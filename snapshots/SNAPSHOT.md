@@ -1,6 +1,6 @@
 # Snapshot
 
-- **Generated at:** 2026-05-25T18:48:33.948888+00:00
+- **Generated at:** 2026-05-25T19:23:32.990253+00:00
 - **Workspace ID:** `6ab51ea8-1c35-46e7-a387-961e2877f3cf`
 
 ## Counts
@@ -8,7 +8,7 @@
 | Resource | Count |
 |---|---|
 | agents | 36 |
-| skills | 99 |
+| skills | 102 |
 | squads | 9 |
 | projects | 11 |
 | autopilots | 3 |

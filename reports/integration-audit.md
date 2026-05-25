@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-25T18:48:33.995734+00:00_
+_Generated: 2026-05-25T19:23:33.061564+00:00_
 
 ## Health Summary
 
@@ -8,7 +8,7 @@ _Generated: 2026-05-25T18:48:33.995734+00:00_
 |---|---|
 | agents_without_model | 0 |
 | orphan_skills | 0 |
-| agents_without_skills | 3 |
+| agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
 | inactive_autopilots | 0 |
@@ -20,21 +20,18 @@ _Generated: 2026-05-25T18:48:33.995734+00:00_
 
 ## Coverage Matrix
 
-- **Agents:** 36 (with skills: 33, without: 3)
-- **Skills:** 99 (owned: 99, orphan: 0)
+- **Agents:** 36 (with skills: 36, without: 0)
+- **Skills:** 102 (owned: 102, orphan: 0)
 - **Squads:** 9 (active members: 9)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 3 (active: 3)
 
-## Verdict: YELLOW ⚠️ — 3 warnings, no blockers
+## Verdict: GREEN ✅ — factory fully integrated
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
-| 🟡 WARN | `agent.no_skills` | Agent `codegraph-indexer` has zero skills attached | Attach at least the skill(s) named in its instructions |
-| 🟡 WARN | `agent.no_skills` | Agent `codebase-cartographer` has zero skills attached | Attach at least the skill(s) named in its instructions |
-| 🟡 WARN | `agent.no_skills` | Agent `impact-analyst` has zero skills attached | Attach at least the skill(s) named in its instructions |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

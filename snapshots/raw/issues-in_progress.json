@@ -12,7 +12,9 @@
       "id": "f76d10de-667b-48f8-ae1b-d3baa473fee5",
       "identifier": "DEV-33",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "retry_log": 1
+      },
       "number": 33,
       "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
       "position": 0,
@@ -21,7 +23,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "Android Mobile App — React Native Expo (Attendance App)",
-      "updated_at": "2026-05-25T17:43:07Z",
+      "updated_at": "2026-05-25T19:18:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],

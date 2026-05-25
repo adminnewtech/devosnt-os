@@ -61,10 +61,11 @@
       "identifier": "DEV-36",
       "labels": [],
       "metadata": {
+        "audit_verdict": "GREEN",
         "decision": "App Hub Model adopted (ADR-002/DEV-37). Factory Pulse v3 live (every 15min). GitHub linked via gh CLI as adminnewtech with scopes repo+workflow+read:org+gist — sufficient for App Hub bootstrap on personal account (no newtechkw org exists; repos owned by adminnewtech).",
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
-        "kb_sync_status": "secrets_set@2026-05-25T18:46Z",
+        "kb_sync_status": "green@2026-05-25T18:50Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "build-parallel-running"
       },
@@ -76,7 +77,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-25T18:46:47Z",
+      "updated_at": "2026-05-25T18:50:49Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -138,7 +139,9 @@
       "id": "f76d10de-667b-48f8-ae1b-d3baa473fee5",
       "identifier": "DEV-33",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "retry_log": 1
+      },
       "number": 33,
       "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
       "position": 0,
@@ -147,7 +150,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "Android Mobile App — React Native Expo (Attendance App)",
-      "updated_at": "2026-05-25T17:43:07Z",
+      "updated_at": "2026-05-25T19:18:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
