@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-25T19:23:33.061564+00:00_
+_Generated: 2026-05-25T19:27:52.781384+00:00_
 
 ## Health Summary
 
@@ -24,7 +24,7 @@ _Generated: 2026-05-25T19:23:33.061564+00:00_
 - **Skills:** 102 (owned: 102, orphan: 0)
 - **Squads:** 9 (active members: 9)
 - **Projects:** 11 (pipeline gaps: 0)
-- **Autopilots:** 3 (active: 3)
+- **Autopilots:** 4 (active: 4)
 
 ## Verdict: GREEN ✅ — factory fully integrated
 

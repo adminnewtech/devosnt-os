@@ -1,6 +1,23 @@
 {
   "autopilots": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T19:25:40Z",
+      "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+      "created_by_type": "member",
+      "description": "KB Sync — Hourly Refresh. Runs every hour. Pull live workspace snapshots and refresh the devosnt-os knowledge base on GitHub so the audit and KB never drift more than 60 minutes from live state.\n\nCRITICAL: This autopilot is run_only. Never create new issues. Do not change any issue status. Do not mention any agent. Stay quiet on success — only post a comment on DEV-36 (id e60d5be5-b9dd-48aa-b949-28286ea80f1b) if the audit verdict regresses (GREEN→YELLOW/RED).\n\nSteps:\n\n(1) Clone or update the KB repo:\n    if [ -d /tmp/devosnt-os ]; then cd /tmp/devosnt-os \u0026\u0026 git pull --quiet; else cd /tmp \u0026\u0026 gh repo clone adminnewtech/devosnt-os --quiet; fi\n    cd /tmp/devosnt-os\n\n(2) Refresh raw snapshots (all 6 resource lists + 7 issue status lists). Use --output json on every call. Continue on any single failure:\n    mkdir -p snapshots/raw\n    for resource in agents skills squads projects autopilots workspaces; do multica $resource list --output json \u003e snapshots/raw/$resource.json 2\u003e/dev/null; done\n    for status in done in_review in_progress backlog todo blocked cancelled; do multica issue list --output json --status $status \u003e snapshots/raw/issues-$status.json 2\u003e/dev/null; done\n    multica issue list --output json \u003e snapshots/raw/issues.json 2\u003e/dev/null\n\n(3) Re-render KB + run audit:\n    python3 scripts/render_kb.py\n    python3 scripts/audit_integration.py\n\n(4) Detect drift. If git status --porcelain shows changes:\n    - Commit with body: \"chore: hourly KB sync — \u003cCOUNTS\u003e\" (counts from snapshots/SNAPSHOT.md)\n    - Push to main\n    - Update DEV-36 metadata key kb_sync_status to \"\u003cverdict\u003e@\u003cRFC3339-now\u003e\" (e.g. \"green@2026-05-25T20:00Z\") via: multica issue metadata set e60d5be5-b9dd-48aa-b949-28286ea80f1b --key kb_sync_status --value \"...\"\n    - Update DEV-36 metadata key audit_verdict to the verdict from reports/integration-audit.md (GREEN, YELLOW, or RED)\n\n(5) Verdict regression escalation. ONLY if the new verdict is YELLOW or RED (was GREEN before): post one comment on DEV-36 summarizing the new findings, parented to comment 9322ef81-1035-4f7a-832e-74c9a9d8f7da. No mentions.\n\n(6) Output one-line summary to stdout: \"KB Sync @ HH:MM | verdict=\u003cG/Y/R\u003e | drift=\u003cyes/no\u003e | issues=N agents=N skills=N\". If git is clean and verdict is unchanged, say \"KB Sync @ HH:MM | clean\".\n\nOperating rules:\n- Never block on a single CLI failure. Log and continue.\n- Run quietly. No issue comments unless verdict regresses.\n- Never mention any agent.\n- Use git config user.name \"devosnt-os-bot\" + user.email \"bot@devosnt.local\" before committing.\n- Do not modify any issue status. Do not modify any non-metadata field on any issue.",
+      "execution_mode": "run_only",
+      "id": "47668345-3f72-4821-af88-c4233b4764cd",
+      "issue_title_template": null,
+      "last_run_at": null,
+      "project_id": null,
+      "status": "active",
+      "title": "KB Sync — Hourly Refresh",
+      "updated_at": "2026-05-25T19:25:40Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "ebd03ec3-2a72-433f-b89f-bf4d35573a3d",
       "assignee_type": "agent",
       "created_at": "2026-05-25T17:20:18Z",
@@ -10,11 +27,11 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-05-25T19:15:09Z",
+      "last_run_at": "2026-05-25T19:24:00Z",
       "project_id": null,
       "status": "active",
       "title": "Factory Pulse — Auto-route \u0026 Unblock",
-      "updated_at": "2026-05-25T19:15:09Z",
+      "updated_at": "2026-05-25T19:24:00Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -52,5 +69,5 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
-  "total": 3
+  "total": 4
 }
