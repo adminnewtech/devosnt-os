@@ -55,6 +55,32 @@
     {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
+      "created_at": "2026-05-25T16:28:25Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Input\nPRD: [DEV-26](mention://issue/799e091f-184e-4551-8f8d-fd55cf62c59f). Architecture: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219). Schema: [DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76). API: [DEV-32](mention://issue/bb36dbf3-e989-4e10-bf4e-f0756c5eef37).\n\n## Expected Output\nReact Native Expo application (Android target, API 24+) with:\n\n**Screens**:\n1. Login screen — email + password; magic link fallback; Arabic-first RTL layout\n2. Home / Today's card — status (لم يبدأ / حاضر / انصرف), check-in time, hours worked; Check In / Check Out buttons\n3. Check-In flow — GPS validation (Haversine client-side pre-check) → optional selfie capture → optional QR scan → POST punch-checkin → result feedback\n4. Attendance history — 30-day list; status badge; tap for detail (GPS mini-map + selfie thumbnail)\n5. Shift schedule — this week + next week; shift name, start, end, office\n6. Leave requests — list + submit form (type, date range, note); status badge\n7. Offline sync indicator — badge count + sync status bar\n\n**Technical requirements**:\n- Expo SDK 51+ (bare or managed workflow; bare preferred for GPS + camera)\n- Supabase JS client with JWT session management (auto-refresh)\n- expo-location for GPS (foreground only — no background tracking)\n- expo-camera for selfie capture; compress to ≤200 KB before upload\n- expo-barcode-scanner for QR check-in\n- expo-sqlite for offline punch queue persistence\n- expo-notifications + @react-native-firebase/messaging for FCM token registration\n- @react-navigation/native (bottom tabs + stack)\n- i18n: react-i18next, Arabic Kuwaiti strings default, English toggle, RTL-first via I18nManager.forceRTL\n- Zustand or Redux Toolkit for auth/session state\n- React Query (TanStack) for server state\n- WCAG 2.2 AA: minimum touch targets 44×44pt, sufficient color contrast\n\n**Offline behaviour**:\n- expo-sqlite stores queued punches (schema from DEV-30 offline sync spec)\n- NetInfo listener triggers sync on reconnect\n- Retry: 3 attempts, exponential backoff (30s → 120s → 300s)\n- Failed punches show HR-contact prompt\n\n## Acceptance Criteria\n- [ ] Check-In shows Arabic error 'أنت خارج نطاق المكتب' when outside geofence\n- [ ] Punch queued to SQLite when offline; synced on reconnect with badge updating to 0\n- [ ] Selfie compressed to ≤200 KB before upload\n- [ ] App switches to full RTL layout when Arabic is active\n- [ ] Session auto-refreshes without requiring re-login within 30-day window\n- [ ] No background location access (foreground-only)\n- [ ] EAS build produces a runnable APK on Android API 24+\n\n## Dependencies\nSupabase project URL + anon key. DEV-31 (schema) for real data; can build against mock/stub data initially. DEV-32 (API) for punch endpoints.\n\n## Risk\n- GPS accuracy indoors — QR scan is the fallback (opt-in per tenant); document this in release notes.\n- Selfie camera permission UX — must explain purpose clearly per PDPL consent flow.\n\n## Definition of Done\nEAS internal build produces installable APK. Full happy path (login → check-in → check-out → history → leave request) tested on physical Android device or emulator. RTL layout verified. Offline queue sync verified with airplane mode test.",
+      "due_date": null,
+      "id": "f76d10de-667b-48f8-ae1b-d3baa473fee5",
+      "identifier": "DEV-33",
+      "labels": [],
+      "metadata": {
+        "decision": "qa_gate_passed",
+        "retry_log": 1
+      },
+      "number": 33,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": 0,
+      "priority": "high",
+      "project_id": "adf682fe-0b45-4e30-a1b6-dbd2d04ccce1",
+      "start_date": null,
+      "status": "done",
+      "title": "Android Mobile App — React Native Expo (Attendance App)",
+      "updated_at": "2026-05-25T21:16:29Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T16:27:57Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -714,5 +740,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 30
+  "total": 31
 }
