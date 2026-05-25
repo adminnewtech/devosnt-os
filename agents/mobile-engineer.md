@@ -9,7 +9,7 @@
 
 ## Description
 
-React Native (Expo) mobile apps. Openclaw runtime.
+React Native (Expo) mobile apps. Claude runtime (swapped from Openclaw→Codex→Claude after runtime stalls).
 
 ## Skills
 

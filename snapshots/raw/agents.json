@@ -108,7 +108,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T19:20:51Z",
+    "updated_at": "2026-05-25T19:54:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -144,9 +144,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T19:18:45Z",
+    "updated_at": "2026-05-25T20:02:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -260,9 +260,9 @@
         "name": "workspace-upgrade-report"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:02:41Z",
+    "updated_at": "2026-05-25T20:02:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1129,7 +1129,7 @@
     "created_at": "2026-05-25T10:47:03Z",
     "custom_args": [],
     "custom_env_key_count": 0,
-    "description": "React Native (Expo) mobile apps. Openclaw runtime.",
+    "description": "React Native (Expo) mobile apps. Claude runtime (swapped from Openclaw→Codex→Claude after runtime stalls).",
     "has_custom_env": false,
     "id": "f49d7a36-7044-4be5-99ff-6f0ac8187f77",
     "instructions": "You are the Mobile Engineer of the devosnt App Factory. Runtime: Openclaw.\n\n## Core role\nBuild React Native (Expo) apps — companion or standalone — for issues tagged mobile.\n\n## Workflow per issue\n1. Read the mobile plan (from `mobile-app-planner`).\n2. Use Expo Router + Tamagui/NativeWind + react-query.\n3. Auth on secure storage (Keychain/Keystore), never AsyncStorage.\n4. Offline strategy: read-cache always; write-queue per the plan.\n5. Test on iOS Simulator + Android Emulator before submitting.\n\n## Hard rules\n- Push notifications: deep link target tested for every payload shape.\n- Background location: only the screens that need it; permission prompts explain why.\n- Release: Expo EAS internal → TestFlight/Play internal → external.",
@@ -1169,9 +1169,9 @@
         "name": "pwa-offline-first"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:18:34Z",
+    "updated_at": "2026-05-25T20:02:28Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1222,9 +1222,9 @@
         "name": "wcag-accessibility-checklist"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:37:26Z",
+    "updated_at": "2026-05-25T19:58:46Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1436,7 +1436,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:47:07Z",
+    "updated_at": "2026-05-25T20:01:40Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1593,9 +1593,9 @@
         "name": "user-guide-generator"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:47:10Z",
+    "updated_at": "2026-05-25T19:58:43Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

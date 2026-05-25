@@ -23,7 +23,7 @@ Total agents in `devosnt`: **36**
 | [impact-analyst](./impact-analyst.md) | `claude-sonnet-4-6` | `local` | 1 | On every Build sub-issue, runs codegraph_impact against the proposed change scop |
 | [integration-architect](./integration-architect.md) | `claude-sonnet-4-6` | `local` | 8 | Plans every external integration (payments, Shopify, Zoho, WhatsApp). |
 | [memory-curator](./memory-curator.md) | `claude-sonnet-4-6` | `local` | 4 | Audits workspace memory + pinned metadata for staleness. |
-| [mobile-engineer](./mobile-engineer.md) | `claude-sonnet-4-6` | `local` | 5 | React Native (Expo) mobile apps. Openclaw runtime. |
+| [mobile-engineer](./mobile-engineer.md) | `claude-sonnet-4-6` | `local` | 5 | React Native (Expo) mobile apps. Claude runtime (swapped from Openclaw→Codex→Cla |
 | [performance-tester](./performance-tester.md) | `claude-sonnet-4-6` | `local` | 3 | Runs performance-review-checklist with prod-like data volume. |
 | [product-manager](./product-manager.md) | `claude-sonnet-4-6` | `local` | 10 | Idea → PRD → user stories → MVP scope cut. Hands off to UX + Architecture. |
 | [prompt-optimizer](./prompt-optimizer.md) | `claude-sonnet-4-6` | `local` | 2 | Improves agent prompts via prompt-improvement-review. |

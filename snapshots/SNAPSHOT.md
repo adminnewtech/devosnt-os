@@ -1,6 +1,6 @@
 # Snapshot
 
-- **Generated at:** 2026-05-25T19:27:52.710607+00:00
+- **Generated at:** 2026-05-25T20:03:18.544006+00:00
 - **Workspace ID:** `6ab51ea8-1c35-46e7-a387-961e2877f3cf`
 
 ## Counts
@@ -12,4 +12,4 @@
 | squads | 9 |
 | projects | 11 |
 | autopilots | 4 |
-| issues_total | 38 |
+| issues_total | 41 |

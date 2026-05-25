@@ -12,7 +12,7 @@ Frontend, backend, mobile, integrations, automation, coding tasks executed in pa
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-33 | Android Mobile App — React Native Expo (Attendance App) | `in_progress` | high |
+| DEV-33 | Android Mobile App — React Native Expo (Attendance App) | `todo` | high |
 | DEV-35 | Push Notifications Integration — FCM + pg_cron (Attendance App) | `in_review` | high |
 
 ## Recent Done
