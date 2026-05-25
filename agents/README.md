@@ -10,8 +10,8 @@ Total agents in `devosnt`: **36**
 | [bug-hunter](./bug-hunter.md) | `claude-sonnet-4-6` | `local` | 3 | Hunts edge-case defects QA didn't cover. Thinks like a power user/attacker. |
 | [ceo](./ceo.md) | `claude-opus-4-7` | `local` | 17 | CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → DEPLO |
 | [claude-code-lead-developer](./claude-code-lead-developer.md) | `claude-sonnet-4-6` | `local` | 8 | Orchestrates Build Squad. Decomposes parents, assigns engineers, unblocks. |
-| [codebase-cartographer](./codebase-cartographer.md) | `claude-sonnet-4-6` | `local` | 0 | Owns the human-readable architecture overview per app: docs/ARCHITECTURE.md, gui |
-| [codegraph-indexer](./codegraph-indexer.md) | `claude-sonnet-4-6` | `local` | 0 | Builds + refreshes the per-app codegraph index (SQLite + tree-sitter) and the Un |
+| [codebase-cartographer](./codebase-cartographer.md) | `claude-sonnet-4-6` | `local` | 1 | Owns the human-readable architecture overview per app: docs/ARCHITECTURE.md, gui |
+| [codegraph-indexer](./codegraph-indexer.md) | `claude-sonnet-4-6` | `local` | 1 | Builds + refreshes the per-app codegraph index (SQLite + tree-sitter) and the Un |
 | [database-architect](./database-architect.md) | `claude-sonnet-4-6` | `local` | 7 | RLS-first PostgreSQL schema with indexes, audit, money + timezone hygiene. |
 | [deployment-engineer](./deployment-engineer.md) | `claude-sonnet-4-6` | `local` | 7 | Production deploys + rollback plans. Confirms before pushing prod. |
 | [docs-analyst](./docs-analyst.md) | `claude-sonnet-4-6` | `local` | 3 | Reads vendor docs + changelogs. Alerts on breaking changes. |
@@ -20,7 +20,7 @@ Total agents in `devosnt`: **36**
 | [frontend-engineer](./frontend-engineer.md) | `claude-sonnet-4-6` | `local` | 10 | Next.js + TS + Tailwind frontend implementation with accessibility + responsive. |
 | [full-stack-engineer](./full-stack-engineer.md) | `claude-sonnet-4-6` | `local` | 9 | Small end-to-end features (UI + API + migration) in one PR. Opencode runtime. |
 | [github-analyst](./github-analyst.md) | `claude-sonnet-4-6` | `local` | 2 | Owner of github-research-workflow. Prior-art research for any non-trivial build. |
-| [impact-analyst](./impact-analyst.md) | `claude-sonnet-4-6` | `local` | 0 | On every Build sub-issue, runs codegraph_impact against the proposed change scop |
+| [impact-analyst](./impact-analyst.md) | `claude-sonnet-4-6` | `local` | 1 | On every Build sub-issue, runs codegraph_impact against the proposed change scop |
 | [integration-architect](./integration-architect.md) | `claude-sonnet-4-6` | `local` | 8 | Plans every external integration (payments, Shopify, Zoho, WhatsApp). |
 | [memory-curator](./memory-curator.md) | `claude-sonnet-4-6` | `local` | 4 | Audits workspace memory + pinned metadata for staleness. |
 | [mobile-engineer](./mobile-engineer.md) | `claude-sonnet-4-6` | `local` | 5 | React Native (Expo) mobile apps. Openclaw runtime. |

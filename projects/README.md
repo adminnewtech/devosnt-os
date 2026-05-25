@@ -7,7 +7,7 @@
 | 📐 | [02 - Product Specs](./02---product-specs.md) | 2 | 2 | PRDs, user stories, requirements, role matrix, acceptance criteria, workflows. |
 | 🎨 | [03 - UX UI Design System](./03---ux-ui-design-system.md) | 3 | 3 | Sitemaps, screen lists, user flows, dashboard layouts, mobile layouts, RTL/Arabi |
 | 🏗️ | [04 - Architecture Database API](./04---architecture-database-api.md) | 3 | 3 | Tech stack, database schemas, API contracts, auth model, integrations, ERDs, ADR |
-| ⚙️ | [05 - Parallel Build](./05---parallel-build.md) | 6 | 3 | Frontend, backend, mobile, integrations, automation, coding tasks executed in pa |
+| ⚙️ | [05 - Parallel Build](./05---parallel-build.md) | 6 | 4 | Frontend, backend, mobile, integrations, automation, coding tasks executed in pa |
 | 🛡️ | [06 - QA Security Performance](./06---qa-security-performance.md) | 1 | 1 | Test plans, bug reports, security reviews, performance tests, permissions valida |
 | 🚀 | [07 - Deploy Documentation Handover](./07---deploy-documentation-handover.md) | 1 | 1 | Deployment runbooks, environment setup, release notes, rollback plans, user guid |
 | 📚 | [08 - Skill Library](./08---skill-library.md) | 2 | 1 | Reusable skills, app templates, prompt templates, workflow templates — the works |

@@ -27,6 +27,32 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-05-25T16:27:57Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Input\nArchitecture spec: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219) comment #4 (API contract). Schema must exist (DEV-31).\n\n## Expected Output\nSupabase Edge Functions (Deno/TypeScript) for all custom endpoints:\n\n1. `punch-checkin` — GPS geofence validation, rate limiting (punch_rate_limit table), selfie upload, lateness computation, idempotency via client_punch_id.\n2. `punch-checkout` — active check-in verification, rate limiting, hours worked calculation.\n3. `punch-sync` — batch offline queue sync, chronological ordering, idempotency, per-punch result map.\n4. `employees/:id/invite` — Supabase Auth invite by email, invited_at update.\n5. `reports/attendance` — CSV stream + async PDF generation (react-pdf), role-scoped data, civil ID masking.\n6. `fcm-register` — FCM token upsert in push_subscriptions.\n7. `notify-shift-reminder` — query employees with shifts starting in 29–31 min window, send FCM.\n8. `notify-missed-punch-alert` — query employees whose shift started 14–16 min ago with no check_in, send FCM.\n9. `notify-leave-decision` — receive leave_request_id, fetch status, send FCM to employee.\n\nAll Edge Functions must:\n- Validate JWT claims via Supabase Auth verification\n- Return bilingual error responses (Arabic + English) per DEV-30 error format\n- Write to `audit_log` for all mutations\n- Handle civil ID via `pgp_sym_decrypt` with key from Vault (never hardcoded)\n\n## Acceptance Criteria\n- [ ] `punch-checkin` returns 422 when employee is outside geofence\n- [ ] `punch-checkin` returns 429 when called within 30s of last punch\n- [ ] `punch-sync` processes punches in chronological order and skips duplicates\n- [ ] `reports/attendance` masks civil ID as `****XXXX` for roles below hr_manager\n- [ ] All functions reject unauthenticated requests with 401\n- [ ] `notify-shift-reminder` sends FCM via Firebase HTTP v1 API (not legacy)\n- [ ] Haversine distance calculation correct to within 1 meter\n\n## Dependencies\n[DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76) schema must land before integration testing. FCM Server Key in Supabase Vault (from Integration Architect / admin).\n\n## Risk\n- PDF generation in Deno Edge Function may hit memory limits on Supabase free tier — fallback: generate CSV only for MVP and defer PDF to a background job.\n- pg_cron calls to Edge Functions require `pg_net` extension — confirm enabled on Supabase project.\n\n## Definition of Done\nAll Edge Functions deployed to Supabase. Each endpoint tested with a real JWT from the test seed data (DEV-31). Postman/Bruno collection added to repo.",
+      "due_date": null,
+      "id": "bb36dbf3-e989-4e10-bf4e-f0756c5eef37",
+      "identifier": "DEV-32",
+      "labels": [],
+      "metadata": {
+        "decision": "qa_gate_passed",
+        "quality_score": 7
+      },
+      "number": 32,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": 0,
+      "priority": "high",
+      "project_id": "adf682fe-0b45-4e30-a1b6-dbd2d04ccce1",
+      "start_date": null,
+      "status": "done",
+      "title": "API Edge Functions Implementation — Android Attendance App",
+      "updated_at": "2026-05-25T18:36:51Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
       "assignee_type": "agent",
       "created_at": "2026-05-25T16:27:34Z",
@@ -660,7 +686,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
-  "limit": 500,
+  "limit": 50,
   "offset": 0,
-  "total": 28
+  "total": 29
 }

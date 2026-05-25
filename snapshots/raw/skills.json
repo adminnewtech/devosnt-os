@@ -231,6 +231,26 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-25T18:46:01Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync with the machine-readable codegraph for every app repo.",
+    "id": "8fdc1eca-1ca7-4d84-a7c1-88bcc8b60668",
+    "name": "codebase-cartographer",
+    "updated_at": "2026-05-25T18:46:01Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-25T18:45:50Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Build and refresh a per-app codegraph index (tree-sitter + SQLite) plus an Understand-Anything graph.json on every PR merge so build/QA/security agents reason on symbols, not grep.",
+    "id": "e36325f5-c647-4306-92f1-bb9e723b69be",
+    "name": "codegraph-indexer",
+    "updated_at": "2026-05-25T18:45:50Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:41Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Per-project monthly budget + alerting on cloud + AI spend.",
@@ -447,6 +467,16 @@
     "id": "299d3d20-e0cb-4c08-a132-95ba3d7663ac",
     "name": "i18n-multilang-setup",
     "updated_at": "2026-05-25T15:53:25Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-25T18:46:11Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "On every Build PR, compute blast radius from the codegraph (changed symbols → callers → callees → routes → tests) and post a reviewer-facing impact table.",
+    "id": "fd38466e-be91-4372-b5ae-cd5045b985b6",
+    "name": "impact-analyst",
+    "updated_at": "2026-05-25T18:46:11Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

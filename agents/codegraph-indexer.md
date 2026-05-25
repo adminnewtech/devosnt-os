@@ -13,7 +13,7 @@ Builds + refreshes the per-app codegraph index (SQLite + tree-sitter) and the Un
 
 ## Skills
 
-_(no skills assigned)_
+- [`codegraph-indexer`](../skills/codegraph-indexer.md) — Build and refresh a per-app codegraph index (tree-sitter + SQLite) plus an Understand-Anything graph.json on every PR merge so build/QA/security agents reason on symbols, not grep.
 
 ## Instructions
 

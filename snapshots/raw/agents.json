@@ -108,7 +108,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:24:07Z",
+    "updated_at": "2026-05-25T18:43:24Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -144,9 +144,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:20:15Z",
+    "updated_at": "2026-05-25T18:49:02Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1224,7 +1224,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:09:31Z",
+    "updated_at": "2026-05-25T18:37:26Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1958,7 +1958,13 @@
     "runtime_config": {},
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
-    "skills": [],
+    "skills": [
+      {
+        "description": "Build and refresh a per-app codegraph index (tree-sitter + SQLite) plus an Understand-Anything graph.json on every PR merge so build/QA/security agents reason on symbols, not grep.",
+        "id": "e36325f5-c647-4306-92f1-bb9e723b69be",
+        "name": "codegraph-indexer"
+      }
+    ],
     "status": "idle",
     "thinking_level": "",
     "updated_at": "2026-05-25T17:58:10Z",
@@ -1985,7 +1991,13 @@
     "runtime_config": {},
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
-    "skills": [],
+    "skills": [
+      {
+        "description": "Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync with the machine-readable codegraph for every app repo.",
+        "id": "8fdc1eca-1ca7-4d84-a7c1-88bcc8b60668",
+        "name": "codebase-cartographer"
+      }
+    ],
     "status": "idle",
     "thinking_level": "",
     "updated_at": "2026-05-25T17:58:20Z",
@@ -2012,7 +2024,13 @@
     "runtime_config": {},
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
-    "skills": [],
+    "skills": [
+      {
+        "description": "On every Build PR, compute blast radius from the codegraph (changed symbols → callers → callees → routes → tests) and post a reviewer-facing impact table.",
+        "id": "fd38466e-be91-4372-b5ae-cd5045b985b6",
+        "name": "impact-analyst"
+      }
+    ],
     "status": "idle",
     "thinking_level": "",
     "updated_at": "2026-05-25T17:58:30Z",

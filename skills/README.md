@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **99**
+Total skills in `devosnt`: **102**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -27,6 +27,8 @@ Total skills in `devosnt`: **99**
 | [chat-support-builder](./chat-support-builder.md) | `full-stack-engineer` | Default in-app support chat: ticketing, agent inbox, AI deflection, WhatsApp bridge. |
 | [ci-cd-pipeline-builder](./ci-cd-pipeline-builder.md) | `claude-code-lead-developer`, `deployment-engineer` | Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy. |
 | [clinic-system-builder](./clinic-system-builder.md) | `solution-architect` | Build a medical clinic system: patients, appointments, EMR, prescriptions, billing, insura |
+| [codebase-cartographer](./codebase-cartographer.md) | `codebase-cartographer` | Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync  |
+| [codegraph-indexer](./codegraph-indexer.md) | `codegraph-indexer` | Build and refresh a per-app codegraph index (tree-sitter + SQLite) plus an Understand-Anyt |
 | [cost-budget-tracker](./cost-budget-tracker.md) | `workspace-operations-manager`, `environment-manager`, `tool-evaluator` | Per-project monthly budget + alerting on cloud + AI spend. |
 | [crm-system-builder](./crm-system-builder.md) | `solution-architect` | Build a CRM (leads, deals, pipeline, tasks, KPIs) from the standard preset. |
 | [cross-project-pattern-extractor](./cross-project-pattern-extractor.md) | `ceo`, `skill-builder`, `memory-curator`, `research-scout` | Learn across all completed projects and propose new skills, default-changes, or removed ob |
@@ -49,6 +51,7 @@ Total skills in `devosnt`: **99**
 | [gym-system-builder](./gym-system-builder.md) | `solution-architect` | Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing. |
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
+| [impact-analyst](./impact-analyst.md) | `impact-analyst` | On every Build PR, compute blast radius from the codegraph (changed symbols → callers → ca |
 | [incident-response-runbook](./incident-response-runbook.md) | `workspace-operations-manager`, `deployment-engineer` | Standard incident response: severity, comms, postmortem template. |
 | [inventory-system-builder](./inventory-system-builder.md) | `solution-architect` | Build an inventory management system (SKUs, stock, movements, counts) from preset. |
 | [kw-civil-id-validator](./kw-civil-id-validator.md) | `integration-architect` | Kuwait Civil ID validation + age/gender extraction + PACI integration helper. |

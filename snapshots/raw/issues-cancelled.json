@@ -48,7 +48,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
-  "limit": 500,
+  "limit": 50,
   "offset": 0,
   "total": 2
 }

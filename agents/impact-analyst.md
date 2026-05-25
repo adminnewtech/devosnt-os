@@ -13,7 +13,7 @@ On every Build sub-issue, runs codegraph_impact against the proposed change scop
 
 ## Skills
 
-_(no skills assigned)_
+- [`impact-analyst`](../skills/impact-analyst.md) — On every Build PR, compute blast radius from the codegraph (changed symbols → callers → callees → routes → tests) and post a reviewer-facing impact table.
 
 ## Instructions
 

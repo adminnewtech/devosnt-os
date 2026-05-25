@@ -1,7 +1,7 @@
 {
   "has_more": false,
   "issues": [],
-  "limit": 500,
+  "limit": 50,
   "offset": 0,
   "total": 0
 }

@@ -64,6 +64,8 @@
         "decision": "App Hub Model adopted (ADR-002/DEV-37). Factory Pulse v3 live (every 15min). GitHub linked via gh CLI as adminnewtech with scopes repo+workflow+read:org+gist — sufficient for App Hub bootstrap on personal account (no newtechkw org exists; repos owned by adminnewtech).",
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
+        "kb_sync_status": "secrets_set@2026-05-25T18:46Z",
+        "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "build-parallel-running"
       },
       "number": 36,
@@ -74,12 +76,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-25T18:20:27Z",
+      "updated_at": "2026-05-25T18:46:47Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "16644cb9-8081-4066-9a5b-d89a8485ec4a",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T16:29:17Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -97,7 +99,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Push Notifications Integration — FCM + pg_cron (Attendance App)",
-      "updated_at": "2026-05-25T18:21:52Z",
+      "updated_at": "2026-05-25T18:34:56Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -149,8 +151,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "614bc86d-6ef1-4f1e-8b3c-b393b43f46d0",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T16:27:57Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -160,7 +162,7 @@
       "identifier": "DEV-32",
       "labels": [],
       "metadata": {
-        "decision": "revise",
+        "decision": "qa_gate_passed",
         "quality_score": 7
       },
       "number": 32,
@@ -169,9 +171,9 @@
       "priority": "high",
       "project_id": "adf682fe-0b45-4e30-a1b6-dbd2d04ccce1",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "API Edge Functions Implementation — Android Attendance App",
-      "updated_at": "2026-05-25T18:21:12Z",
+      "updated_at": "2026-05-25T18:36:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -354,7 +356,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Android Attendance App — تطبيق حضور وانصراف متكامل (one-prompt-to-app)",
-      "updated_at": "2026-05-25T17:58:54Z",
+      "updated_at": "2026-05-25T18:48:54Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -913,7 +915,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
-  "limit": 500,
+  "limit": 50,
   "offset": 0,
   "total": 38
 }

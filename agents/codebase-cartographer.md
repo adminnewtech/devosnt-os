@@ -13,7 +13,7 @@ Owns the human-readable architecture overview per app: docs/ARCHITECTURE.md, gui
 
 ## Skills
 
-_(no skills assigned)_
+- [`codebase-cartographer`](../skills/codebase-cartographer.md) — Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync with the machine-readable codegraph for every app repo.
 
 ## Instructions
 
