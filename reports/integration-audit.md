@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-25T20:03:20.320743+00:00_
+_Generated: 2026-05-25T21:01:25.256935+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-05-25T20:03:20.320743+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 0 |
+| blocked_issues | 1 |
 | in_review_parent_count | 3 |
 | agents_outside_squad_preview | 16 |
 
@@ -26,12 +26,13 @@ _Generated: 2026-05-25T20:03:20.320743+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 4 (active: 4)
 
-## Verdict: GREEN ✅ — factory fully integrated
+## Verdict: YELLOW ⚠️ — 1 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-39 blocked: Deployment Plan + Runbook — Android Attendance App | Review blocker — autopilot caps at 3 retries |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

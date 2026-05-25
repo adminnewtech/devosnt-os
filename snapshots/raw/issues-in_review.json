@@ -2,52 +2,6 @@
   "has_more": false,
   "issues": [
     {
-      "assignee_id": "e4c72b01-5bc8-4d1a-9fbb-a6aa0f2e7787",
-      "assignee_type": "agent",
-      "created_at": "2026-05-25T19:58:46Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nParent: [DEV-25](mention://issue/f01f5264-86df-4f80-a2ff-f6a1abbb0794). All build sub-issues (DEV-31..35).\n\nThis is the **full-app QA test plan** — covers the integration of all builds, not the per-build unit tests (those landed in DEV-31..35 individually).\n\n## Expected Output\n\nA `qa-test-plan.md` in the repo with:\n\n1. **Golden path E2E**: employee logs in → checks in (with geofence + selfie) → checks out → sees correct hours → submits leave request → HR approves → employee receives push → employee sees decision in app.\n2. **Anti-golden path**:\n   - Outside geofence → check-in rejected with Arabic error\n   - Rate-limit on punch endpoint (1 per 30s) blocks fast double-punch\n   - Offline mode queues punch → reconnects → syncs without duplicate\n   - JWT expired mid-session → app refreshes silently (no re-login UX)\n   - Civil ID masked correctly per role\n3. **Permission matrix tests**: each of the 4 roles attempts every action; row × column = pass/fail\n4. **RLS smoke**: no cross-tenant data leak (tenant A signing in cannot see tenant B's employees)\n5. **WCAG 2.2 AA**: keyboard nav on admin dashboard, ARIA labels, color contrast, RTL active\n6. **Performance**:\n   - p95 punch latency ≤ 800ms\n   - Live board update ≤ 3s after punch event\n   - Monthly report (500 employees × 31 days) generates \u003c 30s\n7. **Security checks** (top up the per-build gates):\n   - SQL injection on every parameterised endpoint\n   - XSS on every text input rendered in the admin dashboard\n   - CSRF / replay attack on punch endpoint with stolen JWT\n   - FCM token rotation honoured (old token deleted on rotation)\n8. **Device matrix**: Android 7 / 10 / 13 / 14 + emulator + at least one physical device\n\n## Acceptance Criteria\n- [ ] Each test has clear Given/When/Then + expected pass criteria\n- [ ] Each test mapped to the specific Acceptance Criterion in its source issue (DEV-31..35)\n- [ ] Section \"Manual smoke tests\" lists the 5 minute post-deploy check\n- [ ] Plan is executable by a non-author (clear, no assumed context)\n\n## Dependencies\nDEV-33 (mobile build) and DEV-34 (admin dashboard) must be ready to install/access before EXECUTION. Plan AUTHORING can start now.\n\n## Risk\n- Physical Android device for testing — flag if not available (emulator coverage is acceptable for MVP per PRD).\n- Firebase provisioning still pending → push tests in section 1 cannot execute until DEV-35 Firebase Vault is loaded.\n\n## Definition of Done\n`qa-test-plan.md` committed. Comment on this issue with file link + summary of coverage map. Plan reviewed and signed off by [@quality-gate-manager](mention://agent/d87c831d-bd4d-459f-9672-d633e238c44f).",
-      "due_date": null,
-      "id": "da399052-6a07-4db7-8e13-b9616c9a06bf",
-      "identifier": "DEV-41",
-      "labels": [],
-      "metadata": {},
-      "number": 41,
-      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
-      "position": 0,
-      "priority": "high",
-      "project_id": "f0911f5c-2e0e-4c1e-9e0e-f39078d8af64",
-      "start_date": null,
-      "status": "in_review",
-      "title": "Full-App QA Test Plan + E2E — Android Attendance App",
-      "updated_at": "2026-05-25T20:02:46Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "296b1701-bb8f-467e-b244-89149b255841",
-      "assignee_type": "agent",
-      "created_at": "2026-05-25T19:58:18Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nParent: [DEV-25](mention://issue/f01f5264-86df-4f80-a2ff-f6a1abbb0794). PRD: [DEV-26](mention://issue/799e091f-184e-4551-8f8d-fd55cf62c59f). Architecture: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219).\n\nApp Hub project: `09e6cfd3-d45e-4225-a494-2e3400b6983c`. Repo: `adminnewtech/attendance-app` (pending). Target lifecycle phase: `deploy_gate=green` cannot fire until QA + Security sign off on the `integrate` branch.\n\n## Expected Output\n\nA `DEPLOY.md` + `RUNBOOK.md` in the repo plus a comment on this issue summarising the plan. Cover:\n\n1. **Environments**: dev (Supabase project + Vercel preview + EAS internal) → staging → prod (gated)\n2. **Env vars list** for each environment (NO secret values — placeholder names only)\n3. **Pre-deploy checklist**: migrations applied, RLS policies verified, FCM Vault secrets present, EAS credentials linked\n4. **Deploy steps** (web admin: `vercel deploy --prod` after preview green; mobile: `eas build --profile production` + Play Store internal track first)\n5. **Smoke tests** post-deploy (5 minute manual checklist: login, punch-in, punch-out, history, leave request, admin dashboard live-board)\n6. **Rollback plan**: revert Vercel deployment in 1 click; mobile: pull from Play Store + previous APK rollout; DB: down-migrations for last 3 migrations\n7. **Monitoring + alerting**: Sentry + Supabase logs + uptime check on edge functions + p95 latency budget\n8. **Incident response runbook**: who to page, severity matrix, comms template (bilingual AR/EN)\n\n## Acceptance Criteria\n- [ ] `DEPLOY.md` covers all 3 environments with env var names\n- [ ] `RUNBOOK.md` covers smoke tests + rollback + monitoring + incident response\n- [ ] Both documents are bilingual where customer-facing (incident comms template)\n- [ ] No secret values written anywhere; only placeholder names\n- [ ] Section \"Pre-deploy gates\" lists the `deploy_gate=green` requirements explicitly\n\n## Dependencies\nNone blocking — Architecture is finalised. Can start immediately.\n\n## Risk\n- EAS production builds require paid Expo account — flag in docs as a paid resource gate.\n- Vercel prod deploy requires custom domain DNS for `attendance.newtechkw.com` — document the DNS records needed.\n\n## Definition of Done\nBoth files committed to `adminnewtech/attendance-app` (or local-pending). Comment on this issue with summary + PR/commit link. `deploy_gate=ready_to_arm` pinned on metadata once both QA + Security sign off lands.",
-      "due_date": null,
-      "id": "b2fc5cb4-f977-421f-95be-6d9e18738b22",
-      "identifier": "DEV-39",
-      "labels": [],
-      "metadata": {},
-      "number": 39,
-      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
-      "position": 0,
-      "priority": "high",
-      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
-      "start_date": null,
-      "status": "in_review",
-      "title": "Deployment Plan + Runbook — Android Attendance App",
-      "updated_at": "2026-05-25T20:01:33Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-05-25T17:59:32Z",
@@ -112,7 +66,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "green@2026-05-25T19:26Z",
+        "kb_sync_status": "green@2026-05-25T20:03Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "build-parallel-running"
       },
@@ -124,7 +78,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-25T19:28:08Z",
+      "updated_at": "2026-05-25T20:03:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -148,6 +102,32 @@
       "status": "in_review",
       "title": "Push Notifications Integration — FCM + pg_cron (Attendance App)",
       "updated_at": "2026-05-25T18:34:56Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "f49d7a36-7044-4be5-99ff-6f0ac8187f77",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T16:28:25Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Input\nPRD: [DEV-26](mention://issue/799e091f-184e-4551-8f8d-fd55cf62c59f). Architecture: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219). Schema: [DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76). API: [DEV-32](mention://issue/bb36dbf3-e989-4e10-bf4e-f0756c5eef37).\n\n## Expected Output\nReact Native Expo application (Android target, API 24+) with:\n\n**Screens**:\n1. Login screen — email + password; magic link fallback; Arabic-first RTL layout\n2. Home / Today's card — status (لم يبدأ / حاضر / انصرف), check-in time, hours worked; Check In / Check Out buttons\n3. Check-In flow — GPS validation (Haversine client-side pre-check) → optional selfie capture → optional QR scan → POST punch-checkin → result feedback\n4. Attendance history — 30-day list; status badge; tap for detail (GPS mini-map + selfie thumbnail)\n5. Shift schedule — this week + next week; shift name, start, end, office\n6. Leave requests — list + submit form (type, date range, note); status badge\n7. Offline sync indicator — badge count + sync status bar\n\n**Technical requirements**:\n- Expo SDK 51+ (bare or managed workflow; bare preferred for GPS + camera)\n- Supabase JS client with JWT session management (auto-refresh)\n- expo-location for GPS (foreground only — no background tracking)\n- expo-camera for selfie capture; compress to ≤200 KB before upload\n- expo-barcode-scanner for QR check-in\n- expo-sqlite for offline punch queue persistence\n- expo-notifications + @react-native-firebase/messaging for FCM token registration\n- @react-navigation/native (bottom tabs + stack)\n- i18n: react-i18next, Arabic Kuwaiti strings default, English toggle, RTL-first via I18nManager.forceRTL\n- Zustand or Redux Toolkit for auth/session state\n- React Query (TanStack) for server state\n- WCAG 2.2 AA: minimum touch targets 44×44pt, sufficient color contrast\n\n**Offline behaviour**:\n- expo-sqlite stores queued punches (schema from DEV-30 offline sync spec)\n- NetInfo listener triggers sync on reconnect\n- Retry: 3 attempts, exponential backoff (30s → 120s → 300s)\n- Failed punches show HR-contact prompt\n\n## Acceptance Criteria\n- [ ] Check-In shows Arabic error 'أنت خارج نطاق المكتب' when outside geofence\n- [ ] Punch queued to SQLite when offline; synced on reconnect with badge updating to 0\n- [ ] Selfie compressed to ≤200 KB before upload\n- [ ] App switches to full RTL layout when Arabic is active\n- [ ] Session auto-refreshes without requiring re-login within 30-day window\n- [ ] No background location access (foreground-only)\n- [ ] EAS build produces a runnable APK on Android API 24+\n\n## Dependencies\nSupabase project URL + anon key. DEV-31 (schema) for real data; can build against mock/stub data initially. DEV-32 (API) for punch endpoints.\n\n## Risk\n- GPS accuracy indoors — QR scan is the fallback (opt-in per tenant); document this in release notes.\n- Selfie camera permission UX — must explain purpose clearly per PDPL consent flow.\n\n## Definition of Done\nEAS internal build produces installable APK. Full happy path (login → check-in → check-out → history → leave request) tested on physical Android device or emulator. RTL layout verified. Offline queue sync verified with airplane mode test.",
+      "due_date": null,
+      "id": "f76d10de-667b-48f8-ae1b-d3baa473fee5",
+      "identifier": "DEV-33",
+      "labels": [],
+      "metadata": {
+        "pr_url": "local-pending",
+        "retry_log": 1
+      },
+      "number": 33,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": 0,
+      "priority": "high",
+      "project_id": "adf682fe-0b45-4e30-a1b6-dbd2d04ccce1",
+      "start_date": null,
+      "status": "in_review",
+      "title": "Android Mobile App — React Native Expo (Attendance App)",
+      "updated_at": "2026-05-25T20:53:38Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -212,5 +192,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 8
+  "total": 7
 }

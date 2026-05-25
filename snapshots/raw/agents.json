@@ -106,9 +106,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T19:54:14Z",
+    "updated_at": "2026-05-25T20:44:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -146,7 +146,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:02:13Z",
+    "updated_at": "2026-05-25T21:00:44Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -214,7 +214,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:39:39Z",
+    "updated_at": "2026-05-25T20:06:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -262,7 +262,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:02:13Z",
+    "updated_at": "2026-05-25T21:00:44Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -489,7 +489,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:46:56Z",
+    "updated_at": "2026-05-25T20:30:35Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1169,9 +1169,9 @@
         "name": "pwa-offline-first"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:02:28Z",
+    "updated_at": "2026-05-25T20:53:48Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1222,9 +1222,9 @@
         "name": "wcag-accessibility-checklist"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T19:58:46Z",
+    "updated_at": "2026-05-25T20:37:54Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1267,7 +1267,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:18:59Z",
+    "updated_at": "2026-05-25T20:38:47Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1330,7 +1330,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:12:13Z",
+    "updated_at": "2026-05-25T20:40:07Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1373,7 +1373,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:50:38Z",
+    "updated_at": "2026-05-25T20:39:24Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1436,7 +1436,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:01:40Z",
+    "updated_at": "2026-05-25T20:16:24Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1593,9 +1593,9 @@
         "name": "user-guide-generator"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T19:58:43Z",
+    "updated_at": "2026-05-25T20:07:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

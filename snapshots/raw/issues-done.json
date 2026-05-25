@@ -2,6 +2,32 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "e4c72b01-5bc8-4d1a-9fbb-a6aa0f2e7787",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T19:58:46Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Input\nParent: [DEV-25](mention://issue/f01f5264-86df-4f80-a2ff-f6a1abbb0794). All build sub-issues (DEV-31..35).\n\nThis is the **full-app QA test plan** — covers the integration of all builds, not the per-build unit tests (those landed in DEV-31..35 individually).\n\n## Expected Output\n\nA `qa-test-plan.md` in the repo with:\n\n1. **Golden path E2E**: employee logs in → checks in (with geofence + selfie) → checks out → sees correct hours → submits leave request → HR approves → employee receives push → employee sees decision in app.\n2. **Anti-golden path**:\n   - Outside geofence → check-in rejected with Arabic error\n   - Rate-limit on punch endpoint (1 per 30s) blocks fast double-punch\n   - Offline mode queues punch → reconnects → syncs without duplicate\n   - JWT expired mid-session → app refreshes silently (no re-login UX)\n   - Civil ID masked correctly per role\n3. **Permission matrix tests**: each of the 4 roles attempts every action; row × column = pass/fail\n4. **RLS smoke**: no cross-tenant data leak (tenant A signing in cannot see tenant B's employees)\n5. **WCAG 2.2 AA**: keyboard nav on admin dashboard, ARIA labels, color contrast, RTL active\n6. **Performance**:\n   - p95 punch latency ≤ 800ms\n   - Live board update ≤ 3s after punch event\n   - Monthly report (500 employees × 31 days) generates \u003c 30s\n7. **Security checks** (top up the per-build gates):\n   - SQL injection on every parameterised endpoint\n   - XSS on every text input rendered in the admin dashboard\n   - CSRF / replay attack on punch endpoint with stolen JWT\n   - FCM token rotation honoured (old token deleted on rotation)\n8. **Device matrix**: Android 7 / 10 / 13 / 14 + emulator + at least one physical device\n\n## Acceptance Criteria\n- [ ] Each test has clear Given/When/Then + expected pass criteria\n- [ ] Each test mapped to the specific Acceptance Criterion in its source issue (DEV-31..35)\n- [ ] Section \"Manual smoke tests\" lists the 5 minute post-deploy check\n- [ ] Plan is executable by a non-author (clear, no assumed context)\n\n## Dependencies\nDEV-33 (mobile build) and DEV-34 (admin dashboard) must be ready to install/access before EXECUTION. Plan AUTHORING can start now.\n\n## Risk\n- Physical Android device for testing — flag if not available (emulator coverage is acceptable for MVP per PRD).\n- Firebase provisioning still pending → push tests in section 1 cannot execute until DEV-35 Firebase Vault is loaded.\n\n## Definition of Done\n`qa-test-plan.md` committed. Comment on this issue with file link + summary of coverage map. Plan reviewed and signed off by [@quality-gate-manager](mention://agent/d87c831d-bd4d-459f-9672-d633e238c44f).",
+      "due_date": null,
+      "id": "da399052-6a07-4db7-8e13-b9616c9a06bf",
+      "identifier": "DEV-41",
+      "labels": [],
+      "metadata": {
+        "decision": "accept",
+        "quality_score": 11
+      },
+      "number": 41,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": 0,
+      "priority": "high",
+      "project_id": "f0911f5c-2e0e-4c1e-9e0e-f39078d8af64",
+      "start_date": null,
+      "status": "done",
+      "title": "Full-App QA Test Plan + E2E — Android Attendance App",
+      "updated_at": "2026-05-25T20:06:00Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-05-25T16:28:54Z",
@@ -688,5 +714,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 29
+  "total": 30
 }

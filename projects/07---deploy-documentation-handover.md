@@ -12,7 +12,7 @@ Deployment runbooks, environment setup, release notes, rollback plans, user guid
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-39 | Deployment Plan + Runbook — Android Attendance App | `in_review` | high |
+| DEV-39 | Deployment Plan + Runbook — Android Attendance App | `blocked` | high |
 | DEV-40 | User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendance App | `in_progress` | high |
 
 ## Recent Done

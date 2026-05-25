@@ -2,8 +2,8 @@
   "has_more": false,
   "issues": [
     {
-      "assignee_id": "3de7b286-b2ed-4390-8ffc-4c0480feee60",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T19:58:42Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -21,7 +21,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendance App",
-      "updated_at": "2026-05-25T20:01:10Z",
+      "updated_at": "2026-05-25T20:33:54Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],

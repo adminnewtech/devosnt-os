@@ -12,21 +12,24 @@
       "id": "da399052-6a07-4db7-8e13-b9616c9a06bf",
       "identifier": "DEV-41",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "decision": "accept",
+        "quality_score": 11
+      },
       "number": 41,
       "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
       "position": 0,
       "priority": "high",
       "project_id": "f0911f5c-2e0e-4c1e-9e0e-f39078d8af64",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Full-App QA Test Plan + E2E — Android Attendance App",
-      "updated_at": "2026-05-25T20:02:46Z",
+      "updated_at": "2026-05-25T20:06:00Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "3de7b286-b2ed-4390-8ffc-4c0480feee60",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T19:58:42Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -44,7 +47,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendance App",
-      "updated_at": "2026-05-25T20:01:10Z",
+      "updated_at": "2026-05-25T20:33:54Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -58,16 +61,18 @@
       "id": "b2fc5cb4-f977-421f-95be-6d9e18738b22",
       "identifier": "DEV-39",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "blocked_reason": "repo adminnewtech/attendance-app not provisioned in workspace — cannot commit artifacts to integrate branch until repo is configured"
+      },
       "number": 39,
       "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
       "position": 0,
       "priority": "high",
       "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
       "start_date": null,
-      "status": "in_review",
+      "status": "blocked",
       "title": "Deployment Plan + Runbook — Android Attendance App",
-      "updated_at": "2026-05-25T20:01:33Z",
+      "updated_at": "2026-05-25T20:16:15Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -135,7 +140,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "green@2026-05-25T19:26Z",
+        "kb_sync_status": "green@2026-05-25T20:03Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "build-parallel-running"
       },
@@ -147,7 +152,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-25T19:28:08Z",
+      "updated_at": "2026-05-25T20:03:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -210,6 +215,7 @@
       "identifier": "DEV-33",
       "labels": [],
       "metadata": {
+        "pr_url": "local-pending",
         "retry_log": 1
       },
       "number": 33,
@@ -218,9 +224,9 @@
       "priority": "high",
       "project_id": "adf682fe-0b45-4e30-a1b6-dbd2d04ccce1",
       "start_date": null,
-      "status": "todo",
+      "status": "in_review",
       "title": "Android Mobile App — React Native Expo (Attendance App)",
-      "updated_at": "2026-05-25T20:01:47Z",
+      "updated_at": "2026-05-25T20:53:38Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
