@@ -1,0 +1,56 @@
+name: weekly-improvement-digest
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build digest from recent commits + reports
+        run: |
+          mkdir -p reports/digests
+          DATE=$(date -u +%Y-%m-%d)
+          OUT="reports/digests/digest-$DATE.md"
+          {
+            echo "# Weekly Improvement Digest — $DATE"
+            echo
+            echo "## Snapshot deltas (last 7 days)"
+            echo
+            git log --since="7 days ago" --pretty=format:'- %h %s' -- snapshots/ || true
+            echo
+            echo
+            echo "## Audit history"
+            echo
+            git log --since="7 days ago" --pretty=format:'- %h %s' -- reports/integration-audit.md || true
+            echo
+            echo
+            echo "## Current health"
+            echo
+            head -40 reports/integration-audit.md
+          } > "$OUT"
+          echo "Wrote $OUT"
+
+      - name: Commit digest
+        run: |
+          git config user.name  "devosnt-os-bot"
+          git config user.email "bot@devosnt.local"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No digest changes."
+          else
+            git commit -m "chore: weekly improvement digest $(date -u +%Y-%m-%d)"
+            git push
+          fi

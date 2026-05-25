@@ -1,0 +1,43 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate snapshot JSON parses
+        run: |
+          for f in snapshots/raw/*.json; do
+            python3 -m json.tool "$f" > /dev/null
+            echo "ok: $f"
+          done
+
+      - name: Re-render docs (must be a no-op on a clean PR)
+        run: |
+          python3 scripts/render_kb.py
+          if ! git diff --quiet; then
+            echo "::error::Generated markdown is out of sync with snapshots. Run: python3 scripts/render_kb.py"
+            git diff --stat
+            exit 1
+          fi
+
+      - name: Re-run audit (must be a no-op)
+        run: |
+          python3 scripts/audit_integration.py
+          if ! git diff --quiet reports/; then
+            echo "::error::Integration audit is out of sync. Run: python3 scripts/audit_integration.py"
+            git diff reports/
+            exit 1
+          fi

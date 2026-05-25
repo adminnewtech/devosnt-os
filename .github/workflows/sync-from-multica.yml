@@ -1,0 +1,76 @@
+name: sync-from-multica
+
+on:
+  # Daily snapshot
+  schedule:
+    - cron: '0 4 * * *'  # 04:00 UTC every day
+  # Manual
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why are you re-syncing?"
+        required: false
+        default: "manual refresh"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Multica CLI
+        env:
+          MULTICA_SERVER_URL: ${{ secrets.MULTICA_SERVER_URL }}
+          MULTICA_TOKEN: ${{ secrets.MULTICA_TOKEN }}
+        run: |
+          if [ -z "$MULTICA_TOKEN" ]; then
+            echo "::warning::MULTICA_TOKEN not set — skipping live sync, will re-render from existing snapshots only."
+            echo "RENDER_ONLY=1" >> $GITHUB_ENV
+            exit 0
+          fi
+          # Install Multica CLI (placeholder — replace with real install command when public)
+          # curl -fsSL https://multica.dev/install | bash
+          echo "Multica CLI install step — pinned to installer URL"
+
+      - name: Snapshot workspace JSON
+        if: env.RENDER_ONLY != '1'
+        env:
+          MULTICA_TOKEN: ${{ secrets.MULTICA_TOKEN }}
+          MULTICA_WORKSPACE_ID: 6ab51ea8-1c35-46e7-a387-961e2877f3cf
+        run: |
+          mkdir -p snapshots/raw
+          for resource in agents skills squads projects autopilots workspaces; do
+            multica $resource list --output json > snapshots/raw/$resource.json || \
+              echo "::warning::failed to snapshot $resource"
+          done
+          for status in done in_review in_progress backlog todo blocked cancelled; do
+            multica issue list --output json --limit 500 --status $status > snapshots/raw/issues-$status.json || true
+          done
+          multica issue list --output json --limit 500 > snapshots/raw/issues.json || true
+
+      - name: Render markdown
+        run: python3 scripts/render_kb.py
+
+      - name: Run integration audit
+        run: python3 scripts/audit_integration.py
+
+      - name: Commit drift (if any)
+        run: |
+          git config user.name  "devosnt-os-bot"
+          git config user.email "bot@devosnt.local"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No drift."
+          else
+            git commit -m "chore: nightly snapshot $(date -u +%Y-%m-%d)" \
+                       -m "Source: Multica workspace devosnt @ $(date -u +%H:%MZ)"
+            git push
+          fi
