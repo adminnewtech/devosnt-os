@@ -32,13 +32,19 @@ jobs:
           MULTICA_TOKEN: ${{ secrets.MULTICA_TOKEN }}
         run: |
           if [ -z "$MULTICA_TOKEN" ]; then
-            echo "::warning::MULTICA_TOKEN not set — skipping live sync, will re-render from existing snapshots only."
+            echo "::warning::MULTICA_TOKEN not set — render-only from committed snapshots."
             echo "RENDER_ONLY=1" >> $GITHUB_ENV
             exit 0
           fi
-          # Install Multica CLI (placeholder — replace with real install command when public)
-          # curl -fsSL https://multica.dev/install | bash
-          echo "Multica CLI install step — pinned to installer URL"
+          # TODO: replace with the public Multica CLI installer when it ships.
+          # For now the CLI is only available on Multica runtime hosts; the
+          # devosnt runtime pushes fresh snapshots/raw/*.json on its own cadence,
+          # and this workflow simply re-renders + audits from whatever was
+          # last committed.
+          if ! command -v multica >/dev/null 2>&1; then
+            echo "::notice::multica CLI not installable on GH runner yet — render-only from committed snapshots."
+            echo "RENDER_ONLY=1" >> $GITHUB_ENV
+          fi
 
       - name: Snapshot workspace JSON
         if: env.RENDER_ONLY != '1'
