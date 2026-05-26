@@ -50,7 +50,7 @@
   {
     "created_at": "2026-05-25T10:24:11Z",
     "description": "Deployment runbooks, environment setup, release notes, rollback plans, user guides, admin guides, handover checklists.",
-    "done_count": 2,
+    "done_count": 1,
     "icon": "🚀",
     "id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
     "issue_count": 5,

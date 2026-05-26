@@ -9,7 +9,7 @@
 | 🏗️ | [04 - Architecture Database API](./04---architecture-database-api.md) | 3 | 3 | Tech stack, database schemas, API contracts, auth model, integrations, ERDs, ADR |
 | ⚙️ | [05 - Parallel Build](./05---parallel-build.md) | 6 | 5 | Frontend, backend, mobile, integrations, automation, coding tasks executed in pa |
 | 🛡️ | [06 - QA Security Performance](./06---qa-security-performance.md) | 2 | 2 | Test plans, bug reports, security reviews, performance tests, permissions valida |
-| 🚀 | [07 - Deploy Documentation Handover](./07---deploy-documentation-handover.md) | 5 | 2 | Deployment runbooks, environment setup, release notes, rollback plans, user guid |
+| 🚀 | [07 - Deploy Documentation Handover](./07---deploy-documentation-handover.md) | 5 | 1 | Deployment runbooks, environment setup, release notes, rollback plans, user guid |
 | 📚 | [08 - Skill Library](./08---skill-library.md) | 2 | 1 | Reusable skills, app templates, prompt templates, workflow templates — the works |
 | 🔬 | [09 - Research Intelligence](./09---research-intelligence.md) | 1 | 1 | Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice |
 | 📱 | [APP — Android Attendance](./app-android-attendance.md) | 0 | 0 | App Hub for the Android Attendance app (parent: DEV-25). Per the App Hub Model ( |
