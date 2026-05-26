@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-26T02:01:42.771274+00:00_
+_Generated: 2026-05-26T03:03:49.084797+00:00_
 
 ## Health Summary
 
@@ -12,43 +12,57 @@ _Generated: 2026-05-26T02:01:42.771274+00:00_
 | empty_squads | 0 |
 | squads_without_leader | 0 |
 | inactive_autopilots | 0 |
-| missing_required_autopilots | 3 |
-| missing_projects | 9 |
+| missing_required_autopilots | 0 |
+| missing_projects | 0 |
 | blocked_issues | 2 |
 | in_review_parent_count | 3 |
-| agents_outside_squad_preview | 0 |
+| agents_outside_squad_preview | 16 |
 
 ## Coverage Matrix
 
-- **Agents:** 0 (with skills: 0, without: 0)
-- **Skills:** 0 (owned: 0, orphan: 0)
-- **Squads:** 0 (active members: 0)
-- **Projects:** 0 (pipeline gaps: 9)
-- **Autopilots:** 0 (active: 0)
+- **Agents:** 36 (with skills: 36, without: 0)
+- **Skills:** 102 (owned: 102, orphan: 0)
+- **Squads:** 9 (active members: 9)
+- **Projects:** 11 (pipeline gaps: 0)
+- **Autopilots:** 4 (active: 4)
 
-## Verdict: RED 🔴 — 12 errors, 2 warnings
+## Verdict: YELLOW ⚠️ — 2 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
-| 🔴 ERROR | `autopilot.missing` | Required autopilot `Factory Pulse — Auto-route & Unblock` is missing | Re-create with `multica autopilot create` |
-| 🔴 ERROR | `autopilot.missing` | Required autopilot `Factory Health Daily Audit` is missing | Re-create with `multica autopilot create` |
-| 🔴 ERROR | `autopilot.missing` | Required autopilot `Skill Improvement Weekly Loop` is missing | Re-create with `multica autopilot create` |
-| 🔴 ERROR | `project.missing` | Pipeline project `00 - Factory Brain` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `01 - App Requests` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `02 - Product Specs` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `03 - UX UI Design System` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `04 - Architecture Database API` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `05 - Parallel Build` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `06 - QA Security Performance` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `07 - Deploy Documentation Handover` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
-| 🔴 ERROR | `project.missing` | Pipeline project `08 - Skill Library` is missing | Recreate to keep IDEA→DEPLOYED flow intact |
 | 🟡 WARN | `issue.blocked` | DEV-40 blocked: User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendan | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-39 blocked: Deployment Plan + Runbook — Android Attendance App | Review blocker — autopilot caps at 3 retries |
+| 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `api-architect` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `integration-architect` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `backend-engineer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `full-stack-engineer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `mobile-engineer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `security-auditor` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `performance-tester` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `release-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `documentation-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `prompt-optimizer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `memory-curator` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `docs-analyst` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `tool-evaluator` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 
 ## Top skills by adoption
 
+- `agent-self-healing-policy` — 5 owner(s): ceo, sprint-commander, claude-code-lead-developer, skill-builder, prompt-optimizer
+- `wcag-accessibility-checklist` — 5 owner(s): quality-gate-manager, ux-architect, ui-designer, frontend-engineer, qa-engineer
+- `i18n-multilang-setup` — 5 owner(s): ux-architect, ui-designer, arabic-rtl-experience-agent, frontend-engineer, mobile-engineer
+- `agentic-codegen-loop` — 5 owner(s): claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer
+- `api-contract-designer` — 4 owner(s): ceo, solution-architect, api-architect, backend-engineer
+- `auth-permission-matrix` — 4 owner(s): ceo, solution-architect, database-architect, security-auditor
+- `cross-project-pattern-extractor` — 4 owner(s): ceo, skill-builder, memory-curator, research-scout
+- `deployment-checklist` — 4 owner(s): ceo, deployment-engineer, environment-manager, release-manager
+- `reusable-template-extractor` — 4 owner(s): ceo, claude-code-lead-developer, skill-builder, template-builder
+- `monitoring-alerting-setup` — 4 owner(s): workspace-operations-manager, performance-tester, deployment-engineer, environment-manager
 
 ## Self-improvement loop status
 

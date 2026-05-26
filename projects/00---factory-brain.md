@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 15 (done: 14)
+- **Issues:** 16 (done: 14)
 
 ## Description
 
@@ -13,6 +13,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-37 | ADR-002 — App Hub Model (per-app project + repo + codegraph + local-first lifecy | `in_review` | high |
+| DEV-44 | Factory Health Audit — 2026-05-26 | `in_progress` | none |
 
 ## Recent Done
 
