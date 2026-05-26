@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-26T06:04:13.883717+00:00_
+_Generated: 2026-05-26T08:03:08.353432+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-05-26T06:04:13.883717+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 2 |
+| blocked_issues | 3 |
 | in_review_parent_count | 4 |
 | agents_outside_squad_preview | 16 |
 
@@ -26,12 +26,13 @@ _Generated: 2026-05-26T06:04:13.883717+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 4 (active: 4)
 
-## Verdict: YELLOW ⚠️ — 2 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 3 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-42 blocked: Sideloadable Demo APK + Self-hosted Demo Backend — Android A | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-40 blocked: User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendan | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-39 blocked: Deployment Plan + Runbook — Android Attendance App | Review blocker — autopilot caps at 3 retries |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

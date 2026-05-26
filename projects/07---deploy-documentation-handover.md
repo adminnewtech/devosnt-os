@@ -14,7 +14,7 @@ Deployment runbooks, environment setup, release notes, rollback plans, user guid
 |---|---|---|---|
 | DEV-39 | Deployment Plan + Runbook — Android Attendance App | `blocked` | high |
 | DEV-40 | User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendance App | `blocked` | high |
-| DEV-42 | Sideloadable Demo APK + Self-hosted Demo Backend — Android Attendance App (Ready | `in_progress` | urgent |
+| DEV-42 | Sideloadable Demo APK + Self-hosted Demo Backend — Android Attendance App (Ready | `blocked` | urgent |
 | DEV-43 | Build local debug APK from attendance-app/ — wired to DEV-42 demo backend | `in_review` | urgent |
 
 ## Recent Done
