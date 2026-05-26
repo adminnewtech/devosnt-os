@@ -13,7 +13,7 @@
       "identifier": "DEV-43",
       "labels": [],
       "metadata": {
-        "retry_log": 1
+        "retry_log": 3
       },
       "number": 43,
       "parent_issue_id": "2ad5f42d-1c32-48ad-aff8-5b9c071c5db5",
@@ -21,9 +21,9 @@
       "priority": "urgent",
       "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Build local debug APK from attendance-app/ — wired to DEV-42 demo backend",
-      "updated_at": "2026-05-25T22:49:58Z",
+      "updated_at": "2026-05-25T23:55:28Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -39,8 +39,9 @@
       "labels": [],
       "metadata": {
         "admin_web_url": "https://michael-apparently-gpl-repairs.trycloudflare.com",
+        "apk_download_url": "https://static.multica.ai/workspaces/6ab51ea8-1c35-46e7-a387-961e2877f3cf/019e618f-ceff-7e8e-ac01-484c7ac665d0.apk",
         "demo_backend_url": "https://diversity-start-oliver-mason.trycloudflare.com",
-        "pipeline_status": "backend-live: supabase running, tunnel up, seed complete. Waiting for APK from mobile-engineer.",
+        "pipeline_status": "demo-apk-ready: attendance-demo-v0.1.0.apk uploaded, JS bundle embedded, v1+v2 signed, 91MB",
         "retry_log": 1
       },
       "number": 42,
@@ -49,9 +50,9 @@
       "priority": "urgent",
       "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Sideloadable Demo APK + Self-hosted Demo Backend — Android Attendance App (Ready-to-test)",
-      "updated_at": "2026-05-25T23:03:28Z",
+      "updated_at": "2026-05-25T23:55:57Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -190,14 +191,14 @@
       "identifier": "DEV-36",
       "labels": [],
       "metadata": {
-        "audit_verdict": "YELLOW",
+        "audit_verdict": "RED",
         "decision": "App Hub Model adopted (ADR-002/DEV-37). Factory Pulse v3 live (every 15min). GitHub linked via gh CLI as adminnewtech with scopes repo+workflow+read:org+gist — sufficient for App Hub bootstrap on personal account (no newtechkw org exists; repos owned by adminnewtech).",
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-05-25T22:02:14Z",
+        "kb_sync_status": "red@2026-05-25T23:04:56Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
-        "pipeline_status": "demo-apk-dispatched: DEV-42/DEV-43 producing sideloadable APK with self-hosted demo backend; production-grade APK still gated on Firebase + Supabase Cloud + GitHub repo"
+        "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
       "number": 36,
       "parent_issue_id": null,
@@ -207,7 +208,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-25T22:38:04Z",
+      "updated_at": "2026-05-25T23:04:58Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -478,7 +479,7 @@
         "integration_branch": "integrate",
         "lifecycle_phase": "build",
         "local_run_command": "supabase start \u0026\u0026 pnpm dev (web) || expo start (mobile)",
-        "pipeline_status": "build-demo-apk-dispatched: DEV-42 (deployment-engineer, demo backend) + DEV-43 (mobile-engineer, APK build) parallel; ETA 60-90 min for first installable demo APK",
+        "pipeline_status": "demo-apk-ready",
         "routing_decision": "Parallel fan-out resumed: DEV-33 on Codex runtime; DEV-39/40/41 created and dispatched in parallel (don't depend on mobile build). Only hard external blockers: Firebase project (DEV-35) + GitHub repo PAT (App Hub bootstrap).",
         "waiting_on": "admin: Firebase project provisioning required for DEV-35 (Push Notifications)"
       },
@@ -490,7 +491,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Android Attendance App — تطبيق حضور وانصراف متكامل (one-prompt-to-app)",
-      "updated_at": "2026-05-25T22:49:54Z",
+      "updated_at": "2026-05-25T23:49:34Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

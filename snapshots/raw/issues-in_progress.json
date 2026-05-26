@@ -1,61 +1,7 @@
 {
   "has_more": false,
-  "issues": [
-    {
-      "assignee_id": "f49d7a36-7044-4be5-99ff-6f0ac8187f77",
-      "assignee_type": "agent",
-      "created_at": "2026-05-25T22:37:58Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Goal\nTake the existing `attendance-app/` Expo source (from [DEV-33](mention://issue/f76d10de-667b-48f8-ae1b-d3baa473fee5)) and produce a signed, sideloadable `attendance-demo-v0.1.0.apk` wired to the demo Supabase URL deployment-engineer publishes on parent [DEV-42](mention://issue/2ad5f42d-1c32-48ad-aff8-5b9c071c5db5).\n\n## Coordination\n- deployment-engineer (on [DEV-42](mention://issue/2ad5f42d-1c32-48ad-aff8-5b9c071c5db5)) will post `demo_backend_url` as a metadata key + comment as soon as it's live. **Poll that issue every 5 min** until the URL appears, then proceed.\n- Do NOT block on Firebase. Set `FCM_ENABLED=false` in `.env.production` — already supported by the FCM registration module (graceful no-op).\n- Do NOT block on EAS / Expo cloud. Local build only.\n\n## Build steps\n1. `git clone` or restore the attendance-app worktree (check the project resource on App Hub `09e6cfd3-d45e-4225-a494-2e3400b6983c`). If unrecoverable, regenerate the scaffold from [DEV-33](mention://issue/f76d10de-667b-48f8-ae1b-d3baa473fee5) description — the AC list is the spec.\n2. Install Android SDK 34 + build-tools 34.0.0 + platform-tools via `sdkmanager` (one-off). Java 17 is on the host already.\n3. `expo prebuild --platform android --clean`\n4. Edit `android/app/build.gradle` to ensure `versionCode 1`, `versionName \"0.1.0-demo\"`, applicationId `com.newtechkw.attendance.demo` (suffix `.demo` to allow side-by-side with future prod).\n5. Generate debug keystore (or use the one shipped by `expo prebuild`): `keytool -genkey -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname \"CN=Demo,OU=NewTech,O=NewTech,L=Kuwait,ST=KW,C=KW\"`\n6. `cd android \u0026\u0026 ./gradlew assembleRelease` (release variant signed with debug keystore — fine for sideload).\n7. Output: `android/app/build/outputs/apk/release/app-release.apk` → rename to `attendance-demo-v0.1.0.apk`.\n8. Attach the APK to **[DEV-42](mention://issue/2ad5f42d-1c32-48ad-aff8-5b9c071c5db5)** via `multica issue comment add ... --attachment ./attendance-demo-v0.1.0.apk`.\n9. Smoke test: install on Android emulator (API 34, x86_64) via `adb install -r`, launch, confirm login screen renders in RTL Arabic.\n\n## Acceptance Criteria\n- [ ] APK file ≤ 60 MB\n- [ ] `adb install` succeeds on a fresh emulator\n- [ ] App launches without crash; login screen visible in Arabic RTL\n- [ ] Attempting login with seeded `super_admin@diwan.demo / Demo2026!` returns a session token from the demo backend\n\n## Self-heal\n- Two `gradle assembleRelease` failures with the same error → swap to `npx eas-cli build --platform android --profile preview --local` (still local, no cloud) before escalating.\n- If Android SDK install fails on this runtime, escalate to [@ceo](mention://agent/d9f942b9-e245-4e28-99eb-8f12fbebc2c3) with the exact error — we'll swap to a runtime that has it pre-installed.\n\n## DoD\nAPK attached to [DEV-42](mention://issue/2ad5f42d-1c32-48ad-aff8-5b9c071c5db5) + smoke-test screenshot + status flipped to `in_review`. CEO picks it up from there and pushes to user.",
-      "due_date": null,
-      "id": "585eee66-2638-4dc8-8a61-6f6dab977c07",
-      "identifier": "DEV-43",
-      "labels": [],
-      "metadata": {
-        "retry_log": 1
-      },
-      "number": 43,
-      "parent_issue_id": "2ad5f42d-1c32-48ad-aff8-5b9c071c5db5",
-      "position": 0,
-      "priority": "urgent",
-      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
-      "start_date": null,
-      "status": "in_progress",
-      "title": "Build local debug APK from attendance-app/ — wired to DEV-42 demo backend",
-      "updated_at": "2026-05-25T22:49:58Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "296b1701-bb8f-467e-b244-89149b255841",
-      "assignee_type": "agent",
-      "created_at": "2026-05-25T22:37:21Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Goal (single sentence)\nShip the user a downloadable, installable **`.apk` that runs on a clean Android device today**, backed by a self-hosted demo Supabase + stubbed FCM, so [admin@newtechkw.com](mention://member/0c06df4b-79c1-44d4-a0a0-a822d82ae6f4) can perform full UI / offline / RTL / golden-path testing without waiting for paid resources.\n\n## Why now\nUser asked on [DEV-36](mention://issue/e60d5be5-b9dd-48aa-b949-28286ea80f1b) (parent comment `8f6ce1bf`) for the complete app ready for full Android testing **now**. DEV-33 is code-done, QA-gate-passed (13/13 tests), but no APK exists yet. External-credential ask is in flight in parallel; this issue is the **action path that does NOT wait on the user**.\n\n## Inputs (already available)\n- React Native Expo source from [DEV-33](mention://issue/f76d10de-667b-48f8-ae1b-d3baa473fee5) (in mobile-engineer's last worktree — re-checkout from the App Hub project `09e6cfd3-d45e-4225-a494-2e3400b6983c` if cleared)\n- Schema + migrations from [DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76)\n- Edge Functions from [DEV-32](mention://issue/bb36dbf3-e989-4e10-bf4e-f0756c5eef37)\n- HR Admin Web from [DEV-34](mention://issue/3f3a89bb-3322-4f87-bd97-f6e89cf63d9b) (separate preview URL acceptable)\n- Deploy plan from [DEV-39](mention://issue/b2fc5cb4-f977-421f-95be-6d9e18738b22) `DEPLOY.md` + `RUNBOOK.md`\n\n## Expected Output\n1. **`attendance-demo-v0.1.0.apk`** — debug-signed, sideloadable, installable on Android API 24+.\n   - Embedded `SUPABASE_URL` + `SUPABASE_ANON_KEY` pointing at a **self-hosted Supabase instance** (Docker compose on this runtime host, exposed via Cloudflare tunnel — no paid account needed).\n   - FCM stubbed (`FCM_ENABLED=false`) → notifications surface as in-app toasts; no Firebase project required.\n   - Embedded demo seed: 1 tenant (شركة الديوان للتجارة), 3 offices (Kuwait City / Salmiya / Hawalli), 5 shifts, 10 employees, 1 super_admin + 2 hr_manager + 7 employees with pre-set passwords.\n2. **`HOW_TO_INSTALL.ar.md`** — Kuwaiti Arabic walkthrough: enable \"تطبيقات من مصادر غير معروفة\", install APK, login as either `super_admin@diwan.demo / Demo2026!` or `employee01@diwan.demo / Demo2026!`, click through full golden path.\n3. **Admin web preview URL** — Vercel preview (`vercel deploy` without `--prod`, free tier OK with existing account or a fresh email; if blocked, fall back to ngrok of local `pnpm dev`).\n4. **Self-hosted Supabase backend URL** posted as `demo_backend_url` metadata on this issue. Must stay live ≥ 7 days for user testing.\n5. **APK attached** to this issue as a file, plus a public download mirror (Cloudflare R2 / temp file.io / GitHub release on `adminnewtech` if PAT exists) for easy phone download.\n\n## Acceptance Criteria\n- [ ] APK installs on a clean Android emulator (API 24+) without errors\n- [ ] Login → Check-In (GPS happy path with seeded office geofence) → Check-Out → History → Leave Request all work end-to-end\n- [ ] Offline test passes: airplane mode → punch → reconnect → syncs without duplicate\n- [ ] RTL Arabic Kuwaiti layout is the default on first launch\n- [ ] Admin web preview URL is reachable and HR manager seed account can log in, see today's punches, approve a leave\n- [ ] `HOW_TO_INSTALL.ar.md` is genuinely Kuwaiti tone (not MSA), tested by [@arabic-rtl-experience-agent](mention://agent/7bcef3ff-a4d6-4ea3-866e-bdcc00b27576)\n- [ ] No secrets in the APK, source, or any committed artifact — only demo credentials labelled as demo\n\n## Build approach (recommended)\n- **No EAS / no Expo cloud build.** Use `expo prebuild` → local `./gradlew assembleRelease` with debug keystore (`-keystore debug.keystore -keyalg RSA -keysize 2048 -validity 10000 -keypass android -storepass android -dname \"CN=Demo\"`). Install Android SDK 34 + build-tools 34.0.0 + platform-tools via `sdkmanager` if not present on the runtime host (one-time cost).\n- **Self-hosted Supabase via `supabase/postgres` + `supabase/gotrue` + `supabase/postgrest` + `supabase/storage-api` containers**, all from the official `docker-compose` recipe. Exposed via Cloudflare tunnel (free, no card required).\n- **Apply migrations from [DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76) and Edge Functions from [DEV-32](mention://issue/bb36dbf3-e989-4e10-bf4e-f0756c5eef37) on the self-hosted instance**, then seed with `seed.sql` (deliverable in this task).\n\n## Dependencies\nNone blocking on user. All work happens on this runtime host or free-tier infra.\n\n## Risk\n- Self-hosted Supabase will not survive a runtime restart unless persisted to /opt/data — mount volumes and document the restart procedure in `RUNBOOK.md`.\n- Cloudflare tunnel free tier requires a `cloudflared` daemon — if not installable, fall back to `ngrok` (also free with a temp account).\n- APK signed with debug keystore CANNOT be uploaded to Play Store — that's fine, this is for sideloading only. Mark APK filename and the install guide with **\"DEMO BUILD — NOT FOR PLAY STORE\"**.\n\n## Definition of Done\nAPK link posted as a top-level comment on **[DEV-36](mention://issue/e60d5be5-b9dd-48aa-b949-28286ea80f1b)** (the user's parent thread) with: install instructions in Kuwaiti Arabic, demo accounts list, backend URL, preview URL for admin web, a 90-second test checklist, and a known-limitations note. `pipeline_status=demo-apk-ready` pinned on DEV-25 metadata once delivered.\n\n## Coordination\n- **deployment-engineer** (assignee) owns: self-hosted Supabase + Cloudflare tunnel + seed data + admin web preview URL + APK hosting mirror.\n- **mobile-engineer** (sub-task or peer dispatch): the actual APK build — `expo prebuild` → gradle assembleRelease — wired to the backend URL deployment-engineer provisions.\n- Coordinate via this thread; deployment-engineer pings mobile-engineer with the backend URL as soon as it's live so the APK build can embed it.\n\nSelf-heal: if `gradle assembleRelease` fails twice with the same error on this runtime, swap to `expo-cli` cloud build (anonymous EAS) before escalating. Document the swap in `retry_log` metadata.",
-      "due_date": null,
-      "id": "2ad5f42d-1c32-48ad-aff8-5b9c071c5db5",
-      "identifier": "DEV-42",
-      "labels": [],
-      "metadata": {
-        "admin_web_url": "https://michael-apparently-gpl-repairs.trycloudflare.com",
-        "demo_backend_url": "https://diversity-start-oliver-mason.trycloudflare.com",
-        "pipeline_status": "backend-live: supabase running, tunnel up, seed complete. Waiting for APK from mobile-engineer.",
-        "retry_log": 1
-      },
-      "number": 42,
-      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
-      "position": 0,
-      "priority": "urgent",
-      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
-      "start_date": null,
-      "status": "in_progress",
-      "title": "Sideloadable Demo APK + Self-hosted Demo Backend — Android Attendance App (Ready-to-test)",
-      "updated_at": "2026-05-25T23:03:28Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    }
-  ],
+  "issues": [],
   "limit": 50,
   "offset": 0,
-  "total": 2
+  "total": 0
 }
