@@ -13,7 +13,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-37 | ADR-002 — App Hub Model (per-app project + repo + codegraph + local-first lifecy | `in_review` | high |
-| DEV-44 | Factory Health Audit — 2026-05-26 | `in_progress` | none |
+| DEV-44 | Factory Health Audit — 2026-05-26 | `in_review` | none |
 
 ## Recent Done
 
