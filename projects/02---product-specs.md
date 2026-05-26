@@ -14,5 +14,4 @@ _(no open issues)_
 
 ## Recent Done
 
-- DEV-26 — PRD + MVP Scope + Permission Matrix — Android Attendance App
-- DEV-16 — Charter — 02 Product Specs
+_(none)_

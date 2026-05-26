@@ -1,17 +1,18 @@
 # Skills
 
-Total skills in `devosnt`: **102**
+Total skills in `devosnt`: **113**
 
 | Skill | Owners | Description |
 |---|---|---|
-| [ab-testing-framework](./ab-testing-framework.md) | `product-manager`, `release-manager` | Lightweight A/B testing wired to PostHog + feature flags. |
+| [ab-testing-framework](./ab-testing-framework.md) | `product-manager`, `release-manager`, `growth-lead`, `analytics-lead` | Lightweight A/B testing wired to PostHog + feature flags. |
 | [admin-console-builder](./admin-console-builder.md) | `full-stack-engineer` | Default internal admin console: tenants, users, impersonation, support actions, audit-boun |
 | [admin-guide-generator](./admin-guide-generator.md) | `documentation-agent` | Generate an end-user admin guide (EN + AR-KW when needed). |
 | [agent-output-quality-review](./agent-output-quality-review.md) | `quality-gate-manager`, `memory-curator` | Score an agent's output against a 6-point rubric and decide accept/revise/reject. |
 | [agent-self-healing-policy](./agent-self-healing-policy.md) | `ceo`, `sprint-commander`, `claude-code-lead-developer`, `skill-builder`, `prompt-optimizer` | Auto-retry failed agent runs with a different runtime/model and surface only after two fai |
 | [agentic-codegen-loop](./agentic-codegen-loop.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer` | Default codegen loop for build agents: read issue → write code → run tests → revise. |
 | [ai-chat-with-data](./ai-chat-with-data.md) | `full-stack-engineer` | Default RAG-on-app-data: chat over the tenant's own records with safe retrieval. |
-| [analytics-tracking-setup](./analytics-tracking-setup.md) | `frontend-engineer` | Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing. |
+| [analytics-tracking-setup](./analytics-tracking-setup.md) | `frontend-engineer`, `growth-lead`, `seo-specialist`, `analytics-lead`, `onboarding-designer` | Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing. |
+| [android-apk-local-builder](./android-apk-local-builder.md) | `mobile-engineer` | Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo pr |
 | [api-contract-designer](./api-contract-designer.md) | `ceo`, `solution-architect`, `api-architect`, `backend-engineer` | Design the HTTP API contract for an app and produce an OpenAPI 3.1 document. |
 | [api-sdk-generator](./api-sdk-generator.md) | `api-architect`, `documentation-agent`, `docs-analyst` | Auto-generate TS + Python SDKs from the OpenAPI spec for every shipped API. |
 | [api-versioning-strategy](./api-versioning-strategy.md) | `solution-architect`, `api-architect` | Default API versioning: /v1 routing, deprecation headers, sunset dates, parallel schemas. |
@@ -20,6 +21,7 @@ Total skills in `devosnt`: **102**
 | [app-scope-mvp-vs-production](./app-scope-mvp-vs-production.md) | `product-manager` | Split an app idea into MVP scope and Production scope with explicit non-goals. |
 | [audit-log-designer](./audit-log-designer.md) | `solution-architect`, `database-architect`, `backend-engineer`, `security-auditor` | Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff |
 | [auth-permission-matrix](./auth-permission-matrix.md) | `ceo`, `solution-architect`, `database-architect`, `security-auditor` | Produce the authoritative role × action permission matrix wired to RLS and route guards. |
+| [autonomous-test-fix-loop](./autonomous-test-fix-loop.md) | _(unowned)_ | After a build issue goes in_review, runs the QA test plan against the preview URL, creates |
 | [background-jobs-design](./background-jobs-design.md) | `solution-architect`, `backend-engineer` | Default background job system: pg-boss / BullMQ / inngest, with retries + DLQ. |
 | [backup-restore-planner](./backup-restore-planner.md) | `database-architect`, `environment-manager` | Daily backups, weekly restore drill, point-in-time recovery, per-tenant export. |
 | [booking-system-builder](./booking-system-builder.md) | `solution-architect` | Build a booking / appointment system from preset. |
@@ -44,10 +46,13 @@ Total skills in `devosnt`: **102**
 | [email-marketing-builder](./email-marketing-builder.md) | `solution-architect` | Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics |
 | [embeddings-semantic-search](./embeddings-semantic-search.md) | `database-architect`, `full-stack-engineer` | Default semantic search via pgvector. Embeddings + hybrid search + reranking. |
 | [error-tracking-setup](./error-tracking-setup.md) | `bug-hunter` | Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing. |
+| [external-blocker-escalation](./external-blocker-escalation.md) | _(unowned)_ | Single-shot consolidated escalation to admin when a build task is blocked on an external c |
 | [feature-flag-system](./feature-flag-system.md) | `release-manager` | Default feature flags + targeting rules + kill switches, Supabase-backed. |
+| [figma-to-ux-spec](./figma-to-ux-spec.md) | _(unowned)_ | Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design |
 | [file-upload-storage-design](./file-upload-storage-design.md) | `backend-engineer` | Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN. |
 | [gdpr-compliance-checklist](./gdpr-compliance-checklist.md) | `quality-gate-manager`, `security-auditor` | GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA. |
 | [github-research-workflow](./github-research-workflow.md) | `research-scout`, `github-analyst`, `docs-analyst` | Research GitHub for prior art before building (top repos, license, patterns). |
+| [growth-launch-plan](./growth-launch-plan.md) | `analytics-lead` | Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, |
 | [gym-system-builder](./gym-system-builder.md) | `solution-architect` | Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing. |
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
@@ -55,17 +60,21 @@ Total skills in `devosnt`: **102**
 | [incident-response-runbook](./incident-response-runbook.md) | `workspace-operations-manager`, `deployment-engineer` | Standard incident response: severity, comms, postmortem template. |
 | [inventory-system-builder](./inventory-system-builder.md) | `solution-architect` | Build an inventory management system (SKUs, stock, movements, counts) from preset. |
 | [kw-civil-id-validator](./kw-civil-id-validator.md) | `integration-architect` | Kuwait Civil ID validation + age/gender extraction + PACI integration helper. |
+| [landing-page-builder](./landing-page-builder.md) | `frontend-engineer`, `growth-lead`, `seo-specialist`, `content-writer-ar-en` | Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analyti |
 | [live-preview-deploys](./live-preview-deploys.md) | `claude-code-lead-developer`, `deployment-engineer`, `release-manager` | Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link. |
 | [lms-system-builder](./lms-system-builder.md) | `solution-architect` | Build an LMS (learning management system): courses, lessons, quizzes, certificates, progre |
 | [maintenance-system-builder](./maintenance-system-builder.md) | `solution-architect` | Build a maintenance / CMMS work-order system from preset. |
 | [marketplace-system-builder](./marketplace-system-builder.md) | `solution-architect` | Build a multi-vendor marketplace: vendors, products, orders, payouts, escrow, ratings. |
+| [mcp-server-evaluator](./mcp-server-evaluator.md) | `skill-builder` | Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject |
 | [mobile-app-planner](./mobile-app-planner.md) | `mobile-engineer` | Plan a React Native (Expo) companion or standalone mobile app. |
 | [monitoring-alerting-setup](./monitoring-alerting-setup.md) | `workspace-operations-manager`, `performance-tester`, `deployment-engineer`, `environment-manager` | Default monitoring: uptime, latency, error rate, with on-call paging. |
 | [multi-tenant-architecture](./multi-tenant-architecture.md) | `solution-architect`, `database-architect` | Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across or |
 | [nextjs-app-starter](./nextjs-app-starter.md) | `claude-code-lead-developer`, `frontend-engineer`, `full-stack-engineer` | Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton. |
+| [nextjs-supabase-builder](./nextjs-supabase-builder.md) | _(unowned)_ | Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS ver |
 | [notifications-multichannel-planner](./notifications-multichannel-planner.md) | `integration-architect` | Default multichannel notification system: email + SMS + push + WhatsApp + in-app. |
-| [onboarding-flow-builder](./onboarding-flow-builder.md) | `product-manager`, `ux-architect` | Default user onboarding: signup → verify → workspace setup → first value moment. |
-| [one-prompt-to-app](./one-prompt-to-app.md) | `ceo`, `product-manager` | Master orchestrator: turn a single raw user prompt into a deployed system end-to-end witho |
+| [onboarding-flow-builder](./onboarding-flow-builder.md) | `product-manager`, `ux-architect`, `growth-lead`, `content-writer-ar-en`, `onboarding-designer` | Default user onboarding: signup → verify → workspace setup → first value moment. |
+| [one-prompt-to-app](./one-prompt-to-app.md) | `ceo`, `product-manager`, `growth-lead` | Master orchestrator: turn a single raw user prompt into a deployed system end-to-end witho |
+| [parallel-issue-dispatcher](./parallel-issue-dispatcher.md) | _(unowned)_ | Auto-identify independent sub-issues within a parent and batch-promote all of them to --st |
 | [payment-subscription-builder](./payment-subscription-builder.md) | `integration-architect` | Default subscription billing: Stripe + KNet/MyFatoorah, plans, trials, dunning. |
 | [payment-workflow-planner](./payment-workflow-planner.md) | `integration-architect` | Plan a payment flow (provider, checkout, webhooks, refunds, reconciliation). |
 | [pdpl-kuwait-compliance](./pdpl-kuwait-compliance.md) | `quality-gate-manager`, `arabic-rtl-experience-agent`, `security-auditor` | Kuwait PDPL baseline: registration, consent, breach reporting, local storage where require |
@@ -92,7 +101,8 @@ Total skills in `devosnt`: **102**
 | [search-system-builder](./search-system-builder.md) | `solution-architect` | Default end-user search with autocomplete, typo tolerance, filters, facets. |
 | [security-review-checklist](./security-review-checklist.md) | `ceo`, `quality-gate-manager`, `security-auditor` | Block release of any user-visible feature that fails the 15-point security gate. |
 | [seed-data-factory](./seed-data-factory.md) | `qa-engineer`, `template-builder` | Default seed data generator per vertical so empty states are demoable from minute one. |
-| [seo-baseline-setup](./seo-baseline-setup.md) | `frontend-engineer` | Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang. |
+| [self-hosted-supabase-tunnel](./self-hosted-supabase-tunnel.md) | _(unowned)_ | Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), |
+| [seo-baseline-setup](./seo-baseline-setup.md) | `frontend-engineer`, `growth-lead`, `seo-specialist` | Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang. |
 | [shopify-dashboard-builder](./shopify-dashboard-builder.md) | `integration-architect` | Build a Shopify analytics + ops dashboard via the Admin API. |
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
@@ -100,6 +110,7 @@ Total skills in `devosnt`: **102**
 | [usability-test-script](./usability-test-script.md) | `product-manager`, `qa-engineer` | Default 5-user usability test script for any new feature before launch. |
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |
 | [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. |
+| [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |
 | [webhooks-framework-planner](./webhooks-framework-planner.md) | `api-architect`, `integration-architect`, `backend-engineer` | Default inbound + outbound webhook framework with signing, retries, and dead-letter queue. |
 | [whatsapp-automation-planner](./whatsapp-automation-planner.md) | `integration-architect` | Plan a WhatsApp Business / Cloud API automation. |

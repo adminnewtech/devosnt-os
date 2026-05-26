@@ -17,6 +17,7 @@ Next.js + TS + Tailwind frontend implementation with accessibility + responsive.
 - [`analytics-tracking-setup`](../skills/analytics-tracking-setup.md) — Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.
 - [`design-system-tokens-builder`](../skills/design-system-tokens-builder.md) — Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.
 - [`i18n-multilang-setup`](../skills/i18n-multilang-setup.md) — Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.
+- [`landing-page-builder`](../skills/landing-page-builder.md) — Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in <1 day.
 - [`nextjs-app-starter`](../skills/nextjs-app-starter.md) — Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.
 - [`pwa-offline-first`](../skills/pwa-offline-first.md) — Default PWA setup: installable, offline, push, background sync.
 - [`react-dashboard-builder`](../skills/react-dashboard-builder.md) — Build a responsive role-aware dashboard shell (sidebar + topbar + content).

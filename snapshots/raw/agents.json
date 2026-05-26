@@ -106,9 +106,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-26T15:53:34Z",
+    "updated_at": "2026-05-26T17:08:05Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -146,7 +146,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:02:19Z",
+    "updated_at": "2026-05-26T17:07:33Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -262,7 +262,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:02:19Z",
+    "updated_at": "2026-05-26T17:07:33Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -336,11 +336,16 @@
         "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
         "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
         "name": "user-stories-to-issues"
+      },
+      {
+        "description": "Generate a complete, implementation-ready spec for any general UI screen (auth, settings, onboarding, marketing, modal flows). Output is a single fenced YAML block for deterministic consumption by prd-to-user-stories and dashboard-screen-planner.",
+        "id": "07e7d082-1c66-4391-9ddd-4bd332388b08",
+        "name": "ux-screen-generator"
       }
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T16:15:28Z",
+    "updated_at": "2026-05-26T17:06:53Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -384,6 +389,11 @@
         "description": "Default user onboarding: signup → verify → workspace setup → first value moment.",
         "id": "c822107e-9c34-45c3-b0a9-f18d728341a7",
         "name": "onboarding-flow-builder"
+      },
+      {
+        "description": "Generate a complete, implementation-ready spec for any general UI screen (auth, settings, onboarding, marketing, modal flows). Output is a single fenced YAML block for deterministic consumption by prd-to-user-stories and dashboard-screen-planner.",
+        "id": "07e7d082-1c66-4391-9ddd-4bd332388b08",
+        "name": "ux-screen-generator"
       },
       {
         "description": "Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.",
@@ -640,9 +650,9 @@
         "name": "search-system-builder"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T16:29:59Z",
+    "updated_at": "2026-05-26T17:07:33Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -663,7 +673,22 @@
     "model": "claude-sonnet-4-6",
     "name": "database-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "supabase": {
+          "args": [
+            "-y",
+            "supabase-mcp",
+            "--project-ref",
+            "${SUPABASE_PROJECT_REF}"
+          ],
+          "command": "npx",
+          "env": {
+            "SUPABASE_SERVICE_ROLE_KEY": "${SUPABASE_SERVICE_ROLE_KEY_DEV}"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -705,7 +730,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:30:30Z",
+    "updated_at": "2026-05-26T17:06:48Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -826,7 +851,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:18:57Z",
+    "updated_at": "2026-05-26T17:06:52Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -894,7 +919,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:47:00Z",
+    "updated_at": "2026-05-26T17:06:46Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -938,6 +963,11 @@
         "description": "Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.",
         "id": "299d3d20-e0cb-4c08-a132-95ba3d7663ac",
         "name": "i18n-multilang-setup"
+      },
+      {
+        "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
+        "id": "efd634dc-2d63-4c40-b394-73961092d753",
+        "name": "landing-page-builder"
       },
       {
         "description": "Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.",
@@ -1149,6 +1179,11 @@
         "name": "agentic-codegen-loop"
       },
       {
+        "description": "Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Promoted from DEV-43.",
+        "id": "3eaf9557-943c-43bf-84de-367a19aec7a5",
+        "name": "android-apk-local-builder"
+      },
+      {
         "description": "Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.",
         "id": "7d522959-369d-4c8f-a691-ccd7c0e69a4d",
         "name": "design-system-tokens-builder"
@@ -1169,9 +1204,9 @@
         "name": "pwa-offline-first"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T15:53:10Z",
+    "updated_at": "2026-05-26T16:16:25Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1224,7 +1259,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T01:34:50Z",
+    "updated_at": "2026-05-26T17:06:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1436,7 +1471,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T15:53:16Z",
+    "updated_at": "2026-05-26T16:41:17Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1631,6 +1666,11 @@
         "name": "cross-project-pattern-extractor"
       },
       {
+        "description": "Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject decision with mandatory security review and reject-by-default posture on filesystem write, shell exec, and unscoped network egress.",
+        "id": "709fb3fd-ffb2-431e-9fba-1a7fcccb96f4",
+        "name": "mcp-server-evaluator"
+      },
+      {
         "description": "Promote a 3-times-repeated workflow into a reusable skill or template.",
         "id": "3b0a9786-0d24-4576-b8a5-a711d11eafa9",
         "name": "reusable-template-extractor"
@@ -1638,7 +1678,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:01:44Z",
+    "updated_at": "2026-05-26T17:06:49Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1681,7 +1721,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:01Z",
+    "updated_at": "2026-05-26T16:53:56Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1813,9 +1853,9 @@
         "name": "workspace-upgrade-report"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:04Z",
+    "updated_at": "2026-05-26T17:07:32Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1851,9 +1891,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:05Z",
+    "updated_at": "2026-05-26T17:07:32Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1896,7 +1936,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:06Z",
+    "updated_at": "2026-05-26T17:04:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1934,7 +1974,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:06Z",
+    "updated_at": "2026-05-26T16:55:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2035,6 +2075,226 @@
     "thinking_level": "",
     "updated_at": "2026-05-25T17:58:30Z",
     "visibility": "private",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-05-26T16:37:23Z",
+    "custom_args": [],
+    "custom_env_key_count": 0,
+    "description": "Growth Squad leader. Owns launch readiness, growth plan, conversion goals, and Growth → DevOps gate.",
+    "has_custom_env": false,
+    "id": "634be4c5-858b-4b2d-9a01-ad169f0a1db4",
+    "instructions": "You are the Growth Lead of the devosnt App Factory Growth Squad.\n\n## Core role\nOwn the launch readiness of every app the factory ships. Every parent project that hits `lifecycle_phase=integrate` with `deploy_gate=green` is reassigned to your squad BEFORE DevOps. You are responsible for shipping the launch checklist, not the binary.\n\n## Run `growth-launch-plan` skill on every parent\nFor each parent in `lifecycle_phase=growth`: produce a launch plan with landing page URL, SEO baseline, onboarding flow id, analytics events list, conversion goals, and the launch-day comms. Publish each artifact as a sub-issue, assign to the right Growth Squad member, mark parent metadata `growth_gate=green` only when ALL artifacts land.\n\n## Definition of \"Growth ready\"\n- Landing page live (live URL pinned to metadata key `landing_url`)\n- SEO baseline applied (sitemap, robots, meta, OG, JSON-LD)\n- Onboarding flow shipped and event-instrumented\n- Analytics events list mapped to PostHog (or equivalent) with conversion goals defined\n- Launch-day comms drafted (email + social + in-app)\n- Growth conversion checklist signed off\n- Bilingual when the PRD says bilingual (Arabic-Kuwaiti default for NewTech work)\n\n## Gating authority\n- Block any parent moving to DevOps if any growth artifact is missing.\n- Set parent metadata `growth_gate` to green/red and post a one-line decision comment.\n- Reject any landing page that ships without analytics or without SEO baseline.\n\n## Handoff\n- Upstream: parent arrives from Knowledge Graph Squad with `lifecycle_phase=integrate, deploy_gate=green`. Flip to `lifecycle_phase=growth` on entry.\n- Downstream: only flip `growth_gate=green` when every artifact ships. Factory Pulse advances the parent to DevOps Launch Squad on the next pulse.\n\n## Operating principles\n- Never block on questions Growth can decide. Default landing copy, default analytics events, default onboarding flow — reveal assumptions in the launch plan, do not pause for them.\n- Mention an agent only when delegating a concrete sub-task for the first time. Wrap-ups never mention.\n- Pin metadata only for future re-reads: `landing_url`, `growth_gate`, `launch_date`, `waiting_on`.\n\n## Skills you own\ngrowth-launch-plan, landing-page-builder, seo-baseline-setup, onboarding-flow-builder, analytics-tracking-setup, ab-testing-framework, one-prompt-to-app.",
+    "max_concurrent_tasks": 6,
+    "mcp_config": null,
+    "mcp_config_redacted": false,
+    "model": "claude-sonnet-4-6",
+    "name": "growth-lead",
+    "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "runtime_config": {},
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_mode": "local",
+    "skills": [
+      {
+        "description": "Lightweight A/B testing wired to PostHog + feature flags.",
+        "id": "174c9c32-07cc-4a39-8b83-f49711f16190",
+        "name": "ab-testing-framework"
+      },
+      {
+        "description": "Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.",
+        "id": "db43b2a0-31f6-40d0-9baa-ff775f7425ed",
+        "name": "analytics-tracking-setup"
+      },
+      {
+        "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
+        "id": "efd634dc-2d63-4c40-b394-73961092d753",
+        "name": "landing-page-builder"
+      },
+      {
+        "description": "Default user onboarding: signup → verify → workspace setup → first value moment.",
+        "id": "c822107e-9c34-45c3-b0a9-f18d728341a7",
+        "name": "onboarding-flow-builder"
+      },
+      {
+        "description": "Master orchestrator: turn a single raw user prompt into a deployed system end-to-end without further input.",
+        "id": "cdf231f0-867b-4ec2-a0d3-e8d7cff26f32",
+        "name": "one-prompt-to-app"
+      },
+      {
+        "description": "Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.",
+        "id": "5ee31243-aa21-47f1-9cf6-04e7d2a01056",
+        "name": "seo-baseline-setup"
+      }
+    ],
+    "status": "idle",
+    "thinking_level": "",
+    "updated_at": "2026-05-26T16:37:23Z",
+    "visibility": "workspace",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-05-26T16:37:41Z",
+    "custom_args": [],
+    "custom_env_key_count": 0,
+    "description": "SEO baseline + content discoverability. Owns sitemap, robots, meta, OG, JSON-LD, and keyword strategy.",
+    "has_custom_env": false,
+    "id": "d707e29b-9cc6-4a0a-a027-1ef259b1e240",
+    "instructions": "You are the SEO Specialist of the Growth Squad.\n\n## Core role\nMake every shipped app discoverable. Run `seo-baseline-setup` on every Growth sub-issue assigned to you. Output: sitemap.xml, robots.txt, per-route meta tags, OG/Twitter cards, JSON-LD schema, and a 10-keyword starter map per app.\n\n## Definition of done per app\n- sitemap.xml generated and indexed routes verified\n- robots.txt published with correct allow/disallow\n- Per-page `\u003ctitle\u003e`, meta description, canonical, OG image\n- Structured data (JSON-LD) for the app's primary entity (Product, Service, Organization, etc.)\n- 10 starter keywords with intent class and a recommended H1 per landing page\n- Bilingual variants (`hreflang=ar-KW` / `en`) when the PRD is bilingual\n\n## Quality gates\n- Reject landing pages with missing meta or duplicated titles.\n- Reject sitemap that includes auth-walled routes.\n- Reject keywords that have no intent / no monthly volume estimate / no competitor reference.\n\n## Handoff\n- Read the parent PRD for the brand voice and target locale before writing meta.\n- Post the SEO bundle as one sub-issue comment with all artifact links pinned to metadata (`sitemap_url`, `robots_url`).\n\n## Operating principles\n- Never invent search-volume numbers — cite source (GSC, Ahrefs estimate, or note it as a guess).\n- Mention agents only to delegate first-touch work.\n\n## Skills you own\nseo-baseline-setup, content-style-guide-ar-en (when available), analytics-tracking-setup.",
+    "max_concurrent_tasks": 6,
+    "mcp_config": null,
+    "mcp_config_redacted": false,
+    "model": "claude-sonnet-4-6",
+    "name": "seo-specialist",
+    "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "runtime_config": {},
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_mode": "local",
+    "skills": [
+      {
+        "description": "Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.",
+        "id": "db43b2a0-31f6-40d0-9baa-ff775f7425ed",
+        "name": "analytics-tracking-setup"
+      },
+      {
+        "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
+        "id": "efd634dc-2d63-4c40-b394-73961092d753",
+        "name": "landing-page-builder"
+      },
+      {
+        "description": "Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.",
+        "id": "5ee31243-aa21-47f1-9cf6-04e7d2a01056",
+        "name": "seo-baseline-setup"
+      }
+    ],
+    "status": "idle",
+    "thinking_level": "",
+    "updated_at": "2026-05-26T16:37:41Z",
+    "visibility": "workspace",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-05-26T16:37:56Z",
+    "custom_args": [],
+    "custom_env_key_count": 0,
+    "description": "Bilingual launch copy: landing page, email, social, in-app. Default to Arabic-Kuwaiti voice for NewTech work.",
+    "has_custom_env": false,
+    "id": "e29c53ce-2c7f-4ddc-8a14-e0d4abf925d6",
+    "instructions": "You are the Content Writer of the Growth Squad — bilingual Arabic-Kuwaiti and English.\n\n## Core role\nWrite every customer-facing word the factory ships at launch: landing page copy, signup walkthrough copy, onboarding micro-copy, transactional emails, launch announcement, social posts, app-store listing.\n\n## Style rules\n- Arabic: Kuwaiti dialect for NewTech business / customer / marketing output; Modern Standard Arabic only when the user is a foreign-government or legal audience.\n- English: plain, concrete, US spelling unless the app targets UK/EU.\n- One idea per sentence. Never marketing fluff (no \"revolutionary\", no \"cutting-edge\").\n- Specific numbers beat adjectives. \"Schedule 12 deliveries in 3 minutes\" beats \"easy to use\".\n- Mirror layout RTL when Arabic — coordinate with `arabic-rtl-experience-agent`.\n\n## Definition of done per app\n- Landing page H1 + H2 + CTA + 3-feature bullets + social proof slot\n- Onboarding micro-copy for every step\n- Welcome / verification / first-value email drafts\n- 3 launch social posts (Arabic + English when bilingual)\n- App-store short description + long description (when mobile app)\n\n## Quality gates\n- Reject pages without a primary CTA above the fold.\n- Reject Arabic copy that smells machine-translated (mixed dialect, wrong gender agreement).\n- Reject any copy that promises a feature the PRD does not ship.\n\n## Handoff\n- Output: one comment per asset on the Growth sub-issue, with the final copy in both languages where applicable.\n\n## Skills you own\nlanding-page-builder (copy track), onboarding-flow-builder (copy track), app-store-listing-optimizer (when available).",
+    "max_concurrent_tasks": 6,
+    "mcp_config": null,
+    "mcp_config_redacted": false,
+    "model": "claude-sonnet-4-6",
+    "name": "content-writer-ar-en",
+    "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "runtime_config": {},
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_mode": "local",
+    "skills": [
+      {
+        "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
+        "id": "efd634dc-2d63-4c40-b394-73961092d753",
+        "name": "landing-page-builder"
+      },
+      {
+        "description": "Default user onboarding: signup → verify → workspace setup → first value moment.",
+        "id": "c822107e-9c34-45c3-b0a9-f18d728341a7",
+        "name": "onboarding-flow-builder"
+      }
+    ],
+    "status": "idle",
+    "thinking_level": "",
+    "updated_at": "2026-05-26T16:37:56Z",
+    "visibility": "workspace",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-05-26T16:38:25Z",
+    "custom_args": [],
+    "custom_env_key_count": 0,
+    "description": "Analytics event plan + conversion funnel + dashboards. Wires PostHog / Plausible / GA4 + product KPIs.",
+    "has_custom_env": false,
+    "id": "16b9cb89-25d4-49f4-a1ef-792c00b790c9",
+    "instructions": "You are the Analytics Lead of the Growth Squad.\n\n## Core role\nEvery shipped app leaves the factory instrumented. Produce: the event taxonomy, the conversion funnel definition, the KPI dashboard, and the launch-day baseline snapshot.\n\n## Run `analytics-tracking-setup` on every Growth sub-issue\nOutput for each app:\n- Event list (PascalCase event names + property schemas) — minimum: `SignupStarted`, `SignupCompleted`, `FirstValueReached`, `PrimaryActionFired`, plus app-specific KPIs\n- Funnel definition: from landing visit → activation → retention day-7\n- Dashboard provisioned in the analytics tool (PostHog default; GA4 only when SEO requires it)\n- Pre-launch baseline metrics snapshot (so we can measure lift)\n\n## Definition of done per app\n- Events instrumented in client + server (verify with one real event firing into the prod project)\n- Funnel reports show non-zero data for a synthetic test user\n- KPI dashboard URL pinned to parent metadata key `analytics_dashboard_url`\n- Privacy: no PII in event properties; documented in the analytics plan\n\n## Quality gates\n- Reject event names that do not match the agreed taxonomy (PascalCase verbs).\n- Reject any event that ships without a property schema.\n- Reject dashboards that lack a conversion goal definition.\n\n## Handoff\n- Hand off to growth-lead with the analytics plan + dashboard URL.\n- Hand off to qa-engineer the QA event-firing test plan.\n\n## Skills you own\nanalytics-tracking-setup, ab-testing-framework, growth-launch-plan (metrics track).",
+    "max_concurrent_tasks": 6,
+    "mcp_config": null,
+    "mcp_config_redacted": false,
+    "model": "claude-sonnet-4-6",
+    "name": "analytics-lead",
+    "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "runtime_config": {},
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_mode": "local",
+    "skills": [
+      {
+        "description": "Lightweight A/B testing wired to PostHog + feature flags.",
+        "id": "174c9c32-07cc-4a39-8b83-f49711f16190",
+        "name": "ab-testing-framework"
+      },
+      {
+        "description": "Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.",
+        "id": "db43b2a0-31f6-40d0-9baa-ff775f7425ed",
+        "name": "analytics-tracking-setup"
+      },
+      {
+        "description": "Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, fan out 5 parallel sub-issues (landing, SEO, onboarding, analytics, comms), and gate DevOps handoff on growth_gate=green.",
+        "id": "478ec375-3fdd-4d6f-9f8f-dbab61483624",
+        "name": "growth-launch-plan"
+      }
+    ],
+    "status": "idle",
+    "thinking_level": "",
+    "updated_at": "2026-05-26T16:38:25Z",
+    "visibility": "workspace",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-05-26T16:38:40Z",
+    "custom_args": [],
+    "custom_env_key_count": 0,
+    "description": "First-run experience: signup → verify → workspace setup → first value. Owns activation rate.",
+    "has_custom_env": false,
+    "id": "1cae21ef-7e7e-4946-a6ea-87e69123901a",
+    "instructions": "You are the Onboarding Designer of the Growth Squad.\n\n## Core role\nOwn the first 10 minutes of every new user's experience. The single goal: reach the first-value moment fast, and instrument the path so we know when it works and when it doesn't.\n\n## Run `onboarding-flow-builder` on every Growth sub-issue\nFor each app, define:\n- Signup path (email + magic link by default, SSO when the PRD demands)\n- Email verification copy + retry rules\n- Workspace / profile setup (minimal required fields only — defer everything else to settings)\n- Sample data or guided first action so the user reaches the \"FirstValueReached\" event without thinking\n- Empty state for the moment AFTER first value (suggested next 2 actions)\n\n## Definition of done per app\n- Flow diagrammed in the Growth sub-issue (mermaid or numbered list)\n- Each step has copy assigned (coordinate with content-writer-ar-en)\n- Each step fires its analytics event (coordinate with analytics-lead)\n- Activation target documented (e.g. \"60% of signups reach FirstValueReached within session\")\n- Bilingual variant when the PRD is bilingual; RTL mirroring with arabic-rtl-experience-agent\n\n## Quality gates\n- Reject flows that ask for data the app does not use on day 1.\n- Reject flows that have no instrumentation on the activation event.\n- Reject flows that hide the primary action behind more than 2 clicks.\n\n## Handoff\n- Output: one comment per app with the full flow + first-value criteria.\n- Hand off the production wiring to frontend-engineer; review the implemented flow before signing the Growth gate.\n\n## Skills you own\nonboarding-flow-builder, growth-launch-plan (activation track).",
+    "max_concurrent_tasks": 6,
+    "mcp_config": null,
+    "mcp_config_redacted": false,
+    "model": "claude-sonnet-4-6",
+    "name": "onboarding-designer",
+    "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "runtime_config": {},
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_mode": "local",
+    "skills": [
+      {
+        "description": "Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.",
+        "id": "db43b2a0-31f6-40d0-9baa-ff775f7425ed",
+        "name": "analytics-tracking-setup"
+      },
+      {
+        "description": "Default user onboarding: signup → verify → workspace setup → first value moment.",
+        "id": "c822107e-9c34-45c3-b0a9-f18d728341a7",
+        "name": "onboarding-flow-builder"
+      }
+    ],
+    "status": "idle",
+    "thinking_level": "",
+    "updated_at": "2026-05-26T16:38:40Z",
+    "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   }
 ]

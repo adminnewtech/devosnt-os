@@ -10,6 +10,10 @@ Default product analytics: PostHog (self-hosted or cloud) + Plausible for market
 ## Owned by
 
 - [`frontend-engineer`](../agents/frontend-engineer.md)
+- [`growth-lead`](../agents/growth-lead.md)
+- [`seo-specialist`](../agents/seo-specialist.md)
+- [`analytics-lead`](../agents/analytics-lead.md)
+- [`onboarding-designer`](../agents/onboarding-designer.md)
 
 ## Config
 

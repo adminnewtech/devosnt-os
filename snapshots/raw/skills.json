@@ -81,6 +81,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T16:38:14Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Promoted from DEV-43.",
+    "id": "3eaf9557-943c-43bf-84de-367a19aec7a5",
+    "name": "android-apk-local-builder",
+    "updated_at": "2026-05-26T16:38:14Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:27:57Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Design the HTTP API contract for an app and produce an OpenAPI 3.1 document.",
@@ -157,6 +167,16 @@
     "id": "1913125c-f237-4d3b-94e1-eb6f26b1d6df",
     "name": "auth-permission-matrix",
     "updated_at": "2026-05-25T10:27:58Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T17:04:18Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.",
+    "id": "622391e4-2b94-4a93-a858-305148e2344b",
+    "name": "autonomous-test-fix-loop",
+    "updated_at": "2026-05-26T17:04:18Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -401,12 +421,32 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T16:38:29Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:\u003cresource\u003e metadata, and stops pulse retries until cleared.",
+    "id": "74c65b85-3623-4a71-961b-536ae81c9dce",
+    "name": "external-blocker-escalation",
+    "updated_at": "2026-05-26T16:38:29Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:35Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default feature flags + targeting rules + kill switches, Supabase-backed.",
     "id": "ee63ea9c-2921-45cd-ab6a-8f13039e6500",
     "name": "feature-flag-system",
     "updated_at": "2026-05-25T15:53:35Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T17:04:51Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design tokens, and interactions; output a structured screen list + per-screen state spec.",
+    "id": "3b768b92-e4b2-47f1-9172-3bc20eeb7695",
+    "name": "figma-to-ux-spec",
+    "updated_at": "2026-05-26T17:04:51Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -437,6 +477,16 @@
     "id": "fce8a6bf-ee65-4061-a538-68b535164e1a",
     "name": "github-research-workflow",
     "updated_at": "2026-05-25T10:41:51Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T16:38:18Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, fan out 5 parallel sub-issues (landing, SEO, onboarding, analytics, comms), and gate DevOps handoff on growth_gate=green.",
+    "id": "478ec375-3fdd-4d6f-9f8f-dbab61483624",
+    "name": "growth-launch-plan",
+    "updated_at": "2026-05-26T16:54:04Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -511,6 +561,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T16:40:42Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
+    "id": "efd634dc-2d63-4c40-b394-73961092d753",
+    "name": "landing-page-builder",
+    "updated_at": "2026-05-26T16:55:04Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:44Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link.",
@@ -547,6 +607,16 @@
     "id": "fb5db792-f520-43c9-96bb-8901f621e95b",
     "name": "marketplace-system-builder",
     "updated_at": "2026-05-25T15:53:50Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T16:50:04Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject decision with mandatory security review and reject-by-default posture on filesystem write, shell exec, and unscoped network egress.",
+    "id": "709fb3fd-ffb2-431e-9fba-1a7fcccb96f4",
+    "name": "mcp-server-evaluator",
+    "updated_at": "2026-05-26T16:50:04Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -591,6 +661,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T16:41:47Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.",
+    "id": "9f1399a6-8cb1-4a7f-95c6-c3a4fb349184",
+    "name": "nextjs-supabase-builder",
+    "updated_at": "2026-05-26T16:41:47Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:32Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default multichannel notification system: email + SMS + push + WhatsApp + in-app.",
@@ -616,7 +696,17 @@
     "description": "Master orchestrator: turn a single raw user prompt into a deployed system end-to-end without further input.",
     "id": "cdf231f0-867b-4ec2-a0d3-e8d7cff26f32",
     "name": "one-prompt-to-app",
-    "updated_at": "2026-05-25T15:53:21Z",
+    "updated_at": "2026-05-26T16:59:57Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T17:04:11Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Auto-identify independent sub-issues within a parent and batch-promote all of them to --status todo simultaneously, using a dependency DAG to determine readiness.",
+    "id": "9f4b229b-4f75-454b-9548-2df4e4b80916",
+    "name": "parallel-issue-dispatcher",
+    "updated_at": "2026-05-26T17:04:11Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -881,6 +971,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T16:48:12Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.",
+    "id": "0138df08-f46d-4216-934a-42ecbf70a087",
+    "name": "self-hosted-supabase-tunnel",
+    "updated_at": "2026-05-26T16:48:12Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:27Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.",
@@ -957,6 +1057,16 @@
     "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
     "name": "user-stories-to-issues",
     "updated_at": "2026-05-25T10:27:53Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T16:47:50Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Generate a complete, implementation-ready spec for any general UI screen (auth, settings, onboarding, marketing, modal flows). Output is a single fenced YAML block for deterministic consumption by prd-to-user-stories and dashboard-screen-planner.",
+    "id": "07e7d082-1c66-4391-9ddd-4bd332388b08",
+    "name": "ux-screen-generator",
+    "updated_at": "2026-05-26T16:47:50Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

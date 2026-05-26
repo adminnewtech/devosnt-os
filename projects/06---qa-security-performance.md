@@ -14,5 +14,4 @@ _(no open issues)_
 
 ## Recent Done
 
-- DEV-41 — Full-App QA Test Plan + E2E — Android Attendance App
-- DEV-20 — Charter — 06 QA Security Performance
+_(none)_

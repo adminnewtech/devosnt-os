@@ -11,6 +11,8 @@ Lightweight A/B testing wired to PostHog + feature flags.
 
 - [`product-manager`](../agents/product-manager.md)
 - [`release-manager`](../agents/release-manager.md)
+- [`growth-lead`](../agents/growth-lead.md)
+- [`analytics-lead`](../agents/analytics-lead.md)
 
 ## Config
 

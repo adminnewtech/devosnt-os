@@ -14,5 +14,4 @@ _(no open issues)_
 
 ## Recent Done
 
-- DEV-30 — Architecture: Android Attendance App (تطبيق حضور وانصراف)
-- DEV-18 — Charter — 04 Architecture Database API
+_(none)_

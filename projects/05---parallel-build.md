@@ -10,14 +10,8 @@ Frontend, backend, mobile, integrations, automation, coding tasks executed in pa
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-35 | Push Notifications Integration — FCM + pg_cron (Attendance App) | `in_review` | high |
+_(no open issues)_
 
 ## Recent Done
 
-- DEV-33 — Android Mobile App — React Native Expo (Attendance App)
-- DEV-32 — API Edge Functions Implementation — Android Attendance App
-- DEV-34 — HR Admin Web Dashboard — Next.js (Attendance App)
-- DEV-31 — Database Schema + RLS + Auth Hook — Android Attendance App
-- DEV-19 — Charter — 05 Parallel Build
+_(none)_

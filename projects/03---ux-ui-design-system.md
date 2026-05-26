@@ -14,5 +14,4 @@ _(no open issues)_
 
 ## Recent Done
 
-- DEV-29 — UX/UI Plan: Android Attendance App (تطبيق حضور وانصراف)
-- DEV-17 — Charter — 03 UX UI Design System
+_(none)_

@@ -10,6 +10,8 @@ Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.
 ## Owned by
 
 - [`frontend-engineer`](../agents/frontend-engineer.md)
+- [`growth-lead`](../agents/growth-lead.md)
+- [`seo-specialist`](../agents/seo-specialist.md)
 
 ## Config
 

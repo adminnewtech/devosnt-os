@@ -23,6 +23,7 @@ Idea → PRD → user stories → MVP scope cut. Hands off to UX + Architecture.
 - [`prompt-router-classifier`](../skills/prompt-router-classifier.md) — Classify any raw user prompt into the right vertical builder + squad, auto-detecting Arabic and dialect.
 - [`usability-test-script`](../skills/usability-test-script.md) — Default 5-user usability test script for any new feature before launch.
 - [`user-stories-to-issues`](../skills/user-stories-to-issues.md) — Convert approved user stories into build-ready Multica issues with full DoD.
+- [`ux-screen-generator`](../skills/ux-screen-generator.md) — Generate a complete, implementation-ready spec for any general UI screen (auth, settings, onboarding, marketing, modal flows). Output is a single fenced YAML block for deterministic consumption by prd-to-user-stories and dashboard-screen-planner.
 
 ## Instructions
 

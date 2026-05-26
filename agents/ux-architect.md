@@ -17,6 +17,7 @@ PRD → sitemap → user flows → screen list with states + role visibility.
 - [`design-system-tokens-builder`](../skills/design-system-tokens-builder.md) — Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.
 - [`i18n-multilang-setup`](../skills/i18n-multilang-setup.md) — Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.
 - [`onboarding-flow-builder`](../skills/onboarding-flow-builder.md) — Default user onboarding: signup → verify → workspace setup → first value moment.
+- [`ux-screen-generator`](../skills/ux-screen-generator.md) — Generate a complete, implementation-ready spec for any general UI screen (auth, settings, onboarding, marketing, modal flows). Output is a single fenced YAML block for deterministic consumption by prd-to-user-stories and dashboard-screen-planner.
 - [`wcag-accessibility-checklist`](../skills/wcag-accessibility-checklist.md) — Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.
 
 ## Instructions

@@ -1,0 +1,18 @@
+# Skill — nextjs-supabase-builder
+
+- **ID:** `9f1399a6-8cb1-4a7f-95c6-c3a4fb349184`
+- **Created:** 2026-05-26T16:41:47Z
+
+## Description
+
+Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.
+
+## Owned by
+
+_⚠️ No agent owns this skill — orphan_
+
+## Config
+
+```json
+{}
+```

@@ -286,5 +286,37 @@
     "name": "Knowledge Graph Squad",
     "updated_at": "2026-05-25T17:58:41Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-05-26T16:40:11Z",
+    "creator_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Launch readiness: landing page, SEO, onboarding, analytics events, conversion checklist, launch comms. Sits between Knowledge Graph and DevOps in the lifecycle.",
+    "id": "3ff01911-bb76-4e3b-8eb9-ffbee295803a",
+    "instructions": "# Growth Squad — Operating Manual\n\n## Mission\nMake every shipped app launch-ready before it reaches DevOps. The factory builds the binary; the Growth Squad turns it into a product people can find, sign up for, and adopt. Nothing flips `lifecycle_phase=deploy` until this squad has signed `growth_gate=green`.\n\n## Members\n- **growth-lead** (leader) — Owns the launch plan, growth gate, and the Growth → DevOps handoff. Runs `growth-launch-plan` on every parent.\n- **seo-specialist** — Sitemap, robots, per-route meta, OG/Twitter cards, JSON-LD, starter keyword map. Owns `seo-baseline-setup`.\n- **content-writer-ar-en** — Bilingual launch copy (Arabic-Kuwaiti default for NewTech): landing page, onboarding micro-copy, emails, social, app-store listing.\n- **analytics-lead** — Event taxonomy, conversion funnel, KPI dashboard, pre-launch baseline. Owns `analytics-tracking-setup`.\n- **onboarding-designer** — First-run experience: signup → verify → setup → first value. Owns `onboarding-flow-builder` and the activation target.\n- **arabic-rtl-experience-agent** (shared with Product UX) — RTL mirroring + Arabic-Kuwaiti review on bilingual launches.\n- **frontend-engineer** (shared with Build) — Production wiring for landing page + onboarding flow.\n\n## Trigger\n- Factory Pulse autopilot reassigns the parent to Growth Squad when `lifecycle_phase=integrate` AND `deploy_gate=green`.\n- On entry, growth-lead flips parent metadata `lifecycle_phase=growth` and runs `growth-launch-plan`.\n- `growth-launch-plan` fans out 5 sub-issues in parallel:\n  - `landing-page-builder` → frontend-engineer + content-writer-ar-en + seo-specialist (joint owners)\n  - `seo-baseline-setup` → seo-specialist\n  - `onboarding-flow-builder` → onboarding-designer + content-writer-ar-en\n  - `analytics-tracking-setup` → analytics-lead\n  - Launch-day comms bundle → content-writer-ar-en\n- When all 5 land in `done`, growth-lead flips `growth_gate=green`. The next Factory Pulse run hands the parent to DevOps Launch Squad.\n\n## Definition of \"Growth ready\"\n- Landing page live with primary CTA above the fold (URL pinned to parent metadata `landing_url`).\n- SEO baseline applied: sitemap.xml, robots.txt, per-page meta + OG + JSON-LD, 10-keyword starter map.\n- Onboarding flow shipped end-to-end with the activation event firing (default target: 60% of signups reach `FirstValueReached` in session).\n- Analytics events instrumented in client + server, conversion funnel report shows non-zero data, KPI dashboard URL pinned (`analytics_dashboard_url`).\n- Launch-day comms drafted: welcome email + 3 social posts + in-app announcement (bilingual when PRD is bilingual).\n- Growth conversion checklist signed off by growth-lead.\n- Arabic-Kuwaiti review passed (when bilingual) — arabic-rtl-experience-agent must sign off on copy + RTL layout.\n\n## Handoff to DevOps\nHand off only when `growth_gate=green` is pinned and every sub-issue is `done` or `cancelled` with a reason. DevOps cannot start deploy until growth-lead's signoff comment lands on the parent. The parent metadata at handoff carries: `landing_url`, `analytics_dashboard_url`, `growth_gate=green`, `launch_date`.\n\n## Quality gates owned\n- Block any parent moving to `lifecycle_phase=deploy` if any growth artifact is missing.\n- Block any landing page that ships without analytics OR without SEO baseline.\n- Block any bilingual project whose Arabic copy has not been reviewed.\n- Block any onboarding flow that lacks an instrumented activation event.\n- Veto a DevOps deploy attempt if `growth_gate` is anything but `green`.\n\n## Output discipline\n- Launch plan goes in the parent as a `growth-launch-plan` comment, with 5 sub-issue links.\n- Each artifact ships as its own sub-issue in the parent's project (or `05 - Parallel Build` when the artifact requires production wiring).\n- Pin only re-readable facts on parent metadata: `landing_url`, `analytics_dashboard_url`, `growth_gate`, `launch_date`, `waiting_on`. Never log run state.\n- Never mention an agent in a wrap-up — squad dispatch and Factory Pulse advance work without re-pinging anyone.\n\n## Skills owned\n`growth-launch-plan`, `landing-page-builder`, `seo-baseline-setup`, `onboarding-flow-builder`, `analytics-tracking-setup`, `ab-testing-framework`. Shared: `app-store-listing-optimizer` (with Product UX), `content-style-guide-ar-en` (with arabic-rtl-experience-agent).\n\n## Escalation\nEscalate to CEO Command Squad when: scope of launch expands beyond the PRD, two channels disagree on launch copy, paid acquisition is requested, or external integrations (Mailchimp, PostHog, GA4, app-store accounts) need credentials. Escalate to workspace owner only after CEO Command Squad cannot resolve internally.",
+    "leader_id": "634be4c5-858b-4b2d-9a01-ad169f0a1db4",
+    "member_count": 7,
+    "member_preview": [
+      {
+        "member_id": "634be4c5-858b-4b2d-9a01-ad169f0a1db4",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "d707e29b-9cc6-4a0a-a027-1ef259b1e240",
+        "member_type": "agent",
+        "role": "member"
+      },
+      {
+        "member_id": "e29c53ce-2c7f-4ddc-8a14-e0d4abf925d6",
+        "member_type": "agent",
+        "role": "member"
+      }
+    ],
+    "name": "Growth Squad",
+    "updated_at": "2026-05-26T16:40:23Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   }
 ]

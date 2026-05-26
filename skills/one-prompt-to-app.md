@@ -11,6 +11,7 @@ Master orchestrator: turn a single raw user prompt into a deployed system end-to
 
 - [`ceo`](../agents/ceo.md)
 - [`product-manager`](../agents/product-manager.md)
+- [`growth-lead`](../agents/growth-lead.md)
 
 ## Config
 

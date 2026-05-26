@@ -1,39 +1,43 @@
 # Integration Audit Report
 
-_Generated: 2026-05-26T16:04:08.142348+00:00_
+_Generated: 2026-05-26T17:08:31.898131+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 0 |
+| orphan_skills | 6 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 2 |
-| in_review_parent_count | 4 |
-| agents_outside_squad_preview | 16 |
+| blocked_issues | 0 |
+| in_review_parent_count | 7 |
+| agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
-- **Agents:** 36 (with skills: 36, without: 0)
-- **Skills:** 102 (owned: 102, orphan: 0)
-- **Squads:** 9 (active members: 9)
+- **Agents:** 41 (with skills: 41, without: 0)
+- **Skills:** 113 (owned: 107, orphan: 6)
+- **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
-- **Autopilots:** 4 (active: 4)
+- **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 2 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 6 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
-| 🟡 WARN | `issue.blocked` | DEV-40 blocked: User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendan | Review blocker — autopilot caps at 3 retries |
-| 🟡 WARN | `issue.blocked` | DEV-39 blocked: Deployment Plan + Runbook — Android Attendance App | Review blocker — autopilot caps at 3 retries |
+| 🟡 WARN | `skill.orphan` | Skill `autonomous-test-fix-loop` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `external-blocker-escalation` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `figma-to-ux-spec` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `nextjs-supabase-builder` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `parallel-issue-dispatcher` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `self-hosted-supabase-tunnel` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
@@ -50,19 +54,21 @@ _Generated: 2026-05-26T16:04:08.142348+00:00_
 | 🔵 INFO | `agent.no_squad` | Agent `memory-curator` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `docs-analyst` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `tool-evaluator` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `analytics-lead` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
+| 🔵 INFO | `agent.no_squad` | Agent `onboarding-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 
 ## Top skills by adoption
 
 - `agent-self-healing-policy` — 5 owner(s): ceo, sprint-commander, claude-code-lead-developer, skill-builder, prompt-optimizer
 - `wcag-accessibility-checklist` — 5 owner(s): quality-gate-manager, ux-architect, ui-designer, frontend-engineer, qa-engineer
+- `onboarding-flow-builder` — 5 owner(s): product-manager, ux-architect, growth-lead, content-writer-ar-en, onboarding-designer
 - `i18n-multilang-setup` — 5 owner(s): ux-architect, ui-designer, arabic-rtl-experience-agent, frontend-engineer, mobile-engineer
 - `agentic-codegen-loop` — 5 owner(s): claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer
+- `analytics-tracking-setup` — 5 owner(s): frontend-engineer, growth-lead, seo-specialist, analytics-lead, onboarding-designer
 - `api-contract-designer` — 4 owner(s): ceo, solution-architect, api-architect, backend-engineer
 - `auth-permission-matrix` — 4 owner(s): ceo, solution-architect, database-architect, security-auditor
 - `cross-project-pattern-extractor` — 4 owner(s): ceo, skill-builder, memory-curator, research-scout
 - `deployment-checklist` — 4 owner(s): ceo, deployment-engineer, environment-manager, release-manager
-- `reusable-template-extractor` — 4 owner(s): ceo, claude-code-lead-developer, skill-builder, template-builder
-- `monitoring-alerting-setup` — 4 owner(s): workspace-operations-manager, performance-tester, deployment-engineer, environment-manager
 
 ## Self-improvement loop status
 

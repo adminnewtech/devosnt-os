@@ -11,6 +11,9 @@ Default user onboarding: signup → verify → workspace setup → first value m
 
 - [`product-manager`](../agents/product-manager.md)
 - [`ux-architect`](../agents/ux-architect.md)
+- [`growth-lead`](../agents/growth-lead.md)
+- [`content-writer-ar-en`](../agents/content-writer-ar-en.md)
+- [`onboarding-designer`](../agents/onboarding-designer.md)
 
 ## Config
 

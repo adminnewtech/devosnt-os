@@ -10,10 +10,8 @@ All new app ideas and system requests start here. Intake → triage → routed t
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-25 | Android Attendance App — تطبيق حضور وانصراف متكامل (one-prompt-to-app) | `in_review` | high |
+_(no open issues)_
 
 ## Recent Done
 
-- DEV-15 — Project Intake Form (use this for every new App Request)
+_(none)_

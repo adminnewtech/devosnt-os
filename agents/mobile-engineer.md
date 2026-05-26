@@ -14,6 +14,7 @@ React Native (Expo) mobile apps. Claude runtime (swapped from Openclaw→Codex�
 ## Skills
 
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
+- [`android-apk-local-builder`](../skills/android-apk-local-builder.md) — Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Promoted from DEV-43.
 - [`design-system-tokens-builder`](../skills/design-system-tokens-builder.md) — Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.
 - [`i18n-multilang-setup`](../skills/i18n-multilang-setup.md) — Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.
 - [`mobile-app-planner`](../skills/mobile-app-planner.md) — Plan a React Native (Expo) companion or standalone mobile app.
