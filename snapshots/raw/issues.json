@@ -2,8 +2,8 @@
   "has_more": false,
   "issues": [
     {
-      "assignee_id": "f49d7a36-7044-4be5-99ff-6f0ac8187f77",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T22:37:58Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -23,12 +23,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Build local debug APK from attendance-app/ — wired to DEV-42 demo backend",
-      "updated_at": "2026-05-25T23:55:28Z",
+      "updated_at": "2026-05-26T00:16:28Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "296b1701-bb8f-467e-b244-89149b255841",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-25T22:37:21Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -38,10 +38,11 @@
       "identifier": "DEV-42",
       "labels": [],
       "metadata": {
-        "admin_web_url": "https://michael-apparently-gpl-repairs.trycloudflare.com",
-        "apk_download_url": "https://static.multica.ai/workspaces/6ab51ea8-1c35-46e7-a387-961e2877f3cf/019e618f-ceff-7e8e-ac01-484c7ac665d0.apk",
-        "demo_backend_url": "https://diversity-start-oliver-mason.trycloudflare.com",
-        "pipeline_status": "demo-apk-ready: attendance-demo-v0.1.0.apk uploaded, JS bundle embedded, v1+v2 signed, 91MB",
+        "admin_web_url": "https://through-nav-realtor-feof.trycloudflare.com",
+        "apk_download_url": "https://static.multica.ai/workspaces/6ab51ea8-1c35-46e7-a387-961e2877f3cf/019e61ba-860a-75f5-b9f7-ce96f2e8c79f.apk",
+        "blocked_reason": "v3 rebuild required: BUG-03 RECORD_AUDIO, BUG-04 Firebase init, Next.js prod build, seed scale, cloudflared supervision",
+        "demo_backend_url": "https://walnut-lights-cow-parish.trycloudflare.com",
+        "pipeline_status": "v2-qa-failed-rebuild-pending",
         "retry_log": 1
       },
       "number": 42,
@@ -50,9 +51,9 @@
       "priority": "urgent",
       "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
       "start_date": null,
-      "status": "in_review",
+      "status": "in_progress",
       "title": "Sideloadable Demo APK + Self-hosted Demo Backend — Android Attendance App (Ready-to-test)",
-      "updated_at": "2026-05-25T23:55:57Z",
+      "updated_at": "2026-05-26T00:58:33Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -196,7 +197,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "red@2026-05-25T23:04:56Z",
+        "kb_sync_status": "red@2026-05-26T00:03:08Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -208,7 +209,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-25T23:04:58Z",
+      "updated_at": "2026-05-26T00:03:14Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -491,7 +492,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Android Attendance App — تطبيق حضور وانصراف متكامل (one-prompt-to-app)",
-      "updated_at": "2026-05-25T23:49:34Z",
+      "updated_at": "2026-05-26T00:44:06Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
