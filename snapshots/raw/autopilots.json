@@ -1,1 +1,73 @@
-[]
+{
+  "autopilots": [
+    {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T19:25:40Z",
+      "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+      "created_by_type": "member",
+      "description": "KB Sync — Hourly Refresh. Runs every hour. Pull live workspace snapshots and refresh the devosnt-os knowledge base on GitHub so the audit and KB never drift more than 60 minutes from live state.\n\nCRITICAL: This autopilot is run_only. Never create new issues. Do not change any issue status. Do not mention any agent. Stay quiet on success — only post a comment on DEV-36 (id e60d5be5-b9dd-48aa-b949-28286ea80f1b) if the audit verdict regresses (GREEN→YELLOW/RED).\n\nSteps:\n\n(1) Clone or update the KB repo:\n    if [ -d /tmp/devosnt-os ]; then cd /tmp/devosnt-os \u0026\u0026 git pull --quiet; else cd /tmp \u0026\u0026 gh repo clone adminnewtech/devosnt-os --quiet; fi\n    cd /tmp/devosnt-os\n\n(2) Refresh raw snapshots (all 6 resource lists + 7 issue status lists). Use --output json on every call. Continue on any single failure:\n    mkdir -p snapshots/raw\n    for resource in agents skills squads projects autopilots workspaces; do multica $resource list --output json \u003e snapshots/raw/$resource.json 2\u003e/dev/null; done\n    for status in done in_review in_progress backlog todo blocked cancelled; do multica issue list --output json --status $status \u003e snapshots/raw/issues-$status.json 2\u003e/dev/null; done\n    multica issue list --output json \u003e snapshots/raw/issues.json 2\u003e/dev/null\n\n(3) Re-render KB + run audit:\n    python3 scripts/render_kb.py\n    python3 scripts/audit_integration.py\n\n(4) Detect drift. If git status --porcelain shows changes:\n    - Commit with body: \"chore: hourly KB sync — \u003cCOUNTS\u003e\" (counts from snapshots/SNAPSHOT.md)\n    - Push to main\n    - Update DEV-36 metadata key kb_sync_status to \"\u003cverdict\u003e@\u003cRFC3339-now\u003e\" (e.g. \"green@2026-05-25T20:00Z\") via: multica issue metadata set e60d5be5-b9dd-48aa-b949-28286ea80f1b --key kb_sync_status --value \"...\"\n    - Update DEV-36 metadata key audit_verdict to the verdict from reports/integration-audit.md (GREEN, YELLOW, or RED)\n\n(5) Verdict regression escalation. ONLY if the new verdict is YELLOW or RED (was GREEN before): post one comment on DEV-36 summarizing the new findings, parented to comment 9322ef81-1035-4f7a-832e-74c9a9d8f7da. No mentions.\n\n(6) Output one-line summary to stdout: \"KB Sync @ HH:MM | verdict=\u003cG/Y/R\u003e | drift=\u003cyes/no\u003e | issues=N agents=N skills=N\". If git is clean and verdict is unchanged, say \"KB Sync @ HH:MM | clean\".\n\nOperating rules:\n- Never block on a single CLI failure. Log and continue.\n- Run quietly. No issue comments unless verdict regresses.\n- Never mention any agent.\n- Use git config user.name \"devosnt-os-bot\" + user.email \"bot@devosnt.local\" before committing.\n- Do not modify any issue status. Do not modify any non-metadata field on any issue.",
+      "execution_mode": "run_only",
+      "id": "47668345-3f72-4821-af88-c4233b4764cd",
+      "issue_title_template": null,
+      "last_run_at": "2026-05-26T12:00:14Z",
+      "project_id": null,
+      "status": "active",
+      "title": "KB Sync — Hourly Refresh",
+      "updated_at": "2026-05-26T12:00:14Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "ebd03ec3-2a72-433f-b89f-bf4d35573a3d",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T17:20:18Z",
+      "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+      "created_by_type": "member",
+      "description": "Factory Pulse v3 — App Hub model + lifecycle_phase + deploy_gate enforcement. Run every 15 minutes. Mode=run_only. Do NOT create new issues.\n\nCRITICAL EXCLUSIONS: NEVER touch DEV-36 (the workspace-operations dialog with the workspace owner). NEVER touch any issue whose creator is a member AND whose title contains \"تابع\" or \"مراجعة\" or whose project is the CEO/ops project. These are conversations, not work items.\n\nSteps:\n\n(1) QA dispatch — list every issue with status=in_review whose parent_issue_id is NOT null (children only — never parents). For each: if assignee is NOT the QA Security Squad (id 45b0949e-f65b-47c8-a861-3ad0e8dbe3aa), reassign via `multica issue update \u003cid\u003e --assignee-id 45b0949e-f65b-47c8-a861-3ad0e8dbe3aa`. The squad leader fans out. Skip if already on QA squad.\n\n(2) Build dispatch — list issues with status=todo whose parent is not null. If assignee is a build-engineer name (mobile-engineer, frontend-engineer, backend-engineer, full-stack-engineer), leave it. Otherwise reassign to Build Squad (a51cdb63-a37d-4e54-80cf-a0534ff416f7). Cap at 6 per pulse.\n\n(3) Backlog promotion — list backlog issues. If parent in_progress AND all sibling prerequisites done/cancelled, flip to todo + comment \"Promoted — prereqs landed.\"\n\n(4) Stall detection — any in_progress issue updated_at \u003e90min ago with no new comment since updated_at. Reassign to same agent (re-fires the run). Track retry_log metadata; cap at 3 attempts then set status=blocked.\n\n(5) Parent advance — for every parent (in_review or in_progress) where ALL children are done/cancelled: read parent metadata. Decide next destination by `lifecycle_phase`:\n   - If `lifecycle_phase=build` OR unset → flip metadata `lifecycle_phase=integrate` and reassign parent to **Knowledge Graph Squad (981c8c82-88ca-4940-a2cb-20e1893707b7)** for codegraph refresh + impact analysis + integration-branch verification. Comment: \"All build children landed — dispatching Knowledge Graph Squad for integrate phase.\"\n   - If `lifecycle_phase=integrate` AND `deploy_gate=green` → reassign parent to **DevOps Launch Squad (d097f96a-2467-4c3c-b6e3-4c8a13517d17)** + flip `lifecycle_phase=deploy`. Comment: \"Integration green — dispatching DevOps Launch Squad.\"\n   - If `lifecycle_phase=integrate` AND `deploy_gate!=green` (missing, red, or pending) → DO NOT dispatch. Comment once: \"Holding parent in integrate — deploy_gate not green.\" Skip further pulses until gate flips.\n   - If `lifecycle_phase=deploy` AND parent done → step (6) handles skill extraction.\n   Do NOT mention CEO — squad dispatch replaces CEO re-entry.\n\n(6) Skill extraction trigger — when a parent moves to done, reassign a copy-of-issue to Skill Factory Squad (925a3e48-37f2-4620-870c-b57fe9003981) for cross-project-pattern-extractor + reusable-template-extractor.\n\n(7) Model audit — fix any agent with empty model (set claude-sonnet-4-6 + runtime 6af6eb94-a120-43e6-b6de-5e1503c2f1e3).\n\n(8) App Hub bootstrap watch — any parent issue with title prefix \"APP — \" or label \"app-request\" and missing metadata key `app_project_id`: reassign to ceo (d9f942b9-e245-4e28-99eb-8f12fbebc2c3) with comment \"App Hub bootstrap needed — run app-hub-bootstrap skill.\" Cap 2 per pulse.\n\n(9) Output — one-line summary printed (no comment, no new issue). Format: \"Pulse @ HH:MM | QA: N | Build: N | Promoted: N | Stalls: N | Parents→KG: N | Parents→DevOps: N | Held(gate): N | Skills extracted: N | Agents fixed: N\". If all zero: print \"Pulse @ HH:MM | quiet\".\n\nOperating rules:\n- Never block on a single CLI failure. Log and continue.\n- Use --output json everywhere.\n- NEVER mention CEO (d9f942b9-e245-4e28-99eb-8f12fbebc2c3) — squad dispatch handles all advance.\n- Read metadata before pinning. Only update keys that changed.\n- This autopilot is run_only; never create new issues.\n- Hard skip rules: DEV-36, any issue with creator_type=member AND status=in_progress (those are active human conversations).\n- `deploy_gate=green` is the ONLY signal that authorizes DevOps dispatch. No bypass.",
+      "execution_mode": "run_only",
+      "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
+      "issue_title_template": null,
+      "last_run_at": "2026-05-26T12:00:17Z",
+      "project_id": null,
+      "status": "active",
+      "title": "Factory Pulse — Auto-route \u0026 Unblock",
+      "updated_at": "2026-05-26T12:00:17Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T15:56:16Z",
+      "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+      "created_by_type": "member",
+      "description": "Run the weekly skill improvement loop. (1) Pull all retry_log metadata across issues touched in the past 7 days — find the top 5 most-failed skills; (2) Run cross-project-pattern-extractor across the past week's closed issues; (3) For each repeated failure pattern (≥3 occurrences) propose: a prompt fix, a missing default, or a new skill; (4) Run prompt-improvement-review on the top 3 failed skills; (5) Run workspace-upgrade-report scan; (6) Post a ranked action list as a comment on the created issue — top 5 actions with: rationale, source issues, effort estimate, owner agent. Memory Curator and Prompt Optimizer pick up the top 3 immediately. Never skip a week — silent skip is itself a finding.",
+      "execution_mode": "create_issue",
+      "id": "656afad6-c9eb-40b3-8fb3-26ef3676f859",
+      "issue_title_template": "Skill Improvement Review — {{date}}",
+      "last_run_at": null,
+      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
+      "status": "active",
+      "title": "Skill Improvement Weekly Loop",
+      "updated_at": "2026-05-25T15:56:16Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-25T15:56:10Z",
+      "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+      "created_by_type": "member",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.",
+      "execution_mode": "create_issue",
+      "id": "0cf43035-4ef9-4b41-b99a-9f84a4ec9872",
+      "issue_title_template": "Factory Health Audit — {{date}}",
+      "last_run_at": "2026-05-26T03:00:10Z",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "status": "active",
+      "title": "Factory Health Daily Audit",
+      "updated_at": "2026-05-26T03:00:10Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    }
+  ],
+  "total": 4
+}

@@ -14,7 +14,7 @@
       "labels": [],
       "metadata": {
         "admin_web_url": "https://through-nav-realtor-feof.trycloudflare.com",
-        "apk_download_url": "https://static.multica.ai/workspaces/6ab51ea8-1c35-46e7-a387-961e2877f3cf/019e61e2-dc28-7c51-b13d-8b5e6bf978cd.apk",
+        "apk_download_url": "https://github.com/adminnewtech/nomas-releases/releases/download/v0.1.0-demo-v3/attendance-demo-v0.1.0-v3.apk",
         "demo_backend_url": "https://walnut-lights-cow-parish.trycloudflare.com",
         "pipeline_status": "demo-apk-delivered-to-user",
         "retry_log": 3
@@ -27,7 +27,7 @@
       "start_date": null,
       "status": "done",
       "title": "Sideloadable Demo APK + Self-hosted Demo Backend — Android Attendance App (Ready-to-test)",
-      "updated_at": "2026-05-26T10:54:25Z",
+      "updated_at": "2026-05-26T11:54:05Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
