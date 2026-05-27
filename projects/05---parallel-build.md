@@ -2,7 +2,7 @@
 
 - **ID:** `adf682fe-0b45-4e30-a1b6-dbd2d04ccce1`
 - **Status:** `planned`
-- **Issues:** 7 (done: 5)
+- **Issues:** 7 (done: 6)
 
 ## Description
 
@@ -10,10 +10,8 @@ Frontend, backend, mobile, integrations, automation, coding tasks executed in pa
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-133 | QA Gate: DEV-35 — Push Notifications Integration | `todo` | none |
+_(no open issues)_
 
 ## Recent Done
 
-_(none)_
+- DEV-133 — QA Gate: DEV-35 — Push Notifications Integration

@@ -116,9 +116,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:02:51Z",
+    "updated_at": "2026-05-27T09:51:44Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -161,7 +161,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:03:22Z",
+    "updated_at": "2026-05-27T10:03:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -229,7 +229,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T08:14:51Z",
+    "updated_at": "2026-05-27T09:30:03Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -277,7 +277,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:03:23Z",
+    "updated_at": "2026-05-27T10:03:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2105,7 +2105,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:59:13Z",
+    "updated_at": "2026-05-27T09:32:08Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2219,7 +2219,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:02Z",
+    "updated_at": "2026-05-27T10:00:39Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2285,7 +2285,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:04Z",
+    "updated_at": "2026-05-27T09:59:11Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

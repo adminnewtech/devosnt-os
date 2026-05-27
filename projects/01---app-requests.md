@@ -12,7 +12,7 @@ All new app ideas and system requests start here. Intake → triage → routed t
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-134 | QA Gate: DEV-25 — Android Attendance App | `todo` | none |
+| DEV-134 | QA Gate: DEV-25 — Android Attendance App | `in_review` | none |
 
 ## Recent Done
 

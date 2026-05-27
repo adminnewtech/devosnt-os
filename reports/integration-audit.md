@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-27T09:04:16.776202+00:00_
+_Generated: 2026-05-27T10:03:57.792296+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-05-27T09:04:16.776202+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 3 |
+| blocked_issues | 2 |
 | in_review_parent_count | 2 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,7 +26,7 @@ _Generated: 2026-05-27T09:04:16.776202+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 10 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 9 warnings, no blockers
 
 ## Findings
 
@@ -34,7 +34,6 @@ _Generated: 2026-05-27T09:04:16.776202+00:00_
 |---|---|---|---|
 | 🟡 WARN | `issue.blocked` | DEV-126 blocked: OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-108 blocked: ARCH ACTION: Consolidate and resolve ADR-002 admin credentia | Review blocker — autopilot caps at 3 retries |
-| 🟡 WARN | `issue.blocked` | DEV-106 blocked: ARCH ACTION: Audit and patch qs dependency for CVE-2026-8723 | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `benchmark-vendor-tracker` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `code-reviewer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `multi-agent-coordinator` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
