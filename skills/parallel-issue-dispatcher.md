@@ -9,7 +9,8 @@ Auto-identify independent sub-issues within a parent and batch-promote all of th
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`ceo`](../agents/ceo.md)
+- [`sprint-commander`](../agents/sprint-commander.md)
 
 ## Config
 

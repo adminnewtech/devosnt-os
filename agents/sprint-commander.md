@@ -14,6 +14,7 @@ Sprint cadence + parallel WIP enforcement across all squads.
 ## Skills
 
 - [`agent-self-healing-policy`](../skills/agent-self-healing-policy.md) — Auto-retry failed agent runs with a different runtime/model and surface only after two failures.
+- [`parallel-issue-dispatcher`](../skills/parallel-issue-dispatcher.md) — Auto-identify independent sub-issues within a parent and batch-promote all of them to --status todo simultaneously, using a dependency DAG to determine readiness.
 - [`user-stories-to-issues`](../skills/user-stories-to-issues.md) — Convert approved user stories into build-ready Multica issues with full DoD.
 
 ## Instructions

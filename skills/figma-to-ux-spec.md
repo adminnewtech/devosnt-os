@@ -9,7 +9,8 @@ Accept a Figma file URL or exported JSON in the UX Planning stage; extract scree
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`ux-architect`](../agents/ux-architect.md)
+- [`ui-designer`](../agents/ui-designer.md)
 
 ## Config
 

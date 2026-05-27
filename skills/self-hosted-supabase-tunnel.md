@@ -9,7 +9,8 @@ Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free,
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`solution-architect`](../agents/solution-architect.md)
+- [`database-architect`](../agents/database-architect.md)
 
 ## Config
 

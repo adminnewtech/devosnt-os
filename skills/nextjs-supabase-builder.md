@@ -9,7 +9,8 @@ Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then laye
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`frontend-engineer`](../agents/frontend-engineer.md)
+- [`full-stack-engineer`](../agents/full-stack-engineer.md)
 
 ## Config
 

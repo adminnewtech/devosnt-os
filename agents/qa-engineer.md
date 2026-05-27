@@ -13,6 +13,7 @@ Writes + executes QA test plans. Pass/fail every shippable feature.
 
 ## Skills
 
+- [`autonomous-test-fix-loop`](../skills/autonomous-test-fix-loop.md) — After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.
 - [`bug-report-template`](../skills/bug-report-template.md) — Standard bug report shape so issues are reproducible on first read.
 - [`qa-test-plan-generator`](../skills/qa-test-plan-generator.md) — Produce the QA test plan for a feature or full app.
 - [`seed-data-factory`](../skills/seed-data-factory.md) — Default seed data generator per vertical so empty states are demoable from minute one.

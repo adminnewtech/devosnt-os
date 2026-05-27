@@ -2,7 +2,7 @@
 
 - **ID:** `88c09466-8a25-419d-b28e-d3d5973197c4`
 - **Status:** `planned`
-- **Issues:** 16 (done: 8)
+- **Issues:** 22 (done: 13)
 
 ## Description
 
@@ -12,17 +12,12 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-50 | SKILL: benchmark-vendor-tracker — one-page brief per competitor | `in_progress` | medium |
-| DEV-52 | SKILL: android-apk-local-builder — lift DEV-43's gradle+expo recipe into reusabl | `in_review` | high |
-| DEV-56 | SKILL: ux-screen-generator — general screen spec beyond dashboards (auth/setting | `todo` | high |
-| DEV-67 | SKILL: growth-launch-plan — orchestrator for every parent in lifecycle_phase=gro | `in_review` | high |
-| DEV-68 | SKILL: landing-page-builder — production-ready bilingual landing page with SEO + | `in_review` | high |
+| DEV-145 | QA Gate: DEV-52 — SKILL: android-apk-local-builder | `in_progress` | none |
+| DEV-150 | SKILL: Vendor Brief + Changelog Verification — extract as reusable skill | `todo` | medium |
 
 ## Recent Done
 
-- DEV-53 — SKILL: nextjs-supabase-builder — combined stack scaffold (NX+SB+RLS+i18n+CI)
-- DEV-73 — Wire nextjs-supabase-builder into one-prompt-to-app default scaffold path
-- DEV-99 — SKILL: figma-to-ux-spec — translate Figma file into screen list + state specs
-- DEV-98 — SKILL: parallel-issue-dispatcher
-- DEV-54 — SKILL: mcp-server-evaluator — import/adapt/reject decision with security review
-- DEV-55 — SKILL: self-hosted-supabase-tunnel — lift DEV-42's demo-backend recipe (docker+c
+- DEV-115 — SKILL: multi-agent-coordinator — concurrent agent coordination for Multica squad
+- DEV-120 — SKILL: tdd-mastery — Red-Green-Refactor TDD with coverage enforcement
+- DEV-113 — SKILL: code-reviewer — OWASP-aware code review gate (in_review → done)
+- DEV-109 — SKILL: security-auditor — OWASP/RLS/SOC2/ISO27001/GDPR audit with Red/Amber/Gree

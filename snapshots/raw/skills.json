@@ -36,7 +36,7 @@
     "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
     "id": "95580252-933b-441a-8748-b2f765b9a3ea",
     "name": "agentic-codegen-loop",
-    "updated_at": "2026-05-25T15:54:02Z",
+    "updated_at": "2026-05-26T17:21:30Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -201,6 +201,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T17:13:12Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor name. Output: issue in 09-Research Intelligence with the standard 8-section brief template (what they do, onboarding, pricing, strengths, weaknesses, patterns to copy, patterns to beat, decision).",
+    "id": "c67a8cdd-0898-4d1b-a5d1-6a945f9ec656",
+    "name": "benchmark-vendor-tracker",
+    "updated_at": "2026-05-26T17:13:12Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:41:41Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Build a booking / appointment system from preset.",
@@ -267,6 +277,16 @@
     "id": "e36325f5-c647-4306-92f1-bb9e723b69be",
     "name": "codegraph-indexer",
     "updated_at": "2026-05-25T18:45:50Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T17:13:30Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best practices. Pre-gates the in_review → done transition before security-review-checklist. Adapted from VoltAgent/awesome-claude-code-subagents (MIT). Run on Opus.",
+    "id": "7a01483c-d432-4a1e-80f6-4bdab8052430",
+    "name": "code-reviewer",
+    "updated_at": "2026-05-26T17:13:30Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -486,7 +506,7 @@
     "description": "Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, fan out 5 parallel sub-issues (landing, SEO, onboarding, analytics, comms), and gate DevOps handoff on growth_gate=green.",
     "id": "478ec375-3fdd-4d6f-9f8f-dbab61483624",
     "name": "growth-launch-plan",
-    "updated_at": "2026-05-26T16:54:04Z",
+    "updated_at": "2026-05-26T17:32:22Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -641,6 +661,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T17:15:22Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Coordinate concurrent agents across Multica issues: DAG-based dependency ordering on parent/child hierarchies, deadlock prevention via blocked-status workflow, issue-based message routing, and fault tolerance aligned with agent-self-healing-policy.",
+    "id": "d80e5678-abe0-49f9-aff8-b47fcd308cec",
+    "name": "multi-agent-coordinator",
+    "updated_at": "2026-05-26T17:15:22Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:24Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across orgs.",
@@ -656,7 +686,7 @@
     "description": "Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.",
     "id": "6ce51984-5d19-4d83-b06b-bbae372d5fba",
     "name": "nextjs-app-starter",
-    "updated_at": "2026-05-25T10:41:35Z",
+    "updated_at": "2026-05-26T17:21:14Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -951,12 +981,32 @@
   },
   {
     "config": {},
+    "created_at": "2026-05-26T17:13:03Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps, vulnerability assessment, and Red/Amber/Green risk scoring. Read/Grep/Glob only; opus model.",
+    "id": "fe3ddde3-3e97-48a4-a9ad-91806868224b",
+    "name": "security-auditor",
+    "updated_at": "2026-05-26T17:13:03Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T17:15:23Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validation, output encoding, SQL injection, CSRF, CSP, JWT, secrets management, and dependency auditing. Extends security-review-checklist. Adapted from rohitg00/awesome-claude-code-toolkit (Apache 2.0).",
+    "id": "c2bc0fda-62ee-4f23-9caa-88dab2379817",
+    "name": "security-hardening-owasp",
+    "updated_at": "2026-05-26T17:15:23Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:28:03Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Block release of any user-visible feature that fails the 15-point security gate.",
     "id": "4f364d84-6c12-4c1c-b887-702c6ca2003c",
     "name": "security-review-checklist",
-    "updated_at": "2026-05-25T10:28:03Z",
+    "updated_at": "2026-05-26T17:14:01Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -1017,6 +1067,16 @@
     "id": "a7067388-ff05-4abb-a9fe-5c07ad8ff9a0",
     "name": "supabase-app-starter",
     "updated_at": "2026-05-25T10:41:35Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-26T17:19:48Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primary, Python, Go) and enforced 80% line / 75% branch coverage thresholds. Pairs with qa-test-plan-generator at the QA gate.",
+    "id": "035f76ed-3f96-42bd-91ef-152d11d359b2",
+    "name": "tdd-mastery",
+    "updated_at": "2026-05-26T17:19:48Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

@@ -38,6 +38,7 @@ Tech stack + ADRs + build graph. Default Next.js + Supabase + Vercel.
 - [`restaurant-system-builder`](../skills/restaurant-system-builder.md) — Build a restaurant/QSR system: menu, KDS, tables, orders, online order, delivery dispatch.
 - [`school-system-builder`](../skills/school-system-builder.md) — Build a school / SIS system: students, classes, attendance, grades, parents, fees.
 - [`search-system-builder`](../skills/search-system-builder.md) — Default end-user search with autocomplete, typo tolerance, filters, facets.
+- [`self-hosted-supabase-tunnel`](../skills/self-hosted-supabase-tunnel.md) — Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.
 
 ## Instructions
 

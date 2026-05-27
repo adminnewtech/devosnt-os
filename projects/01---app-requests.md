@@ -2,7 +2,7 @@
 
 - **ID:** `f3089a97-c608-4599-913c-f331335e1abe`
 - **Status:** `planned`
-- **Issues:** 2 (done: 1)
+- **Issues:** 3 (done: 1)
 
 ## Description
 
@@ -10,7 +10,9 @@ All new app ideas and system requests start here. Intake → triage → routed t
 
 ## Open Issues (snapshot)
 
-_(no open issues)_
+| ID | Title | Status | Priority |
+|---|---|---|---|
+| DEV-134 | QA Gate: DEV-25 — Android Attendance App | `todo` | none |
 
 ## Recent Done
 

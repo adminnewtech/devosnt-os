@@ -9,7 +9,8 @@ After a build issue goes in_review, runs the QA test plan against the preview UR
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`qa-engineer`](../agents/qa-engineer.md)
+- [`bug-hunter`](../agents/bug-hunter.md)
 
 ## Config
 

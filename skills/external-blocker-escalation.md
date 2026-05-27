@@ -9,7 +9,7 @@ Single-shot consolidated escalation to admin when a build task is blocked on an 
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`ceo`](../agents/ceo.md)
 
 ## Config
 

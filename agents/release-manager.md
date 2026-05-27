@@ -1,7 +1,7 @@
 # Agent — release-manager
 
 - **ID:** `b5a60aa0-f32f-455b-9e26-0b7f240f095f`
-- **Model:** `claude-haiku-4-5-20251001`
+- **Model:** `claude-sonnet-4-6`
 - **Runtime mode:** `local`
 - **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
 - **Max concurrent tasks:** 6

@@ -2,6 +2,156 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "d097f96a-2467-4c3c-b6e3-4c8a13517d17",
+      "assignee_type": "squad",
+      "created_at": "2026-05-26T17:28:04Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Input\nQA verdict on [DEV-84](mention://issue/9ddef01a-60cf-4b8b-8dbc-108ac5eae7a1) flagged a credential gap: the `figma-to-ux-spec` skill (workspace skill ID `3b768b92-e4b2-47f1-9172-3bc20eeb7695`) cannot contact `api.figma.com` because `FIGMA_TOKEN` is unset. Logic was verified via shaped-JSON; live HTTP path is unverified.\n\n## Expected Output\n1. `FIGMA_TOKEN` (read-only scope) provisioned and present in workspace env vars across runtimes that execute the skill.\n2. One live smoke test executed against any public Figma community file key.\n3. Result comment on this issue with: token present (yes/no), HTTP 200 received, frame count parsed, any schema deltas vs. the shaped-JSON mock.\n\n## Acceptance Criteria\n- [ ] Figma Personal Access Token obtained (read-only scope sufficient).\n- [ ] Token set as `FIGMA_TOKEN` in workspace env (escalate to admin@newtechkw.com — only admin can write workspace env vars).\n- [ ] Smoke test run via the skill against a public Figma community file; result captured in this issue.\n- [ ] If Figma schema differs from the mocked response shape, file a follow-up bug on the skill.\n\n## Dependencies\n- Admin (admin@newtechkw.com) must supply or set the token — this is the hard blocker.\n- Skill spec: see [DEV-99](mention://issue/a2673b73-eb90-4b35-b494-a151f9176b34).\n\n## Risk\nLow. Read-only Figma scope. No production impact — skill currently falls back to the documented \"prompt user for exported JSON\" path when the token is missing, so this work unlocks the live API path rather than fixing a broken one.\n\n## Definition of Done\nToken live in workspace env, one successful live API run logged on this issue, parent skill remains green.",
+      "due_date": null,
+      "id": "7055afab-4465-4efa-bfe8-7cc0ffea94c5",
+      "identifier": "DEV-126",
+      "labels": [],
+      "metadata": {
+        "waiting_on": "admin:FIGMA_TOKEN"
+      },
+      "number": 126,
+      "parent_issue_id": null,
+      "position": 0,
+      "priority": "medium",
+      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
+      "start_date": null,
+      "status": "blocked",
+      "title": "OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux-spec skill",
+      "updated_at": "2026-05-26T17:31:49Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "assignee_type": "agent",
+      "created_at": "2026-05-26T17:10:59Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Rationale\nADR-002 (DEV-37, App Hub Model) has been in 'in_review' since 2026-05-25 with three unresolved admin blockers tracked only in its metadata: (1) GitHub PAT for newtechkw/adminnewtech org repo creation, (2) codegraph + understand-anything install on the runtime host, (3) Factory Pulse v3 deploy approval. The App Hub Model cannot be realized — no per-app repos, no codegraph indexing, no local-first lifecycle enforcement — until these are resolved. DEV-64 raised the production credentials escalation for Android Attendance but did not close the ADR-level blockers.\n\n## Evidence\n- ADR-002 (DEV-37) metadata: waiting_on = 'admin: (1) GH PAT for newtechkw org, (2) codegraph install on runtime, (3) Factory Pulse v3 deploy approval'\n- DEV-64 (ESCALATION: Production-credentials pack) status: in_review — shows admin ping was sent but response is pending\n- APP — Android Attendance hub project has 0 issues — App Hub model not yet realized\n- Architecture review window: 2026-04-01 → 2026-05-26\n\n## Acceptance Criteria\n- [ ] A single consolidated escalation comment is posted on DEV-37 listing the 3 blockers with exact provisioning steps and ETA request\n- [ ] If admin responds with confirmation, each blocker is unblocked and marked resolved in ADR-002 metadata\n- [ ] After all 3 are resolved: Factory Pulse v3 patch deployed, app-hub-bootstrap skill marked ready, codegraph-indexer agent wired to PR merge events\n- [ ] ADR-002 status moved to 'done' when all 3 are unblocked and validated\n\n## Dependencies\n- Admin response on DEV-64 / ADR-002 blockers\n- GitHub PAT with repo:create scope on adminnewtech account\n\n## Risk\nEvery new app built without the App Hub model accumulates tech debt (scattered issues, no codegraph, no local-first lifecycle). The gap widens with each additional app.\n\n## Definition of Done\nADR-002 moved to done; APP — Android Attendance hub populated; codegraph baseline established; Factory Pulse v3 live.\n\n## Effort: M (depends on admin response speed; technical work is S)",
+      "due_date": null,
+      "id": "4850d6c3-e432-4b72-9add-1d0e27a7cfe5",
+      "identifier": "DEV-108",
+      "labels": [],
+      "metadata": {
+        "waiting_on": "admin: (1) GH PAT for newtechkw org, (2) codegraph+understand-anything runtime install, (3) Factory Pulse v3 deploy approval"
+      },
+      "number": 108,
+      "parent_issue_id": "142023d5-144d-4431-b531-dfcccae7422d",
+      "position": 0,
+      "priority": "medium",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "blocked",
+      "title": "ARCH ACTION: Consolidate and resolve ADR-002 admin credential blockers",
+      "updated_at": "2026-05-26T17:31:46Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-05-26T17:10:24Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Rationale\nCVE-2026-8723 (MEDIUM — qs.stringify crashes with TypeError on null/undefined entries) affects the `qs` package, which is a common transitive dependency in Next.js applications. Our default stack uses Next.js for the frontend. If any API route or server-side function serializes query parameters with qs.stringify and passes null/undefined values, it is susceptible to a remotely triggerable DoS crash.\n\n## Evidence\n- CVE-2026-8723: GitHub Security Advisory, npm ecosystem, severity: medium\n- Default stack uses Next.js (per CLAUDE.md and skill list)\n- Android Attendance app is the first app built on this stack\n\n## Acceptance Criteria\n- [ ] Lock file audit run on all app repos (newtechkw/attendance-app or local demo) to identify the qs version in use\n- [ ] If qs \u003c patched version is present, upgrade to the patched version\n- [ ] Add a `qs` version constraint to the workspace template so all new apps start with the safe version\n- [ ] Note added to the `agentic-codegen-loop` skill to avoid qs.stringify with unvalidated inputs\n\n## Dependencies\n- GitHub repo access (newtechkw/attendance-app or adminnewtech equivalent)\n- Lock file (package-lock.json or pnpm-lock.yaml) visible in repo\n\n## Risk\nRemotely triggerable DoS on query-string serialization paths in any Next.js API route that uses qs.stringify with user-supplied data.\n\n## Definition of Done\nqs patched in all app repos and added to workspace template. Codegen loop skill updated with the constraint.\n\n## Effort: S (half day)",
+      "due_date": null,
+      "id": "a7ce212d-71f6-43b6-b433-beb70a145475",
+      "identifier": "DEV-106",
+      "labels": [],
+      "metadata": {
+        "waiting_on": "admin:github-repo:newtechkw/attendance-app"
+      },
+      "number": 106,
+      "parent_issue_id": "142023d5-144d-4431-b531-dfcccae7422d",
+      "position": 0,
+      "priority": "high",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "blocked",
+      "title": "ARCH ACTION: Audit and patch qs dependency for CVE-2026-8723 (DoS)",
+      "updated_at": "2026-05-27T07:45:29Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "296b1701-bb8f-467e-b244-89149b255841",
+      "assignee_type": "agent",
+      "created_at": "2026-05-26T17:00:51Z",
+      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
+      "creator_type": "agent",
+      "description": "## Input\n\nSentry MCP (P5 import) approved for wiring pending security review DEV-89.  \nSource: [getsentry/sentry-mcp](https://github.com/getsentry/sentry-mcp)\n\n## Agents to Wire\n\n| Agent | Token Type | Tools Allowed |\n|-------|-----------|---------------|\n| deployment-engineer | Read + write (assign/resolve issues) | Full Sentry MCP |\n| qa-engineer | Read-only | Error events, issue list |\n| security-auditor | Read-only | Error events, stack traces, release health |\n\n## Expected Output\n\n- Per-role Sentry auth tokens provisioned (read-only vs read-write)\n- `mcp_config` added to all 3 agents\n- Sentry project scoped to workspace's deployed apps only (not all Sentry orgs)\n- Smoke test: deployment-engineer can list recent errors for a test project\n\n## Acceptance Criteria\n- [ ] 3 agents wired\n- [ ] Token permissions match table above\n- [ ] Sentry project scoping confirmed\n- [ ] Smoke test passes\n- [ ] environment-manager confirms tokens stored in secrets\n\n## Dependencies\n- DEV-89 (security review) must be DONE before promotion to `todo`\n- A Sentry account + project must exist; admin provisions auth tokens\n- First production app must be deployed before this provides real value\n\n## Risk\nStack traces may contain sensitive user data (emails, IDs, request payloads). Write token for deployment-engineer only — no other agent should resolve or assign Sentry issues autonomously without a human gate.\n\n## Definition of Done\n3 agents wired. Token scope audit attached. Smoke test screenshot showing Sentry events loading successfully.",
+      "due_date": null,
+      "id": "b9e73484-ccc9-4dc9-bb2d-c15075d2fed9",
+      "identifier": "DEV-97",
+      "labels": [],
+      "metadata": {
+        "waiting_on": "admin:sentry-credentials (org slug + 2 tokens: RW for deployment-engineer, RO for qa-engineer + security-auditor)"
+      },
+      "number": 97,
+      "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
+      "position": 0,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "blocked",
+      "title": "WIRE: Sentry MCP → Deployment + QA + Security agents",
+      "updated_at": "2026-05-27T07:52:58Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "24030551-4371-4e97-9f71-68d2322f29d1",
+      "assignee_type": "agent",
+      "created_at": "2026-05-26T17:00:37Z",
+      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
+      "creator_type": "agent",
+      "description": "## Input\n\nContext7 MCP (P4 import) approved for wiring pending security review DEV-89.  \nSource: [upstash/context7](https://github.com/upstash/context7)  \nRemote endpoint: `https://mcp.context7.com/mcp`  \nInstall: `npx -y @upstash/context7-mcp` or direct remote\n\n## Agents to Wire\n\nAll code-producing agents benefit equally. Wire to:\n- claude-code-lead-developer\n- frontend-engineer\n- backend-engineer\n- full-stack-engineer\n- mobile-engineer\n\n## Expected Output\n\n- Single `CONTEXT7_API_KEY` provisioned by admin (or one per agent for usage tracking)\n- `mcp_config` entry added to each of the 5 agents pointing to the Context7 MCP\n- Test: each agent can call `resolve-library-id` for \"next.js\" and get library docs returned\n\n## Acceptance Criteria\n- [ ] All 5 code agents wired\n- [ ] `CONTEXT7_API_KEY` stored via environment-manager (not hardcoded)\n- [ ] Smoke test: `get-library-docs` returns Next.js docs successfully\n- [ ] Usage/cost tracking noted (paid per query — confirm billing plan)\n\n## Dependencies\n- DEV-89 (security review) must be DONE before promotion to `todo`\n- Admin must provision Upstash/Context7 API key\n\n## Risk\nLow. Read-only, no data egress. Paid per query — set up Upstash billing alert at $50/month threshold.\n\n## Definition of Done\n5 code agents wired. Smoke test passes. Billing alert configured.",
+      "due_date": null,
+      "id": "dc28497c-af1e-4f1e-bd1b-7eb365a49f1b",
+      "identifier": "DEV-96",
+      "labels": [],
+      "metadata": {
+        "waiting_on": "admin:CONTEXT7_API_KEY — set on all 5 code agents via multica agent env set, then run smoke test and configure Upstash billing alert"
+      },
+      "number": 96,
+      "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
+      "position": 0,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "blocked",
+      "title": "WIRE: Context7 MCP → all code agents",
+      "updated_at": "2026-05-27T07:48:16Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "24030551-4371-4e97-9f71-68d2322f29d1",
+      "assignee_type": "agent",
+      "created_at": "2026-05-26T16:59:55Z",
+      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
+      "creator_type": "agent",
+      "description": "## Input\n\nGitHub MCP (P1 import) approved for wiring pending security review DEV-89.  \nSource: [github/github-mcp-server](https://github.com/github/github-mcp-server)\n\n## Agents to Wire\n\n| Agent | Token Scope | Mode |\n|-------|------------|------|\n| claude-code-lead-developer | Read + write; workspace repos only | Full |\n| frontend-engineer | Read + write; workspace repos only | Full |\n| backend-engineer | Read + write; workspace repos only | Full |\n| full-stack-engineer | Read + write; workspace repos only | Full |\n| mobile-engineer | Read + write; workspace repos only | Full |\n| qa-engineer | Read-only | Read-only |\n| github-analyst | Read-only | Read-only |\n\n## Expected Output\n\n- `mcp_config` set on each listed agent via `multica agent update`\n- Separate GitHub PAT (or GitHub App token) provisioned per permission tier\n- Smoke test: each agent can list repos and read a file\n- Risk note posted as comment if any wiring deviation from plan\n\n## Acceptance Criteria\n- [ ] All 7 agents have GitHub MCP in their `mcp_config`\n- [ ] Token scopes verified against list above\n- [ ] Smoke tests passed\n- [ ] workspace-operations-manager confirms env vars set\n\n## Dependencies\n- DEV-89 (security review) must be DONE before this issue is promoted to `todo`\n- API keys: admin must provision GitHub App or fine-grained PATs\n\n## Risk\nOverly broad token scope could allow agents to push to repos they shouldn't. Use per-agent fine-grained PATs scoped to specific repo lists.\n\n## Definition of Done\nAll 7 agents wired. Smoke tests pass. Token scope audit attached as comment.",
+      "due_date": null,
+      "id": "e609f967-eebb-4fc7-b83a-ffe4f25d079c",
+      "identifier": "DEV-93",
+      "labels": [],
+      "metadata": {
+        "blocked_reason": "Admin must provision GITHUB_PAT_RW and GITHUB_PAT_RO tokens and set them as agent env vars; smoke tests cannot run without tokens"
+      },
+      "number": 93,
+      "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
+      "position": 0,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "blocked",
+      "title": "WIRE: GitHub MCP → Build Squad agents",
+      "updated_at": "2026-05-27T07:47:19Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "925a3e48-37f2-4620-870c-b57fe9003981",
       "assignee_type": "squad",
       "created_at": "2026-05-26T16:34:01Z",
@@ -13,9 +163,9 @@
       "identifier": "DEV-48",
       "labels": [],
       "metadata": {
-        "blocked_reason": "Supabase credentials + hosting target required to deploy reference demo (DoD final item)",
+        "blocked_reason": "App Hub hosting target still needed for reference demo at /templates/landing-kw-en/ — Supabase backend now covered by self-hosted-supabase-tunnel (DEV-110)",
         "skill_id": "efd634dc-2d63-4c40-b394-73961092d753",
-        "waiting_on": "admin_credentials_and_hosting"
+        "waiting_on": "admin_hosting"
       },
       "number": 48,
       "parent_issue_id": null,
@@ -25,11 +175,37 @@
       "start_date": null,
       "status": "blocked",
       "title": "SKILL: landing-page-builder — Next.js+Tailwind, bilingual EN/AR-KW RTL, Lighthouse ≥95",
-      "updated_at": "2026-05-26T17:00:33Z",
+      "updated_at": "2026-05-26T17:22:23Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_type": "squad",
+      "created_at": "2026-05-25T19:58:42Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Input\nParent: [DEV-25](mention://issue/f01f5264-86df-4f80-a2ff-f6a1abbb0794). PRD: [DEV-26](mention://issue/799e091f-184e-4551-8f8d-fd55cf62c59f). UX/UI plan: [DEV-29](mention://issue/0e6d9818-9ce4-46a8-8edc-e8e7e2cb1681). API: [DEV-32](mention://issue/bb36dbf3-e989-4e10-bf4e-f0756c5eef37). Schema + roles: [DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76).\n\n## Expected Output\n\nThree documents committed to `adminnewtech/attendance-app/docs/`:\n\n1. **`USER_GUIDE.ar.md`** (Kuwaiti Arabic, RTL formatting)\n   - How to install the APK\n   - First-time login (email + password / magic link)\n   - How to check-in / check-out (with GPS + selfie + QR)\n   - Reading the history screen\n   - Submitting a leave request\n   - What \"أنت خارج نطاق المكتب\" means and what to do\n   - Offline mode behaviour\n   - Troubleshooting: lost FCM notifications, login fails, GPS not detected\n\n2. **`ADMIN_GUIDE.ar.md`** + **`ADMIN_GUIDE.en.md`** (Kuwaiti Arabic + English, mirrored content)\n   - Logging into the admin dashboard\n   - Creating employees (with civil ID handling + role assignment)\n   - Office + geofence setup\n   - Shift template management\n   - Reading the live attendance board\n   - Generating + exporting reports (CSV / PDF)\n   - Approving leave requests\n   - Auditing changes via audit log\n   - Role matrix (super_admin / hr_manager / dept_manager / employee) with what each can/cannot do\n   - PDPL compliance notes (civil ID storage, biometric consent)\n\n3. **`README.md`** at repo root: 60-second project summary + how to run locally (`pnpm dev` + `expo start` + `supabase start`) + links to all three guides.\n\n## Acceptance Criteria\n- [ ] User guide uses Kuwaiti Arabic conversational tone (not MSA)\n- [ ] Admin guide is fully bilingual with matching headings AR ↔ EN\n- [ ] Every role in the matrix has a clear \"Can / Cannot\" list\n- [ ] No secrets, internal URLs, or PII anywhere in the docs\n- [ ] Screenshots/diagrams optional but encouraged (Mermaid acceptable for flow diagrams)\n\n## Dependencies\nNone blocking. UX plan + Architecture + DB schema are all finalised.\n\n## Risk\n- Admin guide may need regeneration if [DEV-34](mention://issue/3f3a89bb-3322-4f87-bd97-f6e89cf63d9b) UI labels change — document this dependency in a \"Maintenance\" section.\n\n## Definition of Done\nAll four files committed. Comment on this issue with file list + PR/commit link. Reviewed for tone (Arabic Kuwaiti, not MSA) by [@arabic-rtl-experience-agent](mention://agent/7bcef3ff-a4d6-4ea3-866e-bdcc00b27576) — they sign off before this can land in `done`.",
+      "due_date": null,
+      "id": "967675f5-e77f-4bf1-bbaf-c7e5251b3717",
+      "identifier": "DEV-40",
+      "labels": [],
+      "metadata": {
+        "retry_log": "{\"count\":3,\"stalled_at\":\"2026-05-26\"}",
+        "waiting_on": "admin:github-repo:adminnewtech/attendance-app"
+      },
+      "number": 40,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": 0,
+      "priority": "high",
+      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
+      "start_date": null,
+      "status": "blocked",
+      "title": "User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendance App",
+      "updated_at": "2026-05-26T17:26:02Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 1
+  "total": 8
 }

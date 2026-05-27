@@ -15,6 +15,7 @@ Design tokens, primitives, composed screens (LTR + RTL).
 
 - [`dashboard-screen-planner`](../skills/dashboard-screen-planner.md) — Produce the sitemap, screen list, and per-screen spec for a dashboard or admin UI.
 - [`design-system-tokens-builder`](../skills/design-system-tokens-builder.md) — Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.
+- [`figma-to-ux-spec`](../skills/figma-to-ux-spec.md) — Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design tokens, and interactions; output a structured screen list + per-screen state spec.
 - [`i18n-multilang-setup`](../skills/i18n-multilang-setup.md) — Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.
 - [`react-dashboard-builder`](../skills/react-dashboard-builder.md) — Build a responsive role-aware dashboard shell (sidebar + topbar + content).
 - [`wcag-accessibility-checklist`](../skills/wcag-accessibility-checklist.md) — Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.

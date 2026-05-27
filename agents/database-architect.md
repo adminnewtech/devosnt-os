@@ -20,6 +20,7 @@ RLS-first PostgreSQL schema with indexes, audit, money + timezone hygiene.
 - [`database-schema-designer`](../skills/database-schema-designer.md) — Design the relational data model for an app from its PRD with RLS-first defaults.
 - [`embeddings-semantic-search`](../skills/embeddings-semantic-search.md) — Default semantic search via pgvector. Embeddings + hybrid search + reranking.
 - [`multi-tenant-architecture`](../skills/multi-tenant-architecture.md) — Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across orgs.
+- [`self-hosted-supabase-tunnel`](../skills/self-hosted-supabase-tunnel.md) — Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.
 
 ## Instructions
 

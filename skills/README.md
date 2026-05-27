@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **113**
+Total skills in `devosnt`: **119**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -21,14 +21,16 @@ Total skills in `devosnt`: **113**
 | [app-scope-mvp-vs-production](./app-scope-mvp-vs-production.md) | `product-manager` | Split an app idea into MVP scope and Production scope with explicit non-goals. |
 | [audit-log-designer](./audit-log-designer.md) | `solution-architect`, `database-architect`, `backend-engineer`, `security-auditor` | Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff |
 | [auth-permission-matrix](./auth-permission-matrix.md) | `ceo`, `solution-architect`, `database-architect`, `security-auditor` | Produce the authoritative role × action permission matrix wired to RLS and route guards. |
-| [autonomous-test-fix-loop](./autonomous-test-fix-loop.md) | _(unowned)_ | After a build issue goes in_review, runs the QA test plan against the preview URL, creates |
+| [autonomous-test-fix-loop](./autonomous-test-fix-loop.md) | `qa-engineer`, `bug-hunter` | After a build issue goes in_review, runs the QA test plan against the preview URL, creates |
 | [background-jobs-design](./background-jobs-design.md) | `solution-architect`, `backend-engineer` | Default background job system: pg-boss / BullMQ / inngest, with retries + DLQ. |
 | [backup-restore-planner](./backup-restore-planner.md) | `database-architect`, `environment-manager` | Daily backups, weekly restore drill, point-in-time recovery, per-tenant export. |
+| [benchmark-vendor-tracker](./benchmark-vendor-tracker.md) | _(unowned)_ | Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor  |
 | [booking-system-builder](./booking-system-builder.md) | `solution-architect` | Build a booking / appointment system from preset. |
 | [bug-report-template](./bug-report-template.md) | `qa-engineer`, `bug-hunter` | Standard bug report shape so issues are reproducible on first read. |
 | [chat-support-builder](./chat-support-builder.md) | `full-stack-engineer` | Default in-app support chat: ticketing, agent inbox, AI deflection, WhatsApp bridge. |
 | [ci-cd-pipeline-builder](./ci-cd-pipeline-builder.md) | `claude-code-lead-developer`, `deployment-engineer` | Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy. |
 | [clinic-system-builder](./clinic-system-builder.md) | `solution-architect` | Build a medical clinic system: patients, appointments, EMR, prescriptions, billing, insura |
+| [code-reviewer](./code-reviewer.md) | _(unowned)_ | OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best pra |
 | [codebase-cartographer](./codebase-cartographer.md) | `codebase-cartographer` | Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync  |
 | [codegraph-indexer](./codegraph-indexer.md) | `codegraph-indexer` | Build and refresh a per-app codegraph index (tree-sitter + SQLite) plus an Understand-Anyt |
 | [cost-budget-tracker](./cost-budget-tracker.md) | `workspace-operations-manager`, `environment-manager`, `tool-evaluator` | Per-project monthly budget + alerting on cloud + AI spend. |
@@ -46,9 +48,9 @@ Total skills in `devosnt`: **113**
 | [email-marketing-builder](./email-marketing-builder.md) | `solution-architect` | Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics |
 | [embeddings-semantic-search](./embeddings-semantic-search.md) | `database-architect`, `full-stack-engineer` | Default semantic search via pgvector. Embeddings + hybrid search + reranking. |
 | [error-tracking-setup](./error-tracking-setup.md) | `bug-hunter` | Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing. |
-| [external-blocker-escalation](./external-blocker-escalation.md) | _(unowned)_ | Single-shot consolidated escalation to admin when a build task is blocked on an external c |
+| [external-blocker-escalation](./external-blocker-escalation.md) | `ceo` | Single-shot consolidated escalation to admin when a build task is blocked on an external c |
 | [feature-flag-system](./feature-flag-system.md) | `release-manager` | Default feature flags + targeting rules + kill switches, Supabase-backed. |
-| [figma-to-ux-spec](./figma-to-ux-spec.md) | _(unowned)_ | Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design |
+| [figma-to-ux-spec](./figma-to-ux-spec.md) | `ux-architect`, `ui-designer` | Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design |
 | [file-upload-storage-design](./file-upload-storage-design.md) | `backend-engineer` | Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN. |
 | [gdpr-compliance-checklist](./gdpr-compliance-checklist.md) | `quality-gate-manager`, `security-auditor` | GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA. |
 | [github-research-workflow](./github-research-workflow.md) | `research-scout`, `github-analyst`, `docs-analyst` | Research GitHub for prior art before building (top repos, license, patterns). |
@@ -68,13 +70,14 @@ Total skills in `devosnt`: **113**
 | [mcp-server-evaluator](./mcp-server-evaluator.md) | `skill-builder` | Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject |
 | [mobile-app-planner](./mobile-app-planner.md) | `mobile-engineer` | Plan a React Native (Expo) companion or standalone mobile app. |
 | [monitoring-alerting-setup](./monitoring-alerting-setup.md) | `workspace-operations-manager`, `performance-tester`, `deployment-engineer`, `environment-manager` | Default monitoring: uptime, latency, error rate, with on-call paging. |
+| [multi-agent-coordinator](./multi-agent-coordinator.md) | _(unowned)_ | Coordinate concurrent agents across Multica issues: DAG-based dependency ordering on paren |
 | [multi-tenant-architecture](./multi-tenant-architecture.md) | `solution-architect`, `database-architect` | Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across or |
 | [nextjs-app-starter](./nextjs-app-starter.md) | `claude-code-lead-developer`, `frontend-engineer`, `full-stack-engineer` | Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton. |
-| [nextjs-supabase-builder](./nextjs-supabase-builder.md) | _(unowned)_ | Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS ver |
+| [nextjs-supabase-builder](./nextjs-supabase-builder.md) | `frontend-engineer`, `full-stack-engineer` | Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS ver |
 | [notifications-multichannel-planner](./notifications-multichannel-planner.md) | `integration-architect` | Default multichannel notification system: email + SMS + push + WhatsApp + in-app. |
 | [onboarding-flow-builder](./onboarding-flow-builder.md) | `product-manager`, `ux-architect`, `growth-lead`, `content-writer-ar-en`, `onboarding-designer` | Default user onboarding: signup → verify → workspace setup → first value moment. |
 | [one-prompt-to-app](./one-prompt-to-app.md) | `ceo`, `product-manager`, `growth-lead` | Master orchestrator: turn a single raw user prompt into a deployed system end-to-end witho |
-| [parallel-issue-dispatcher](./parallel-issue-dispatcher.md) | _(unowned)_ | Auto-identify independent sub-issues within a parent and batch-promote all of them to --st |
+| [parallel-issue-dispatcher](./parallel-issue-dispatcher.md) | `ceo`, `sprint-commander` | Auto-identify independent sub-issues within a parent and batch-promote all of them to --st |
 | [payment-subscription-builder](./payment-subscription-builder.md) | `integration-architect` | Default subscription billing: Stripe + KNet/MyFatoorah, plans, trials, dunning. |
 | [payment-workflow-planner](./payment-workflow-planner.md) | `integration-architect` | Plan a payment flow (provider, checkout, webhooks, refunds, reconciliation). |
 | [pdpl-kuwait-compliance](./pdpl-kuwait-compliance.md) | `quality-gate-manager`, `arabic-rtl-experience-agent`, `security-auditor` | Kuwait PDPL baseline: registration, consent, breach reporting, local storage where require |
@@ -99,13 +102,16 @@ Total skills in `devosnt`: **113**
 | [rtl-arabic-ui-planner](./rtl-arabic-ui-planner.md) | `arabic-rtl-experience-agent` | Plan an RTL-correct Arabic UI variant with Kuwaiti-Arabic copy guidance. |
 | [school-system-builder](./school-system-builder.md) | `solution-architect` | Build a school / SIS system: students, classes, attendance, grades, parents, fees. |
 | [search-system-builder](./search-system-builder.md) | `solution-architect` | Default end-user search with autocomplete, typo tolerance, filters, facets. |
+| [security-auditor](./security-auditor.md) | _(unowned)_ | Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps,  |
+| [security-hardening-owasp](./security-hardening-owasp.md) | _(unowned)_ | OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validat |
 | [security-review-checklist](./security-review-checklist.md) | `ceo`, `quality-gate-manager`, `security-auditor` | Block release of any user-visible feature that fails the 15-point security gate. |
 | [seed-data-factory](./seed-data-factory.md) | `qa-engineer`, `template-builder` | Default seed data generator per vertical so empty states are demoable from minute one. |
-| [self-hosted-supabase-tunnel](./self-hosted-supabase-tunnel.md) | _(unowned)_ | Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), |
+| [self-hosted-supabase-tunnel](./self-hosted-supabase-tunnel.md) | `solution-architect`, `database-architect` | Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), |
 | [seo-baseline-setup](./seo-baseline-setup.md) | `frontend-engineer`, `growth-lead`, `seo-specialist` | Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang. |
 | [shopify-dashboard-builder](./shopify-dashboard-builder.md) | `integration-architect` | Build a Shopify analytics + ops dashboard via the Admin API. |
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
+| [tdd-mastery](./tdd-mastery.md) | _(unowned)_ | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
 | [tool-comparison-workflow](./tool-comparison-workflow.md) | `research-scout`, `docs-analyst`, `tool-evaluator` | Compare 2-4 tools/services and produce a one-page decision doc. |
 | [usability-test-script](./usability-test-script.md) | `product-manager`, `qa-engineer` | Default 5-user usability test script for any new feature before launch. |
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |

@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 25 (done: 14)
+- **Issues:** 41 (done: 20)
 
 ## Description
 
@@ -12,15 +12,22 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-51 | AUTOPILOT: workspace-upgrade-loop — weekly recursive workspace improvement | `in_review` | high |
-| DEV-57 | AUTOPILOT: Weekly GitHub Research Sweep — Anthropic+awesome-claude-code-*+MCP+Su | `in_review` | high |
-| DEV-58 | AUTOPILOT: Daily Command Center Digest — per-project status briefing at 07:00 KW | `in_review` | high |
-| DEV-59 | AUTOPILOT: Monthly Architecture & Tool-stack Review — ADR + stack + integration  | `in_review` | high |
-| DEV-60 | AUTOPILOT: Weekly Benchmark Sweep — refresh 6-vendor brief every Monday | `in_review` | high |
-| DEV-64 | ESCALATION: Production-credentials pack for Android Attendance — one consolidate | `in_review` | urgent |
-| DEV-66 | Workspace Upgrade Report — 2026-05-26 | `in_progress` | none |
-| DEV-70 | Monthly Architecture & Tool-stack Review — 2026-05-26 | `in_progress` | none |
+| DEV-106 | ARCH ACTION: Audit and patch qs dependency for CVE-2026-8723 (DoS) | `blocked` | high |
+| DEV-108 | ARCH ACTION: Consolidate and resolve ADR-002 admin credential blockers | `blocked` | medium |
+| DEV-111 | Workspace Upgrade Action — Adopt 6 orphan skills (attach to owner agents) | `in_review` | high |
+| DEV-112 | Workspace Upgrade Action — CEO prompt: dispatch in_review queue to quality-gate- | `in_review` | high |
+| DEV-131 | QA Gate: DEV-44 — Factory Health Audit — 2026-05-26 | `todo` | none |
+| DEV-136 | Factory Health Audit — 2026-05-27 | `todo` | none |
+| DEV-137 | Daily Command Center Digest — 2026-05-27 | `in_review` | none |
+| DEV-139 | QA Gate: DEV-112 — dispatch in_review queue to quality-gate | `todo` | none |
+| DEV-140 | QA Gate: DEV-111 — Adopt 6 orphan skills | `todo` | none |
+| DEV-141 | QA Gate: DEV-110 — Pin self-hosted-supabase-tunnel | `todo` | none |
+| DEV-142 | QA Gate: DEV-107 — Write ADR-001 tech stack | `todo` | none |
 
 ## Recent Done
 
-_(none)_
+- DEV-146 — QA Gate: DEV-70 — Monthly Architecture & Tool-stack Review
+- DEV-104 — ARCH ACTION: Add MCP server auth policy before codegraph integration
+- DEV-110 — Workspace Upgrade Action — Pin self-hosted-supabase-tunnel as demo-backend defau
+- DEV-107 — ARCH ACTION: Write ADR-001 documenting the default tech stack decision
+- DEV-128 — ADR-001 — Default Tech Stack (Next.js + Supabase + Vercel)

@@ -9,11 +9,11 @@
     "description": "CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → DEPLOYED SYSTEM workflow, owns the quality gate.",
     "has_custom_env": false,
     "id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-    "instructions": "You are the CEO Orchestrator of the devosnt workspace — the founding agent and the routing hub for every other agent.\n\n## Core role\nRead every new issue, decide which squad owns it, set assignee + status, and keep the IDEA → DEPLOYED SYSTEM workflow moving without manual intervention. Default behaviour: drive every inbound prompt to a deployed system via the `one-prompt-to-app` orchestrator without pausing for clarification on anything that can be defaulted.\n\n## Decision rules\n- **New raw prompt in `01 - App Requests`** (any language, any vertical) → run `prompt-router-classifier`, then dispatch `one-prompt-to-app`. Do not stop until either (a) the app is live or (b) a hard external blocker hits (credentials, paid resource, ambiguous billing). Re-read the parent every cycle.\n- `01 - App Requests` issues with a brief already → run `app-idea-to-product-brief` skill, then route to Product UX Squad.\n- `02 - Product Specs` issues → ensure the PRD is complete, then trigger Architecture + UX in parallel.\n- `04 - Architecture Database API` issues → ensure schema (+ `multi-tenant-architecture`, `audit-log-designer`), API contract (+ `api-versioning-strategy`, `rate-limiting-design`), permission matrix, and `backup-restore-planner` plan exist before promoting build sub-issues from `backlog` to `todo`.\n- `05 - Parallel Build` issues → confirm parent has Acceptance Criteria + DoD before assigning to Build Squad. Every Build issue runs through `agentic-codegen-loop`.\n- `06 - QA Security Performance` issues → gate `in_review → done` transitions; veto if any of `security-review-checklist` / `wcag-accessibility-checklist` / `performance-review-checklist` / `dependency-vulnerability-scanner` failed.\n- `07 - Deploy Documentation Handover` issues → require QA + Security sign-off; run `deployment-checklist` + `monitoring-alerting-setup` + `incident-response-runbook`.\n- `08 - Skill Library` issues → after any project closes, run `reusable-template-extractor` + `cross-project-pattern-extractor` + `post-build-report-generator`.\n\n## Self-healing\n- Any failed agent run → invoke `agent-self-healing-policy`: retry with a different runtime/model up to 2× before escalating.\n- Pin `retry_log` to issue metadata so the failure pattern surfaces in the weekly improvement loop.\n\n## Operating principles\n1. Never ask for confirmation on cheap reversible actions (creating issues, labels, sub-tasks). Ask before destructive or paid actions.\n2. Every comment you post is a teammate update, not a chatbot reply. State the decision and the next step.\n3. Pin metadata only for facts future runs on the same issue will re-read (`pr_url`, `deploy_url`, `waiting_on`, `blocked_reason`, `decision`, `routing_decision`, `retry_log`). Never log run state.\n4. Mentions are side-effecting. Do not mention an agent in a wrap-up or thank-you — silence ends conversations.\n5. Always read full comment history before deciding. Earlier comments often hold the real instructions.\n6. **Default to action, not questions.** If the user prompt has any reasonable interpretation, run with it via `one-prompt-to-app` and reveal the assumptions in the result. Only ask when the prompt is structurally ambiguous (e.g. \"build something\").\n\n## Skills you own\none-prompt-to-app, prompt-router-classifier, agent-self-healing-policy, cross-project-pattern-extractor, app-idea-to-product-brief, product-brief-to-prd, prd-to-user-stories, user-stories-to-issues, database-schema-designer, api-contract-designer, auth-permission-matrix, qa-test-plan-generator, security-review-checklist, deployment-checklist, reusable-template-extractor, dashboard-screen-planner.\n\n## Escalation\nEscalate to admin@newtechkw.com only when: credentials are required, a paid resource must be provisioned, a production deploy is needed, or a Multica capability is missing.",
+    "instructions": "You are the CEO Orchestrator of the devosnt workspace — the founding agent and the routing hub for every other agent.\n\n## Core role\nRead every new issue, decide which squad owns it, set assignee + status, and keep the IDEA → DEPLOYED SYSTEM workflow moving without manual intervention. Default behaviour: drive every inbound prompt to a deployed system via the `one-prompt-to-app` orchestrator without pausing for clarification on anything that can be defaulted.\n\n## Decision rules\n- **New raw prompt in `01 - App Requests`** (any language, any vertical) → run `prompt-router-classifier`, then dispatch `one-prompt-to-app`. Do not stop until either (a) the app is live or (b) a hard external blocker hits (credentials, paid resource, ambiguous billing). Re-read the parent every cycle.\n- `01 - App Requests` issues with a brief already → run `app-idea-to-product-brief` skill, then route to Product UX Squad.\n- `02 - Product Specs` issues → ensure the PRD is complete, then trigger Architecture + UX in parallel.\n- `04 - Architecture Database API` issues → ensure schema (+ `multi-tenant-architecture`, `audit-log-designer`), API contract (+ `api-versioning-strategy`, `rate-limiting-design`), permission matrix, and `backup-restore-planner` plan exist before promoting build sub-issues from `backlog` to `todo`.\n- `05 - Parallel Build` issues → confirm parent has Acceptance Criteria + DoD before assigning to Build Squad. Every Build issue runs through `agentic-codegen-loop`.\n- `06 - QA Security Performance` issues → gate `in_review → done` transitions; veto if any of `security-review-checklist` / `wcag-accessibility-checklist` / `performance-review-checklist` / `dependency-vulnerability-scanner` failed.\n- `07 - Deploy Documentation Handover` issues → require QA + Security sign-off; run `deployment-checklist` + `monitoring-alerting-setup` + `incident-response-runbook`.\n- `08 - Skill Library` issues → after any project closes, run `reusable-template-extractor` + `cross-project-pattern-extractor` + `post-build-report-generator`.\n\n## in_review queue sweep\nAfter routing new App Requests each run, sweep the workspace `in_review` queue and delegate up to 5 issues to quality-gate-manager (id: `d87c831d-bd4d-459f-9672-d633e238c44f`) for verification.\n\n**Steps (run every CEO invocation):**\n\n1. `multica issue list --status in_review --output json` — fetch the full queue.\n2. **Filter** to issues where ALL of:\n   - `assignee_id` ≠ `d9f942b9-e245-4e28-99eb-8f12fbebc2c3` (not ceo — those are escalations, not shippable work).\n   - `identifier` ≠ `DEV-36` (permanently excluded).\n   - `updated_at` is older than 12 h ago **OR** the description contains a \"Definition of Done\" checklist.\n3. **Dedup** — for each candidate, check whether a quality-gate sub-issue already exists and is still open (status not `done`/`cancelled`). Skip if one exists.\n4. Sort by `updated_at` ascending (oldest first). Take the first **5**.\n5. For each, create one sub-issue:\n   - `--parent \u003cparent-issue-id\u003e`\n   - `--assignee-id d87c831d-bd4d-459f-9672-d633e238c44f`\n   - `--status todo`\n   - Title: `QA Gate: \u003cparent-identifier\u003e — \u003cparent-title\u003e`\n   - Description:\n     ```\n     Verify and decide on [\u003cparent-identifier\u003e](mention://issue/\u003cparent-id\u003e).\n\n     Steps:\n     1. Read the parent issue body + all comments.\n     2. Run `security-review-checklist` if the issue is user-facing.\n     3. Check every item in the Definition of Done checklist.\n\n     Decision:\n     - PASS (DoD met, no security issues) → `multica issue status \u003cparent-id\u003e done`\n     - VETO (DoD not met or security failure) → `multica issue status \u003cparent-id\u003e backlog` + `multica issue metadata set \u003cparent-id\u003e --key blocked_reason --value \"\u003creason\u003e\"`\n\n     Post your verdict as a comment on the parent issue.\n     ```\n6. Do **NOT** `@mention` quality-gate-manager anywhere — the assignment fires the trigger automatically.\n7. After dispatching, post one summary comment on the issue that triggered this CEO run listing which parent issues were queued for QA review.\n\n**Cap:** Maximum 5 dispatches per CEO run to prevent flooding. If all 5 slots are consumed, the remaining candidates will be picked up on the next CEO run.\n\n## Self-healing\n- Any failed agent run → invoke `agent-self-healing-policy`: retry with a different runtime/model up to 2× before escalating.\n- Pin `retry_log` to issue metadata so the failure pattern surfaces in the weekly improvement loop.\n\n## Operating principles\n1. Never ask for confirmation on cheap reversible actions (creating issues, labels, sub-tasks). Ask before destructive or paid actions.\n2. Every comment you post is a teammate update, not a chatbot reply. State the decision and the next step.\n3. Pin metadata only for facts future runs on the same issue will re-read (`pr_url`, `deploy_url`, `waiting_on`, `blocked_reason`, `decision`, `routing_decision`, `retry_log`). Never log run state.\n4. Mentions are side-effecting. Do not mention an agent in a wrap-up or thank-you — silence ends conversations.\n5. Always read full comment history before deciding. Earlier comments often hold the real instructions.\n6. **Default to action, not questions.** If the user prompt has any reasonable interpretation, run with it via `one-prompt-to-app` and reveal the assumptions in the result. Only ask when the prompt is structurally ambiguous (e.g. \"build something\").\n\n## Skills you own\none-prompt-to-app, prompt-router-classifier, agent-self-healing-policy, cross-project-pattern-extractor, app-idea-to-product-brief, product-brief-to-prd, prd-to-user-stories, user-stories-to-issues, database-schema-designer, api-contract-designer, auth-permission-matrix, qa-test-plan-generator, security-review-checklist, deployment-checklist, reusable-template-extractor, dashboard-screen-planner.\n\n## Escalation\nEscalate to admin@newtechkw.com only when: credentials are required, a paid resource must be provisioned, a production deploy is needed, or a Multica capability is missing.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-opus-4-7",
+    "model": "claude-sonnet-4-6",
     "name": "ceo",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
@@ -66,9 +66,19 @@
         "name": "deployment-checklist"
       },
       {
+        "description": "Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:\u003cresource\u003e metadata, and stops pulse retries until cleared.",
+        "id": "74c65b85-3623-4a71-961b-536ae81c9dce",
+        "name": "external-blocker-escalation"
+      },
+      {
         "description": "Master orchestrator: turn a single raw user prompt into a deployed system end-to-end without further input.",
         "id": "cdf231f0-867b-4ec2-a0d3-e8d7cff26f32",
         "name": "one-prompt-to-app"
+      },
+      {
+        "description": "Auto-identify independent sub-issues within a parent and batch-promote all of them to --status todo simultaneously, using a dependency DAG to determine readiness.",
+        "id": "9f4b229b-4f75-454b-9548-2df4e4b80916",
+        "name": "parallel-issue-dispatcher"
       },
       {
         "description": "Decompose a PRD into atomic build-ready user stories with acceptance criteria.",
@@ -106,9 +116,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:08:05Z",
+    "updated_at": "2026-05-27T08:01:31Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -139,6 +149,11 @@
         "name": "agent-self-healing-policy"
       },
       {
+        "description": "Auto-identify independent sub-issues within a parent and batch-promote all of them to --status todo simultaneously, using a dependency DAG to determine readiness.",
+        "id": "9f4b229b-4f75-454b-9548-2df4e4b80916",
+        "name": "parallel-issue-dispatcher"
+      },
+      {
         "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
         "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
         "name": "user-stories-to-issues"
@@ -146,7 +161,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:07:33Z",
+    "updated_at": "2026-05-27T08:02:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -214,7 +229,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:06:19Z",
+    "updated_at": "2026-05-27T07:51:57Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -232,7 +247,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-haiku-4-5-20251001",
+    "model": "claude-sonnet-4-6",
     "name": "workspace-operations-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
@@ -262,7 +277,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:07:33Z",
+    "updated_at": "2026-05-27T08:02:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -345,7 +360,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:06:53Z",
+    "updated_at": "2026-05-27T07:20:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -381,6 +396,11 @@
         "name": "design-system-tokens-builder"
       },
       {
+        "description": "Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design tokens, and interactions; output a structured screen list + per-screen state spec.",
+        "id": "3b768b92-e4b2-47f1-9172-3bc20eeb7695",
+        "name": "figma-to-ux-spec"
+      },
+      {
         "description": "Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.",
         "id": "299d3d20-e0cb-4c08-a132-95ba3d7663ac",
         "name": "i18n-multilang-setup"
@@ -403,7 +423,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T16:20:48Z",
+    "updated_at": "2026-05-27T07:20:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -439,6 +459,11 @@
         "name": "design-system-tokens-builder"
       },
       {
+        "description": "Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design tokens, and interactions; output a structured screen list + per-screen state spec.",
+        "id": "3b768b92-e4b2-47f1-9172-3bc20eeb7695",
+        "name": "figma-to-ux-spec"
+      },
+      {
         "description": "Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.",
         "id": "299d3d20-e0cb-4c08-a132-95ba3d7663ac",
         "name": "i18n-multilang-setup"
@@ -456,7 +481,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:46:55Z",
+    "updated_at": "2026-05-27T07:20:11Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -499,7 +524,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:30:35Z",
+    "updated_at": "2026-05-27T07:20:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -648,11 +673,16 @@
         "description": "Default end-user search with autocomplete, typo tolerance, filters, facets.",
         "id": "abfcf7ae-9c8b-41d1-b039-d9fdefa1aebc",
         "name": "search-system-builder"
+      },
+      {
+        "description": "Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.",
+        "id": "0138df08-f46d-4216-934a-42ecbf70a087",
+        "name": "self-hosted-supabase-tunnel"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:07:33Z",
+    "updated_at": "2026-05-27T07:47:02Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -678,13 +708,15 @@
         "supabase": {
           "args": [
             "-y",
-            "supabase-mcp",
+            "supabase-mcp@latest",
             "--project-ref",
-            "${SUPABASE_PROJECT_REF}"
+            "${SUPABASE_PROJECT_REF}",
+            "--read-only",
+            "false"
           ],
           "command": "npx",
           "env": {
-            "SUPABASE_SERVICE_ROLE_KEY": "${SUPABASE_SERVICE_ROLE_KEY_DEV}"
+            "SUPABASE_ACCESS_TOKEN": "${SUPABASE_PAT_DB_ARCHITECT}"
           }
         }
       }
@@ -726,11 +758,16 @@
         "description": "Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across orgs.",
         "id": "fd6d0f9a-8326-40f7-8520-ea3276608bdd",
         "name": "multi-tenant-architecture"
+      },
+      {
+        "description": "Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.",
+        "id": "0138df08-f46d-4216-934a-42ecbf70a087",
+        "name": "self-hosted-supabase-tunnel"
       }
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:06:48Z",
+    "updated_at": "2026-05-27T07:51:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -783,7 +820,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:21:47Z",
+    "updated_at": "2026-05-27T07:20:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -851,7 +888,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:06:52Z",
+    "updated_at": "2026-05-27T07:20:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -872,7 +909,17 @@
     "model": "claude-sonnet-4-6",
     "name": "claude-code-lead-developer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "context7": {
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ],
+          "command": "npx"
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -919,7 +966,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:06:46Z",
+    "updated_at": "2026-05-27T07:48:23Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -940,7 +987,17 @@
     "model": "claude-sonnet-4-6",
     "name": "frontend-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "context7": {
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ],
+          "command": "npx"
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -975,6 +1032,11 @@
         "name": "nextjs-app-starter"
       },
       {
+        "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.",
+        "id": "9f1399a6-8cb1-4a7f-95c6-c3a4fb349184",
+        "name": "nextjs-supabase-builder"
+      },
+      {
         "description": "Default PWA setup: installable, offline, push, background sync.",
         "id": "e45fa089-30a7-4988-a60c-66a8d487dcff",
         "name": "pwa-offline-first"
@@ -1002,7 +1064,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:58:21Z",
+    "updated_at": "2026-05-27T07:47:33Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1023,7 +1085,26 @@
     "model": "claude-sonnet-4-6",
     "name": "backend-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "supabase": {
+          "args": [
+            "-y",
+            "supabase-mcp@latest",
+            "--project-ref",
+            "${SUPABASE_PROJECT_REF}",
+            "--read-only",
+            "false",
+            "--features",
+            "database,storage,functions,realtime"
+          ],
+          "command": "npx",
+          "env": {
+            "SUPABASE_ACCESS_TOKEN": "${SUPABASE_PAT_BACKEND_ENGINEER}"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -1075,7 +1156,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T18:21:57Z",
+    "updated_at": "2026-05-27T07:49:34Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1096,7 +1177,26 @@
     "model": "claude-sonnet-4-6",
     "name": "full-stack-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "supabase": {
+          "args": [
+            "-y",
+            "supabase-mcp@latest",
+            "--project-ref",
+            "${SUPABASE_PROJECT_REF}",
+            "--read-only",
+            "false",
+            "--features",
+            "database,storage,functions,realtime"
+          ],
+          "command": "npx",
+          "env": {
+            "SUPABASE_ACCESS_TOKEN": "${SUPABASE_PAT_FULLSTACK_ENGINEER}"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -1131,6 +1231,11 @@
         "name": "nextjs-app-starter"
       },
       {
+        "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.",
+        "id": "9f1399a6-8cb1-4a7f-95c6-c3a4fb349184",
+        "name": "nextjs-supabase-builder"
+      },
+      {
         "description": "Default realtime patterns for collaborative apps using Supabase Realtime / Pusher / Liveblocks.",
         "id": "c2dafd1e-c475-439b-bf23-fcf5adeb4cd5",
         "name": "realtime-collaboration-planner"
@@ -1148,7 +1253,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:18:59Z",
+    "updated_at": "2026-05-27T07:49:40Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1169,7 +1274,17 @@
     "model": "claude-sonnet-4-6",
     "name": "mobile-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "context7": {
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ],
+          "command": "npx"
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -1206,7 +1321,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:16:25Z",
+    "updated_at": "2026-05-27T07:47:35Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1227,10 +1342,43 @@
     "model": "claude-sonnet-4-6",
     "name": "qa-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "playwright": {
+          "args": [
+            "-y",
+            "@playwright/mcp@latest",
+            "--no-sandbox",
+            "--isolated",
+            "--block-service-workers",
+            "--blocked-origins",
+            "http://127.0.0.1;https://127.0.0.1;http://localhost;https://localhost;http://169.254.169.254;https://169.254.169.254"
+          ],
+          "command": "npx"
+        },
+        "sentry": {
+          "args": [
+            "-y",
+            "@sentry/mcp-server@0.35.0",
+            "--organization-slug",
+            "REPLACE_WITH_SENTRY_ORG_SLUG"
+          ],
+          "command": "npx",
+          "env": {
+            "MCP_DISABLE_SKILLS": "update_issue,create_team,create_project,update_project,create_dsn",
+            "SENTRY_ACCESS_TOKEN": "REPLACE_WITH_SENTRY_RO_TOKEN"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
+      {
+        "description": "After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.",
+        "id": "622391e4-2b94-4a93-a858-305148e2344b",
+        "name": "autonomous-test-fix-loop"
+      },
       {
         "description": "Standard bug report shape so issues are reproducible on first read.",
         "id": "d657a738-f44a-4400-81b1-248af5f94455",
@@ -1259,7 +1407,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:06:50Z",
+    "updated_at": "2026-05-27T07:52:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1280,10 +1428,30 @@
     "model": "claude-sonnet-4-6",
     "name": "bug-hunter",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "playwright": {
+          "args": [
+            "-y",
+            "@playwright/mcp@latest",
+            "--no-sandbox",
+            "--isolated",
+            "--block-service-workers",
+            "--blocked-origins",
+            "http://127.0.0.1;https://127.0.0.1;http://localhost;https://localhost;http://169.254.169.254;https://169.254.169.254"
+          ],
+          "command": "npx"
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
+      {
+        "description": "After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.",
+        "id": "622391e4-2b94-4a93-a858-305148e2344b",
+        "name": "autonomous-test-fix-loop"
+      },
       {
         "description": "Standard bug report shape so issues are reproducible on first read.",
         "id": "d657a738-f44a-4400-81b1-248af5f94455",
@@ -1302,7 +1470,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T01:30:20Z",
+    "updated_at": "2026-05-27T07:47:07Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1323,7 +1491,23 @@
     "model": "claude-sonnet-4-6",
     "name": "security-auditor",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "sentry": {
+          "args": [
+            "-y",
+            "@sentry/mcp-server@0.35.0",
+            "--organization-slug",
+            "REPLACE_WITH_SENTRY_ORG_SLUG"
+          ],
+          "command": "npx",
+          "env": {
+            "MCP_DISABLE_SKILLS": "update_issue,create_team,create_project,update_project,create_dsn",
+            "SENTRY_ACCESS_TOKEN": "REPLACE_WITH_SENTRY_RO_TOKEN"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -1365,7 +1549,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T00:59:55Z",
+    "updated_at": "2026-05-27T07:52:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1408,7 +1592,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T01:28:28Z",
+    "updated_at": "2026-05-27T07:20:29Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1429,7 +1613,22 @@
     "model": "claude-sonnet-4-6",
     "name": "deployment-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "sentry": {
+          "args": [
+            "-y",
+            "@sentry/mcp-server@0.35.0",
+            "--organization-slug",
+            "REPLACE_WITH_SENTRY_ORG_SLUG"
+          ],
+          "command": "npx",
+          "env": {
+            "SENTRY_ACCESS_TOKEN": "REPLACE_WITH_SENTRY_RW_TOKEN"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -1471,7 +1670,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:41:17Z",
+    "updated_at": "2026-05-27T07:53:06Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1489,7 +1688,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-haiku-4-5-20251001",
+    "model": "claude-sonnet-4-6",
     "name": "environment-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
@@ -1524,7 +1723,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:47:08Z",
+    "updated_at": "2026-05-27T07:20:53Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1542,7 +1741,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-haiku-4-5-20251001",
+    "model": "claude-sonnet-4-6",
     "name": "release-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
@@ -1582,7 +1781,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T10:47:09Z",
+    "updated_at": "2026-05-27T07:20:54Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1630,7 +1829,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T20:07:12Z",
+    "updated_at": "2026-05-27T07:20:55Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1678,7 +1877,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:06:49Z",
+    "updated_at": "2026-05-27T07:20:56Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1721,7 +1920,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:53:56Z",
+    "updated_at": "2026-05-27T07:20:57Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1759,7 +1958,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:02Z",
+    "updated_at": "2026-05-27T07:20:57Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1807,7 +2006,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:19:03Z",
+    "updated_at": "2026-05-27T07:20:58Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1853,9 +2052,9 @@
         "name": "workspace-upgrade-report"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:07:32Z",
+    "updated_at": "2026-05-27T07:20:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1876,7 +2075,20 @@
     "model": "claude-sonnet-4-6",
     "name": "github-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "runtime_config": {},
+    "runtime_config": {
+      "mcpServers": {
+        "github": {
+          "args": [
+            "-y",
+            "@github/github-mcp-server"
+          ],
+          "command": "npx",
+          "env": {
+            "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PAT_RO}"
+          }
+        }
+      }
+    },
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
@@ -1891,9 +2103,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:07:32Z",
+    "updated_at": "2026-05-27T07:59:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1936,7 +2148,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T17:04:59Z",
+    "updated_at": "2026-05-27T07:21:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1974,7 +2186,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:55:10Z",
+    "updated_at": "2026-05-27T07:21:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2007,7 +2219,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:58:10Z",
+    "updated_at": "2026-05-27T07:21:02Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2040,7 +2252,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:58:20Z",
+    "updated_at": "2026-05-27T07:21:03Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2073,7 +2285,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-25T17:58:30Z",
+    "updated_at": "2026-05-27T07:21:04Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2131,7 +2343,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:37:23Z",
+    "updated_at": "2026-05-27T07:21:05Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2174,7 +2386,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:37:41Z",
+    "updated_at": "2026-05-27T07:21:06Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2212,7 +2424,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:37:56Z",
+    "updated_at": "2026-05-27T07:21:06Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2255,7 +2467,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:38:25Z",
+    "updated_at": "2026-05-27T07:21:07Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2293,7 +2505,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-26T16:38:40Z",
+    "updated_at": "2026-05-27T07:21:08Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   }

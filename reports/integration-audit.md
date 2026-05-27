@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-27T07:59:30.305512+00:00_
+_Generated: 2026-05-27T08:03:33.709622+00:00_
 
 ## Health Summary
 
@@ -14,30 +14,33 @@ _Generated: 2026-05-27T07:59:30.305512+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 0 |
-| in_review_parent_count | 7 |
+| blocked_issues | 3 |
+| in_review_parent_count | 1 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 113 (owned: 107, orphan: 6)
+- **Skills:** 119 (owned: 113, orphan: 6)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 6 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 9 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
-| 🟡 WARN | `skill.orphan` | Skill `autonomous-test-fix-loop` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `external-blocker-escalation` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `figma-to-ux-spec` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `nextjs-supabase-builder` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `parallel-issue-dispatcher` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `self-hosted-supabase-tunnel` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `issue.blocked` | DEV-126 blocked: OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux | Review blocker — autopilot caps at 3 retries |
+| 🟡 WARN | `issue.blocked` | DEV-108 blocked: ARCH ACTION: Consolidate and resolve ADR-002 admin credentia | Review blocker — autopilot caps at 3 retries |
+| 🟡 WARN | `issue.blocked` | DEV-106 blocked: ARCH ACTION: Audit and patch qs dependency for CVE-2026-8723 | Review blocker — autopilot caps at 3 retries |
+| 🟡 WARN | `skill.orphan` | Skill `benchmark-vendor-tracker` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `code-reviewer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `multi-agent-coordinator` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `security-auditor` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `security-hardening-owasp` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `tdd-mastery` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
