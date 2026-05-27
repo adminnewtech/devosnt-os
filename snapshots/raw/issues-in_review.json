@@ -420,7 +420,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "925a3e48-37f2-4620-870c-b57fe9003981",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-05-26T16:35:22Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
@@ -431,6 +431,7 @@
       "identifier": "DEV-52",
       "labels": [],
       "metadata": {
+        "lifecycle_phase": "integrate",
         "promoted_from_issues": "[\"DEV-43\"]"
       },
       "number": 52,
@@ -441,7 +442,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "SKILL: android-apk-local-builder — lift DEV-43's gradle+expo recipe into reusable skill",
-      "updated_at": "2026-05-26T16:47:48Z",
+      "updated_at": "2026-05-27T19:53:00Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -587,7 +588,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-05-27T18:01Z",
+        "kb_sync_status": "yellow@2026-05-27T19:03Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -599,7 +600,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-05-27T18:01:45Z",
+      "updated_at": "2026-05-27T19:03:25Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
