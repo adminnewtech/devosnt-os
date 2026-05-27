@@ -4,6 +4,29 @@
     {
       "assignee_id": null,
       "assignee_type": null,
+      "created_at": "2026-05-27T08:10:05Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Context\n\nDEV-95 wired Playwright MCP to qa-engineer and bug-hunter agents with application-level blocked-origins. The qa-engineer flagged that `--blocked-origins` is not a security boundary per Playwright's own docs — it does not block redirects and is bypassable by a crafted target page.\n\n## Required\n\nImplement OS-level egress filtering so the agent process cannot reach RFC-1918 / link-local ranges from the browser context, regardless of Playwright configuration:\n\n- Block outbound to 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 127.0.0.0/8, 169.254.0.0/16 from the Playwright process UID or network namespace\n- Verify the iptables/nftables rules survive a browser process restart\n- Document the rules in the agent runtime runbook\n\n## Acceptance Criteria\n- [ ] iptables/nftables egress rules block RFC-1918 from agent process\n- [ ] Rules verified with a test that confirms 192.168.1.1 and 10.0.0.1 are unreachable even when `--blocked-origins` is not passed\n- [ ] Rules survive browser process restart\n- [ ] Runbook updated\n\n## Risk\n\nWithout this, an agent given a malicious URL could be used to SSRF internal infrastructure.\n\n## Definition of Done\n\nOS-level network policy in place, verified, and documented.",
+      "due_date": null,
+      "id": "3951ef58-0052-4668-9fb6-f2f70f9f8459",
+      "identifier": "DEV-153",
+      "labels": [],
+      "metadata": {},
+      "number": 153,
+      "parent_issue_id": null,
+      "position": 0,
+      "priority": "high",
+      "project_id": null,
+      "start_date": null,
+      "status": "backlog",
+      "title": "INFRA: OS-level network isolation for Playwright agent browsers (iptables/SSRF hardening)",
+      "updated_at": "2026-05-27T08:10:05Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": null,
+      "assignee_type": null,
       "created_at": "2026-05-26T17:30:07Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -52,5 +75,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 2
+  "total": 3
 }

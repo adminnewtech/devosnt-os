@@ -2,29 +2,6 @@
   "has_more": false,
   "issues": [
     {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-05-27T07:54:32Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Trigger\n3-times rule hit: Vendor Brief + Changelog Verification pattern has run for Lovable, Bolt.new, and at least one other vendor in the Phase 6 sweep (DEV-62). Quality Gate Manager flagged this for extraction.\n\n## Pattern to extract\nA standardized workflow for producing a vendor competitive brief that includes:\n1. Structured brief template (capabilities, what-they-beat-us-at, what-we-beat-them-at, key import patterns)\n2. Changelog/feature announcement verification step (docs-analyst sub-task delegated to extract latest release notes)\n3. Source citation requirement (minimum 3 sources)\n4. Quality gate: correctness check against live docs, corrections documented, breaking changes noted\n\n## Input\n- Vendor name\n- Primary website + changelog URL\n- Phase / sweep context (e.g. Phase 6)\n\n## Expected Output\n- Skill definition in Multica skill format with: purpose, trigger, required input, steps, output, quality checklist, failure handling, improvement rule\n- Prompt template for the docs-analyst sub-task\n\n## Acceptance Criteria\n- [ ] Skill spec written and reviewed\n- [ ] Skill added to the Multica skill library\n- [ ] benchmark-vendor-tracker updated to reference the new skill\n\n## Definition of Done\nSkill spec complete, registered in 08 - Skill Library, referenced from benchmark-vendor-tracker.",
-      "due_date": null,
-      "id": "53d68ee8-38c1-486b-80f8-80c1b775e636",
-      "identifier": "DEV-150",
-      "labels": [],
-      "metadata": {},
-      "number": 150,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "medium",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "todo",
-      "title": "SKILL: Vendor Brief + Changelog Verification — extract as reusable skill",
-      "updated_at": "2026-05-27T07:54:32Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
       "assignee_type": "agent",
       "created_at": "2026-05-27T07:08:09Z",
@@ -301,29 +278,6 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
-      "created_at": "2026-05-26T17:16:43Z",
-      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
-      "creator_type": "agent",
-      "description": "## SKILL IMPORT: sandbox-runtime\n\n**Source:** https://github.com/anthropic-experimental/sandbox-runtime\n**License:** Apache 2.0 (green)\n**Stars:** 4,122 | **Last commit:** 2026-05-23 (from Anthropic experimental)\n\n### What it does\nLightweight OS-level sandboxing tool (`srt`) for restricting filesystem and network access on arbitrary agent processes without requiring containers.\n- macOS: uses `sandbox-exec`\n- Linux: uses `bubblewrap`\n- Network: proxy-based filtering with allowlist\n- No container runtime needed\n\n### Proposed Multica skill name\n`sandbox-runtime-policy`\n\n### PR-Ready Spec\n- **Install:** `npm install -g @anthropic-ai/sandbox-runtime`\n- **Usage:** Wrap shell invocations: `srt \"\u003ccommand\u003e\"`\n- **Integration:** Hook into `ci-cd-pipeline-builder` and `agentic-codegen-loop` skills — apply `srt` when agent executes shell commands during builds\n- **Skill shape:** Define a SKILL.md that specifies which commands require sandboxing, what filesystem paths to allow, and which network endpoints to permit\n\n### Acceptance Criteria\n- [ ] `srt` installs successfully in workspace Linux environment (bubblewrap path)\n- [ ] At least one build command runs sandboxed without breaking normal operation\n- [ ] Allowlist defaults documented for Supabase CLI, npm, gh CLI\n- [ ] Security review sub-issue returns `decision=green`\n\n### Dependencies\n- Security review sub-issue (sibling, assigned to security-auditor) must be `done` + `decision=green` before this issue is promoted to `todo`\n\n### Risk\n- Sandbox itself needs audit — review allowlist defaults and privilege escalation paths\n- Linux bubblewrap requires specific kernel capabilities; may need adjustments in Docker-based workspace\n\n### Definition of Done\n- Sandbox policy documented in `sandbox-runtime-policy` SKILL.md\n- Integration hooked into at least one existing build skill\n- Security review cleared",
-      "due_date": null,
-      "id": "9bdb8397-efee-4d72-ab46-cacde1b81ba8",
-      "identifier": "DEV-117",
-      "labels": [],
-      "metadata": {},
-      "number": 117,
-      "parent_issue_id": "c94356da-c3f2-432c-8dde-e71df6ddb5db",
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "todo",
-      "title": "SKILL IMPORT: sandbox-runtime",
-      "updated_at": "2026-05-26T20:14:16Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "925a3e48-37f2-4620-870c-b57fe9003981",
       "assignee_type": "squad",
       "created_at": "2026-05-26T16:35:22Z",
@@ -345,36 +299,9 @@
       "title": "SKILL: ux-screen-generator — general screen spec beyond dashboards (auth/settings/onboarding)",
       "updated_at": "2026-05-26T16:35:22Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-25T19:58:18Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nParent: [DEV-25](mention://issue/f01f5264-86df-4f80-a2ff-f6a1abbb0794). PRD: [DEV-26](mention://issue/799e091f-184e-4551-8f8d-fd55cf62c59f). Architecture: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219).\n\nApp Hub project: `09e6cfd3-d45e-4225-a494-2e3400b6983c`. Repo: `adminnewtech/attendance-app` (pending). Target lifecycle phase: `deploy_gate=green` cannot fire until QA + Security sign off on the `integrate` branch.\n\n## Expected Output\n\nA `DEPLOY.md` + `RUNBOOK.md` in the repo plus a comment on this issue summarising the plan. Cover:\n\n1. **Environments**: dev (Supabase project + Vercel preview + EAS internal) → staging → prod (gated)\n2. **Env vars list** for each environment (NO secret values — placeholder names only)\n3. **Pre-deploy checklist**: migrations applied, RLS policies verified, FCM Vault secrets present, EAS credentials linked\n4. **Deploy steps** (web admin: `vercel deploy --prod` after preview green; mobile: `eas build --profile production` + Play Store internal track first)\n5. **Smoke tests** post-deploy (5 minute manual checklist: login, punch-in, punch-out, history, leave request, admin dashboard live-board)\n6. **Rollback plan**: revert Vercel deployment in 1 click; mobile: pull from Play Store + previous APK rollout; DB: down-migrations for last 3 migrations\n7. **Monitoring + alerting**: Sentry + Supabase logs + uptime check on edge functions + p95 latency budget\n8. **Incident response runbook**: who to page, severity matrix, comms template (bilingual AR/EN)\n\n## Acceptance Criteria\n- [ ] `DEPLOY.md` covers all 3 environments with env var names\n- [ ] `RUNBOOK.md` covers smoke tests + rollback + monitoring + incident response\n- [ ] Both documents are bilingual where customer-facing (incident comms template)\n- [ ] No secret values written anywhere; only placeholder names\n- [ ] Section \"Pre-deploy gates\" lists the `deploy_gate=green` requirements explicitly\n\n## Dependencies\nNone blocking — Architecture is finalised. Can start immediately.\n\n## Risk\n- EAS production builds require paid Expo account — flag in docs as a paid resource gate.\n- Vercel prod deploy requires custom domain DNS for `attendance.newtechkw.com` — document the DNS records needed.\n\n## Definition of Done\nBoth files committed to `adminnewtech/attendance-app` (or local-pending). Comment on this issue with summary + PR/commit link. `deploy_gate=ready_to_arm` pinned on metadata once both QA + Security sign off lands.",
-      "due_date": null,
-      "id": "b2fc5cb4-f977-421f-95be-6d9e18738b22",
-      "identifier": "DEV-39",
-      "labels": [],
-      "metadata": {
-        "blocked_reason": "repo adminnewtech/attendance-app not provisioned in workspace — cannot commit artifacts to integrate branch until repo is configured",
-        "deploy_gate": "ready_to_arm",
-        "waiting_on": "admin:github-repo:adminnewtech/attendance-app"
-      },
-      "number": 39,
-      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
-      "position": 0,
-      "priority": "high",
-      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
-      "start_date": null,
-      "status": "todo",
-      "title": "Deployment Plan + Runbook — Android Attendance App",
-      "updated_at": "2026-05-26T17:33:51Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 16
+  "total": 13
 }

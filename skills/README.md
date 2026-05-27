@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **119**
+Total skills in `devosnt`: **120**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -117,6 +117,7 @@ Total skills in `devosnt`: **119**
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |
 | [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. |
 | [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
+| [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | _(unowned)_ | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |
 | [webhooks-framework-planner](./webhooks-framework-planner.md) | `api-architect`, `integration-architect`, `backend-engineer` | Default inbound + outbound webhook framework with signing, retries, and dead-letter queue. |
 | [whatsapp-automation-planner](./whatsapp-automation-planner.md) | `integration-architect` | Plan a WhatsApp Business / Cloud API automation. |

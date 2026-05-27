@@ -1,13 +1,13 @@
 # Integration Audit Report
 
-_Generated: 2026-05-27T08:03:33.709622+00:00_
+_Generated: 2026-05-27T09:04:16.776202+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 6 |
+| orphan_skills | 7 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
@@ -15,18 +15,18 @@ _Generated: 2026-05-27T08:03:33.709622+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 3 |
-| in_review_parent_count | 1 |
+| in_review_parent_count | 2 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 119 (owned: 113, orphan: 6)
+- **Skills:** 120 (owned: 113, orphan: 7)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 9 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 10 warnings, no blockers
 
 ## Findings
 
@@ -41,6 +41,7 @@ _Generated: 2026-05-27T08:03:33.709622+00:00_
 | 🟡 WARN | `skill.orphan` | Skill `security-auditor` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `security-hardening-owasp` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `tdd-mastery` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `vendor-brief-changelog-verification` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

@@ -25,6 +25,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_type": "squad",
+      "created_at": "2026-05-26T17:16:43Z",
+      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
+      "creator_type": "agent",
+      "description": "## SKILL IMPORT: sandbox-runtime\n\n**Source:** https://github.com/anthropic-experimental/sandbox-runtime\n**License:** Apache 2.0 (green)\n**Stars:** 4,122 | **Last commit:** 2026-05-23 (from Anthropic experimental)\n\n### What it does\nLightweight OS-level sandboxing tool (`srt`) for restricting filesystem and network access on arbitrary agent processes without requiring containers.\n- macOS: uses `sandbox-exec`\n- Linux: uses `bubblewrap`\n- Network: proxy-based filtering with allowlist\n- No container runtime needed\n\n### Proposed Multica skill name\n`sandbox-runtime-policy`\n\n### PR-Ready Spec\n- **Install:** `npm install -g @anthropic-ai/sandbox-runtime`\n- **Usage:** Wrap shell invocations: `srt \"\u003ccommand\u003e\"`\n- **Integration:** Hook into `ci-cd-pipeline-builder` and `agentic-codegen-loop` skills — apply `srt` when agent executes shell commands during builds\n- **Skill shape:** Define a SKILL.md that specifies which commands require sandboxing, what filesystem paths to allow, and which network endpoints to permit\n\n### Acceptance Criteria\n- [ ] `srt` installs successfully in workspace Linux environment (bubblewrap path)\n- [ ] At least one build command runs sandboxed without breaking normal operation\n- [ ] Allowlist defaults documented for Supabase CLI, npm, gh CLI\n- [ ] Security review sub-issue returns `decision=green`\n\n### Dependencies\n- Security review sub-issue (sibling, assigned to security-auditor) must be `done` + `decision=green` before this issue is promoted to `todo`\n\n### Risk\n- Sandbox itself needs audit — review allowlist defaults and privilege escalation paths\n- Linux bubblewrap requires specific kernel capabilities; may need adjustments in Docker-based workspace\n\n### Definition of Done\n- Sandbox policy documented in `sandbox-runtime-policy` SKILL.md\n- Integration hooked into at least one existing build skill\n- Security review cleared",
+      "due_date": null,
+      "id": "9bdb8397-efee-4d72-ab46-cacde1b81ba8",
+      "identifier": "DEV-117",
+      "labels": [],
+      "metadata": {},
+      "number": 117,
+      "parent_issue_id": "c94356da-c3f2-432c-8dde-e71df6ddb5db",
+      "position": 0,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "SKILL IMPORT: sandbox-runtime",
+      "updated_at": "2026-05-27T09:00:03Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "4124a55a-4ba2-48b8-a2af-f461eafc1182",
       "assignee_type": "squad",
       "created_at": "2026-05-26T16:36:48Z",
@@ -142,5 +165,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 6
+  "total": 7
 }

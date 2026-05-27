@@ -206,7 +206,7 @@
     "description": "Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor name. Output: issue in 09-Research Intelligence with the standard 8-section brief template (what they do, onboarding, pricing, strengths, weaknesses, patterns to copy, patterns to beat, decision).",
     "id": "c67a8cdd-0898-4d1b-a5d1-6a945f9ec656",
     "name": "benchmark-vendor-tracker",
-    "updated_at": "2026-05-26T17:13:12Z",
+    "updated_at": "2026-05-27T09:02:22Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -1127,6 +1127,16 @@
     "id": "07e7d082-1c66-4391-9ddd-4bd332388b08",
     "name": "ux-screen-generator",
     "updated_at": "2026-05-26T16:47:50Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-05-27T09:01:52Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Verify a vendor competitive brief against live changelog/release notes via a docs-analyst sub-task. Ensures every brief captures the vendor's latest shipped features, inline corrections are attributed, and at least 3 sources are cited before the brief is marked done.",
+    "id": "171c3217-8b5f-4ae2-bfd3-64a5c3a62b05",
+    "name": "vendor-brief-changelog-verification",
+    "updated_at": "2026-05-27T09:01:52Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
