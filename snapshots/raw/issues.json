@@ -271,7 +271,9 @@
       "id": "3ed8799e-5713-4d20-b88d-76cfc97ba50a",
       "identifier": "DEV-145",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "retry_log": 1
+      },
       "number": 145,
       "parent_issue_id": "3a7890a9-1d7e-4190-92e3-3b4fdfdfd397",
       "position": 0,
@@ -280,7 +282,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "QA Gate: DEV-52 — SKILL: android-apk-local-builder",
-      "updated_at": "2026-05-27T07:50:21Z",
+      "updated_at": "2026-05-27T10:09:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
