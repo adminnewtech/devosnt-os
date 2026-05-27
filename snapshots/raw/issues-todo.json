@@ -25,8 +25,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": null,
-      "assignee_type": null,
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_type": "squad",
       "created_at": "2026-05-27T09:12:06Z",
       "creator_id": "e3ef7374-d648-4b47-aa0b-ee3474b123b0",
       "creator_type": "agent",
@@ -44,7 +44,7 @@
       "start_date": null,
       "status": "todo",
       "title": "Implement model-selection-per-task routing (Standard vs Max tier)",
-      "updated_at": "2026-05-27T09:25:19Z",
+      "updated_at": "2026-05-27T12:07:48Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

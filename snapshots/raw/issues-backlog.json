@@ -101,7 +101,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-05-25T16:04:09Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
@@ -117,7 +117,7 @@
         "blocked_reason": "QA gate VETO: DoD not met. 5 items remain: (1) DEV-39 Deployment Plan BLOCKED (GitHub PAT missing), (2) DEV-40 User+Admin Guides BLOCKED (GitHub PAT missing), (3) DEV-35 FCM Push in_review (Firebase project not provisioned), (4) production-signed APK/AAB not built (needs EAS + Firebase), (5) admin dashboard preview URL not confirmed. Code is complete and security-reviewed. All blockers are admin credentials — promote back to in_review once admin provides Firebase + GitHub PAT + Supabase cloud project.",
         "deploy_gate": "demo-apk-track: bypasses external creds via self-hosted Supabase + FCM-disabled; production-track still waits on Firebase + Supabase-cloud + GitHub PAT",
         "integration_branch": "integrate",
-        "lifecycle_phase": "build",
+        "lifecycle_phase": "integrate",
         "local_run_command": "supabase start \u0026\u0026 pnpm dev (web) || expo start (mobile)",
         "pipeline_status": "demo-apk-ready",
         "routing_decision": "Parallel fan-out resumed: DEV-33 on Codex runtime; DEV-39/40/41 created and dispatched in parallel (don't depend on mobile build). Only hard external blockers: Firebase project (DEV-35) + GitHub repo PAT (App Hub bootstrap).",
@@ -131,7 +131,7 @@
       "start_date": null,
       "status": "backlog",
       "title": "Android Attendance App — تطبيق حضور وانصراف متكامل (one-prompt-to-app)",
-      "updated_at": "2026-05-27T09:37:34Z",
+      "updated_at": "2026-05-27T12:07:29Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],

@@ -1,9 +1,9 @@
 # Agent — solution-architect
 
 - **ID:** `77da9a0d-924e-4087-9278-59ba1182b599`
-- **Model:** `-`
+- **Model:** `claude-sonnet-4-6`
 - **Runtime mode:** `local`
-- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
+- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-25T10:46:57Z
 

@@ -13,11 +13,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "ceo",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -116,9 +116,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:03:19Z",
+    "updated_at": "2026-05-27T13:00:24Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -136,11 +136,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "sprint-commander",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -161,7 +161,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:01:52Z",
+    "updated_at": "2026-05-27T13:00:24Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -179,11 +179,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "quality-gate-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -229,7 +229,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:53Z",
+    "updated_at": "2026-05-27T12:08:17Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -247,11 +247,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "workspace-operations-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -277,7 +277,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:01:52Z",
+    "updated_at": "2026-05-27T13:00:24Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -295,11 +295,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "product-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -360,7 +360,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:55Z",
+    "updated_at": "2026-05-27T12:08:18Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -378,11 +378,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "ux-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -423,7 +423,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:55Z",
+    "updated_at": "2026-05-27T12:08:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -441,11 +441,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "ui-designer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -481,7 +481,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:56Z",
+    "updated_at": "2026-05-27T12:08:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -499,11 +499,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "arabic-rtl-experience-agent",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -524,7 +524,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:57Z",
+    "updated_at": "2026-05-27T12:08:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -542,11 +542,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "solution-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -682,7 +682,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:58Z",
+    "updated_at": "2026-05-27T12:08:22Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -700,7 +700,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "database-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -721,7 +721,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -767,7 +767,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:58Z",
+    "updated_at": "2026-05-27T12:08:36Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -785,11 +785,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "api-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -820,7 +820,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:35:59Z",
+    "updated_at": "2026-05-27T12:08:37Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -838,11 +838,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "integration-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -888,7 +888,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:00Z",
+    "updated_at": "2026-05-27T12:08:38Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -906,7 +906,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "claude-code-lead-developer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -920,7 +920,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -966,7 +966,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:01Z",
+    "updated_at": "2026-05-27T12:08:39Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -984,7 +984,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "frontend-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -998,7 +998,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1064,7 +1064,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:01Z",
+    "updated_at": "2026-05-27T12:08:40Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1082,7 +1082,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "backend-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1105,7 +1105,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1156,7 +1156,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:02Z",
+    "updated_at": "2026-05-27T12:08:41Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1174,7 +1174,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "full-stack-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1197,7 +1197,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1253,7 +1253,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:03Z",
+    "updated_at": "2026-05-27T12:08:41Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1271,7 +1271,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "mobile-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1285,7 +1285,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1321,7 +1321,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:04Z",
+    "updated_at": "2026-05-27T12:08:42Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1339,7 +1339,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "qa-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1371,7 +1371,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1407,7 +1407,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:05Z",
+    "updated_at": "2026-05-27T12:08:43Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1425,7 +1425,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "bug-hunter",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1444,7 +1444,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1470,7 +1470,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:06Z",
+    "updated_at": "2026-05-27T12:08:51Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1488,7 +1488,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "security-auditor",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1508,7 +1508,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1549,7 +1549,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:06Z",
+    "updated_at": "2026-05-27T12:08:52Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1567,11 +1567,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "performance-tester",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1592,7 +1592,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:07Z",
+    "updated_at": "2026-05-27T12:08:52Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1610,7 +1610,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "deployment-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1629,7 +1629,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1670,7 +1670,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:08Z",
+    "updated_at": "2026-05-27T12:08:53Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1688,11 +1688,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "environment-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1723,7 +1723,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:09Z",
+    "updated_at": "2026-05-27T12:08:54Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1741,11 +1741,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "release-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1781,7 +1781,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:09Z",
+    "updated_at": "2026-05-27T12:08:55Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1799,11 +1799,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "documentation-agent",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1829,7 +1829,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:10Z",
+    "updated_at": "2026-05-27T12:08:56Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1847,11 +1847,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "skill-builder",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1877,7 +1877,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:11Z",
+    "updated_at": "2026-05-27T12:08:56Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1895,11 +1895,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "template-builder",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1920,7 +1920,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:12Z",
+    "updated_at": "2026-05-27T12:08:57Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1938,11 +1938,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "prompt-optimizer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1958,7 +1958,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:12Z",
+    "updated_at": "2026-05-27T12:09:09Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1976,11 +1976,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "memory-curator",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2006,7 +2006,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:13Z",
+    "updated_at": "2026-05-27T12:09:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2024,11 +2024,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "research-scout",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2054,7 +2054,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:14Z",
+    "updated_at": "2026-05-27T12:09:11Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2072,7 +2072,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "github-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -2089,7 +2089,7 @@
         }
       }
     },
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2105,7 +2105,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:15Z",
+    "updated_at": "2026-05-27T12:09:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2123,11 +2123,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "docs-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2148,7 +2148,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:16Z",
+    "updated_at": "2026-05-27T12:09:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2166,11 +2166,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "tool-evaluator",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2186,7 +2186,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:16Z",
+    "updated_at": "2026-05-27T12:09:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2204,11 +2204,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "codegraph-indexer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2219,7 +2219,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:17Z",
+    "updated_at": "2026-05-27T12:11:30Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2237,11 +2237,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "codebase-cartographer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2252,7 +2252,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:18Z",
+    "updated_at": "2026-05-27T12:09:15Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2270,11 +2270,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "impact-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2285,7 +2285,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:19Z",
+    "updated_at": "2026-05-27T12:09:16Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2303,11 +2303,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "growth-lead",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2343,7 +2343,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:19Z",
+    "updated_at": "2026-05-27T12:09:17Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2361,11 +2361,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "seo-specialist",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2386,7 +2386,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:20Z",
+    "updated_at": "2026-05-27T12:09:18Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2404,11 +2404,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "content-writer-ar-en",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2424,7 +2424,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:21Z",
+    "updated_at": "2026-05-27T12:09:18Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2442,11 +2442,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "analytics-lead",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2467,7 +2467,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:22Z",
+    "updated_at": "2026-05-27T12:09:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2485,11 +2485,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "",
+    "model": "claude-sonnet-4-6",
     "name": "onboarding-designer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
+    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2505,7 +2505,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:36:22Z",
+    "updated_at": "2026-05-27T12:09:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   }

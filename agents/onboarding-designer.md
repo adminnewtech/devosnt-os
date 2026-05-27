@@ -1,9 +1,9 @@
 # Agent — onboarding-designer
 
 - **ID:** `1cae21ef-7e7e-4946-a6ea-87e69123901a`
-- **Model:** `-`
+- **Model:** `claude-sonnet-4-6`
 - **Runtime mode:** `local`
-- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
+- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-26T16:38:40Z
 

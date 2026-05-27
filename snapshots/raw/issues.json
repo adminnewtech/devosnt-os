@@ -4,6 +4,29 @@
     {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
+      "created_at": "2026-05-27T12:43:52Z",
+      "creator_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+      "creator_type": "member",
+      "description": "[https://companies.sh/](https://companies.sh/) ابحث وحل كل شي هنا وشوف كيف ممكن نطور الوركسبيس الحالي وشنو نضيف",
+      "due_date": null,
+      "id": "35d7c5fc-2df4-4d5f-85e7-81dcfcf23add",
+      "identifier": "DEV-160",
+      "labels": [],
+      "metadata": {},
+      "number": 160,
+      "parent_issue_id": null,
+      "position": 0,
+      "priority": "none",
+      "project_id": null,
+      "start_date": null,
+      "status": "in_review",
+      "title": "https://companies.sh/ ابحث وحل كل شي هنا وشوف كيف ممكن نطور الوركسبيس الحالي وشنو نضيف",
+      "updated_at": "2026-05-27T12:52:40Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "assignee_type": "agent",
       "created_at": "2026-05-27T11:55:14Z",
       "creator_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "creator_type": "member",
@@ -117,8 +140,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": null,
-      "assignee_type": null,
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_type": "squad",
       "created_at": "2026-05-27T09:12:06Z",
       "creator_id": "e3ef7374-d648-4b47-aa0b-ee3474b123b0",
       "creator_type": "agent",
@@ -136,7 +159,7 @@
       "start_date": null,
       "status": "todo",
       "title": "Implement model-selection-per-task routing (Standard vs Max tier)",
-      "updated_at": "2026-05-27T09:25:19Z",
+      "updated_at": "2026-05-27T12:07:48Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1158,32 +1181,9 @@
       "title": "Workspace Upgrade Action — Adopt 6 orphan skills (attach to owner agents)",
       "updated_at": "2026-05-27T09:26:42Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T17:13:33Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nWorkspace Upgrade Report — 2026-05-26, action #1. The orphan skill `self-hosted-supabase-tunnel` documents a free demo-backend path \"when production Supabase Cloud credentials are not yet provisioned,\" but no agent owns it and `one-prompt-to-app` never reaches for it. As a result, DEV-48 (`landing-page-builder` reference demo) sits blocked on `waiting_on=admin_credentials_and_hosting`.\n\n## Expected Output\nA memory/default-policy update so that future CEO + `one-prompt-to-app` runs auto-pick the self-hosted-supabase-tunnel demo backend when production Supabase credentials are absent. Concretely:\n\n- One **default-decision memory entry** captured in CEO's persistent memory (or the equivalent workspace memory layer you maintain) stating: *\"If a build's parent issue lacks Supabase Cloud credentials AND has no `waiting_on=admin_credentials_*` set, default to `self-hosted-supabase-tunnel` instead of escalating. Owner: CEO.\"*\n- A short note attached to the `one-prompt-to-app` skill (or queued for skill-builder to merge under action #2) so the orchestrator references the tunnel as the demo-backend default.\n- Stale-fact audit: scan `memory list`/equivalent for any pinned fact that says \"blocked on Supabase credentials = wait\" and replace with the new default.\n\n## Acceptance Criteria\n- [ ] New memory entry exists and is retrievable by `ceo` on the next run.\n- [ ] At least one obsolete \"waiting on Supabase credentials\" memory entry is either reconfirmed or removed.\n- [ ] Memory entry cites this issue and DEV-48 as evidence.\n\n## Dependencies\n- Sibling action #2 (skill-builder) attaches `self-hosted-supabase-tunnel` to its owner agent; this memory entry references that skill by name so the link survives even before the attachment lands.\n\n## Risk\nLow. Worst case: CEO defaults to the tunnel for an app that already had Supabase Cloud provisioned. Mitigation: add the conditional (\"AND has no Supabase project_ref pinned\") in the memory entry.\n\n## Definition of Done\n- Memory entry written and grep-able.\n- Stale entries cleaned.\n- One-line confirmation comment posted here with the entry text and what was removed.",
-      "due_date": null,
-      "id": "da83645b-aa71-451d-81db-25999c191d7a",
-      "identifier": "DEV-110",
-      "labels": [],
-      "metadata": {},
-      "number": 110,
-      "parent_issue_id": "80580478-4f26-418a-8aac-d9e68d030451",
-      "position": 0,
-      "priority": "high",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "start_date": null,
-      "status": "done",
-      "title": "Workspace Upgrade Action — Pin self-hosted-supabase-tunnel as demo-backend default",
-      "updated_at": "2026-05-27T07:43:03Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 159
+  "total": 160
 }

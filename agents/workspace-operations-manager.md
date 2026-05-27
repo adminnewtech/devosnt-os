@@ -1,9 +1,9 @@
 # Agent — workspace-operations-manager
 
 - **ID:** `f3a68587-4383-43b1-8f03-16b12ee95797`
-- **Model:** `-`
+- **Model:** `claude-sonnet-4-6`
 - **Runtime mode:** `local`
-- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
+- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-25T10:46:53Z
 

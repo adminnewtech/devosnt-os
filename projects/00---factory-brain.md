@@ -25,5 +25,4 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 - DEV-112 — Workspace Upgrade Action — CEO prompt: dispatch in_review queue to quality-gate-
 - DEV-142 — QA Gate: DEV-107 — Write ADR-001 tech stack
 - DEV-146 — QA Gate: DEV-70 — Monthly Architecture & Tool-stack Review
-- DEV-110 — Workspace Upgrade Action — Pin self-hosted-supabase-tunnel as demo-backend defau
 - DEV-128 — ADR-001 — Default Tech Stack (Next.js + Supabase + Vercel)

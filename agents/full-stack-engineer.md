@@ -1,9 +1,9 @@
 # Agent — full-stack-engineer
 
 - **ID:** `787fc0fc-53ec-4d5a-826d-8e6d173a10e6`
-- **Model:** `-`
+- **Model:** `claude-sonnet-4-6`
 - **Runtime mode:** `local`
-- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
+- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-25T10:47:02Z
 
