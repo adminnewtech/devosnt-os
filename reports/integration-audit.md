@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-27T13:01:09.175419+00:00_
+_Generated: 2026-05-27T14:04:08.584761+00:00_
 
 ## Health Summary
 
@@ -14,24 +14,25 @@ _Generated: 2026-05-27T13:01:09.175419+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 1 |
+| blocked_issues | 2 |
 | in_review_parent_count | 3 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 120 (owned: 113, orphan: 7)
+- **Skills:** 126 (owned: 119, orphan: 7)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 8 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 9 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-145 blocked: QA Gate: DEV-52 — SKILL: android-apk-local-builder | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-126 blocked: OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `benchmark-vendor-tracker` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `code-reviewer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

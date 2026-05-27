@@ -4,6 +4,29 @@
     {
       "assignee_id": null,
       "assignee_type": null,
+      "created_at": "2026-05-27T13:04:40Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Goal\nPublish devosnt as a standard Agent Company on companies.sh — the open registry for AI organizational structures. This gives devosnt international visibility, a new revenue model (sell on ClipMart), and forces us to document the full workspace in a machine-readable standard format.\n\n## Input\n- devosnt workspace structure (agents, skills, workflows)\n- companies.sh standard format (Agent Company Standard)\n\n## Expected Output\n- `COMPANY.md` file describing the company structure\n- `.paperclip.yaml` with all agents and skills defined\n- GitHub public repo with the company definition\n- Registration on companies.sh registry\n\n## Steps\n1. Research companies.sh Agent Company Standard format (run `npx companies.sh --help` and study existing companies)\n2. Write `COMPANY.md`:\n   - Company name: devosnt — AI App Factory OS\n   - Mission statement\n   - Agent org chart (CEO → squads → agents)\n   - Skill library index\n   - Workflow diagrams (IDEA → DEPLOYED SYSTEM)\n3. Write `.paperclip.yaml` with all 100+ agents and skills\n4. Create GitHub public repo: newtechkw/devosnt-company\n5. Register on companies.sh\n6. Pin repo URL to this issue metadata\n\n## Acceptance Criteria\n- [ ] COMPANY.md follows Agent Company Standard schema\n- [ ] All agents described with roles and capabilities\n- [ ] All skills indexed with descriptions\n- [ ] Repo is public and cloneable\n- [ ] Submission accepted on companies.sh (or PR opened)\n\n## Dependencies\n- Admin must create GitHub repo or grant access\n\n## Risk\n- Paperclip platform compatibility: companies.sh uses Paperclip runtime. The company definition will be descriptive (not executable on Multica). Accept this as a documentation/marketing artifact.\n- GitHub repo provisioning requires admin action.\n\n## Definition of Done\n- [ ] COMPANY.md complete\n- [ ] .paperclip.yaml complete\n- [ ] GitHub repo live\n- [ ] companies.sh registration submitted\n- [ ] deploy_url pinned to issue metadata",
+      "due_date": null,
+      "id": "cae17175-24ed-41a5-8de9-49799208007c",
+      "identifier": "DEV-161",
+      "labels": [],
+      "metadata": {},
+      "number": 161,
+      "parent_issue_id": null,
+      "position": 0,
+      "priority": "medium",
+      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
+      "start_date": null,
+      "status": "backlog",
+      "title": "Package devosnt as Agent Company on companies.sh",
+      "updated_at": "2026-05-27T13:04:40Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": null,
+      "assignee_type": null,
       "created_at": "2026-05-27T08:10:05Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -137,5 +160,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 5
+  "total": 6
 }

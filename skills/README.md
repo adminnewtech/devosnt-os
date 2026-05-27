@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **120**
+Total skills in `devosnt`: **126**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -15,6 +15,7 @@ Total skills in `devosnt`: **120**
 | [android-apk-local-builder](./android-apk-local-builder.md) | `mobile-engineer` | Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo pr |
 | [api-contract-designer](./api-contract-designer.md) | `ceo`, `solution-architect`, `api-architect`, `backend-engineer` | Design the HTTP API contract for an app and produce an OpenAPI 3.1 document. |
 | [api-sdk-generator](./api-sdk-generator.md) | `api-architect`, `documentation-agent`, `docs-analyst` | Auto-generate TS + Python SDKs from the OpenAPI spec for every shipped API. |
+| [api-security-audit](./api-security-audit.md) | `ceo` | Focused security audit for REST/GraphQL API endpoints: auth, authorization, input validati |
 | [api-versioning-strategy](./api-versioning-strategy.md) | `solution-architect`, `api-architect` | Default API versioning: /v1 routing, deprecation headers, sunset dates, parallel schemas. |
 | [app-hub-bootstrap](./app-hub-bootstrap.md) | `ceo`, `deployment-engineer` | Bootstrap a new App Hub project, GitHub repo, and codegraph baseline for every new classif |
 | [app-idea-to-product-brief](./app-idea-to-product-brief.md) | `ceo`, `product-manager` | Turn a raw user app idea into a one-page product brief that downstream squads can plan fro |
@@ -45,6 +46,7 @@ Total skills in `devosnt`: **120**
 | [deployment-checklist](./deployment-checklist.md) | `ceo`, `deployment-engineer`, `environment-manager`, `release-manager` | Ship safely to production with a rollback drill and post-deploy smoke tests. |
 | [design-system-tokens-builder](./design-system-tokens-builder.md) | `ux-architect`, `ui-designer`, `frontend-engineer`, `mobile-engineer` | Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwin |
 | [documentation-generator](./documentation-generator.md) | `documentation-agent` | Generate developer-facing docs (README, ARCHITECTURE, RUNBOOK) from the codebase. |
+| [e2e-test-generator](./e2e-test-generator.md) | `ceo` | Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and accepta |
 | [email-marketing-builder](./email-marketing-builder.md) | `solution-architect` | Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics |
 | [embeddings-semantic-search](./embeddings-semantic-search.md) | `database-architect`, `full-stack-engineer` | Default semantic search via pgvector. Embeddings + hybrid search + reranking. |
 | [error-tracking-setup](./error-tracking-setup.md) | `bug-hunter` | Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing. |
@@ -100,8 +102,10 @@ Total skills in `devosnt`: **120**
 | [reusable-template-extractor](./reusable-template-extractor.md) | `ceo`, `claude-code-lead-developer`, `skill-builder`, `template-builder` | Promote a 3-times-repeated workflow into a reusable skill or template. |
 | [rollback-plan-generator](./rollback-plan-generator.md) | `deployment-engineer`, `environment-manager`, `release-manager` | Produce a deploy-specific rollback plan the on-call can execute under stress. |
 | [rtl-arabic-ui-planner](./rtl-arabic-ui-planner.md) | `arabic-rtl-experience-agent` | Plan an RTL-correct Arabic UI variant with Kuwaiti-Arabic copy guidance. |
+| [sast-scan](./sast-scan.md) | `ceo` | Static Application Security Testing: scan source code for security vulnerabilities before  |
 | [school-system-builder](./school-system-builder.md) | `solution-architect` | Build a school / SIS system: students, classes, attendance, grades, parents, fees. |
 | [search-system-builder](./search-system-builder.md) | `solution-architect` | Default end-user search with autocomplete, typo tolerance, filters, facets. |
+| [secrets-leak-detector](./secrets-leak-detector.md) | `ceo` | Scan every PR diff for leaked API keys, tokens, passwords, and credentials before merge. Z |
 | [security-auditor](./security-auditor.md) | _(unowned)_ | Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps,  |
 | [security-hardening-owasp](./security-hardening-owasp.md) | _(unowned)_ | OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validat |
 | [security-review-checklist](./security-review-checklist.md) | `ceo`, `quality-gate-manager`, `security-auditor` | Block release of any user-visible feature that fails the 15-point security gate. |
@@ -112,6 +116,8 @@ Total skills in `devosnt`: **120**
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
 | [tdd-mastery](./tdd-mastery.md) | _(unowned)_ | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
+| [technical-debt-tracker](./technical-debt-tracker.md) | `ceo` | After every project closes, catalog technical debt items, score by impact and fix cost, an |
+| [threat-modeling](./threat-modeling.md) | `ceo` | STRIDE threat analysis on any new app or feature before architecture is finalized. Output: |
 | [tool-comparison-workflow](./tool-comparison-workflow.md) | `research-scout`, `docs-analyst`, `tool-evaluator` | Compare 2-4 tools/services and produce a one-page decision doc. |
 | [usability-test-script](./usability-test-script.md) | `product-manager`, `qa-engineer` | Default 5-user usability test script for any new feature before launch. |
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |

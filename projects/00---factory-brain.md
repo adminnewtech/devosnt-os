@@ -20,7 +20,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 - DEV-131 — QA Gate: DEV-44 — Factory Health Audit — 2026-05-26
 - DEV-140 — QA Gate: DEV-111 — Adopt 6 orphan skills
-- DEV-111 — Workspace Upgrade Action — Adopt 6 orphan skills (attach to owner agents)
 - DEV-139 — QA Gate: DEV-112 — dispatch in_review queue to quality-gate
 - DEV-112 — Workspace Upgrade Action — CEO prompt: dispatch in_review queue to quality-gate-
 - DEV-142 — QA Gate: DEV-107 — Write ADR-001 tech stack

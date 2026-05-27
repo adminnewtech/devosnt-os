@@ -2,6 +2,29 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": null,
+      "assignee_type": null,
+      "created_at": "2026-05-27T13:04:40Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Goal\nPublish devosnt as a standard Agent Company on companies.sh — the open registry for AI organizational structures. This gives devosnt international visibility, a new revenue model (sell on ClipMart), and forces us to document the full workspace in a machine-readable standard format.\n\n## Input\n- devosnt workspace structure (agents, skills, workflows)\n- companies.sh standard format (Agent Company Standard)\n\n## Expected Output\n- `COMPANY.md` file describing the company structure\n- `.paperclip.yaml` with all agents and skills defined\n- GitHub public repo with the company definition\n- Registration on companies.sh registry\n\n## Steps\n1. Research companies.sh Agent Company Standard format (run `npx companies.sh --help` and study existing companies)\n2. Write `COMPANY.md`:\n   - Company name: devosnt — AI App Factory OS\n   - Mission statement\n   - Agent org chart (CEO → squads → agents)\n   - Skill library index\n   - Workflow diagrams (IDEA → DEPLOYED SYSTEM)\n3. Write `.paperclip.yaml` with all 100+ agents and skills\n4. Create GitHub public repo: newtechkw/devosnt-company\n5. Register on companies.sh\n6. Pin repo URL to this issue metadata\n\n## Acceptance Criteria\n- [ ] COMPANY.md follows Agent Company Standard schema\n- [ ] All agents described with roles and capabilities\n- [ ] All skills indexed with descriptions\n- [ ] Repo is public and cloneable\n- [ ] Submission accepted on companies.sh (or PR opened)\n\n## Dependencies\n- Admin must create GitHub repo or grant access\n\n## Risk\n- Paperclip platform compatibility: companies.sh uses Paperclip runtime. The company definition will be descriptive (not executable on Multica). Accept this as a documentation/marketing artifact.\n- GitHub repo provisioning requires admin action.\n\n## Definition of Done\n- [ ] COMPANY.md complete\n- [ ] .paperclip.yaml complete\n- [ ] GitHub repo live\n- [ ] companies.sh registration submitted\n- [ ] deploy_url pinned to issue metadata",
+      "due_date": null,
+      "id": "cae17175-24ed-41a5-8de9-49799208007c",
+      "identifier": "DEV-161",
+      "labels": [],
+      "metadata": {},
+      "number": 161,
+      "parent_issue_id": null,
+      "position": 0,
+      "priority": "medium",
+      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
+      "start_date": null,
+      "status": "backlog",
+      "title": "Package devosnt as Agent Company on companies.sh",
+      "updated_at": "2026-05-27T13:04:40Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-05-27T12:43:52Z",
@@ -364,7 +387,7 @@
       "identifier": "DEV-145",
       "labels": [],
       "metadata": {
-        "retry_log": 2
+        "retry_log": 3
       },
       "number": 145,
       "parent_issue_id": "3a7890a9-1d7e-4190-92e3-3b4fdfdfd397",
@@ -372,9 +395,9 @@
       "priority": "none",
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "start_date": null,
-      "status": "in_progress",
+      "status": "blocked",
       "title": "QA Gate: DEV-52 — SKILL: android-apk-local-builder",
-      "updated_at": "2026-05-27T11:53:35Z",
+      "updated_at": "2026-05-27T13:37:25Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1158,32 +1181,9 @@
       "title": "Workspace Upgrade Action — CEO prompt: dispatch in_review queue to quality-gate-manager",
       "updated_at": "2026-05-27T09:25:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T17:13:37Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nWorkspace Upgrade Report — 2026-05-26, action #2. Six skills are currently orphans (`agent_count==0`) per the `multica skill list` ∖ `agent.skills` diff:\n\n1. `self-hosted-supabase-tunnel` (id: 0138df08-f46d-4216-934a-42ecbf70a087)\n2. `figma-to-ux-spec` (id: 3b768b92-e4b2-47f1-9172-3bc20eeb7695)\n3. `autonomous-test-fix-loop` (id: 622391e4-2b94-4a93-a858-305148e2344b)\n4. `external-blocker-escalation` (id: 74c65b85-3623-4a71-961b-536ae81c9dce)\n5. `nextjs-supabase-builder` (id: 9f1399a6-8cb1-4a7f-95c6-c3a4fb349184)\n6. `parallel-issue-dispatcher` (id: 9f4b229b-4f75-454b-9548-2df4e4b80916)\n\nSeveral of these are referenced by name in active autopilot prompts (DEV-67/DEV-82/DEV-83/DEV-84) but no agent can actually invoke them.\n\n## Expected Output\nEach orphan skill is attached to the right agent (or a small set), via `multica agent update \u003cid\u003e --skill \u003cskill-id\u003e` (or whatever the current CLI verb is — check `multica agent --help`). Suggested mapping:\n\n- `self-hosted-supabase-tunnel` → solution-architect + database-architect (owners of demo-backend path)\n- `figma-to-ux-spec` → ux-architect + ui-designer\n- `autonomous-test-fix-loop` → qa-engineer + bug-hunter\n- `external-blocker-escalation` → ceo (used by escalation lane only)\n- `nextjs-supabase-builder` → frontend-engineer + full-stack-engineer\n- `parallel-issue-dispatcher` → sprint-commander + ceo\n\nAdjust mapping if the skill body conflicts with the agent role — your domain call.\n\n## Acceptance Criteria\n- [ ] All 6 skills have `agent_count \u003e= 1` after this run.\n- [ ] No agent gains a skill that contradicts its role (e.g., do not give `external-blocker-escalation` to engineers).\n- [ ] Final mapping posted as a comment on this issue.\n\n## Dependencies\nNone hard. Action #1 (memory-curator) references `self-hosted-supabase-tunnel` by name; both can land in parallel.\n\n## Risk\nLow. Skill attachment is reversible. Risk is mis-routing — mitigated by posting the mapping for CEO review before the next weekly loop runs.\n\n## Definition of Done\n- 6 attachments made.\n- Mapping comment posted with rationale.\n- A re-run of the orphan-skill scan returns 0 orphans (verify with `agent get` per agent + diff against `skill list`).",
-      "due_date": null,
-      "id": "e46d51a3-2a39-4313-8e01-2998f6fe158e",
-      "identifier": "DEV-111",
-      "labels": [],
-      "metadata": {},
-      "number": 111,
-      "parent_issue_id": "80580478-4f26-418a-8aac-d9e68d030451",
-      "position": 0,
-      "priority": "high",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "start_date": null,
-      "status": "done",
-      "title": "Workspace Upgrade Action — Adopt 6 orphan skills (attach to owner agents)",
-      "updated_at": "2026-05-27T09:26:42Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 160
+  "total": 161
 }

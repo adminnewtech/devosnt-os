@@ -15,6 +15,7 @@ CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → D
 
 - [`agent-self-healing-policy`](../skills/agent-self-healing-policy.md) — Auto-retry failed agent runs with a different runtime/model and surface only after two failures.
 - [`api-contract-designer`](../skills/api-contract-designer.md) — Design the HTTP API contract for an app and produce an OpenAPI 3.1 document.
+- [`api-security-audit`](../skills/api-security-audit.md) — Focused security audit for REST/GraphQL API endpoints: auth, authorization, input validation, rate limiting, and data exposure checks.
 - [`app-hub-bootstrap`](../skills/app-hub-bootstrap.md) — Bootstrap a new App Hub project, GitHub repo, and codegraph baseline for every new classified App Request. Runs before app-idea-to-product-brief.
 - [`app-idea-to-product-brief`](../skills/app-idea-to-product-brief.md) — Turn a raw user app idea into a one-page product brief that downstream squads can plan from.
 - [`auth-permission-matrix`](../skills/auth-permission-matrix.md) — Produce the authoritative role × action permission matrix wired to RLS and route guards.
@@ -22,6 +23,7 @@ CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → D
 - [`dashboard-screen-planner`](../skills/dashboard-screen-planner.md) — Produce the sitemap, screen list, and per-screen spec for a dashboard or admin UI.
 - [`database-schema-designer`](../skills/database-schema-designer.md) — Design the relational data model for an app from its PRD with RLS-first defaults.
 - [`deployment-checklist`](../skills/deployment-checklist.md) — Ship safely to production with a rollback drill and post-deploy smoke tests.
+- [`e2e-test-generator`](../skills/e2e-test-generator.md) — Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and acceptance criteria. Output: ready-to-run test files.
 - [`external-blocker-escalation`](../skills/external-blocker-escalation.md) — Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:<resource> metadata, and stops pulse retries until cleared.
 - [`one-prompt-to-app`](../skills/one-prompt-to-app.md) — Master orchestrator: turn a single raw user prompt into a deployed system end-to-end without further input.
 - [`parallel-issue-dispatcher`](../skills/parallel-issue-dispatcher.md) — Auto-identify independent sub-issues within a parent and batch-promote all of them to --status todo simultaneously, using a dependency DAG to determine readiness.
@@ -30,7 +32,11 @@ CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → D
 - [`prompt-router-classifier`](../skills/prompt-router-classifier.md) — Classify any raw user prompt into the right vertical builder + squad, auto-detecting Arabic and dialect.
 - [`qa-test-plan-generator`](../skills/qa-test-plan-generator.md) — Produce the QA test plan for a feature or full app.
 - [`reusable-template-extractor`](../skills/reusable-template-extractor.md) — Promote a 3-times-repeated workflow into a reusable skill or template.
+- [`sast-scan`](../skills/sast-scan.md) — Static Application Security Testing: scan source code for security vulnerabilities before every PR merge. Integrates with CI/CD.
+- [`secrets-leak-detector`](../skills/secrets-leak-detector.md) — Scan every PR diff for leaked API keys, tokens, passwords, and credentials before merge. Zero-tolerance gate.
 - [`security-review-checklist`](../skills/security-review-checklist.md) — Block release of any user-visible feature that fails the 15-point security gate.
+- [`technical-debt-tracker`](../skills/technical-debt-tracker.md) — After every project closes, catalog technical debt items, score by impact and fix cost, and create prioritized backlog issues for the next quarter.
+- [`threat-modeling`](../skills/threat-modeling.md) — STRIDE threat analysis on any new app or feature before architecture is finalized. Output: threat register with mitigations.
 - [`user-stories-to-issues`](../skills/user-stories-to-issues.md) — Convert approved user stories into build-ready Multica issues with full DoD.
 
 ## Instructions

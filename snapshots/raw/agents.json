@@ -31,6 +31,11 @@
         "name": "api-contract-designer"
       },
       {
+        "description": "Focused security audit for REST/GraphQL API endpoints: auth, authorization, input validation, rate limiting, and data exposure checks.",
+        "id": "d3ba6cb1-67ee-4a58-a583-282cbf9d0160",
+        "name": "api-security-audit"
+      },
+      {
         "description": "Bootstrap a new App Hub project, GitHub repo, and codegraph baseline for every new classified App Request. Runs before app-idea-to-product-brief.",
         "id": "60aa6bfd-041b-45e0-8938-dd9d12d27d06",
         "name": "app-hub-bootstrap"
@@ -64,6 +69,11 @@
         "description": "Ship safely to production with a rollback drill and post-deploy smoke tests.",
         "id": "bdbe8717-ff21-4179-a617-48caea9cbecb",
         "name": "deployment-checklist"
+      },
+      {
+        "description": "Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and acceptance criteria. Output: ready-to-run test files.",
+        "id": "47232add-09ff-41c1-9fbf-da46da062a33",
+        "name": "e2e-test-generator"
       },
       {
         "description": "Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:\u003cresource\u003e metadata, and stops pulse retries until cleared.",
@@ -106,9 +116,29 @@
         "name": "reusable-template-extractor"
       },
       {
+        "description": "Static Application Security Testing: scan source code for security vulnerabilities before every PR merge. Integrates with CI/CD.",
+        "id": "1c93c5c9-0c9b-4113-8cef-9e7fb0dc4daf",
+        "name": "sast-scan"
+      },
+      {
+        "description": "Scan every PR diff for leaked API keys, tokens, passwords, and credentials before merge. Zero-tolerance gate.",
+        "id": "57cb9938-4917-4e41-a03a-7cc1f353e70f",
+        "name": "secrets-leak-detector"
+      },
+      {
         "description": "Block release of any user-visible feature that fails the 15-point security gate.",
         "id": "4f364d84-6c12-4c1c-b887-702c6ca2003c",
         "name": "security-review-checklist"
+      },
+      {
+        "description": "After every project closes, catalog technical debt items, score by impact and fix cost, and create prioritized backlog issues for the next quarter.",
+        "id": "8c279486-7301-4a6c-8f98-2592eb85edea",
+        "name": "technical-debt-tracker"
+      },
+      {
+        "description": "STRIDE threat analysis on any new app or feature before architecture is finalized. Output: threat register with mitigations.",
+        "id": "6858520c-7d30-4bb6-b0e3-67d20237a4b4",
+        "name": "threat-modeling"
       },
       {
         "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
@@ -116,9 +146,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T13:00:24Z",
+    "updated_at": "2026-05-27T13:06:26Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -161,7 +191,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T13:00:24Z",
+    "updated_at": "2026-05-27T14:03:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -277,7 +307,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T13:00:24Z",
+    "updated_at": "2026-05-27T14:03:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

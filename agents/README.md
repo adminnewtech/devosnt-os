@@ -9,7 +9,7 @@ Total agents in `devosnt`: **41**
 | [arabic-rtl-experience-agent](./arabic-rtl-experience-agent.md) | `claude-sonnet-4-6` | `local` | 3 | RTL UI + Kuwaiti-Arabic copy. Native, not machine-translated. |
 | [backend-engineer](./backend-engineer.md) | `claude-sonnet-4-6` | `local` | 9 | API endpoints, DB access, jobs, webhooks. Codex runtime. |
 | [bug-hunter](./bug-hunter.md) | `claude-sonnet-4-6` | `local` | 4 | Hunts edge-case defects QA didn't cover. Thinks like a power user/attacker. |
-| [ceo](./ceo.md) | `claude-sonnet-4-6` | `local` | 19 | CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → DEPLO |
+| [ceo](./ceo.md) | `claude-sonnet-4-6` | `local` | 25 | CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → DEPLO |
 | [claude-code-lead-developer](./claude-code-lead-developer.md) | `claude-sonnet-4-6` | `local` | 8 | Orchestrates Build Squad. Decomposes parents, assigns engineers, unblocks. |
 | [codebase-cartographer](./codebase-cartographer.md) | `claude-sonnet-4-6` | `local` | 1 | Owns the human-readable architecture overview per app: docs/ARCHITECTURE.md, gui |
 | [codegraph-indexer](./codegraph-indexer.md) | `claude-sonnet-4-6` | `local` | 1 | Builds + refreshes the per-app codegraph index (SQLite + tree-sitter) and the Un |
