@@ -12,7 +12,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-108 | ARCH ACTION: Consolidate and resolve ADR-002 admin credential blockers | `blocked` | medium |
 | DEV-136 | Factory Health Audit — 2026-05-27 | `todo` | none |
 | DEV-137 | Daily Command Center Digest — 2026-05-27 | `in_review` | none |
 | DEV-141 | QA Gate: DEV-110 — Pin self-hosted-supabase-tunnel | `in_review` | none |
@@ -27,5 +26,4 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 - DEV-142 — QA Gate: DEV-107 — Write ADR-001 tech stack
 - DEV-146 — QA Gate: DEV-70 — Monthly Architecture & Tool-stack Review
 - DEV-110 — Workspace Upgrade Action — Pin self-hosted-supabase-tunnel as demo-backend defau
-- DEV-107 — ARCH ACTION: Write ADR-001 documenting the default tech stack decision
 - DEV-128 — ADR-001 — Default Tech Stack (Next.js + Supabase + Vercel)

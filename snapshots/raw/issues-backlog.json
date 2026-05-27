@@ -25,29 +25,6 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-05-26T17:30:07Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nFollow-up from [DEV-82](mention://issue/f5b0da68-4c0b-4edf-894a-1e0f146b4fda) QA verification. Skill `parallel-issue-dispatcher` (ID: `9f4b229b-4f75-454b-9548-2df4e4b80916`) is registered and tested, but sprint-commander has not been configured to invoke it automatically after parent build plans are finalized.\n\n## Expected Output\nsprint-commander invokes `parallel-issue-dispatcher` automatically when a parent issue has ≥3 sub-issues in `backlog` with mixed dependencies. Until then, ceo or sprint-commander can call it manually.\n\n## Acceptance Criteria\n- [ ] sprint-commander's instructions/skill list include `parallel-issue-dispatcher` as a default tool to consider after build-plan creation.\n- [ ] First real dispatch validates Step 6 (re-run on sub-issue `done` cascades unblocking).\n- [ ] Any defect found on first real use is filed as a follow-up against [DEV-98](mention://issue/2b595f8a-ea02-4677-b9a2-87f0edf2cb61).\n\n## Dependencies\n- [DEV-98](mention://issue/2b595f8a-ea02-4677-b9a2-87f0edf2cb61) — skill spec (done)\n- [DEV-82](mention://issue/f5b0da68-4c0b-4edf-894a-1e0f146b4fda) — skill build (done)\n\n## Risk\nLow. Configuration change only; reversible.\n\n## Definition of Done\nsprint-commander references the skill in its operating instructions and has used it on at least one real parent issue. Step 6 cascade validated or follow-up filed.",
-      "due_date": null,
-      "id": "b35f279e-cc1e-4058-b51a-ec322cb44e74",
-      "identifier": "DEV-127",
-      "labels": [],
-      "metadata": {},
-      "number": 127,
-      "parent_issue_id": "f5b0da68-4c0b-4edf-894a-1e0f146b4fda",
-      "position": 0,
-      "priority": "low",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "backlog",
-      "title": "Wire parallel-issue-dispatcher into sprint-commander trigger list",
-      "updated_at": "2026-05-26T17:30:07Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "assignee_type": "agent",
       "created_at": "2026-05-26T17:16:26Z",
@@ -160,5 +137,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 6
+  "total": 5
 }

@@ -1,12 +1,12 @@
 # Integration Audit Report
 
-_Generated: 2026-05-27T11:01:11.552350+00:00_
+_Generated: 2026-05-27T12:05:54.988628+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
-| agents_without_model | 0 |
+| agents_without_model | 41 |
 | orphan_skills | 7 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
@@ -14,7 +14,7 @@ _Generated: 2026-05-27T11:01:11.552350+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 2 |
+| blocked_issues | 1 |
 | in_review_parent_count | 2 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,14 +26,54 @@ _Generated: 2026-05-27T11:01:11.552350+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 9 warnings, no blockers
+## Verdict: RED 🔴 — 41 errors, 8 warnings
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🔴 ERROR | `agent.model` | `ceo` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `sprint-commander` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `quality-gate-manager` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `workspace-operations-manager` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `product-manager` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `ux-architect` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `ui-designer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `arabic-rtl-experience-agent` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `solution-architect` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `database-architect` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `api-architect` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `integration-architect` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `claude-code-lead-developer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `frontend-engineer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `backend-engineer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `full-stack-engineer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `mobile-engineer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `qa-engineer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `bug-hunter` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `security-auditor` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `performance-tester` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `deployment-engineer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `environment-manager` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `release-manager` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `documentation-agent` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `skill-builder` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `template-builder` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `prompt-optimizer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `memory-curator` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `research-scout` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `github-analyst` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `docs-analyst` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `tool-evaluator` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `codegraph-indexer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `codebase-cartographer` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `impact-analyst` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `growth-lead` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `seo-specialist` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `content-writer-ar-en` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `analytics-lead` has empty model | Set model via `multica agent update` |
+| 🔴 ERROR | `agent.model` | `onboarding-designer` has empty model | Set model via `multica agent update` |
 | 🟡 WARN | `issue.blocked` | DEV-126 blocked: OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux | Review blocker — autopilot caps at 3 retries |
-| 🟡 WARN | `issue.blocked` | DEV-108 blocked: ARCH ACTION: Consolidate and resolve ADR-002 admin credentia | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `benchmark-vendor-tracker` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `code-reviewer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `multi-agent-coordinator` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

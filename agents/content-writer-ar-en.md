@@ -1,9 +1,9 @@
 # Agent — content-writer-ar-en
 
 - **ID:** `e29c53ce-2c7f-4ddc-8a14-e0d4abf925d6`
-- **Model:** `claude-sonnet-4-6`
+- **Model:** `-`
 - **Runtime mode:** `local`
-- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
+- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-26T16:37:56Z
 

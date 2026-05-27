@@ -13,11 +13,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "ceo",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -118,7 +118,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:51:44Z",
+    "updated_at": "2026-05-27T12:03:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -132,15 +132,15 @@
     "description": "Sprint cadence + parallel WIP enforcement across all squads.",
     "has_custom_env": false,
     "id": "ebd03ec3-2a72-433f-b89f-bf4d35573a3d",
-    "instructions": "You are the Sprint Commander of the devosnt App Factory.\n\n## Core role\nOwn sprint cadence, WIP limits, and parallel build orchestration across all squads.\n\n## Responsibilities\n- Open issues land in the right project + status (`todo` for \"start now\", `backlog` for \"wait for input\").\n- Enforce WIP: max 3 in_progress per agent, max 6 in_progress per squad.\n- Promote `backlog → todo` only when prerequisites have landed (schema before backend, API contract before frontend).\n- Spot stalls (any issue \u003e24h `in_progress` without comments) and ping the assignee.\n\n## Decision rules\n- Independent build tasks → create as sibling sub-issues, all `--status todo`, run in parallel.\n- Strictly sequential tasks → only the first is `--status todo`; rest are `--status backlog`, promote in turn.\n- Never assign an agent two issues whose acceptance criteria block each other.\n\n## Output\nA short comment on the parent issue any time you change the build plan, with: what moved, why, what's now blocked.\n\n## Escalation\nEscalate to CEO Orchestrator only on cross-squad scope disputes or PRD changes after approval.",
+    "instructions": "\nYou are the Sprint Commander of the devosnt App Factory.\n\n## Core role\nOwn sprint cadence, WIP limits, and parallel build orchestration across all squads.\n\n## Responsibilities\n- Open issues land in the right project + status (`todo` for \"start now\", `backlog` for \"wait for input\").\n- Enforce WIP: max 3 in_progress per agent, max 6 in_progress per squad.\n- Promote `backlog → todo` only when prerequisites have landed (schema before backend, API contract before frontend).\n- Spot stalls (any issue \u003e24h `in_progress` without comments) and ping the assignee.\n\n## Decision rules\n- Independent build tasks → create as sibling sub-issues, all `--status todo`, run in parallel.\n- Strictly sequential tasks → only the first is `--status todo`; rest are `--status backlog`, promote in turn.\n- Never assign an agent two issues whose acceptance criteria block each other.\n\n## When to run parallel-issue-dispatcher (auto-trigger)\nAfter creating a build plan (or reviewing a parent that has ≥3 sub-issues in `backlog` with mixed dependencies), run `parallel-issue-dispatcher` to auto-identify independent sub-issues and batch-promote ready ones to `--status todo` in parallel. This skips the manual `backlog → todo` promotion dance and unblocks Build Squad faster.\n\n## Output\nA short comment on the parent issue any time you change the build plan, with: what moved, why, what's now blocked.\n\n## Escalation\nEscalate to CEO Orchestrator only on cross-squad scope disputes or PRD changes after approval.\n",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "sprint-commander",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -161,7 +161,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:00:20Z",
+    "updated_at": "2026-05-27T12:01:52Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -179,11 +179,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "quality-gate-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -229,7 +229,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:30:03Z",
+    "updated_at": "2026-05-27T11:35:53Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -247,11 +247,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "workspace-operations-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -277,7 +277,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T11:00:20Z",
+    "updated_at": "2026-05-27T12:01:52Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -295,11 +295,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "product-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -360,7 +360,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:10Z",
+    "updated_at": "2026-05-27T11:35:55Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -378,11 +378,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "ux-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -423,7 +423,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:10Z",
+    "updated_at": "2026-05-27T11:35:55Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -441,11 +441,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "ui-designer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -481,7 +481,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:11Z",
+    "updated_at": "2026-05-27T11:35:56Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -499,11 +499,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "arabic-rtl-experience-agent",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -524,7 +524,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:12Z",
+    "updated_at": "2026-05-27T11:35:57Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -542,11 +542,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "solution-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -682,7 +682,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:47:02Z",
+    "updated_at": "2026-05-27T11:35:58Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -700,7 +700,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "database-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -721,7 +721,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -767,7 +767,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:51:01Z",
+    "updated_at": "2026-05-27T11:35:58Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -785,11 +785,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "api-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -820,7 +820,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:21Z",
+    "updated_at": "2026-05-27T11:35:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -838,11 +838,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "integration-architect",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -888,7 +888,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:21Z",
+    "updated_at": "2026-05-27T11:36:00Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -906,7 +906,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "claude-code-lead-developer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -920,7 +920,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -966,7 +966,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:48:23Z",
+    "updated_at": "2026-05-27T11:36:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -984,7 +984,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "frontend-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -998,7 +998,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1064,7 +1064,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:47:33Z",
+    "updated_at": "2026-05-27T11:36:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1082,7 +1082,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "backend-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1105,7 +1105,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1156,7 +1156,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:49:34Z",
+    "updated_at": "2026-05-27T11:36:02Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1174,7 +1174,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "full-stack-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1197,7 +1197,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1253,7 +1253,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:49:40Z",
+    "updated_at": "2026-05-27T11:36:03Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1271,7 +1271,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "mobile-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1285,7 +1285,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1321,7 +1321,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:47:35Z",
+    "updated_at": "2026-05-27T11:36:04Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1339,7 +1339,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "qa-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1371,7 +1371,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1407,7 +1407,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:52:14Z",
+    "updated_at": "2026-05-27T11:36:05Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1425,7 +1425,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "bug-hunter",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1444,7 +1444,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1470,7 +1470,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:47:07Z",
+    "updated_at": "2026-05-27T11:36:06Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1488,7 +1488,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "security-auditor",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1508,7 +1508,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1549,7 +1549,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:52:20Z",
+    "updated_at": "2026-05-27T11:36:06Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1567,11 +1567,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "performance-tester",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1592,7 +1592,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:29Z",
+    "updated_at": "2026-05-27T11:36:07Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1610,7 +1610,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "deployment-engineer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -1629,7 +1629,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1670,7 +1670,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:53:06Z",
+    "updated_at": "2026-05-27T11:36:08Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1688,11 +1688,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "environment-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1723,7 +1723,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:53Z",
+    "updated_at": "2026-05-27T11:36:09Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1741,11 +1741,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "release-manager",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1781,7 +1781,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:54Z",
+    "updated_at": "2026-05-27T11:36:09Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1799,11 +1799,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "documentation-agent",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1829,7 +1829,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:55Z",
+    "updated_at": "2026-05-27T11:36:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1847,11 +1847,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "skill-builder",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1877,7 +1877,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:56Z",
+    "updated_at": "2026-05-27T11:36:11Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1895,11 +1895,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "template-builder",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1920,7 +1920,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:57Z",
+    "updated_at": "2026-05-27T11:36:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1938,11 +1938,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "prompt-optimizer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -1958,7 +1958,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:57Z",
+    "updated_at": "2026-05-27T11:36:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1976,11 +1976,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "memory-curator",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2006,7 +2006,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:58Z",
+    "updated_at": "2026-05-27T11:36:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2024,11 +2024,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "research-scout",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2054,7 +2054,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:20:59Z",
+    "updated_at": "2026-05-27T11:36:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2072,7 +2072,7 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "github-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {
@@ -2089,7 +2089,7 @@
         }
       }
     },
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2105,7 +2105,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:32:08Z",
+    "updated_at": "2026-05-27T11:36:15Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2123,11 +2123,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "docs-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2148,7 +2148,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:01Z",
+    "updated_at": "2026-05-27T11:36:16Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2166,11 +2166,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "tool-evaluator",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2186,7 +2186,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:01Z",
+    "updated_at": "2026-05-27T11:36:16Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2204,11 +2204,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "codegraph-indexer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2219,7 +2219,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T10:23:42Z",
+    "updated_at": "2026-05-27T11:36:17Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2237,11 +2237,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "codebase-cartographer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2252,7 +2252,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:03Z",
+    "updated_at": "2026-05-27T11:36:18Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2270,11 +2270,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "impact-analyst",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2285,7 +2285,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T09:59:11Z",
+    "updated_at": "2026-05-27T11:36:19Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2303,11 +2303,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "growth-lead",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2343,7 +2343,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:05Z",
+    "updated_at": "2026-05-27T11:36:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2361,11 +2361,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "seo-specialist",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2386,7 +2386,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:06Z",
+    "updated_at": "2026-05-27T11:36:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2404,11 +2404,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "content-writer-ar-en",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2424,7 +2424,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:06Z",
+    "updated_at": "2026-05-27T11:36:21Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2442,11 +2442,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "analytics-lead",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2467,7 +2467,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:07Z",
+    "updated_at": "2026-05-27T11:36:22Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2485,11 +2485,11 @@
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
-    "model": "claude-sonnet-4-6",
+    "model": "",
     "name": "onboarding-designer",
     "owner_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "runtime_config": {},
-    "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
+    "runtime_id": "c31b3c54-35aa-4bb9-920e-b86f7f69b597",
     "runtime_mode": "local",
     "skills": [
       {
@@ -2505,7 +2505,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T07:21:08Z",
+    "updated_at": "2026-05-27T11:36:22Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   }

@@ -1,9 +1,9 @@
 # Agent — template-builder
 
 - **ID:** `daeb52e5-a809-4b48-b221-eb71e3c90fae`
-- **Model:** `claude-sonnet-4-6`
+- **Model:** `-`
 - **Runtime mode:** `local`
-- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
+- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-25T10:47:11Z
 

@@ -20,4 +20,3 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 - DEV-115 — SKILL: multi-agent-coordinator — concurrent agent coordination for Multica squad
 - DEV-120 — SKILL: tdd-mastery — Red-Green-Refactor TDD with coverage enforcement
 - DEV-113 — SKILL: code-reviewer — OWASP-aware code review gate (in_review → done)
-- DEV-109 — SKILL: security-auditor — OWASP/RLS/SOC2/ISO27001/GDPR audit with Red/Amber/Gree

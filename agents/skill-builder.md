@@ -1,9 +1,9 @@
 # Agent — skill-builder
 
 - **ID:** `5822179b-4e9e-40ea-bca2-70f4c80d2a19`
-- **Model:** `claude-sonnet-4-6`
+- **Model:** `-`
 - **Runtime mode:** `local`
-- **Runtime ID:** `6af6eb94-a120-43e6-b6de-5e1503c2f1e3`
+- **Runtime ID:** `c31b3c54-35aa-4bb9-920e-b86f7f69b597`
 - **Max concurrent tasks:** 6
 - **Created:** 2026-05-25T10:47:10Z
 
