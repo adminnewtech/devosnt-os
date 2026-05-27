@@ -1,60 +1,7 @@
 {
   "has_more": false,
-  "issues": [
-    {
-      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T16:36:48Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nPhase 6 benchmark mandate. Run the first six-vendor sweep now to seat the data the Weekly Benchmark Sweep autopilot will diff against.\n\n## Expected Output\nSix briefs (one per vendor), produced via `benchmark-vendor-tracker`:\n1. Lovable\n2. Bolt.new\n3. Cursor (agent mode)\n4. Replit Agent\n5. Antigravity 2.0\n6. Atoms.dev\n\nPlus a 1-page rollup:\n- What each beats us at\n- What we beat them at\n- Top 3 patterns to import as skills\n- Top 3 patterns we're already ahead on (proof)\n\n## Acceptance Criteria\n- [ ] All six briefs filed in `09 - Research Intelligence`\n- [ ] Rollup posted as a comment on this issue\n- [ ] Top 3 patterns dispatched to Skill Factory as sub-issues\n\n## Dependencies\nIssue: SKILL benchmark-vendor-tracker (must exist first; Skill Factory can stub-and-iterate).\n\n## DoD\nBriefs filed, rollup comment posted, 3 Skill Factory follow-ups created.",
-      "due_date": null,
-      "id": "c289d731-eaf9-4747-814f-c122f1ed08cd",
-      "identifier": "DEV-62",
-      "labels": [],
-      "metadata": {
-        "lifecycle_phase": "integrate",
-        "retry_log": 3
-      },
-      "number": 62,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "in_progress",
-      "title": "RESEARCH: Six-vendor benchmark sweep — Lovable / Bolt / Cursor / Replit / Antigravity 2.0 / Atoms.dev",
-      "updated_at": "2026-05-27T14:22:21Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T16:36:48Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nMCP servers are the highest-leverage integration surface for the App Factory. We have no inventory of what's worth wiring to our agents.\n\n## Expected Output\nTop-20 MCP server inventory, saved to `09 - Research Intelligence`:\n- Per server: GitHub URL, purpose, maintainer activity, perms requested, security risk, recommended agents to wire it to, import / reject decision (with reason)\n- For each \"import\": exact `multica` wiring steps + per-agent risk-mitigation note\n\n## Acceptance Criteria\n- [ ] 20 MCP servers reviewed\n- [ ] Every \"import\" has a security review\n- [ ] Top 5 imports routed to agent-owners as sub-issues\n\n## Dependencies\nIssue: SKILL mcp-server-evaluator (sibling).\n\n## DoD\nInventory filed, top 5 wired (or queued).",
-      "due_date": null,
-      "id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
-      "identifier": "DEV-61",
-      "labels": [],
-      "metadata": {
-        "lifecycle_phase": "integrate",
-        "retry_log": 3
-      },
-      "number": 61,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "in_progress",
-      "title": "RESEARCH: Top-20 MCP server inventory for App Factory",
-      "updated_at": "2026-05-27T14:22:23Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    }
-  ],
+  "issues": [],
   "limit": 50,
   "offset": 0,
-  "total": 2
+  "total": 0
 }
