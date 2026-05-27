@@ -14,7 +14,7 @@
       "labels": [],
       "metadata": {
         "lifecycle_phase": "integrate",
-        "retry_log": 2
+        "retry_log": 3
       },
       "number": 62,
       "parent_issue_id": null,
@@ -24,7 +24,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "RESEARCH: Six-vendor benchmark sweep — Lovable / Bolt / Cursor / Replit / Antigravity 2.0 / Atoms.dev",
-      "updated_at": "2026-05-27T12:07:04Z",
+      "updated_at": "2026-05-27T14:22:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -40,7 +40,7 @@
       "labels": [],
       "metadata": {
         "lifecycle_phase": "integrate",
-        "retry_log": 2
+        "retry_log": 3
       },
       "number": 61,
       "parent_issue_id": null,
@@ -50,7 +50,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "RESEARCH: Top-20 MCP server inventory for App Factory",
-      "updated_at": "2026-05-27T12:07:09Z",
+      "updated_at": "2026-05-27T14:22:23Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
