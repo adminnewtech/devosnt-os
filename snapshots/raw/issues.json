@@ -2,6 +2,29 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-28T03:00:15Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-05-28 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "794c71ce-5740-41ae-ac13-55de3cb77a65",
+      "identifier": "DEV-162",
+      "labels": [],
+      "metadata": {},
+      "number": 162,
+      "parent_issue_id": null,
+      "position": 0,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-05-28",
+      "updated_at": "2026-05-28T03:01:07Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": null,
       "assignee_type": null,
       "created_at": "2026-05-27T13:04:40Z",
@@ -1158,32 +1181,9 @@
       "title": "SKILL: code-reviewer — OWASP-aware code review gate (in_review → done)",
       "updated_at": "2026-05-26T17:14:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T17:13:39Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nWorkspace Upgrade Report — 2026-05-26, action #3. 32 issues currently sit in `status=in_review` while quality-gate-manager (id: d87c831d-bd4d-459f-9672-d633e238c44f) has WIP=0. The CEO prompt never delegates the `in_review → done` gate to quality-gate-manager — every in_review issue waits for an ad-hoc CEO review that never fires.\n\nConcrete sample of the stuck queue (full list in the report comment on the parent issue): DEV-1, DEV-25, DEV-35–DEV-89 in_review subset.\n\n## Expected Output\nA patch to the CEO agent's `instructions` (a.k.a. system prompt) that adds an explicit `in_review` sweep step:\n\n- On every CEO run, after routing new App Requests, **scan `multica issue list --status in_review`** for issues NOT assigned to ceo where (a) updated_at \u003e 12h ago OR (b) DoD checklist is present in the description.\n- For each such issue, create exactly one sub-issue assigned to quality-gate-manager with the verify-and-decide prompt (PASS → flip parent to done; VETO → flip parent to backlog with a `blocked_reason`).\n- Cap dispatch at 5 in_review reviews per CEO run to avoid flood.\n- Skip DEV-36, skip any issue whose assignee is ceo (those are escalations, not shippable work).\n- Never `@mention` quality-gate-manager — assignment fires the trigger.\n\n## Acceptance Criteria\n- [ ] CEO instructions updated via `multica agent update d9f942b9-e245-4e28-99eb-8f12fbebc2c3 --instructions-file \u003cpatched.md\u003e` (or your standard prompt-optimizer flow).\n- [ ] Diff posted as a comment on this issue with before/after of the new section.\n- [ ] Dry-run test: simulate the new prompt against the current 32-issue in_review pile and confirm the first 5 picks are sensible (post the picks as a comment).\n\n## Dependencies\nNone hard. Independent of skill-builder / memory-curator actions.\n\n## Risk\nMedium. Wrong selection could close a not-actually-done issue. Mitigations:\n- The new sub-issue does NOT auto-close the parent — it delegates the decision to quality-gate-manager.\n- Cap of 5/run gives CEO a chance to course-correct week-over-week.\n- DEV-36 and ceo-assigned escalations are excluded.\n\n## Definition of Done\n- CEO prompt patched.\n- Diff + dry-run picks posted as a comment.\n- The next weekly Workspace Upgrade run should observe in_review count trending down — note the baseline (32) so next week's loop can diff it.",
-      "due_date": null,
-      "id": "50e0a7d3-ed42-481d-b43f-783ad16c4723",
-      "identifier": "DEV-112",
-      "labels": [],
-      "metadata": {},
-      "number": 112,
-      "parent_issue_id": "80580478-4f26-418a-8aac-d9e68d030451",
-      "position": 0,
-      "priority": "high",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "start_date": null,
-      "status": "done",
-      "title": "Workspace Upgrade Action — CEO prompt: dispatch in_review queue to quality-gate-manager",
-      "updated_at": "2026-05-27T09:25:44Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 161
+  "total": 162
 }
