@@ -16,7 +16,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-137 | Daily Command Center Digest — 2026-05-27 | `in_review` | none |
 | DEV-141 | QA Gate: DEV-110 — Pin self-hosted-supabase-tunnel | `in_review` | none |
 | DEV-162 | Factory Health Audit — 2026-05-28 | `in_review` | none |
-| DEV-163 | Daily Command Center Digest — 2026-05-28 | `in_progress` | none |
+| DEV-163 | Daily Command Center Digest — 2026-05-28 | `in_review` | none |
 
 ## Recent Done
 
