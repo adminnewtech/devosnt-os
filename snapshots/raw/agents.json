@@ -146,9 +146,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-29T04:02:12Z",
+    "updated_at": "2026-05-29T04:09:42Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -196,7 +196,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-29T04:02:13Z",
+    "updated_at": "2026-05-29T04:47:37Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -317,7 +317,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-29T04:02:12Z",
+    "updated_at": "2026-05-29T05:03:09Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
