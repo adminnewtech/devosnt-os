@@ -2,6 +2,29 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-29T03:00:12Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-05-29 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "b208256b-f079-41ad-b444-9e9627c1e838",
+      "identifier": "DEV-164",
+      "labels": [],
+      "metadata": {},
+      "number": 164,
+      "parent_issue_id": null,
+      "position": -1,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Daily Factory Health Audit — 2026-05-29",
+      "updated_at": "2026-05-29T03:04:32Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-05-28T04:00:14Z",
@@ -1162,32 +1185,9 @@
       "title": "SKILL: multi-agent-coordinator — concurrent agent coordination for Multica squads",
       "updated_at": "2026-05-27T07:42:46Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-05-26T17:14:31Z",
-      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "creator_type": "agent",
-      "description": "# COMPETITIVE BRIEF: LOVABLE\n**Run date:** 2026-05-26\n\n## What They Do\nLovable (lovable.dev) is an AI-powered full-stack app builder that generates production-ready React/TypeScript/Supabase applications from plain English prompts, eliminating the need to write code or configure visual builders. The platform targets non-technical founders, startup teams, and product managers who need a working web app for validation or MVP launch quickly. Its core value proposition is delivering a complete, deployable system — frontend UI, database schema, authentication, and payment integrations — in hours rather than weeks, with full GitHub code export so the user owns the output.\n\n## Onboarding Flow\n1. **Landing page chatbot** — Visitors describe an app idea and see live AI output *before* creating an account, proving capability with zero commitment.\n2. **Email-only signup** — Five-second registration; no password required, no verification delay.\n3. **Personalization survey** — Minimal discovery questions to tailor output; no template picker.\n4. **Guided integration prompts** — Supabase (DB), Stripe (payments), and OAuth providers are introduced in context as each becomes relevant, not all at once.\n5. **Real-time task narration** — The builder narrates AI subtasks (\"Create schema → Compose UI → Spin preview\") with an inline credit counter visible throughout.\n\nNotable UX choices: share buttons are public-by-default to encourage viral loops; credit remaining is surfaced inline to avoid surprise bills.\n\n## Pricing (as of 2026-05-26)\n| Tier | Price | Credits/month | Notable limits |\n|---|---|---|---|\n| Free | $0 | 30 (5/day cap) | 5 lovable.app subdomains, private projects |\n| Pro | $25/mo | 100 | Custom domains, unlimited collaborators |\n| Business | $50/mo | 100 | SSO, team workspace, design templates, opt-out of data training |\n| Enterprise | Custom | Custom | Volume pricing, SCIM, dedicated support |\n\nCredit consumption varies by complexity: simple styling ~0.5 credits; a full landing page 2+ credits. Every prompt (including AI-introduced bug fixes) consumes credits. Student discount: up to 50% off Pro.\n\n## Strengths\n1. **Full-stack generation with code ownership** — GitHub two-way sync exports standard React/TypeScript/Tailwind code; users can deploy anywhere and fork freely after export. ([Lovable FAQ](https://lovable.dev/faq/code-export), [Export Guide](https://www.alanbagi.com/blog/can-i-export-an-lovable-project-guide))\n2. **Auto-generated Supabase schema + RLS** — Plain-English prompts produce SQL schemas, table relationships, and Row-Level Security policies simultaneously with UI bindings and real-time subscriptions, eliminating manual backend setup. ([Lovable Supabase Integration](https://uibakery.io/blog/lovable-supabase-integration), [Docs](https://docs.lovable.dev/integrations/supabase))\n3. **Agentic mode with 91% fewer errors** — Agent Mode makes multi-file changes and validates them with built-in browser testing and edge function validation before delivery. ([Lovable Blog](https://lovable.dev/blog/setting-the-standard-for-agentic-development), [Docs](https://docs.lovable.dev/features/agent-mode))\n\n## Weaknesses\n1. **Credit trap on AI-introduced bugs** — Every prompt costs credits, including re-fixes of bugs the AI introduced. Users report 70% of spend goes to fixing AI mistakes; costs of $200–$3,000+ for moderately complex apps are documented. The AI lacks persistent cross-session context, causing fixed bugs to resurface.\n2. **Security vulnerabilities in generated code** — February 2026: 16 vulnerabilities (6 critical) found in a single Lovable-hosted app exposing 18,000 users' data. A 2026 audit found 10%+ of sampled production apps with live vulnerabilities. Generated code lacks rate limiting, CSRF tokens, and proper secrets management. ([The Register](https://www.theregister.com/2026/02/27/lovable_app_vulnerabilities/))\n3. **Scaling failures past MVP** — Multi-step workflows and complex business logic confuse the AI. Data structures are tightly coupled and break when requirements change. Code that works in Lovable fails locally due to sync/build issues. Not suitable for enterprise or long-term applications.\n\n## Patterns to Copy\n1. **Value-before-signup chatbot** — Visitors see working AI output on the landing page before creating an account, proving capability and pre-qualifying intent. | Implementation note: build a public \"describe your app\" demo that generates a mockup or screen list without requiring login; capture emails at the output step.\n2. **Transparent inline cost display** — Credits remaining are visible contextually during every action, not buried in a settings page. | Implementation note: surface usage/quota inline wherever a user takes a resource-consuming action; frame it as \"X credits remaining\" not as a warning.\n3. **Agentic task narration UI** — Real-time narration of AI subtasks (\"Designing schema → Wiring UI → Running tests\") maintains psychological momentum on slow operations. | Implementation note: stream agent step labels into the UI for any long-running build or generation task; a spinner alone is insufficient.\n\n## Patterns to Beat\n1. **Per-message credit burn with no refund on AI failures** — Lovable charges credits for every prompt regardless of outcome, trapping users in expensive debug loops. | Our differentiation: charge credits only at verifiable checkpoints (compilation, test pass, deploy-ready). Auto-refund or credit-reverse when the AI re-introduces a previously-fixed bug (detected via diff comparison).\n2. **Stateless agent with no cross-project memory** — Lovable's Agent Mode processes each session in isolation; design systems and naming conventions must be re-explained for every new project. | Our differentiation: maintain a persistent workspace memory layer that learns project conventions, component libraries, and schema patterns across all user projects and applies them proactively to new builds.\n3. **No security hardening by default** — Generated apps ship without rate limiting, input validation, audit logging, or proper secrets management. | Our differentiation: auto-inject a security scaffold (helmet.js / equivalent, input sanitisation, secrets via env var, audit log stub) on every generated backend; run an automated pre-deploy security report with a one-click \"fix all\" option.\n\n## Decision\n**Study only** — Lovable has strong UX patterns worth adopting (value-before-signup, transparent costs, agentic narration) but its credit-trap pricing, documented security failures, and scaling ceiling make it a cautionary example rather than a source to import or adapt directly; our differentiation should explicitly solve the problems that cause Lovable users to outgrow the platform.\n\n## Sources\n- [Lovable FAQ — Code Export](https://lovable.dev/faq/code-export)\n- [Lovable Agent Mode Docs](https://docs.lovable.dev/features/agent-mode)\n- [Lovable Agent Blog](https://lovable.dev/blog/setting-the-standard-for-agentic-development)\n- [Lovable Supabase Integration](https://uibakery.io/blog/lovable-supabase-integration)\n- [Lovable Pricing 2026](https://flowith.io/blog/lovable-pricing-2026-free-vs-starter-vs-pro/)\n- [Lovable Pricing \u0026 Credits](https://www.banani.co/blog/lovable-pricing-and-credits)\n- [Lovable Onboarding Teardown](https://www.candu.ai/blog/lovables-agentic-onboarding)\n- [Lovable App Exposed 18K Users — The Register](https://www.theregister.com/2026/02/27/lovable_app_vulnerabilities/)\n- [Lovable Bugs \u0026 Realistic Costs 2026](https://forasoft.medium.com/lovable-app-bugs-how-to-fix-them-when-to-hire-developers-realistic-costs-2026-946199c6496d)\n- [Lovable Limitations Guide](https://p0stman.com/guides/lovable-limitations)\n- [Why Startups Outgrow Lovable](https://www.fastdev.com/blog/blog/startups-scaleups-lovable-limitations/)\n- [Lovable Review 2026](https://weavai.app/blog/en/2026/04/26/2026-lovable-review-is-this-ai-app-builder-worth-it/)",
-      "due_date": null,
-      "id": "a2ba9e56-0537-40a7-841f-25a8f9848cf0",
-      "identifier": "DEV-114",
-      "labels": [],
-      "metadata": {},
-      "number": 114,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "medium",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "done",
-      "title": "BRIEF: Lovable — competitor snapshot 2026-05-26",
-      "updated_at": "2026-05-26T17:14:31Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 163
+  "total": 164
 }
