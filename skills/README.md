@@ -25,13 +25,13 @@ Total skills in `devosnt`: **126**
 | [autonomous-test-fix-loop](./autonomous-test-fix-loop.md) | `qa-engineer`, `bug-hunter` | After a build issue goes in_review, runs the QA test plan against the preview URL, creates |
 | [background-jobs-design](./background-jobs-design.md) | `solution-architect`, `backend-engineer` | Default background job system: pg-boss / BullMQ / inngest, with retries + DLQ. |
 | [backup-restore-planner](./backup-restore-planner.md) | `database-architect`, `environment-manager` | Daily backups, weekly restore drill, point-in-time recovery, per-tenant export. |
-| [benchmark-vendor-tracker](./benchmark-vendor-tracker.md) | _(unowned)_ | Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor  |
+| [benchmark-vendor-tracker](./benchmark-vendor-tracker.md) | `research-scout` | Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor  |
 | [booking-system-builder](./booking-system-builder.md) | `solution-architect` | Build a booking / appointment system from preset. |
 | [bug-report-template](./bug-report-template.md) | `qa-engineer`, `bug-hunter` | Standard bug report shape so issues are reproducible on first read. |
 | [chat-support-builder](./chat-support-builder.md) | `full-stack-engineer` | Default in-app support chat: ticketing, agent inbox, AI deflection, WhatsApp bridge. |
 | [ci-cd-pipeline-builder](./ci-cd-pipeline-builder.md) | `claude-code-lead-developer`, `deployment-engineer` | Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy. |
 | [clinic-system-builder](./clinic-system-builder.md) | `solution-architect` | Build a medical clinic system: patients, appointments, EMR, prescriptions, billing, insura |
-| [code-reviewer](./code-reviewer.md) | _(unowned)_ | OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best pra |
+| [code-reviewer](./code-reviewer.md) | `quality-gate-manager` | OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best pra |
 | [codebase-cartographer](./codebase-cartographer.md) | `codebase-cartographer` | Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync  |
 | [codegraph-indexer](./codegraph-indexer.md) | `codegraph-indexer` | Build and refresh a per-app codegraph index (tree-sitter + SQLite) plus an Understand-Anyt |
 | [cost-budget-tracker](./cost-budget-tracker.md) | `workspace-operations-manager`, `environment-manager`, `tool-evaluator` | Per-project monthly budget + alerting on cloud + AI spend. |
@@ -72,7 +72,7 @@ Total skills in `devosnt`: **126**
 | [mcp-server-evaluator](./mcp-server-evaluator.md) | `skill-builder` | Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject |
 | [mobile-app-planner](./mobile-app-planner.md) | `mobile-engineer` | Plan a React Native (Expo) companion or standalone mobile app. |
 | [monitoring-alerting-setup](./monitoring-alerting-setup.md) | `workspace-operations-manager`, `performance-tester`, `deployment-engineer`, `environment-manager` | Default monitoring: uptime, latency, error rate, with on-call paging. |
-| [multi-agent-coordinator](./multi-agent-coordinator.md) | _(unowned)_ | Coordinate concurrent agents across Multica issues: DAG-based dependency ordering on paren |
+| [multi-agent-coordinator](./multi-agent-coordinator.md) | `sprint-commander` | Coordinate concurrent agents across Multica issues: DAG-based dependency ordering on paren |
 | [multi-tenant-architecture](./multi-tenant-architecture.md) | `solution-architect`, `database-architect` | Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across or |
 | [nextjs-app-starter](./nextjs-app-starter.md) | `claude-code-lead-developer`, `frontend-engineer`, `full-stack-engineer` | Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton. |
 | [nextjs-supabase-builder](./nextjs-supabase-builder.md) | `frontend-engineer`, `full-stack-engineer` | Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS ver |
@@ -106,8 +106,8 @@ Total skills in `devosnt`: **126**
 | [school-system-builder](./school-system-builder.md) | `solution-architect` | Build a school / SIS system: students, classes, attendance, grades, parents, fees. |
 | [search-system-builder](./search-system-builder.md) | `solution-architect` | Default end-user search with autocomplete, typo tolerance, filters, facets. |
 | [secrets-leak-detector](./secrets-leak-detector.md) | `ceo` | Scan every PR diff for leaked API keys, tokens, passwords, and credentials before merge. Z |
-| [security-auditor](./security-auditor.md) | _(unowned)_ | Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps,  |
-| [security-hardening-owasp](./security-hardening-owasp.md) | _(unowned)_ | OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validat |
+| [security-auditor](./security-auditor.md) | `security-auditor` | Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps,  |
+| [security-hardening-owasp](./security-hardening-owasp.md) | `security-auditor` | OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validat |
 | [security-review-checklist](./security-review-checklist.md) | `ceo`, `quality-gate-manager`, `security-auditor` | Block release of any user-visible feature that fails the 15-point security gate. |
 | [seed-data-factory](./seed-data-factory.md) | `qa-engineer`, `template-builder` | Default seed data generator per vertical so empty states are demoable from minute one. |
 | [self-hosted-supabase-tunnel](./self-hosted-supabase-tunnel.md) | `solution-architect`, `database-architect` | Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), |
@@ -115,7 +115,7 @@ Total skills in `devosnt`: **126**
 | [shopify-dashboard-builder](./shopify-dashboard-builder.md) | `integration-architect` | Build a Shopify analytics + ops dashboard via the Admin API. |
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
-| [tdd-mastery](./tdd-mastery.md) | _(unowned)_ | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
+| [tdd-mastery](./tdd-mastery.md) | `qa-engineer` | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
 | [technical-debt-tracker](./technical-debt-tracker.md) | `ceo` | After every project closes, catalog technical debt items, score by impact and fix cost, an |
 | [threat-modeling](./threat-modeling.md) | `ceo` | STRIDE threat analysis on any new app or feature before architecture is finalized. Output: |
 | [tool-comparison-workflow](./tool-comparison-workflow.md) | `research-scout`, `docs-analyst`, `tool-evaluator` | Compare 2-4 tools/services and produce a one-page decision doc. |
@@ -123,7 +123,7 @@ Total skills in `devosnt`: **126**
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |
 | [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. |
 | [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
-| [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | _(unowned)_ | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
+| [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | `research-scout` | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |
 | [webhooks-framework-planner](./webhooks-framework-planner.md) | `api-architect`, `integration-architect`, `backend-engineer` | Default inbound + outbound webhook framework with signing, retries, and dead-letter queue. |
 | [whatsapp-automation-planner](./whatsapp-automation-planner.md) | `integration-architect` | Plan a WhatsApp Business / Cloud API automation. |

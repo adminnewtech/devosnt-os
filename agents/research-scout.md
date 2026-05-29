@@ -13,9 +13,11 @@ Weekly frontier scan: AI tools, SaaS competitors, patterns.
 
 ## Skills
 
+- [`benchmark-vendor-tracker`](../skills/benchmark-vendor-tracker.md) — Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor name. Output: issue in 09-Research Intelligence with the standard 8-section brief template (what they do, onboarding, pricing, strengths, weaknesses, patterns to copy, patterns to beat, decision).
 - [`cross-project-pattern-extractor`](../skills/cross-project-pattern-extractor.md) — Learn across all completed projects and propose new skills, default-changes, or removed obsolete skills.
 - [`github-research-workflow`](../skills/github-research-workflow.md) — Research GitHub for prior art before building (top repos, license, patterns).
 - [`tool-comparison-workflow`](../skills/tool-comparison-workflow.md) — Compare 2-4 tools/services and produce a one-page decision doc.
+- [`vendor-brief-changelog-verification`](../skills/vendor-brief-changelog-verification.md) — Verify a vendor competitive brief against live changelog/release notes via a docs-analyst sub-task. Ensures every brief captures the vendor's latest shipped features, inline corrections are attributed, and at least 3 sources are cited before the brief is marked done.
 - [`workspace-upgrade-report`](../skills/workspace-upgrade-report.md) — Quarterly self-audit of the App Factory and bets for next quarter.
 
 ## Instructions

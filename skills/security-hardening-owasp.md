@@ -9,7 +9,7 @@ OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): inp
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`security-auditor`](../agents/security-auditor.md)
 
 ## Config
 

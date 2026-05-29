@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 44 (done: 27)
+- **Issues:** 45 (done: 27)
 
 ## Description
 
@@ -17,7 +17,8 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-141 | QA Gate: DEV-110 — Pin self-hosted-supabase-tunnel | `in_review` | none |
 | DEV-162 | Factory Health Audit — 2026-05-28 | `in_review` | none |
 | DEV-163 | Daily Command Center Digest — 2026-05-28 | `in_review` | none |
-| DEV-164 | Daily Factory Health Audit — 2026-05-29 | `in_progress` | none |
+| DEV-164 | Daily Factory Health Audit — 2026-05-29 | `in_review` | none |
+| DEV-165 | Daily Command Center Digest — 2026-05-29 | `in_progress` | none |
 
 ## Recent Done
 

@@ -9,7 +9,7 @@ OWASP-aware code review for logic errors, vulnerability patterns, complexity, an
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`quality-gate-manager`](../agents/quality-gate-manager.md)
 
 ## Config
 

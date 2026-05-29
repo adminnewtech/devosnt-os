@@ -9,7 +9,7 @@ Coordinate concurrent agents across Multica issues: DAG-based dependency orderin
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`sprint-commander`](../agents/sprint-commander.md)
 
 ## Config
 

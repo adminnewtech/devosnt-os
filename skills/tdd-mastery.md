@@ -9,7 +9,7 @@ Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`qa-engineer`](../agents/qa-engineer.md)
 
 ## Config
 

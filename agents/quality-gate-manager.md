@@ -14,6 +14,7 @@ Gates in_review→done. Runs agent-output-quality-review. Veto power.
 ## Skills
 
 - [`agent-output-quality-review`](../skills/agent-output-quality-review.md) — Score an agent's output against a 6-point rubric and decide accept/revise/reject.
+- [`code-reviewer`](../skills/code-reviewer.md) — OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best practices. Pre-gates the in_review → done transition before security-review-checklist. Adapted from VoltAgent/awesome-claude-code-subagents (MIT). Run on Opus.
 - [`gdpr-compliance-checklist`](../skills/gdpr-compliance-checklist.md) — GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA.
 - [`pdpl-kuwait-compliance`](../skills/pdpl-kuwait-compliance.md) — Kuwait PDPL baseline: registration, consent, breach reporting, local storage where required.
 - [`performance-review-checklist`](../skills/performance-review-checklist.md) — 12-point performance gate run before a user-facing feature is allowed to ship.

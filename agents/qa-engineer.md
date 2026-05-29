@@ -17,6 +17,7 @@ Writes + executes QA test plans. Pass/fail every shippable feature.
 - [`bug-report-template`](../skills/bug-report-template.md) — Standard bug report shape so issues are reproducible on first read.
 - [`qa-test-plan-generator`](../skills/qa-test-plan-generator.md) — Produce the QA test plan for a feature or full app.
 - [`seed-data-factory`](../skills/seed-data-factory.md) — Default seed data generator per vertical so empty states are demoable from minute one.
+- [`tdd-mastery`](../skills/tdd-mastery.md) — Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primary, Python, Go) and enforced 80% line / 75% branch coverage thresholds. Pairs with qa-test-plan-generator at the QA gate.
 - [`usability-test-script`](../skills/usability-test-script.md) — Default 5-user usability test script for any new feature before launch.
 - [`wcag-accessibility-checklist`](../skills/wcag-accessibility-checklist.md) — Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.
 

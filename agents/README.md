@@ -31,15 +31,15 @@ Total agents in `devosnt`: **41**
 | [performance-tester](./performance-tester.md) | `claude-sonnet-4-6` | `local` | 3 | Runs performance-review-checklist with prod-like data volume. |
 | [product-manager](./product-manager.md) | `claude-sonnet-4-6` | `local` | 11 | Idea → PRD → user stories → MVP scope cut. Hands off to UX + Architecture. |
 | [prompt-optimizer](./prompt-optimizer.md) | `claude-sonnet-4-6` | `local` | 2 | Improves agent prompts via prompt-improvement-review. |
-| [qa-engineer](./qa-engineer.md) | `claude-sonnet-4-6` | `local` | 6 | Writes + executes QA test plans. Pass/fail every shippable feature. |
-| [quality-gate-manager](./quality-gate-manager.md) | `claude-sonnet-4-6` | `local` | 8 | Gates in_review→done. Runs agent-output-quality-review. Veto power. |
+| [qa-engineer](./qa-engineer.md) | `claude-sonnet-4-6` | `local` | 7 | Writes + executes QA test plans. Pass/fail every shippable feature. |
+| [quality-gate-manager](./quality-gate-manager.md) | `claude-sonnet-4-6` | `local` | 9 | Gates in_review→done. Runs agent-output-quality-review. Veto power. |
 | [release-manager](./release-manager.md) | `claude-sonnet-4-6` | `local` | 6 | Release notes, customer comms, post-deploy verification. |
-| [research-scout](./research-scout.md) | `claude-sonnet-4-6` | `local` | 4 | Weekly frontier scan: AI tools, SaaS competitors, patterns. |
-| [security-auditor](./security-auditor.md) | `claude-sonnet-4-6` | `local` | 7 | Runs security-review-checklist. Veto on fail. |
+| [research-scout](./research-scout.md) | `claude-sonnet-4-6` | `local` | 6 | Weekly frontier scan: AI tools, SaaS competitors, patterns. |
+| [security-auditor](./security-auditor.md) | `claude-sonnet-4-6` | `local` | 9 | Runs security-review-checklist. Veto on fail. |
 | [seo-specialist](./seo-specialist.md) | `claude-sonnet-4-6` | `local` | 3 | SEO baseline + content discoverability. Owns sitemap, robots, meta, OG, JSON-LD, |
 | [skill-builder](./skill-builder.md) | `claude-sonnet-4-6` | `local` | 4 | Lifts 3x-repeated workflows into reusable skills. |
 | [solution-architect](./solution-architect.md) | `claude-sonnet-4-6` | `local` | 26 | Tech stack + ADRs + build graph. Default Next.js + Supabase + Vercel. |
-| [sprint-commander](./sprint-commander.md) | `claude-sonnet-4-6` | `local` | 3 | Sprint cadence + parallel WIP enforcement across all squads. |
+| [sprint-commander](./sprint-commander.md) | `claude-sonnet-4-6` | `local` | 4 | Sprint cadence + parallel WIP enforcement across all squads. |
 | [template-builder](./template-builder.md) | `claude-sonnet-4-6` | `local` | 3 | Turns shipped apps into reusable code templates + seed repos. |
 | [tool-evaluator](./tool-evaluator.md) | `claude-sonnet-4-6` | `local` | 2 | Runs tool-comparison-workflow for any new tool/service decision. |
 | [ui-designer](./ui-designer.md) | `claude-sonnet-4-6` | `local` | 6 | Design tokens, primitives, composed screens (LTR + RTL). |

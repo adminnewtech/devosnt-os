@@ -9,7 +9,7 @@ Verify a vendor competitive brief against live changelog/release notes via a doc
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`research-scout`](../agents/research-scout.md)
 
 ## Config
 

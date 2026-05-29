@@ -9,7 +9,7 @@ Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR complia
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`security-auditor`](../agents/security-auditor.md)
 
 ## Config
 

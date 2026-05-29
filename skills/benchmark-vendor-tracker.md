@@ -9,7 +9,7 @@ Produce a structured one-page competitive brief for any AI-adjacent vendor. Inpu
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`research-scout`](../agents/research-scout.md)
 
 ## Config
 

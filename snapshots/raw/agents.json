@@ -146,9 +146,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-28T04:07:43Z",
+    "updated_at": "2026-05-29T04:02:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -179,6 +179,11 @@
         "name": "agent-self-healing-policy"
       },
       {
+        "description": "Coordinate concurrent agents across Multica issues: DAG-based dependency ordering on parent/child hierarchies, deadlock prevention via blocked-status workflow, issue-based message routing, and fault tolerance aligned with agent-self-healing-policy.",
+        "id": "d80e5678-abe0-49f9-aff8-b47fcd308cec",
+        "name": "multi-agent-coordinator"
+      },
+      {
         "description": "Auto-identify independent sub-issues within a parent and batch-promote all of them to --status todo simultaneously, using a dependency DAG to determine readiness.",
         "id": "9f4b229b-4f75-454b-9548-2df4e4b80916",
         "name": "parallel-issue-dispatcher"
@@ -189,9 +194,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-29T03:05:15Z",
+    "updated_at": "2026-05-29T04:02:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -220,6 +225,11 @@
         "description": "Score an agent's output against a 6-point rubric and decide accept/revise/reject.",
         "id": "a52e7ea3-84e9-4f44-b5a4-f16edb9c8324",
         "name": "agent-output-quality-review"
+      },
+      {
+        "description": "OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best practices. Pre-gates the in_review → done transition before security-review-checklist. Adapted from VoltAgent/awesome-claude-code-subagents (MIT). Run on Opus.",
+        "id": "7a01483c-d432-4a1e-80f6-4bdab8052430",
+        "name": "code-reviewer"
       },
       {
         "description": "GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA.",
@@ -307,7 +317,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-29T03:05:15Z",
+    "updated_at": "2026-05-29T04:02:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1425,6 +1435,11 @@
         "name": "seed-data-factory"
       },
       {
+        "description": "Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primary, Python, Go) and enforced 80% line / 75% branch coverage thresholds. Pairs with qa-test-plan-generator at the QA gate.",
+        "id": "035f76ed-3f96-42bd-91ef-152d11d359b2",
+        "name": "tdd-mastery"
+      },
+      {
         "description": "Default 5-user usability test script for any new feature before launch.",
         "id": "a53ec8bc-06b5-4cb3-b734-59434bc3e8ea",
         "name": "usability-test-script"
@@ -1565,6 +1580,16 @@
         "description": "Kuwait PDPL baseline: registration, consent, breach reporting, local storage where required.",
         "id": "3c3d57ed-ccd5-45f1-8274-67d299778532",
         "name": "pdpl-kuwait-compliance"
+      },
+      {
+        "description": "Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps, vulnerability assessment, and Red/Amber/Green risk scoring. Read/Grep/Glob only; opus model.",
+        "id": "fe3ddde3-3e97-48a4-a9ad-91806868224b",
+        "name": "security-auditor"
+      },
+      {
+        "description": "OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validation, output encoding, SQL injection, CSRF, CSP, JWT, secrets management, and dependency auditing. Extends security-review-checklist. Adapted from rohitg00/awesome-claude-code-toolkit (Apache 2.0).",
+        "id": "c2bc0fda-62ee-4f23-9caa-88dab2379817",
+        "name": "security-hardening-owasp"
       },
       {
         "description": "Block release of any user-visible feature that fails the 15-point security gate.",
@@ -2062,6 +2087,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor name. Output: issue in 09-Research Intelligence with the standard 8-section brief template (what they do, onboarding, pricing, strengths, weaknesses, patterns to copy, patterns to beat, decision).",
+        "id": "c67a8cdd-0898-4d1b-a5d1-6a945f9ec656",
+        "name": "benchmark-vendor-tracker"
+      },
+      {
         "description": "Learn across all completed projects and propose new skills, default-changes, or removed obsolete skills.",
         "id": "5cab565d-590c-47e3-9b1d-050d5704d4c1",
         "name": "cross-project-pattern-extractor"
@@ -2075,6 +2105,11 @@
         "description": "Compare 2-4 tools/services and produce a one-page decision doc.",
         "id": "f24e65be-ac03-49b1-aa4f-b084500f595e",
         "name": "tool-comparison-workflow"
+      },
+      {
+        "description": "Verify a vendor competitive brief against live changelog/release notes via a docs-analyst sub-task. Ensures every brief captures the vendor's latest shipped features, inline corrections are attributed, and at least 3 sources are cited before the brief is marked done.",
+        "id": "171c3217-8b5f-4ae2-bfd3-64a5c3a62b05",
+        "name": "vendor-brief-changelog-verification"
       },
       {
         "description": "Quarterly self-audit of the App Factory and bets for next quarter.",
