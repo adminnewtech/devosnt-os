@@ -19,7 +19,6 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 - DEV-127 — Wire parallel-issue-dispatcher into sprint-commander trigger list
 - DEV-156 — QA Gate: DEV-117 — SKILL IMPORT: sandbox-runtime
-- DEV-117 — SKILL IMPORT: sandbox-runtime
 - DEV-155 — QA Gate: DEV-76 — VENDOR BRIEF: Bolt.new
 - DEV-152 — QA Gate: DEV-94 — WIRE: Supabase MCP → Database + Backend agents
 - DEV-151 — DEV-77: Survey community Cursor extension repos (cursor-tools, cursor-rules, VS 
@@ -27,3 +26,4 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-147 — QA Gate: DEV-77 — VENDOR BRIEF: Cursor (agent mode)
 - DEV-148 — QA Gate: DEV-76 — VENDOR BRIEF: Bolt.new
 - DEV-144 — QA Gate: DEV-101 — IMPORT: code-reviewer subagent (VoltAgent/awesome-claude-code
+- DEV-143 — QA Gate: DEV-103 — IMPORT: skills/security-hardening (rohitg00/awesome-claude-co
