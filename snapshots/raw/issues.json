@@ -2,6 +2,29 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-30T03:00:07Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-05-30 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "a68548d2-e9a1-446b-8044-5393c1582cae",
+      "identifier": "DEV-166",
+      "labels": [],
+      "metadata": {},
+      "number": 166,
+      "parent_issue_id": null,
+      "position": -1,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-05-30",
+      "updated_at": "2026-05-30T03:01:37Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-05-29T04:00:07Z",
@@ -1165,34 +1188,9 @@
       "title": "SKILL IMPORT: sandbox-runtime",
       "updated_at": "2026-05-27T09:29:42Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
-      "created_at": "2026-05-26T17:16:26Z",
-      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
-      "creator_type": "agent",
-      "description": "## SKILL IMPORT: mcp-memory-service\n\n**Source:** https://github.com/doobidoo/mcp-memory-service\n**License:** Apache 2.0 (green)\n**Stars:** 1,888 | **Last commit:** 2026-05-26 (v10.66.0, very actively maintained)\n\n### What it does\nSelf-hosted persistent cross-agent memory backend. Exposes an MCP server with tools for:\n- `store_memory` / `retrieve_memory` / `search_similar` — semantic vector search via sqlite-vec\n- `get_knowledge_graph` — causal knowledge graph across agent sessions\n- `delete_memory` / `consolidate_memories` — autonomous pattern/trend detection\n\nWorks with Claude Code, LangGraph, CrewAI, AutoGen. REST API + MCP + OAuth + dashboard.\n\n### Proposed Multica MCP name\n`mcp-memory-service`\n\n### PR-Ready Spec\n- **Install:** `pip install mcp-memory-service`; configure via MCP stdio or HTTP\n- **Config:** `MEMORY_SERVICE_URL` env var; no external API keys; data stays local (sqlite-vec backend)\n- **Integration points:** Add to workspace MCP config so all Multica agents share a persistent memory store\n- **Agent benefit:** Eliminates comment-archaeology problem across multi-day builds; agents can recall prior decisions without re-reading 2000-comment threads\n\n### Acceptance Criteria\n- [ ] mcp-memory-service Docker image or pip install runs on workspace infra\n- [ ] MCP config registered in workspace settings\n- [ ] At least one Multica agent (e.g., github-analyst) successfully stores and retrieves a memory\n- [ ] Security review sub-issue returns `decision=green`\n\n### Dependencies\n- Security review sub-issue (sibling, assigned to security-auditor) must be `done` + `decision=green` before this issue is promoted to `todo`\n\n### Risk\n- Writable to disk; network exposure via HTTP; consolidation scheduler runs background tasks\n- Requires dedicated infra or Docker container in workspace\n\n### Definition of Done\n- MCP config documented in workspace CLAUDE.md\n- At least one integration test passes\n- Security review cleared",
-      "due_date": null,
-      "id": "deb94651-8a6d-4630-bf8a-d833cca213ac",
-      "identifier": "DEV-116",
-      "labels": [],
-      "metadata": {
-        "blocked_reason": "security_review_failed"
-      },
-      "number": 116,
-      "parent_issue_id": "c94356da-c3f2-432c-8dde-e71df6ddb5db",
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "backlog",
-      "title": "SKILL IMPORT: mcp-memory-service",
-      "updated_at": "2026-05-26T17:32:54Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 165
+  "total": 166
 }

@@ -12,7 +12,6 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-116 | SKILL IMPORT: mcp-memory-service | `backlog` | high |
 | DEV-135 | QA Gate: DEV-81 — VENDOR BRIEF: Atoms.dev | `in_review` | none |
 | DEV-154 | Implement model-selection-per-task routing (Standard vs Max tier) | `todo` | high |
 
