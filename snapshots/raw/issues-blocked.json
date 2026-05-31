@@ -27,31 +27,6 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
-      "assignee_type": "agent",
-      "created_at": "2026-05-27T07:48:51Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "Verify and decide on [DEV-52](mention://issue/3a7890a9-1d7e-4190-92e3-3b4fdfdfd397).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` if the issue is user-facing.\n3. Check every item in the Definition of Done checklist.\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 3a7890a9-1d7e-4190-92e3-3b4fdfdfd397 done`\n- VETO (DoD not met or security failure) → `multica issue status 3a7890a9-1d7e-4190-92e3-3b4fdfdfd397 backlog` + `multica issue metadata set 3a7890a9-1d7e-4190-92e3-3b4fdfdfd397 --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
-      "due_date": null,
-      "id": "3ed8799e-5713-4d20-b88d-76cfc97ba50a",
-      "identifier": "DEV-145",
-      "labels": [],
-      "metadata": {
-        "retry_log": 3
-      },
-      "number": 145,
-      "parent_issue_id": "3a7890a9-1d7e-4190-92e3-3b4fdfdfd397",
-      "position": 0,
-      "priority": "none",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "blocked",
-      "title": "QA Gate: DEV-52 — SKILL: android-apk-local-builder",
-      "updated_at": "2026-05-27T13:37:25Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "d097f96a-2467-4c3c-b6e3-4c8a13517d17",
       "assignee_type": "squad",
       "created_at": "2026-05-26T17:28:04Z",
@@ -437,5 +412,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 17
+  "total": 16
 }

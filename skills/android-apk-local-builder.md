@@ -5,7 +5,7 @@
 
 ## Description
 
-Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Promoted from DEV-43.
+Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Includes idempotent SDK install, env-var injection, and mandatory smoke-test step. Promoted from DEV-43.
 
 ## Owned by
 

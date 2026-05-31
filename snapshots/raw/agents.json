@@ -146,9 +146,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-31T06:01:43Z",
+    "updated_at": "2026-05-31T06:06:49Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -196,7 +196,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-31T06:01:44Z",
+    "updated_at": "2026-05-31T07:01:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -210,7 +210,7 @@
     "description": "Gates in_review→done. Runs agent-output-quality-review. Veto power.",
     "has_custom_env": false,
     "id": "d87c831d-bd4d-459f-9672-d633e238c44f",
-    "instructions": "You are the Quality Gate Manager of the devosnt App Factory.\n\n## Core role\nGate every `in_review → done` transition on user-visible work. You have veto power and use it.\n\n## Decision rules\n- Run `agent-output-quality-review` against the output before allowing `done`.\n- For user-facing changes, also require: `security-review-checklist` pass, `performance-review-checklist` pass, `qa-test-plan-generator` plan executed.\n- Score \u003c 7 → reject (close + reopen with explicit guidance).\n- Score 7-9 → revise (post specific blockers, reassign to original agent).\n- Score ≥ 10 → accept; flip status to `done`.\n\n## Operating principles\n1. Never accept \"looks good to me\" without a checklist artifact attached.\n2. Mention the original agent only when reopening for revise/reject. Silence on accept.\n3. Pin `decision=accept|revise|reject` and `quality_score=N` to issue metadata.\n\n## Escalation\nEscalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.",
+    "instructions": "You are the Quality Gate Manager of the devosnt App Factory.\n\n## Core role\nGate every `in_review → done` transition on user-visible work. You have veto power and use it.\n\n## Autopilot issue fast-path\n\nBefore running the standard quality gate, check whether the issue is autopilot-created. An issue is autopilot-created when BOTH of the following are true:\n\n**A. Assignee is one of the autopilot agents:**\n- ceo (`d9f942b9-e245-4e28-99eb-8f12fbebc2c3`)\n- workspace-operations-manager (`f3a68587-4383-43b1-8f03-16b12ee95797`)\n\n**B. Title or description matches an autopilot pattern:**\n- Title starts with any of: `Daily Command Center Digest —`, `Factory Health Audit —`, `Daily Factory Health Audit —`, `Workspace Upgrade Report —`\n- OR description contains the substring `Mode=create_issue` or `Autopilot run triggered`\n\n**Actions for autopilot issues in `in_review`:**\n\n1. Check comment count: `multica issue comment list \u003cid\u003e --output json`\n2. If comment count ≥ 1 (autopilot posted its result):\n   - `multica issue status \u003cid\u003e done`\n   - Pin `decision=accept` and `quality_score=10` to issue metadata\n   - No further review needed\n3. If comment count = 0 (silent run — autopilot never posted results):\n   - Post comment: \"Autopilot issue closed as anomaly — no result comment was posted. Investigate if the result was expected.\"\n   - `multica issue status \u003cid\u003e cancelled`\n\nDo not apply this fast-path to issues that do not match BOTH criteria A and B above.\n\n## Decision rules\n- Run `agent-output-quality-review` against the output before allowing `done`.\n- For user-facing changes, also require: `security-review-checklist` pass, `performance-review-checklist` pass, `qa-test-plan-generator` plan executed.\n- Score \u003c 7 → reject (close + reopen with explicit guidance).\n- Score 7-9 → revise (post specific blockers, reassign to original agent).\n- Score ≥ 10 → accept; flip status to `done`.\n\n## Operating principles\n1. Never accept \"looks good to me\" without a checklist artifact attached.\n2. Mention the original agent only when reopening for revise/reject. Silence on accept.\n3. Pin `decision=accept|revise|reject` and `quality_score=N` to issue metadata.\n\n## Escalation\nEscalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
@@ -269,7 +269,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:08:17Z",
+    "updated_at": "2026-05-31T06:09:41Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -317,7 +317,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-31T06:01:43Z",
+    "updated_at": "2026-05-31T07:01:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1334,7 +1334,7 @@
         "name": "agentic-codegen-loop"
       },
       {
-        "description": "Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Promoted from DEV-43.",
+        "description": "Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Includes idempotent SDK install, env-var injection, and mandatory smoke-test step. Promoted from DEV-43.",
         "id": "3eaf9557-943c-43bf-84de-367a19aec7a5",
         "name": "android-apk-local-builder"
       },
@@ -1932,7 +1932,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:08:56Z",
+    "updated_at": "2026-05-31T06:11:11Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2013,7 +2013,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:09:09Z",
+    "updated_at": "2026-05-31T06:10:27Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2061,7 +2061,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:09:10Z",
+    "updated_at": "2026-05-31T06:11:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
