@@ -2,6 +2,29 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-31T03:00:16Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-05-31 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "884f838b-c056-42d6-bfc1-b21b12d246c5",
+      "identifier": "DEV-168",
+      "labels": [],
+      "metadata": {},
+      "number": 168,
+      "parent_issue_id": null,
+      "position": -1,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-05-31",
+      "updated_at": "2026-05-31T03:03:41Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-05-30T04:00:10Z",
@@ -1164,35 +1187,9 @@
       "title": "SECURITY REVIEW: sandbox-runtime import",
       "updated_at": "2026-05-26T20:27:04Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T17:16:59Z",
-      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
-      "creator_type": "agent",
-      "description": "## SECURITY REVIEW: mcp-memory-service import\n\n**Dispatch sub-issue:** [DEV-116](mention://issue/deb94651-8a6d-4630-bf8a-d833cca213ac)\n**Source URL:** https://github.com/doobidoo/mcp-memory-service\n**License:** Apache 2.0\n\n### What to review\nPython MCP server providing persistent agent memory via sqlite-vec + REST API.\n\n**Install footprint:**\n- `pip install mcp-memory-service`\n- Runs as local daemon; optional Docker image\n- Exposes HTTP REST API (configurable port) + MCP stdio transport\n\n**Required scopes / permissions:**\n- **Filesystem:** Reads/writes sqlite-vec database to local disk (configurable path)\n- **Network:** Listens on a local HTTP port; no external outbound calls in core path\n- **Background tasks:** Autonomy consolidation scheduler runs in background thread\n\n**Specific areas to audit:**\n1. Can the consolidation scheduler be triggered to write arbitrary data to disk?\n2. Does the HTTP REST API expose authentication controls, or is it open by default?\n3. Are there any supply chain risks in the PyPI package (`mcp-memory-service`)?\n4. Does the knowledge graph traversal have injection risks?\n5. Any OWASP-relevant patterns in the API surface (memory injection, data exfil via graph)?\n\n**When done:**\n- Pin `decision=green` or `decision=red` on this issue\n- If green: run `multica issue status deb94651-8a6d-4630-bf8a-d833cca213ac todo` to promote the dispatch sub-issue\n- If red: pin `blocked_reason=security_review_failed` on DEV-116 and leave it backlog",
-      "due_date": null,
-      "id": "64220404-db6d-40ad-bb73-922b836462d1",
-      "identifier": "DEV-118",
-      "labels": [],
-      "metadata": {
-        "blocked_reason": "security_review_failed: mcp-memory-service REST API lacks auth controls by default; consolidation scheduler could write arbitrary data; VETO",
-        "decision": "red"
-      },
-      "number": 118,
-      "parent_issue_id": "c94356da-c3f2-432c-8dde-e71df6ddb5db",
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "done",
-      "title": "SECURITY REVIEW: mcp-memory-service import",
-      "updated_at": "2026-05-26T20:26:30Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 167
+  "total": 168
 }
