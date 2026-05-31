@@ -18,4 +18,4 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 ## Recent Done
 
-- DEV-120 — SKILL: tdd-mastery — Red-Green-Refactor TDD with coverage enforcement
+_(none)_

@@ -2,6 +2,31 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-05-31T03:05:26Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "## P1 Runtime Offline Alert\n\n**Detected by:** Factory Health Audit — DEV-168 (2026-05-31 06:00 Kuwait)\n\n## Affected Runtimes\nDaemon: `019e3f5c-072f-7d86-b729-76da01f81f04` (device: `ceo` desktop)\nLast seen: **2026-05-29T20:01:08Z** — offline for ~31 hours\n\nOffline runtimes:\n- Openclaw (ceo)\n- Hermes (ceo)\n- Claude (ceo)\n- Codex (ceo)\n- Opencode (ceo)\n\n## Impact\nAll 5 runtimes on the CEO desktop device are offline. The primary NewTech-VPS runtimes are all healthy and the workspace continues to operate normally through the VPS.\n\nAny desktop-based agent runs (e.g., those previously run from the CEO's local machine) are unavailable until the device reconnects.\n\n## Input\nRuntime list from `multica runtime list` — 5 runtimes with status: offline, last_seen \u003e 5 minutes.\n\n## Expected Output\nRuntimes restored to online status OR admin confirms desktop device intentionally offline and documents expected return window.\n\n## Acceptance Criteria\n- [ ] Admin acknowledges status (intentional vs. unintentional offline)\n- [ ] If unintentional: VPS daemon restarted or desktop reconnected\n- [ ] If intentional: metadata set with expected return date\n\n## Risk\nMedium — primary VPS is healthy; secondary desktop offline does not block workspace operations but reduces runtime redundancy.\n\n## Definition of Done\nRuntimes online OR admin documents offline window as intentional with return ETA.",
+      "due_date": null,
+      "id": "4ba6e4f2-a285-4048-add8-389d8a5f5dbc",
+      "identifier": "DEV-169",
+      "labels": [],
+      "metadata": {
+        "blocked_reason": "Awaiting admin acknowledgment: desktop daemon offline 55+ hrs, requires manual reconnect on ceo machine or intentional-offline confirmation with ETA"
+      },
+      "number": 169,
+      "parent_issue_id": null,
+      "position": -1,
+      "priority": "urgent",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "blocked",
+      "title": "P1: 5 runtimes offline on CEO desktop daemon (31+ hrs)",
+      "updated_at": "2026-05-31T03:06:29Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
       "assignee_type": "agent",
       "created_at": "2026-05-27T07:48:51Z",
@@ -412,5 +437,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 16
+  "total": 17
 }

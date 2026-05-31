@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 48 (done: 27)
+- **Issues:** 50 (done: 27)
 
 ## Description
 
@@ -21,7 +21,9 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-165 | Daily Command Center Digest — 2026-05-29 | `in_review` | none |
 | DEV-166 | Factory Health Audit — 2026-05-30 | `in_review` | none |
 | DEV-167 | Daily Command Center Digest — 2026-05-30 | `in_review` | none |
-| DEV-168 | Factory Health Audit — 2026-05-31 | `in_progress` | none |
+| DEV-168 | Factory Health Audit — 2026-05-31 | `in_review` | none |
+| DEV-169 | P1: 5 runtimes offline on CEO desktop daemon (31+ hrs) | `blocked` | urgent |
+| DEV-170 | Daily Command Center Digest — 2026-05-31 | `in_progress` | none |
 
 ## Recent Done
 

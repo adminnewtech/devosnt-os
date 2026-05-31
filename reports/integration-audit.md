@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-05-31T03:04:11.256440+00:00_
+_Generated: 2026-05-31T04:03:52.515278+00:00_
 
 ## Health Summary
 
@@ -14,8 +14,8 @@ _Generated: 2026-05-31T03:04:11.256440+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 2 |
-| in_review_parent_count | 9 |
+| blocked_issues | 3 |
+| in_review_parent_count | 10 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
@@ -26,12 +26,13 @@ _Generated: 2026-05-31T03:04:11.256440+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 2 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 3 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-169 blocked: P1: 5 runtimes offline on CEO desktop daemon (31+ hrs) | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-145 blocked: QA Gate: DEV-52 — SKILL: android-apk-local-builder | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-126 blocked: OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux | Review blocker — autopilot caps at 3 retries |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
