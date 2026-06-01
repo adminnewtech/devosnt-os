@@ -12,7 +12,6 @@ Deployment runbooks, environment setup, release notes, rollback plans, user guid
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-126 | OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux-spec skill | `blocked` | medium |
 | DEV-132 | QA Gate: DEV-43 — Build local debug APK from attendance-app/ | `in_review` | none |
 
 ## Recent Done

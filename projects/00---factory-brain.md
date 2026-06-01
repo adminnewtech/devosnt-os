@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 55 (done: 38)
+- **Issues:** 57 (done: 38)
 
 ## Description
 
@@ -23,7 +23,9 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-172 | Workspace Upgrade Action — Fix quality-gate-manager prompt: auto-close autopilot | `in_review` | high |
 | DEV-173 | Workspace Upgrade Action — Sweep and close 27 stale in_review autopilot issues | `in_review` | high |
 | DEV-174 | Workspace Upgrade Action — Diagnose and rewrite android-apk-local-builder skill  | `in_review` | high |
-| DEV-175 | Daily Factory Health Audit — 2026-06-01 06:00 KWT | `in_progress` | none |
+| DEV-175 | Daily Factory Health Audit — 2026-06-01 06:00 KWT | `in_review` | none |
+| DEV-176 | P1: ceo device runtimes offline 55h — CEO orchestrator unavailable | `todo` | urgent |
+| DEV-178 | Daily Command Center Digest — 2026-06-01 | `in_progress` | none |
 
 ## Recent Done
 

@@ -2,6 +2,29 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": null,
+      "assignee_type": null,
+      "created_at": "2026-06-01T03:05:35Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "## Incident\n\nAll 5 runtimes on the `ceo` machine (device daemon `019e3f5c-072f-7d86-b729-76da01f81f04`) have been offline since **2026-05-29T20:01:08Z** — approximately 55 hours as of this audit (2026-06-01T03:03 UTC).\n\n**Affected runtimes:**\n- Claude (ceo) — id `3a3d63ed-c616-47a9-a62e-ade63b656f0a`\n- Codex (ceo) — id `a1e8349a-0c10-4420-837e-6d81409addb2`\n- Opencode (ceo) — id `10a474f4-4123-4cff-8a54-fca7e74fd88b`\n- Openclaw (ceo) — id `5c5ce7c0-e0a4-40a2-9344-eee54c433353`\n- Hermes (ceo) — id `dd93d5a2-aa2e-4514-bc55-b856212cd5b7`\n\n**Impact:** The `ceo` agent's preferred runtimes are unavailable. Any issue routed to the ceo agent will fail to execute until the device is back online or the ceo agent is assigned an alternate runtime (the NewTech-VPS runtimes are healthy).\n\n## Expected Output\nAll ceo runtimes back online, or ceo agent migrated to NewTech-VPS runtime.\n\n## Acceptance Criteria\n- `multica runtime list` shows no ceo runtimes offline \u003e5m\n- ceo agent successfully picks up and routes a test issue\n\n## Dependencies\n- Workspace owner (admin@newtechkw.com) must check the ceo device\n\n## Risk\nCEO orchestrator cannot route new app requests or enforce quality gates while offline.\n\n## Definition of Done\n- [ ] ceo machine runtimes back online OR ceo agent reassigned to a running runtime\n- [ ] Verified ceo can pick up an issue\n- [ ] Root cause documented in comment\n\n---\n*Detected by Factory Health Audit DEV-175 at 2026-06-01 06:00 KWT*",
+      "due_date": null,
+      "id": "11da08ba-6bdf-445c-800f-bd19fed19217",
+      "identifier": "DEV-176",
+      "labels": [],
+      "metadata": {},
+      "number": 176,
+      "parent_issue_id": null,
+      "position": -1,
+      "priority": "urgent",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "todo",
+      "title": "P1: ceo device runtimes offline 55h — CEO orchestrator unavailable",
+      "updated_at": "2026-06-01T03:05:35Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-05-27T11:55:14Z",
@@ -119,5 +142,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 5
+  "total": 6
 }
