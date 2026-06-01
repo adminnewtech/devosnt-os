@@ -4,7 +4,7 @@
 - **Status:** `active`
 - **Execution mode:** `create_issue`
 - **Assignee:** `ce249709-eb0c-4a45-ad59-007e27564dc0` (agent)
-- **Last run:** 2026-05-26T16:43:04Z
+- **Last run:** 2026-06-01T07:00:08Z
 - **Created:** 2026-05-26T16:42:47Z
 
 ## Description / Steps

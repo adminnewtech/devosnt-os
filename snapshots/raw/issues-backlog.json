@@ -110,6 +110,7 @@
       "labels": [],
       "metadata": {
         "blocked_reason": "Physical-device E2E (DoD requirement) cannot be completed: Firebase project not yet provisioned, Vault secrets missing. All code-level gates cleared (security PASS, QA 20/20 tests). Promote to todo after admin resolves waiting_on:firebase-project.",
+        "pre_build_brief": "Comparables: OneSignal, FCM direct, Knock | Differentiation: Bilingual AR/EN payloads + pg_cron inside Supabase, no external SaaS | Riskiest assumption: Firebase provisioning must precede build start — all 3 Edge Functions fail silently if key absent from Vault",
         "waiting_on": "admin:firebase-project"
       },
       "number": 35,
@@ -120,7 +121,7 @@
       "start_date": null,
       "status": "backlog",
       "title": "Push Notifications Integration — FCM + pg_cron (Attendance App)",
-      "updated_at": "2026-05-27T09:37:25Z",
+      "updated_at": "2026-06-01T06:21:09Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

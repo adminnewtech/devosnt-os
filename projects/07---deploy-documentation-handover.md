@@ -10,9 +10,7 @@ Deployment runbooks, environment setup, release notes, rollback plans, user guid
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-132 | QA Gate: DEV-43 — Build local debug APK from attendance-app/ | `in_review` | none |
+_(no open issues)_
 
 ## Recent Done
 

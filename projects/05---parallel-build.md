@@ -14,4 +14,4 @@ _(no open issues)_
 
 ## Recent Done
 
-- DEV-133 — QA Gate: DEV-35 — Push Notifications Integration
+_(none)_

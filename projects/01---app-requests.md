@@ -10,9 +10,7 @@ All new app ideas and system requests start here. Intake → triage → routed t
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-134 | QA Gate: DEV-25 — Android Attendance App | `in_review` | none |
+_(no open issues)_
 
 ## Recent Done
 
