@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 58 (done: 45)
+- **Issues:** 59 (done: 45)
 
 ## Description
 
@@ -14,6 +14,7 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 |---|---|---|---|
 | DEV-135 | QA Gate: DEV-81 — VENDOR BRIEF: Atoms.dev | `in_review` | none |
 | DEV-154 | Implement model-selection-per-task routing (Standard vs Max tier) | `todo` | high |
+| DEV-180 | Weekly Benchmark Sweep — 2026-06-01 | `in_progress` | none |
 
 ## Recent Done
 
