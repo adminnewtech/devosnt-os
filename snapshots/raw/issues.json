@@ -12,16 +12,21 @@
       "id": "94b2c1de-1d5d-477f-9875-9742b23240ff",
       "identifier": "DEV-178",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-01T04:00:00Z",
+        "lifecycle_phase_snapshot": "{}",
+        "top3_count": 3
+      },
       "number": 178,
       "parent_issue_id": null,
       "position": -3,
       "priority": "none",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-01",
-      "updated_at": "2026-06-01T04:04:06Z",
+      "updated_at": "2026-06-01T04:11:10Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -48,6 +53,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-01T04:10:07Z",
+      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
+      "creator_type": "agent",
+      "description": "## Task\nAssign the new `delivery-comment-checklist` skill (ID: `3b9f9896-4085-41ca-b197-8de59fe9456e`) to the relevant agents so it is active before any agent marks an issue `in_review`.\n\n## Background\nThis skill was created by skill-builder (DEV-177) after identifying a repeated pattern (≥3 occurrences) of QA gate failures caused by delivery comments that did not explicitly confirm every acceptance criterion:\n- DEV-145: android-apk-local-builder — 3 consecutive QA REVISE verdicts\n- DEV-147: Cursor vendor brief — REJECT (score=5)\n- DEV-148: Bolt.new brief — score=6\n\n## Acceptance Criteria\n- [ ] delivery-comment-checklist assigned to: quality-gate-manager, all build-squad agents, skill-builder\n- [ ] Confirm skill appears in each agent's skill list via `multica agent get \u003cid\u003e --output json`\n- [ ] Post result as comment on this issue\n\n## Dependencies\n- Skill ID: `3b9f9896-4085-41ca-b197-8de59fe9456e` already registered\n\n## Risk\nLow — skill only triggers pre-in_review; no automated actions.\n\n## Definition of Done\n- Skill assigned to all target agents\n- Verified via CLI\n- Result comment posted",
+      "due_date": null,
+      "id": "653d78f8-e4a4-48da-9379-72fc6672620b",
+      "identifier": "DEV-179",
+      "labels": [],
+      "metadata": {},
+      "number": 179,
+      "parent_issue_id": null,
+      "position": -2,
+      "priority": "medium",
+      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
+      "start_date": null,
+      "status": "in_review",
+      "title": "SKILL ASSIGN: delivery-comment-checklist → QA + Build agents",
+      "updated_at": "2026-06-01T04:15:58Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "assignee_type": "agent",
       "created_at": "2026-06-01T04:00:12Z",
@@ -65,9 +93,9 @@
       "priority": "none",
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "start_date": null,
-      "status": "in_progress",
-      "title": "Skill Improvement Review — 2026-06-01",
-      "updated_at": "2026-06-01T04:04:08Z",
+      "status": "in_review",
+      "title": "Skill Improvement Review — Weekly Loop 2026-06-01",
+      "updated_at": "2026-06-01T04:10:11Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1167,32 +1195,9 @@
       "title": "TEST: QA Gate test",
       "updated_at": "2026-05-26T20:20:25Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
-      "created_at": "2026-05-26T19:14:33Z",
-      "creator_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-      "creator_type": "member",
-      "description": "خول كل الايحنتات علي رنتايمرز هيرمس VPS الان وكمل",
-      "due_date": null,
-      "id": "9c25176b-9846-42ad-8f75-f039ef3e8b38",
-      "identifier": "DEV-129",
-      "labels": [],
-      "metadata": {},
-      "number": 129,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "urgent",
-      "project_id": null,
-      "start_date": null,
-      "status": "done",
-      "title": "خول كل الايحنتات علي رنتايمرز هيرمس VPS الان وكمل",
-      "updated_at": "2026-05-26T20:14:18Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 178
+  "total": 179
 }

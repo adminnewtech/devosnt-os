@@ -16,6 +16,7 @@ Orchestrates Build Squad. Decomposes parents, assigns engineers, unblocks.
 - [`agent-self-healing-policy`](../skills/agent-self-healing-policy.md) — Auto-retry failed agent runs with a different runtime/model and surface only after two failures.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`ci-cd-pipeline-builder`](../skills/ci-cd-pipeline-builder.md) — Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy.
+- [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`live-preview-deploys`](../skills/live-preview-deploys.md) — Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link.
 - [`nextjs-app-starter`](../skills/nextjs-app-starter.md) — Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.
 - [`react-dashboard-builder`](../skills/react-dashboard-builder.md) — Build a responsive role-aware dashboard shell (sidebar + topbar + content).

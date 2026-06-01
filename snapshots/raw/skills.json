@@ -371,6 +371,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-01T04:09:33Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+    "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+    "name": "delivery-comment-checklist",
+    "updated_at": "2026-06-01T04:09:33Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:41:39Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Build a delivery / dispatch system (orders, drivers, routes, POD) from preset.",

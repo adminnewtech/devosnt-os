@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-01T04:04:29.168763+00:00_
+_Generated: 2026-06-01T05:03:30.175550+00:00_
 
 ## Health Summary
 
@@ -15,13 +15,13 @@ _Generated: 2026-06-01T04:04:29.168763+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 1 |
-| in_review_parent_count | 8 |
+| in_review_parent_count | 11 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 126 (owned: 126, orphan: 0)
+- **Skills:** 127 (owned: 127, orphan: 0)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
@@ -54,6 +54,7 @@ _Generated: 2026-06-01T04:04:29.168763+00:00_
 
 ## Top skills by adoption
 
+- `delivery-comment-checklist` — 8 owner(s): ceo, quality-gate-manager, claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, skill-builder
 - `agent-self-healing-policy` — 5 owner(s): ceo, sprint-commander, claude-code-lead-developer, skill-builder, prompt-optimizer
 - `wcag-accessibility-checklist` — 5 owner(s): quality-gate-manager, ux-architect, ui-designer, frontend-engineer, qa-engineer
 - `onboarding-flow-builder` — 5 owner(s): product-manager, ux-architect, growth-lead, content-writer-ar-en, onboarding-designer
@@ -63,7 +64,6 @@ _Generated: 2026-06-01T04:04:29.168763+00:00_
 - `api-contract-designer` — 4 owner(s): ceo, solution-architect, api-architect, backend-engineer
 - `auth-permission-matrix` — 4 owner(s): ceo, solution-architect, database-architect, security-auditor
 - `cross-project-pattern-extractor` — 4 owner(s): ceo, skill-builder, memory-curator, research-scout
-- `deployment-checklist` — 4 owner(s): ceo, deployment-engineer, environment-manager, release-manager
 
 ## Self-improvement loop status
 

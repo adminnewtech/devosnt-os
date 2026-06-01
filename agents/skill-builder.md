@@ -15,6 +15,7 @@ Lifts 3x-repeated workflows into reusable skills.
 
 - [`agent-self-healing-policy`](../skills/agent-self-healing-policy.md) — Auto-retry failed agent runs with a different runtime/model and surface only after two failures.
 - [`cross-project-pattern-extractor`](../skills/cross-project-pattern-extractor.md) — Learn across all completed projects and propose new skills, default-changes, or removed obsolete skills.
+- [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`mcp-server-evaluator`](../skills/mcp-server-evaluator.md) — Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject decision with mandatory security review and reject-by-default posture on filesystem write, shell exec, and unscoped network egress.
 - [`reusable-template-extractor`](../skills/reusable-template-extractor.md) — Promote a 3-times-repeated workflow into a reusable skill or template.
 

@@ -22,6 +22,7 @@ CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → D
 - [`cross-project-pattern-extractor`](../skills/cross-project-pattern-extractor.md) — Learn across all completed projects and propose new skills, default-changes, or removed obsolete skills.
 - [`dashboard-screen-planner`](../skills/dashboard-screen-planner.md) — Produce the sitemap, screen list, and per-screen spec for a dashboard or admin UI.
 - [`database-schema-designer`](../skills/database-schema-designer.md) — Design the relational data model for an app from its PRD with RLS-first defaults.
+- [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`deployment-checklist`](../skills/deployment-checklist.md) — Ship safely to production with a rollback drill and post-deploy smoke tests.
 - [`e2e-test-generator`](../skills/e2e-test-generator.md) — Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and acceptance criteria. Output: ready-to-run test files.
 - [`external-blocker-escalation`](../skills/external-blocker-escalation.md) — Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:<resource> metadata, and stops pulse retries until cleared.

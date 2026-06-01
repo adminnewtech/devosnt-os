@@ -25,7 +25,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-174 | Workspace Upgrade Action — Diagnose and rewrite android-apk-local-builder skill  | `in_review` | high |
 | DEV-175 | Daily Factory Health Audit — 2026-06-01 06:00 KWT | `in_review` | none |
 | DEV-176 | P1: ceo device runtimes offline 55h — CEO orchestrator unavailable | `todo` | urgent |
-| DEV-178 | Daily Command Center Digest — 2026-06-01 | `in_progress` | none |
+| DEV-178 | Daily Command Center Digest — 2026-06-01 | `in_review` | none |
 
 ## Recent Done
 

@@ -66,6 +66,11 @@
         "name": "database-schema-designer"
       },
       {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
+      },
+      {
         "description": "Ship safely to production with a rollback drill and post-deploy smoke tests.",
         "id": "bdbe8717-ff21-4179-a617-48caea9cbecb",
         "name": "deployment-checklist"
@@ -146,9 +151,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T04:03:48Z",
+    "updated_at": "2026-06-01T04:11:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -196,7 +201,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T04:03:49Z",
+    "updated_at": "2026-06-01T05:02:44Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -230,6 +235,11 @@
         "description": "OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best practices. Pre-gates the in_review → done transition before security-review-checklist. Adapted from VoltAgent/awesome-claude-code-subagents (MIT). Run on Opus.",
         "id": "7a01483c-d432-4a1e-80f6-4bdab8052430",
         "name": "code-reviewer"
+      },
+      {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
       },
       {
         "description": "GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA.",
@@ -317,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-01T04:03:49Z",
+    "updated_at": "2026-06-01T05:02:43Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -979,6 +989,11 @@
         "name": "ci-cd-pipeline-builder"
       },
       {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
+      },
+      {
         "description": "Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link.",
         "id": "aa8c5fbe-8d1a-494c-8325-46f632c1eae1",
         "name": "live-preview-deploys"
@@ -1050,6 +1065,11 @@
         "description": "Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.",
         "id": "db43b2a0-31f6-40d0-9baa-ff775f7425ed",
         "name": "analytics-tracking-setup"
+      },
+      {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
       },
       {
         "description": "Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.",
@@ -1174,6 +1194,11 @@
         "name": "data-export-import-planner"
       },
       {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
+      },
+      {
         "description": "Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN.",
         "id": "44a40257-d6ca-4ade-88ca-d4a9553c1b01",
         "name": "file-upload-storage-design"
@@ -1261,6 +1286,11 @@
         "name": "chat-support-builder"
       },
       {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
+      },
+      {
         "description": "Default semantic search via pgvector. Embeddings + hybrid search + reranking.",
         "id": "1a952f70-430d-4dfe-8828-e544e1e716ea",
         "name": "embeddings-semantic-search"
@@ -1337,6 +1367,11 @@
         "description": "Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Includes idempotent SDK install, env-var injection, and mandatory smoke-test step. Promoted from DEV-43.",
         "id": "3eaf9557-943c-43bf-84de-367a19aec7a5",
         "name": "android-apk-local-builder"
+      },
+      {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
       },
       {
         "description": "Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwind + Tamagui.",
@@ -1920,6 +1955,11 @@
         "name": "cross-project-pattern-extractor"
       },
       {
+        "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
+        "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
+        "name": "delivery-comment-checklist"
+      },
+      {
         "description": "Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject decision with mandatory security review and reject-by-default posture on filesystem write, shell exec, and unscoped network egress.",
         "id": "709fb3fd-ffb2-431e-9fba-1a7fcccb96f4",
         "name": "mcp-server-evaluator"
@@ -1930,9 +1970,9 @@
         "name": "reusable-template-extractor"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T04:03:48Z",
+    "updated_at": "2026-06-01T04:10:22Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

@@ -17,6 +17,7 @@ Small end-to-end features (UI + API + migration) in one PR. Opencode runtime.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`ai-chat-with-data`](../skills/ai-chat-with-data.md) — Default RAG-on-app-data: chat over the tenant's own records with safe retrieval.
 - [`chat-support-builder`](../skills/chat-support-builder.md) — Default in-app support chat: ticketing, agent inbox, AI deflection, WhatsApp bridge.
+- [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`embeddings-semantic-search`](../skills/embeddings-semantic-search.md) — Default semantic search via pgvector. Embeddings + hybrid search + reranking.
 - [`nextjs-app-starter`](../skills/nextjs-app-starter.md) — Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.
 - [`nextjs-supabase-builder`](../skills/nextjs-supabase-builder.md) — Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.

@@ -18,6 +18,7 @@ API endpoints, DB access, jobs, webhooks. Codex runtime.
 - [`audit-log-designer`](../skills/audit-log-designer.md) — Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff.
 - [`background-jobs-design`](../skills/background-jobs-design.md) — Default background job system: pg-boss / BullMQ / inngest, with retries + DLQ.
 - [`data-export-import-planner`](../skills/data-export-import-planner.md) — Default CSV / Excel / JSON import + export per entity, with mapping, validation, and dry-run.
+- [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`file-upload-storage-design`](../skills/file-upload-storage-design.md) — Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN.
 - [`rate-limiting-design`](../skills/rate-limiting-design.md) — Default rate limiting: token bucket per user + per IP + per tenant, Redis-backed.
 - [`supabase-app-starter`](../skills/supabase-app-starter.md) — Provision Supabase with RLS-first schema migrations and seed data.

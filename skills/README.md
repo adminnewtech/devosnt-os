@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **126**
+Total skills in `devosnt`: **127**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -41,6 +41,7 @@ Total skills in `devosnt`: **126**
 | [data-export-import-planner](./data-export-import-planner.md) | `backend-engineer` | Default CSV / Excel / JSON import + export per entity, with mapping, validation, and dry-r |
 | [data-warehouse-analytics](./data-warehouse-analytics.md) | `solution-architect`, `database-architect` | Default data warehouse pipeline: CDC from Postgres → BigQuery/ClickHouse → Metabase. |
 | [database-schema-designer](./database-schema-designer.md) | `ceo`, `solution-architect`, `database-architect` | Design the relational data model for an app from its PRD with RLS-first defaults. |
+| [delivery-comment-checklist](./delivery-comment-checklist.md) | `ceo`, `quality-gate-manager`, `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer`, `skill-builder` | Prevents QA gate failures by requiring agents to explicitly verify every acceptance criter |
 | [delivery-system-builder](./delivery-system-builder.md) | `solution-architect` | Build a delivery / dispatch system (orders, drivers, routes, POD) from preset. |
 | [dependency-vulnerability-scanner](./dependency-vulnerability-scanner.md) | `bug-hunter`, `security-auditor`, `github-analyst` | Default supply chain security: npm audit + Snyk + Dependabot + lockfile lint. |
 | [deployment-checklist](./deployment-checklist.md) | `ceo`, `deployment-engineer`, `environment-manager`, `release-manager` | Ship safely to production with a rollback drill and post-deploy smoke tests. |
