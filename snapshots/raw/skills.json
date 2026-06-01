@@ -1,6 +1,16 @@
 [
   {
     "config": {},
+    "created_at": "2026-06-01T07:13:48Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Interpret A/B experiment results with statistical rigour — p-values, effect size, power, novelty effects, SRM check, multiple comparison corrections — and produce a binary SHIP / NO-SHIP / EXTEND verdict.",
+    "id": "e9624bc2-18d7-49a7-9b01-d3569a70cce1",
+    "name": "ab-test-analysis",
+    "updated_at": "2026-06-01T07:13:48Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:36Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Lightweight A/B testing wired to PostHog + feature flags.",
@@ -541,12 +551,32 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-01T07:14:19Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led) and calculate viral coefficient K. Helps teams move from funnel thinking to compounding loop mechanics.",
+    "id": "b5063307-37a3-4811-9254-fd39704f552a",
+    "name": "growth-loop-designer",
+    "updated_at": "2026-06-01T07:14:19Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:48Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing.",
     "id": "4d7ac62d-ef86-435c-a90a-755ca9d9f5b6",
     "name": "gym-system-builder",
     "updated_at": "2026-05-25T15:53:48Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-01T07:15:12Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits technical/administrative/physical safeguards, generates BAA checklist and prioritised gap matrix with breach-notification timelines.",
+    "id": "f3fe4ee1-2562-4b25-903f-abbed24a0048",
+    "name": "hipaa-compliance-checklist",
+    "updated_at": "2026-06-01T07:15:12Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

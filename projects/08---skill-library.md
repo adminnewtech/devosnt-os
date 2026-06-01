@@ -12,7 +12,6 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-145 | QA Gate: DEV-52 — SKILL: android-apk-local-builder | `in_review` | none |
 | DEV-150 | SKILL: Vendor Brief + Changelog Verification — extract as reusable skill | `in_review` | medium |
 | DEV-161 | Package devosnt as Agent Company on companies.sh | `backlog` | medium |
 | DEV-177 | Skill Improvement Review — Weekly Loop 2026-06-01 | `in_review` | none |

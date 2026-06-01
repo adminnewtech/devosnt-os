@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 57 (done: 38)
+- **Issues:** 58 (done: 38)
 
 ## Description
 
@@ -12,7 +12,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-141 | QA Gate: DEV-110 — Pin self-hosted-supabase-tunnel | `in_review` | none |
 | DEV-166 | Factory Health Audit — 2026-05-30 | `in_review` | none |
 | DEV-167 | Daily Command Center Digest — 2026-05-30 | `in_review` | none |
 | DEV-168 | Factory Health Audit — 2026-05-31 | `in_review` | none |
@@ -25,6 +24,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-175 | Daily Factory Health Audit — 2026-06-01 06:00 KWT | `in_review` | none |
 | DEV-176 | P1: ceo device runtimes offline 55h — CEO orchestrator unavailable | `todo` | urgent |
 | DEV-178 | Daily Command Center Digest — 2026-06-01 | `in_review` | none |
+| DEV-196 | Monthly Architecture & Tool-stack Review — 2026-06-01 | `in_progress` | none |
 
 ## Recent Done
 
@@ -32,6 +32,3 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 - DEV-164 — Daily Factory Health Audit — 2026-05-29
 - DEV-163 — Daily Command Center Digest — 2026-05-28
 - DEV-162 — Factory Health Audit — 2026-05-28
-- DEV-140 — QA Gate: DEV-111 — Adopt 6 orphan skills
-- DEV-142 — QA Gate: DEV-107 — Write ADR-001 tech stack
-- DEV-146 — QA Gate: DEV-70 — Monthly Architecture & Tool-stack Review

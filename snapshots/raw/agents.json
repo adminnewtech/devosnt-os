@@ -201,7 +201,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T07:02:15Z",
+    "updated_at": "2026-06-01T08:01:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-01T07:02:14Z",
+    "updated_at": "2026-06-01T08:01:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -730,9 +730,9 @@
         "name": "self-hosted-supabase-tunnel"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:08:22Z",
+    "updated_at": "2026-06-01T08:00:43Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1639,7 +1639,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:08:52Z",
+    "updated_at": "2026-06-01T07:12:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1972,7 +1972,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T04:10:22Z",
+    "updated_at": "2026-06-01T07:16:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2208,9 +2208,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T07:02:14Z",
+    "updated_at": "2026-06-01T07:10:09Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

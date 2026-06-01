@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 67 (done: 51)
+- **Issues:** 73 (done: 51)
 
 ## Description
 
@@ -15,7 +15,13 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 | DEV-154 | Implement model-selection-per-task routing (Standard vs Max tier) | `todo` | high |
 | DEV-180 | Weekly Benchmark Sweep — 2026-06-01 | `in_review` | none |
 | DEV-187 | BENCHMARK ACTION: Pre-build Research Gate skill | `in_review` | high |
-| DEV-189 | Weekly GitHub Research Sweep — 2026-06-01 | `in_progress` | none |
+| DEV-189 | Weekly GitHub Research Sweep — 2026-06-01 | `in_review` | none |
+| DEV-190 | SKILL IMPORT: growth-loop-designer | `in_review` | high |
+| DEV-191 | SKILL IMPORT: hipaa-compliance-checklist | `in_review` | high |
+| DEV-192 | SKILL IMPORT: ab-test-analysis | `in_review` | high |
+| DEV-193 | SECURITY REVIEW: growth-loop-designer import | `in_review` | high |
+| DEV-194 | SECURITY REVIEW: hipaa-compliance-checklist import | `in_review` | high |
+| DEV-195 | SECURITY REVIEW: ab-test-analysis import | `in_review` | high |
 
 ## Recent Done
 

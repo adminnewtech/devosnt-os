@@ -1,9 +1,10 @@
 # Skills
 
-Total skills in `devosnt`: **127**
+Total skills in `devosnt`: **130**
 
 | Skill | Owners | Description |
 |---|---|---|
+| [ab-test-analysis](./ab-test-analysis.md) | _(unowned)_ | Interpret A/B experiment results with statistical rigour — p-values, effect size, power, n |
 | [ab-testing-framework](./ab-testing-framework.md) | `product-manager`, `release-manager`, `growth-lead`, `analytics-lead` | Lightweight A/B testing wired to PostHog + feature flags. |
 | [admin-console-builder](./admin-console-builder.md) | `full-stack-engineer` | Default internal admin console: tenants, users, impersonation, support actions, audit-boun |
 | [admin-guide-generator](./admin-guide-generator.md) | `documentation-agent` | Generate an end-user admin guide (EN + AR-KW when needed). |
@@ -58,7 +59,9 @@ Total skills in `devosnt`: **127**
 | [gdpr-compliance-checklist](./gdpr-compliance-checklist.md) | `quality-gate-manager`, `security-auditor` | GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA. |
 | [github-research-workflow](./github-research-workflow.md) | `research-scout`, `github-analyst`, `docs-analyst` | Research GitHub for prior art before building (top repos, license, patterns). |
 | [growth-launch-plan](./growth-launch-plan.md) | `analytics-lead` | Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, |
+| [growth-loop-designer](./growth-loop-designer.md) | _(unowned)_ | Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led |
 | [gym-system-builder](./gym-system-builder.md) | `solution-architect` | Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing. |
+| [hipaa-compliance-checklist](./hipaa-compliance-checklist.md) | _(unowned)_ | HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits techn |
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
 | [impact-analyst](./impact-analyst.md) | `impact-analyst` | On every Build PR, compute blast radius from the codegraph (changed symbols → callers → ca |
