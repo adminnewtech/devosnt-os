@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 58 (done: 38)
+- **Issues:** 62 (done: 38)
 
 ## Description
 
@@ -24,7 +24,11 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-175 | Daily Factory Health Audit — 2026-06-01 06:00 KWT | `in_review` | none |
 | DEV-176 | P1: ceo device runtimes offline 55h — CEO orchestrator unavailable | `todo` | urgent |
 | DEV-178 | Daily Command Center Digest — 2026-06-01 | `in_review` | none |
-| DEV-196 | Monthly Architecture & Tool-stack Review — 2026-06-01 | `in_progress` | none |
+| DEV-196 | Monthly Architecture & Tool-stack Review — 2026-06-01 | `in_review` | none |
+| DEV-197 | ARCH ACTION: Re-escalate ADR-002 App Hub Model — unblock admin provisioning | `in_review` | high |
+| DEV-198 | ARCH ACTION: Document runtime failover policy for CEO agent orchestration | `in_review` | medium |
+| DEV-199 | ARCH ACTION: Extend ADR-001 with formal mobile layer (Expo + EAS Build as defaul | `in_review` | medium |
+| DEV-200 | ADR-003 — Mobile Layer Default (Expo + EAS Build) | `in_review` | medium |
 
 ## Recent Done
 

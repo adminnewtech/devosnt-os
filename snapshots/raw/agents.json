@@ -201,7 +201,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T08:01:14Z",
+    "updated_at": "2026-06-01T09:02:16Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-01T08:01:14Z",
+    "updated_at": "2026-06-01T09:02:15Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -730,9 +730,9 @@
         "name": "self-hosted-supabase-tunnel"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T08:00:43Z",
+    "updated_at": "2026-06-01T08:10:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -938,7 +938,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:08:38Z",
+    "updated_at": "2026-06-01T08:08:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

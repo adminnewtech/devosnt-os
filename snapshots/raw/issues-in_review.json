@@ -2,6 +2,52 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "assignee_type": "agent",
+      "created_at": "2026-06-01T08:08:59Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "# ADR-003 — Mobile Layer Default (Expo + EAS Build)\n\n**Status:** Adopted  \n**Date:** 2026-06-01  \n**Deciders:** Solution Architect (solution-architect), CEO Command Squad  \n**Extends:** ADR-001 (DEV-128) — adds the mobile layer omitted from the web-stack ADR  \n**Supersedes:** —  \n**Superseded by:** —\n\n---\n\n## Context\n\nADR-001 (DEV-128) established the default web stack (Next.js + Supabase + Vercel) but left the mobile layer undefined. The Android Attendance app (DEV-43, DEV-30) was built using Expo + local Gradle without a formal ADR backing that decision. The `android-apk-local-builder` workspace skill has accumulated `retry_log=3` QA gate failures (DEV-174), signalling that local APK builds are fragile in the current environment. Future mobile apps (HR mobile, delivery driver app) need a consistent, documented baseline to avoid stack divergence.\n\n---\n\n## Decision\n\nThe devosnt App Factory adopts **Expo (React Native)** as its default mobile framework with the following build split:\n\n| Environment | Build system | Output |\n|---|---|---|\n| Development / local | `eas build --local` (Gradle) | Debug APK |\n| Staging / preview | EAS Build cloud (free tier) | Signed internal APK |\n| Production / release | EAS Build cloud | Signed release AAB / APK |\n\nThis decision covers Android-first mobile apps. iOS coverage via EAS Build is provisioned when the client supplies an Apple Developer account.\n\n\u003e **Interim rule (until DEV-174 is `done`):** the `eas build --local` path is considered unstable. All builds, including development, must use EAS Build cloud until the android-apk-local-builder skill is validated.\n\n---\n\n## Layer-by-Layer Rationale\n\n### Framework — Expo (React Native)\n- React Native shares ~90% of code with the web React codebase; the App Factory's agents already know React.\n- Expo managed workflow eliminates native boilerplate: camera, notifications, location, and file system are SDK modules requiring no Xcode or Android Studio configuration.\n- Expo SDK is compatible with the Supabase JS client — the same auth library used in the web stack.\n- TypeScript end-to-end consistency with Next.js frontend; shared types across layers are feasible.\n- Expo SDK ships quarterly releases with documented upgrade tooling (`npx expo upgrade`).\n\n### Build — EAS Build (Expo cloud CI) for staging and production\n- Managed signing: Android keystores stored in Expo's secure vault; no local keystore management.\n- Reproducible build environment: Docker-based, pinned to exact Expo SDK + Node + Gradle versions.\n- OTA updates via Expo Updates: JS-layer fixes ship without a new APK Play Store review cycle.\n- EAS Submit automates Play Store upload.\n- Free tier: 30 builds/month; production apps move to EAS Production plan.\n\n### Build — `eas build --local` for development (when DEV-174 is resolved)\n- Zero cloud cost and no queue wait during fast iteration.\n- Requires: pinned `JAVA_HOME`, `GRADLE_VERSION` in `eas.json`, and a Docker-based local environment.\n- Gated on DEV-174 fix; not used in any new app until the skill passes its QA gate.\n\n---\n\n## When to Deviate\n\n### Deviate to native Android (Kotlin) when ANY of the following apply:\n1. **AR/VR or computer vision** requiring custom OpenGL/Vulkan pipelines or camera below 30 fps.\n2. **Bluetooth LE / NFC POS integrations** with no Expo SDK module and no viable community module.\n3. **Heavy background processing** (continuous GPS at \u003c1 s interval, audio streaming) that Expo background tasks cannot support.\n4. **Security hardware modules** (HSM, Secure Enclave beyond standard biometrics).\n5. **Client mandate**: client explicitly requires a native Kotlin codebase with in-house mobile engineers.\n\n### Deviate to Web PWA (Next.js) instead of a native app when:\n- App is informational / read-heavy with occasional form input.\n- No native device APIs required (no camera, no push notifications, no offline-first data).\n- Time-to-market ≤ 2 weeks and the client cannot manage app store distribution.\n\nAll deviations require a written ADR amendment approved by the Solution Architect and CEO Command Squad **before** any build work starts.\n\n---\n\n## Minimum Viable Mobile Build Checklist\n\nEvery Expo app must pass this checklist before the QA gate (`in_review` → `done`):\n\n### Environment variables\n- [ ] `EXPO_PUBLIC_SUPABASE_URL` — Supabase project URL\n- [ ] `EXPO_PUBLIC_SUPABASE_ANON_KEY` — Supabase anon/public key\n- [ ] `EXPO_PUBLIC_API_BASE_URL` — set only if API is not Supabase direct\n- [ ] Secrets (service role key, payment keys) stored in **EAS Secrets vault**, never in `.env` or `app.config.js`\n\n### `app.config.js` / `app.json`\n- [ ] `expo.android.package` set to `com.newtechkw.\u003cappname\u003e` (reverse domain)\n- [ ] `expo.version` and `expo.android.versionCode` bumped for every release build\n- [ ] `expo.plugins` lists all native Expo SDK modules used\n\n### `eas.json`\n- [ ] `development` profile: `\"buildType\": \"apk\"`, `\"distribution\": \"internal\"`\n- [ ] `preview` profile: `\"buildType\": \"apk\"`, `\"distribution\": \"internal\"`, `\"env\"` block for staging Supabase URL\n- [ ] `production` profile: `\"buildType\": \"app-bundle\"`, `\"distribution\": \"store\"`, `\"autoIncrement\": true`\n\n### Signing (production only)\n- [ ] Android keystore generated and stored via `eas credentials` (EAS vault)\n- [ ] SHA-1 / SHA-256 fingerprints documented in the build issue metadata (`signing_fingerprint`)\n- [ ] Keystore backed up to client's 1Password vault or equivalent\n\n### QA gate items (mobile-specific)\n- [ ] Build succeeds via `eas build --profile preview --platform android`\n- [ ] Auth flow tested on physical device or emulator API 33+\n- [ ] OTA update channel configured for production (`\"channel\": \"production\"` in `eas.json`)\n- [ ] No hardcoded URLs or secrets in JS bundle (grep check: `grep -rE \"(supabase|_key|secret|password)\" src/`)\n- [ ] App cold-start \u003c 3 s on mid-range Android (2 GB RAM)\n\n---\n\n## Reversal Conditions\n\nThis ADR is reconsidered if **any** hold:\n\n1. Expo SDK drops React Native support or licence changes post-acquisition.\n2. EAS Build cloud cost exceeds $500/month workspace-wide (evaluate self-hosted Turtle CLI).\n3. More than 50% of new app requests require features on the deviation list above.\n4. React Native's New Architecture (Fabric + JSI) causes breaking regressions across 2+ consecutive Expo SDK upgrades.\n\n---\n\n## Validation Path\n\n- **DEV-174** (android-apk-local-builder skill fix) is the active validation task. This ADR's `eas build --local` path is gated on DEV-174 reaching `done`.\n- When DEV-174 closes, the Solution Architect must update the **Interim rule** section above to remove the restriction.\n\n---\n\n## References\n\n- Expo SDK docs: https://docs.expo.dev\n- EAS Build: https://docs.expo.dev/build/introduction/\n- EAS Credentials (managed signing): https://docs.expo.dev/app-signing/managed-credentials/\n- React Native New Architecture: https://reactnative.dev/docs/the-new-architecture/landing-page\n- DEV-43: Android Attendance build — Expo + Gradle precedent\n- DEV-30: Architecture: Android Attendance — first Expo usage\n- DEV-128: ADR-001 — Default Tech Stack (this ADR extends it)\n- DEV-174: android-apk-local-builder skill fix (validation path, gated)",
+      "due_date": null,
+      "id": "6b0bafa6-73ae-4f9a-b6d1-4c670214c52b",
+      "identifier": "DEV-200",
+      "labels": [],
+      "metadata": {},
+      "number": 200,
+      "parent_issue_id": null,
+      "position": -5,
+      "priority": "medium",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "ADR-003 — Mobile Layer Default (Expo + EAS Build)",
+      "updated_at": "2026-06-01T08:10:08Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "assignee_type": "agent",
+      "created_at": "2026-06-01T08:05:01Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Rationale\nADR-001 (DEV-128) documents the default stack for web apps (Next.js + Supabase + Vercel) but makes no decision on the mobile layer. The Android Attendance app was built using Expo (React Native) with a local apk build path, but:\n1. No ADR formalizes Expo as the default mobile stack\n2. The android-apk-local-builder skill has retry_log=3 — three consecutive QA gate failures (DEV-174)\n3. EAS Build (Expo's cloud CI) is deferred per local-first policy but not formally documented\n4. There is no guidance on when to use React Native vs. a web PWA vs. a native Android/Kotlin app\n\nWithout a formal mobile layer decision, future app requests (e.g. HR mobile, delivery driver app) will diverge in stack choice.\n\n## Evidence\n- ADR-001 (DEV-128): no mobile layer defined\n- DEV-43 (Android Attendance build): Expo + local Gradle build\n- DEV-174 (Workspace Upgrade Action): android-apk-local-builder skill retry_log=3, in_review\n- DEV-30 (Architecture: Android Attendance): Expo/React Native used without a formal ADR backing\n\n## Acceptance Criteria\n- [ ] ADR-001 updated (or an ADR-003 created) with a mobile layer section: default=Expo (React Native), build=EAS Build for production / local Gradle for dev, when to deviate (native-only requirement, AR/VR, heavy OS integration)\n- [ ] Minimum viable mobile build checklist documented (env vars, signing, EAS profile)\n- [ ] android-apk-local-builder skill fix (DEV-174) referenced as the validation path\n\n## Definition of Done\n- Mobile layer decision is in a signed ADR\n- Solution Architect and CEO Command Squad have reviewed\n\n## Effort: S",
+      "due_date": null,
+      "id": "8699b4d3-72ea-4661-8d46-95d35a6a7c8c",
+      "identifier": "DEV-199",
+      "labels": [],
+      "metadata": {},
+      "number": 199,
+      "parent_issue_id": "e71ee0f7-e249-44eb-b7c6-3aeb613b591b",
+      "position": -4,
+      "priority": "medium",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "ARCH ACTION: Extend ADR-001 with formal mobile layer (Expo + EAS Build as default)",
+      "updated_at": "2026-06-01T08:09:25Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "17759d29-f9bb-4c4c-910c-b4476723db87",
       "assignee_type": "agent",
       "created_at": "2026-06-01T07:09:46Z",
@@ -47,6 +93,29 @@
       "status": "in_review",
       "title": "SKILL: pre-build-research-gate — research + differentiation gate before any build starts",
       "updated_at": "2026-06-01T06:20:43Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "assignee_type": "agent",
+      "created_at": "2026-06-01T08:04:48Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Rationale\nThe CEO desktop daemon (019e3f5c-072f-7d86-b729-76da01f81f04) went offline at 2026-05-29T20:01:08Z and was still offline at 2026-06-01T06:00 KWT — 55+ hours. P1 issues DEV-169 and DEV-176 document the incident but there is no architecture-level response: no documented failover policy, no formal assignment of NewTech-VPS as primary runtime, and no SLA for CEO agent availability.\n\nThe workspace currently has a single point of failure: if the CEO agent's preferred device is offline, orchestration (routing, quality gates, escalations) degrades silently. VPS runtimes are healthy but not formally designated as failover.\n\n## Evidence\n- DEV-176 (P1: ceo device runtimes offline 55h) — status=todo\n- DEV-169 (P1: 5 runtimes offline on CEO desktop daemon 31+ hrs) — status=blocked\n- No architecture decision exists for runtime failover or CEO agent primary/fallback runtime assignment\n\n## Acceptance Criteria\n- [ ] Write a one-page decision note (ADR-003 or addendum to ADR-001) covering: primary runtime designation for CEO agent, failover conditions, SLA target, escalation path to workspace owner\n- [ ] Recommend whether CEO agent should be pinned to VPS runtime by default\n- [ ] Acceptance criteria for P1 runtime incidents included\n\n## Definition of Done\n- Decision posted as comment on DEV-196 or as a new ADR sub-issue\n- CEO agent runtime assignment documented in workspace CLAUDE.md or equivalent\n- DEV-176 / DEV-169 referenced and their resolution aligned with the policy\n\n## Effort: S",
+      "due_date": null,
+      "id": "9f2260ac-f5d2-4b12-9404-0cd2760404a8",
+      "identifier": "DEV-198",
+      "labels": [],
+      "metadata": {},
+      "number": 198,
+      "parent_issue_id": "e71ee0f7-e249-44eb-b7c6-3aeb613b591b",
+      "position": -3,
+      "priority": "medium",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "ARCH ACTION: Document runtime failover policy for CEO agent orchestration",
+      "updated_at": "2026-06-01T08:07:58Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -146,6 +215,58 @@
       "status": "in_review",
       "title": "Workspace Upgrade Action — Diagnose and rewrite android-apk-local-builder skill (retry_log=3)",
       "updated_at": "2026-05-31T06:11:04Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "4d62192f-7508-4ed2-99f5-db8b3dabbd9c",
+      "assignee_type": "agent",
+      "created_at": "2026-06-01T08:04:36Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## Rationale\nADR-002 (DEV-37) was adopted 2026-05-25 but has never been operationalized. DEV-108 (ARCH ACTION: Consolidate and resolve ADR-002 admin credential blockers) has been **blocked** since 2026-05-26 — 6+ days with no admin response. The APP — Android Attendance hub project has 0 issues; the App Hub model is entirely unrealized.\n\nThree blockers remain outstanding (per ADR-002 metadata):\n1. GitHub PAT with repo:create scope on newtechkw/adminnewtech account\n2. Codegraph + Understand-Anything install on the runtime host\n3. Factory Pulse v3 deploy approval\n\nEvery new app built without the App Hub model accumulates scattered issues, no codegraph, no local-first lifecycle enforcement.\n\n## Evidence\n- ADR-002 (DEV-37) in_review since 2026-05-25\n- DEV-108 blocked since 2026-05-26 — no resolution\n- APP — Android Attendance (project 09e6cfd3): 0 issues\n- DEV-64 (production credentials escalation) still in_review\n\n## Acceptance Criteria\n- [ ] Single escalation comment on DEV-37 with exact provisioning steps for each of the 3 blockers and ETA request to workspace owner (admin@newtechkw.com)\n- [ ] Admin response documented in DEV-37 metadata\n- [ ] DEV-108 unblocked or superseded\n- [ ] Path to ADR-002 marked 'done' is clear\n\n## Definition of Done\n- DEV-37 has a clear admin response on each of the 3 blockers, with a next step for each\n- DEV-108 is either unblocked or has a documented resolution path\n\n## Effort: S (pure escalation; technical work follows admin response)",
+      "due_date": null,
+      "id": "16881563-3727-46fd-8d6b-1134d644d1da",
+      "identifier": "DEV-197",
+      "labels": [],
+      "metadata": {},
+      "number": 197,
+      "parent_issue_id": "e71ee0f7-e249-44eb-b7c6-3aeb613b591b",
+      "position": -2,
+      "priority": "high",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "ARCH ACTION: Re-escalate ADR-002 App Hub Model — unblock admin provisioning",
+      "updated_at": "2026-06-01T08:08:03Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "assignee_type": "agent",
+      "created_at": "2026-06-01T08:00:08Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "Monthly Architecture \u0026 Tool-stack Review — keeps ADRs current, default tech stack honest, and per-integration posture fresh. Runs on the 1st of each month at 11:00 Asia/Kuwait (GMT+3) — Multica's cron parser does not support \"nth weekday of month\", so day-1 was chosen over \"every Sunday + self-gate\" to avoid spawning 3 auto-cancelled issues per month. Mode=create_issue (project: 00 - Factory Brain, id 1a1c2fb3-41ee-4b99-b820-d10f1c564052).\n\nCRITICAL SAFETY RULES:\n- Mode is create_issue. Do NOT create additional issues except the up-to-5 architecture-action sub-issues in step (7).\n- NEVER mention the CEO (d9f942b9-e245-4e28-99eb-8f12fbebc2c3) in any comment — assignment alone is the trigger.\n- NEVER mention any agent in a wrap-up or thank-you. Only mention an agent on dispatch sub-issues, and only if assignment alone is insufficient.\n- NEVER touch DEV-36 (the workspace-operations dialog).\n- Read each issue's metadata before pinning anything; do not log run state.\n\nREVIEW WINDOW:\n- `since = first day of previous calendar month, 00:00 Asia/Kuwait` → `now`. Use RFC3339 UTC for any CLI/API filter.\n\nINPUTS TO PULL (continue on per-source failure — log \"skipped \u003csource\u003e: \u003creason\u003e\" to stdout):\n- All ADRs in `00 - Factory Brain` (title prefix \"ADR-\" or label \"adr\"). `multica issue list --project 1a1c2fb3-41ee-4b99-b820-d10f1c564052 --output json`.\n- All apps shipped or in-flight in the window (projects whose titles start with \"APP —\").\n- Default stack ground-truth: scan `multica skill list --output json` plus the workspace CLAUDE.md content surfaced in your runtime brief.\n- Per-runtime cost / quota notes: latest \"Workspace Upgrade Weekly Loop\" issue + comments for the trailing month (project 00 - Factory Brain).\n- Per-integration health: upstream release notes via `gh` CLI / public RSS / vendor changelogs. Never use `curl`/`wget` against Multica.\n- Open CVEs: GitHub Security Advisories (`gh api /advisories?ecosystem=...`) for Node, Go, Postgres, Next.js, Expo, plus declared SDKs.\n\nSTEPS:\n\n(1) ADR audit\n   - List every ADR-* issue (any status).\n   - For each, classify: still-load-bearing | superseded (cite successor) | contradicted (cite the shipped app / decision that diverged) | stale.\n   - Cross-reference each shipped app's PRD / schema / API contract to detect contradictions.\n   - Output as a table.\n\n(2) Default tech stack\n   - Restate the current default stack per layer (frontend, backend, DB, auth, deploy, mobile, payments, messaging, analytics).\n   - For each layer: (a) what matured in the past 30 days (releases, GA milestones), (b) any alternative now worth a re-look, (c) recommendation: hold | watch | re-evaluate.\n\n(3) Per-runtime delta\n   - Runtimes in scope: Claude Code, Codex, Opencode, Openclaw, Hermes.\n   - For each: pricing / quota changes, new capabilities, deprecations, observed failure rate this month (cite any `agent-self-healing-policy` retry_log surfaced on issues).\n\n(4) Per-integration delta\n   - Integrations: Supabase, Vercel, KNet, MyFatoorah, Meta (FB/IG/WhatsApp Graph), Google (Maps/OAuth/Workspace), Expo.\n   - For each: pricing changes, breaking API changes, new quotas / rate limits, deprecation notices. One bullet per integration. If nothing landed, write \"no changes\".\n\n(5) Security posture\n   - New CVE classes affecting our stack.\n   - RLS / secret-handling gaps surfaced this month (cross-reference any `security-review-checklist` failures in `06 - QA Security Performance`).\n   - One-paragraph posture summary + bulleted gaps.\n\n(6) Top 5 architecture changes to consider\n   - Derive from steps (1)–(5). Rank by impact × urgency. For each: title, rationale (1–2 lines), owner (squad / agent), effort (S/M/L), risk if skipped.\n   - List fewer than 5 if fewer are warranted — do NOT invent fillers.\n   - If the month is genuinely quiet, list 0 actions and post the comment marker \"no changes — green\".\n\n(7) Auto-dispatch the Top 5 (or fewer) as sub-issues\n   - For each action, create a sub-issue:\n     - Title: \"ARCH ACTION: \u003cone-line\u003e\"\n     - Parent: this autopilot's issue id\n     - Project: 00 - Factory Brain (1a1c2fb3-41ee-4b99-b820-d10f1c564052)\n     - Priority: high for security / CVE; medium for stack or runtime drift; low for \"watch\" items\n     - Status: todo\n     - Assignee: solution-architect (77da9a0d-924e-4087-9278-59ba1182b599) by default; database items → database-architect (89c4ed8b-e38b-48c4-9029-19fd7007a255); API contract items → api-architect (614bc86d-6ef1-4f1e-8b3c-b393b43f46d0); integration items → integration-architect (4d62192f-7508-4ed2-99f5-db8b3dabbd9c); security items → security-auditor (17759d29-f9bb-4c4c-910c-b4476723db87).\n     - Description includes: rationale, evidence (links to ADR / app / CVE / release notes), Acceptance Criteria, DoD, suggested effort.\n   - If the month is \"green\" (0 actions), skip dispatch but still complete steps (8)–(10).\n\n(8) Post the audit report as ONE comment on this autopilot's created issue. Use this exact shape (HEREDOC via `multica issue comment add \u003cthis-issue-id\u003e --content-stdin`):\n\n```\n# Monthly Architecture \u0026 Tool-stack Review — \u003cYYYY-MM\u003e\n\n**Window:** \u003csince\u003e → \u003cnow\u003e (Asia/Kuwait)\n**Apps reviewed:** \u003cN\u003e shipped, \u003cN\u003e in-flight\n**ADRs reviewed:** \u003cN\u003e\n\n## ADR audit\n| ADR | Verdict | Evidence |\n| --- | --- | --- |\n| ADR-XXX \u003ctitle\u003e | still-load-bearing \\| superseded \\| contradicted \\| stale | \u003clink\u003e |\n\n## Default tech stack\n- Frontend: hold|watch|re-evaluate — \u003cone-line reason\u003e\n- Backend: …\n- DB: …\n- Auth: …\n- Deploy: …\n- Mobile: …\n- Payments: …\n- Messaging: …\n- Analytics: …\n\n## Per-runtime\n- Claude Code: \u003cdelta or \"no changes\"\u003e\n- Codex: …\n- Opencode: …\n- Openclaw: …\n- Hermes: …\n\n## Per-integration\n- Supabase: …\n- Vercel: …\n- KNet: …\n- MyFatoorah: …\n- Meta: …\n- Google: …\n- Expo: …\n\n## Security posture\n\u003cone paragraph + bulleted gaps, or \"no new CVE classes; no RLS/secret gaps surfaced this month\"\u003e\n\n## Top 5 architecture changes\n1. **\u003ctitle\u003e** — owner: \u003cagent/squad\u003e | effort: S/M/L | risk-if-skipped: \u003cone line\u003e\n2. …\n\n(If the month is quiet: \"no changes — green\")\n\n## Dispatched sub-issues\n- DEV-NN — \u003cARCH ACTION title\u003e\n- …\n```\n\nDo NOT include any `mention://agent/...` link in this comment.\n\n(9) Pin metadata on this issue ONLY when materially useful for future runs. Recommended keys:\n   - `review_window_end` (RFC3339)\n   - `adrs_reviewed` (number)\n   - `apps_reviewed` (number)\n   - `actions_dispatched` (number, 0–5)\n   - `posture` (string: green | yellow | red)\n   Use `multica issue metadata set` once each; skip any key whose value matches what `metadata list` already shows.\n\n(10) Flip this issue's status to `in_review` (`multica issue status \u003cthis-issue-id\u003e in_review`). Do NOT close it — the CEO Command Squad confirms Architecture Squad has actioned the dispatched sub-issues. Sub-issues run on their own assignees.\n\nOUTPUT STDOUT (one line only, no extra comment):\n`Monthly Arch Review @ \u003cRFC3339\u003e | adrs=N | apps=N | actions=N | posture=\u003cgreen|yellow|red\u003e`\n\nOPERATING RULES:\n- Never block on a single CLI / `gh` / HTTP failure. Log \"skipped \u003csource\u003e: \u003creason\u003e\" and continue.\n- Even an empty month gets a \"no changes — green\" comment — never silent.\n- Cap dispatch at 5 sub-issues hard.\n- Read metadata before pinning. Only update keys that changed since last review.\n- All comments go on the auto-created issue or on the dispatch sub-issues this run spawned. Never comment on DEV-36 or any unrelated issue.\n\n---\n*Autopilot run triggered at 2026-06-01 11:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "e71ee0f7-e249-44eb-b7c6-3aeb613b591b",
+      "identifier": "DEV-196",
+      "labels": [],
+      "metadata": {
+        "actions_dispatched": 3,
+        "adrs_reviewed": 2,
+        "apps_reviewed": 1,
+        "posture": "yellow",
+        "review_window_end": "2026-06-01T08:00:00Z"
+      },
+      "number": 196,
+      "parent_issue_id": null,
+      "position": -2,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "Monthly Architecture \u0026 Tool-stack Review — 2026-06-01",
+      "updated_at": "2026-06-01T08:05:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -914,7 +1035,7 @@
       "identifier": "DEV-37",
       "labels": [],
       "metadata": {
-        "waiting_on": "admin: (1) GH PAT for newtechkw org, (2) codegraph install on runtime, (3) Factory Pulse v3 deploy approval"
+        "waiting_on": "admin re-escalation posted 2026-06-01 (comment 0316aefd): (1) GH PAT for newtechkw org, (2) codegraph+understand-anything runtime install, (3) Factory Pulse v3 deploy approval"
       },
       "number": 37,
       "parent_issue_id": null,
@@ -924,7 +1045,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "ADR-002 — App Hub Model (per-app project + repo + codegraph + local-first lifecycle)",
-      "updated_at": "2026-05-25T18:01:30Z",
+      "updated_at": "2026-06-01T08:07:49Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -944,7 +1065,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-01T07:03Z",
+        "kb_sync_status": "yellow@2026-06-01T08:02Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -956,11 +1077,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-01T07:03:24Z",
+      "updated_at": "2026-06-01T08:02:40Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 39
+  "total": 44
 }
