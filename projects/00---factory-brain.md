@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 62 (done: 38)
+- **Issues:** 63 (done: 38)
 
 ## Description
 
@@ -29,6 +29,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-198 | ARCH ACTION: Document runtime failover policy for CEO agent orchestration | `in_review` | medium |
 | DEV-199 | ARCH ACTION: Extend ADR-001 with formal mobile layer (Expo + EAS Build as defaul | `in_review` | medium |
 | DEV-200 | ADR-003 — Mobile Layer Default (Expo + EAS Build) | `in_review` | medium |
+| DEV-201 | Factory Health Audit — 2026-06-02 | `in_progress` | none |
 
 ## Recent Done
 
