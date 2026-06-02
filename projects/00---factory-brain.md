@@ -30,7 +30,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-199 | ARCH ACTION: Extend ADR-001 with formal mobile layer (Expo + EAS Build as defaul | `in_review` | medium |
 | DEV-200 | ADR-003 — Mobile Layer Default (Expo + EAS Build) | `in_review` | medium |
 | DEV-201 | Factory Health Audit — 2026-06-02 | `in_review` | none |
-| DEV-202 | Daily Command Center Digest — 2026-06-02 | `in_progress` | none |
+| DEV-202 | Daily Command Center Digest — 2026-06-02 | `in_review` | none |
 
 ## Recent Done
 
