@@ -33,4 +33,3 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-181 — VENDOR BRIEF: Lovable — Weekly Benchmark Snapshot 2026-06-01
 - DEV-156 — QA Gate: DEV-117 — SKILL IMPORT: sandbox-runtime
 - DEV-155 — QA Gate: DEV-76 — VENDOR BRIEF: Bolt.new
-- DEV-152 — QA Gate: DEV-94 — WIRE: Supabase MCP → Database + Backend agents
