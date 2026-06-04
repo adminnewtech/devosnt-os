@@ -475,6 +475,7 @@
         "actions_dispatched": 3,
         "adrs_reviewed": 2,
         "apps_reviewed": 1,
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate",
         "posture": "yellow",
         "review_window_end": "2026-06-01T08:00:00Z"
@@ -487,7 +488,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Monthly Architecture \u0026 Tool-stack Review — 2026-06-01",
-      "updated_at": "2026-06-04T18:37:04Z",
+      "updated_at": "2026-06-04T20:52:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -551,6 +552,7 @@
       "labels": [],
       "metadata": {
         "candidates_total": 10,
+        "deploy_gate_hold_noted": true,
         "dispatched_count": 3,
         "imported_count": 3,
         "lifecycle_phase": "integrate",
@@ -565,7 +567,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly GitHub Research Sweep — 2026-06-01",
-      "updated_at": "2026-06-04T18:21:57Z",
+      "updated_at": "2026-06-04T20:52:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -818,6 +820,7 @@
       "identifier": "DEV-171",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "dispatched_action_count": 3,
         "lifecycle_phase": "integrate",
         "report_window_end": "2026-05-31T06:00:00Z",
@@ -831,7 +834,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Workspace Upgrade Report — 2026-05-31",
-      "updated_at": "2026-06-04T18:22:01Z",
+      "updated_at": "2026-06-04T20:52:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
