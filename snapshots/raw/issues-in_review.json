@@ -53,12 +53,12 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-04T17:58:31Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
-      "description": "Verify and decide on [DEV-190](mention://issue/471031db-66c0-418e-88ed-ee679424e99e).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` if the issue is user-facing.\n3. Check every item in the Definition of Done checklist:\n   - [ ] SKILL.md authored and merged to skill library (skill ID: b5063307-37a3-4811-9254-fd39704f552a)\n   - [ ] Skill registered in workspace (confirmed via `multica skill list`)\n   - [ ] Trigger tested on 2 sample prompts — **NOT yet verified in comments; verify this**\n   - [ ] No overlap with growth-launch-plan confirmed\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 471031db-66c0-418e-88ed-ee679424e99e done`\n- VETO (DoD not met or security failure) → `multica issue status 471031db-66c0-418e-88ed-ee679424e99e backlog` + `multica issue metadata set 471031db-66c0-418e-88ed-ee679424e99e --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
+      "description": "Re-verify and decide on [DEV-190](mention://issue/471031db-66c0-418e-88ed-ee679424e99e).\n\n**Context:** You previously issued a REVISE verdict because \"Trigger tested on 2 sample prompts\" was unverified. Skill-builder has now posted both test runs as comments on the parent issue. Please re-run the QA gate.\n\nSteps:\n1. Read the latest comments on DEV-190 — the skill-builder's test outputs are there.\n2. Confirm both test outputs include: loop type named, K-factor estimate with product-specific justification, 3-step activation path, no vanity metrics, loop diagram closes back to start.\n3. Verify all remaining DoD items:\n   - [x] SKILL.md authored and registered (ID: b5063307-37a3-4811-9254-fd39704f552a)\n   - [x] Skill visible in `multica skill list`\n   - [x] No overlap with growth-launch-plan confirmed\n   - [ ] Trigger tested on 2 sample prompts — **test outputs now posted; verify these**\n\nDecision:\n- PASS (all DoD met) → `multica issue status 471031db-66c0-418e-88ed-ee679424e99e done`\n- VETO (still fails) → `multica issue status 471031db-66c0-418e-88ed-ee679424e99e backlog` + `multica issue metadata set 471031db-66c0-418e-88ed-ee679424e99e --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
       "due_date": null,
       "id": "49f3cefe-b359-4f4b-90f8-1fe2695321c5",
       "identifier": "DEV-204",
@@ -72,33 +72,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "QA Gate: DEV-190 — SKILL IMPORT: growth-loop-designer",
-      "updated_at": "2026-06-04T18:04:04Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
-      "assignee_type": "agent",
-      "created_at": "2026-06-04T17:53:35Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "Verify and decide on [DEV-192](mention://issue/6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` if the issue is user-facing.\n3. Check every item in the Definition of Done checklist.\n\nDoD checklist (from parent):\n- [ ] SKILL.md authored and merged to skill library\n- [ ] Skill registered in workspace (Skill ID: `e9624bc2-18d7-49a7-9b01-d3569a70cce1`)\n- [ ] Trigger tested on 2 sample prompts (e-commerce and SaaS)\n- [ ] Output includes binary ship/no-ship in all test cases\n\nSecurity review (DEV-195) is already done with decision=green.\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2 done`\n- VETO (DoD not met or security failure) → `multica issue status 6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2 backlog` + `multica issue metadata set 6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2 --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
-      "due_date": null,
-      "id": "6b5ee3cf-ae6b-4345-9b9e-425b207315f8",
-      "identifier": "DEV-203",
-      "labels": [],
-      "metadata": {
-        "decision": "accept",
-        "quality_score": 10
-      },
-      "number": 203,
-      "parent_issue_id": "6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2",
-      "position": -2,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "in_review",
-      "title": "QA Gate: DEV-192 — SKILL IMPORT: ab-test-analysis",
-      "updated_at": "2026-06-04T17:57:14Z",
+      "updated_at": "2026-06-04T18:13:46Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -153,8 +127,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T08:00:08Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -167,6 +141,7 @@
         "actions_dispatched": 3,
         "adrs_reviewed": 2,
         "apps_reviewed": 1,
+        "lifecycle_phase": "integrate",
         "posture": "yellow",
         "review_window_end": "2026-06-01T08:00:00Z"
       },
@@ -178,12 +153,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Monthly Architecture \u0026 Tool-stack Review — 2026-06-01",
-      "updated_at": "2026-06-01T08:05:51Z",
+      "updated_at": "2026-06-04T18:37:04Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:00:08Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -196,6 +171,7 @@
         "candidates_total": 10,
         "dispatched_count": 3,
         "imported_count": 3,
+        "lifecycle_phase": "integrate",
         "sources_skipped": "hanoi-rainbow",
         "sweep_window_end": "2026-06-01T07:00:00Z"
       },
@@ -207,7 +183,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly GitHub Research Sweep — 2026-06-01",
-      "updated_at": "2026-06-01T07:09:57Z",
+      "updated_at": "2026-06-04T18:21:57Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -332,8 +308,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-05-31T06:00:07Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -344,6 +320,7 @@
       "labels": [],
       "metadata": {
         "dispatched_action_count": 3,
+        "lifecycle_phase": "integrate",
         "report_window_end": "2026-05-31T06:00:00Z",
         "top_action_count": 5
       },
@@ -355,7 +332,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Workspace Upgrade Report — 2026-05-31",
-      "updated_at": "2026-05-31T06:06:38Z",
+      "updated_at": "2026-06-04T18:22:01Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -809,7 +786,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-02T10:02Z",
+        "kb_sync_status": "yellow@2026-06-04T18:07Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -821,11 +798,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-02T10:03:01Z",
+      "updated_at": "2026-06-04T18:07:50Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 33
+  "total": 32
 }

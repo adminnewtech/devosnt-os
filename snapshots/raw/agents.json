@@ -153,7 +153,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:04:51Z",
+    "updated_at": "2026-06-04T18:13:51Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -199,9 +199,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:06:12Z",
+    "updated_at": "2026-06-04T18:52:36Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:06:12Z",
+    "updated_at": "2026-06-04T19:02:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1970,9 +1970,9 @@
         "name": "reusable-template-extractor"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:05:41Z",
+    "updated_at": "2026-06-04T18:08:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2210,7 +2210,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T17:58:26Z",
+    "updated_at": "2026-06-04T18:14:17Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2324,7 +2324,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T17:59:49Z",
+    "updated_at": "2026-06-04T18:39:04Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
