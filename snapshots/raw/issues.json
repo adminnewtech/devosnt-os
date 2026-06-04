@@ -94,8 +94,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T08:05:01Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -111,14 +111,14 @@
       "priority": "medium",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "ARCH ACTION: Extend ADR-001 with formal mobile layer (Expo + EAS Build as default)",
-      "updated_at": "2026-06-01T08:09:25Z",
+      "updated_at": "2026-06-04T17:52:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "17759d29-f9bb-4c4c-910c-b4476723db87",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:09:46Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -136,9 +136,9 @@
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "SECURITY REVIEW: ab-test-analysis import",
-      "updated_at": "2026-06-01T07:12:40Z",
+      "updated_at": "2026-06-04T17:52:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -159,9 +159,9 @@
       "priority": "high",
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "SKILL: pre-build-research-gate — research + differentiation gate before any build starts",
-      "updated_at": "2026-06-01T06:20:43Z",
+      "updated_at": "2026-06-04T17:56:10Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -188,8 +188,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T08:04:48Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -205,14 +205,14 @@
       "priority": "medium",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "ARCH ACTION: Document runtime failover policy for CEO agent orchestration",
-      "updated_at": "2026-06-01T08:07:58Z",
+      "updated_at": "2026-06-04T17:57:31Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "17759d29-f9bb-4c4c-910c-b4476723db87",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:09:46Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -230,14 +230,14 @@
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "SECURITY REVIEW: hipaa-compliance-checklist import",
-      "updated_at": "2026-06-01T07:12:44Z",
+      "updated_at": "2026-06-04T17:53:07Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:09:22Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -246,16 +246,19 @@
       "id": "6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2",
       "identifier": "DEV-192",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "decision": "accept",
+        "quality_score": 11
+      },
       "number": 192,
       "parent_issue_id": "2d181300-5f0a-4cd8-ae79-54741633df5c",
       "position": -3,
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "SKILL IMPORT: ab-test-analysis",
-      "updated_at": "2026-06-01T07:14:07Z",
+      "updated_at": "2026-06-04T17:56:57Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -310,8 +313,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-31T06:06:22Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -327,9 +330,58 @@
       "priority": "high",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Workspace Upgrade Action — Diagnose and rewrite android-apk-local-builder skill (retry_log=3)",
-      "updated_at": "2026-05-31T06:11:04Z",
+      "updated_at": "2026-06-04T17:53:18Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
+      "assignee_type": "agent",
+      "created_at": "2026-06-04T17:58:31Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Verify and decide on [DEV-190](mention://issue/471031db-66c0-418e-88ed-ee679424e99e).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` if the issue is user-facing.\n3. Check every item in the Definition of Done checklist:\n   - [ ] SKILL.md authored and merged to skill library (skill ID: b5063307-37a3-4811-9254-fd39704f552a)\n   - [ ] Skill registered in workspace (confirmed via `multica skill list`)\n   - [ ] Trigger tested on 2 sample prompts — **NOT yet verified in comments; verify this**\n   - [ ] No overlap with growth-launch-plan confirmed\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 471031db-66c0-418e-88ed-ee679424e99e done`\n- VETO (DoD not met or security failure) → `multica issue status 471031db-66c0-418e-88ed-ee679424e99e backlog` + `multica issue metadata set 471031db-66c0-418e-88ed-ee679424e99e --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
+      "due_date": null,
+      "id": "49f3cefe-b359-4f4b-90f8-1fe2695321c5",
+      "identifier": "DEV-204",
+      "labels": [],
+      "metadata": {},
+      "number": 204,
+      "parent_issue_id": "471031db-66c0-418e-88ed-ee679424e99e",
+      "position": -2,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "in_review",
+      "title": "QA Gate: DEV-190 — SKILL IMPORT: growth-loop-designer",
+      "updated_at": "2026-06-04T18:04:04Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
+      "assignee_type": "agent",
+      "created_at": "2026-06-04T17:53:35Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Verify and decide on [DEV-192](mention://issue/6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` if the issue is user-facing.\n3. Check every item in the Definition of Done checklist.\n\nDoD checklist (from parent):\n- [ ] SKILL.md authored and merged to skill library\n- [ ] Skill registered in workspace (Skill ID: `e9624bc2-18d7-49a7-9b01-d3569a70cce1`)\n- [ ] Trigger tested on 2 sample prompts (e-commerce and SaaS)\n- [ ] Output includes binary ship/no-ship in all test cases\n\nSecurity review (DEV-195) is already done with decision=green.\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2 done`\n- VETO (DoD not met or security failure) → `multica issue status 6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2 backlog` + `multica issue metadata set 6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2 --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
+      "due_date": null,
+      "id": "6b5ee3cf-ae6b-4345-9b9e-425b207315f8",
+      "identifier": "DEV-203",
+      "labels": [],
+      "metadata": {
+        "decision": "accept",
+        "quality_score": 10
+      },
+      "number": 203,
+      "parent_issue_id": "6dc8245a-bc0c-4c7d-a68b-f9d80d39caf2",
+      "position": -2,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "in_review",
+      "title": "QA Gate: DEV-192 — SKILL IMPORT: ab-test-analysis",
+      "updated_at": "2026-06-04T17:57:14Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -384,8 +436,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "4d62192f-7508-4ed2-99f5-db8b3dabbd9c",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T08:04:36Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -394,16 +446,18 @@
       "id": "16881563-3727-46fd-8d6b-1134d644d1da",
       "identifier": "DEV-197",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "waiting_on": "admin@newtechkw.com: respond to DEV-37 comment 0316aefd (re-escalation 2026-06-01) — 3 blockers: GH PAT, codegraph install, Pulse v3 approval"
+      },
       "number": 197,
       "parent_issue_id": "e71ee0f7-e249-44eb-b7c6-3aeb613b591b",
       "position": -2,
       "priority": "high",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_review",
+      "status": "blocked",
       "title": "ARCH ACTION: Re-escalate ADR-002 App Hub Model — unblock admin provisioning",
-      "updated_at": "2026-06-01T08:08:03Z",
+      "updated_at": "2026-06-04T17:55:12Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -436,8 +490,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "17759d29-f9bb-4c4c-910c-b4476723db87",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:09:46Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -455,14 +509,14 @@
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "SECURITY REVIEW: growth-loop-designer import",
-      "updated_at": "2026-06-01T07:12:24Z",
+      "updated_at": "2026-06-04T17:54:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:09:05Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -478,9 +532,9 @@
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "SKILL IMPORT: hipaa-compliance-checklist",
-      "updated_at": "2026-06-01T07:16:05Z",
+      "updated_at": "2026-06-04T17:55:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -513,7 +567,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "925a3e48-37f2-4620-870c-b57fe9003981",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-06-01T06:16:29Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
@@ -532,7 +586,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "BENCHMARK ACTION: Pre-build Research Gate skill",
-      "updated_at": "2026-06-01T06:21:32Z",
+      "updated_at": "2026-06-04T17:56:37Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -634,8 +688,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "234b4466-aaac-4c1a-bbff-731157620f42",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-31T06:06:06Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -651,14 +705,14 @@
       "priority": "high",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Workspace Upgrade Action — Sweep and close 27 stale in_review autopilot issues",
-      "updated_at": "2026-05-31T06:11:52Z",
+      "updated_at": "2026-06-04T17:54:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T07:08:48Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -667,16 +721,19 @@
       "id": "471031db-66c0-418e-88ed-ee679424e99e",
       "identifier": "DEV-190",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "decision": "revise",
+        "quality_score": 9
+      },
       "number": 190,
       "parent_issue_id": "2d181300-5f0a-4cd8-ae79-54741633df5c",
       "position": -1,
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "in_progress",
       "title": "SKILL IMPORT: growth-loop-designer",
-      "updated_at": "2026-06-01T07:14:44Z",
+      "updated_at": "2026-06-04T18:02:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -726,8 +783,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "91df21fc-2d12-485f-a5b7-8dd2ec894cf4",
-      "assignee_type": "agent",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
       "created_at": "2026-05-31T06:05:49Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -743,9 +800,9 @@
       "priority": "high",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Workspace Upgrade Action — Fix quality-gate-manager prompt: auto-close autopilot digests",
-      "updated_at": "2026-05-31T06:10:21Z",
+      "updated_at": "2026-06-04T17:57:42Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1163,55 +1220,9 @@
       "title": "QA Gate: DEV-76 — VENDOR BRIEF: Bolt.new",
       "updated_at": "2026-05-27T09:29:02Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
-      "assignee_type": "squad",
-      "created_at": "2026-05-27T09:12:06Z",
-      "creator_id": "e3ef7374-d648-4b47-aa0b-ee3474b123b0",
-      "creator_type": "agent",
-      "description": "## Input\nFrom VENDOR BRIEF: Bolt.new — benchmark sweep May 2026 ([DEV-76](mention://issue/ee26fb58-8f56-41fc-9543-ca2f5c230f85)), the model-selection-per-task pattern is marked **Adopt**:\n\n\u003e \"expose model choice at issue-creation time; fast/cheap model for boilerplate, Opus Max-tier per issue type\"\n\nValidation signal: bolt.diy (19.4k stars, exceeds Bolt.new's 16k) — provider/model flexibility is the top community-requested feature. devosnt's squad model already has natural task boundaries; this adds the routing layer on top.\n\n## Expected Output\n1. Issue-creation CLI/workflow updated to accept a `model_tier` field (`standard` | `max`).\n2. Agent assignment logic (or issue template guidance) routes by tier: boilerplate tasks (scaffolding, CRUD generation, style passes) → Standard; complex reasoning tasks (architecture, security review, QA gate, multi-system integrations) → Max (Opus Max-tier).\n3. Sprint Commander skill updated to set `model_tier` when creating sub-issues.\n4. Documentation (CLAUDE.md or agent operating manuals) updated to reflect the new field.\n\n## Acceptance Criteria\n- [ ] `model_tier` can be specified at issue creation time.\n- [ ] Default tier rules documented per task type (boilerplate → standard, complex → max).\n- [ ] Sprint Commander creates sub-issues with correct tier pre-set.\n- [ ] At least one example sprint shows the split in action (one standard sub-issue, one max sub-issue).\n- [ ] No regression in existing issue-creation flow.\n\n## Dependencies\n- [DEV-76](mention://issue/ee26fb58-8f56-41fc-9543-ca2f5c230f85) — source brief (must be in_review or done first).\n\n## Risk\n- If `multica issue create` does not support a `model_tier` metadata key today, the initial implementation is a convention (metadata key) rather than a hard-typed field — acceptable as v1 until platform support lands.\n- Over-classifying tasks as Max increases cost without quality benefit; default rules must be conservative.\n\n## Definition of Done\n- Acceptance criteria above all checked.\n- Sprint Commander operating manual updated.\n- Security review not required (no user-facing surface, no auth changes).",
-      "due_date": null,
-      "id": "56d9e645-0084-4de0-8a71-ab6831918927",
-      "identifier": "DEV-154",
-      "labels": [],
-      "metadata": {},
-      "number": 154,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "todo",
-      "title": "Implement model-selection-per-task routing (Standard vs Max tier)",
-      "updated_at": "2026-05-27T12:07:48Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-05-27T08:10:05Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Context\n\nDEV-95 wired Playwright MCP to qa-engineer and bug-hunter agents with application-level blocked-origins. The qa-engineer flagged that `--blocked-origins` is not a security boundary per Playwright's own docs — it does not block redirects and is bypassable by a crafted target page.\n\n## Required\n\nImplement OS-level egress filtering so the agent process cannot reach RFC-1918 / link-local ranges from the browser context, regardless of Playwright configuration:\n\n- Block outbound to 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 127.0.0.0/8, 169.254.0.0/16 from the Playwright process UID or network namespace\n- Verify the iptables/nftables rules survive a browser process restart\n- Document the rules in the agent runtime runbook\n\n## Acceptance Criteria\n- [ ] iptables/nftables egress rules block RFC-1918 from agent process\n- [ ] Rules verified with a test that confirms 192.168.1.1 and 10.0.0.1 are unreachable even when `--blocked-origins` is not passed\n- [ ] Rules survive browser process restart\n- [ ] Runbook updated\n\n## Risk\n\nWithout this, an agent given a malicious URL could be used to SSRF internal infrastructure.\n\n## Definition of Done\n\nOS-level network policy in place, verified, and documented.",
-      "due_date": null,
-      "id": "3951ef58-0052-4668-9fb6-f2f70f9f8459",
-      "identifier": "DEV-153",
-      "labels": [],
-      "metadata": {},
-      "number": 153,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "high",
-      "project_id": null,
-      "start_date": null,
-      "status": "backlog",
-      "title": "INFRA: OS-level network isolation for Playwright agent browsers (iptables/SSRF hardening)",
-      "updated_at": "2026-05-27T08:10:05Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 202
+  "total": 204
 }

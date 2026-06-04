@@ -153,7 +153,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-02T04:07:18Z",
+    "updated_at": "2026-06-04T18:04:51Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -199,9 +199,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-02T10:01:38Z",
+    "updated_at": "2026-06-04T18:06:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -279,7 +279,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-31T06:09:41Z",
+    "updated_at": "2026-06-04T18:04:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-02T10:01:37Z",
+    "updated_at": "2026-06-04T18:06:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -732,7 +732,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T08:10:13Z",
+    "updated_at": "2026-06-04T17:57:49Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1970,9 +1970,9 @@
         "name": "reusable-template-extractor"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-01T07:16:10Z",
+    "updated_at": "2026-06-04T18:05:41Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2210,7 +2210,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T07:10:09Z",
+    "updated_at": "2026-06-04T17:58:26Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2324,7 +2324,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-28T01:07:43Z",
+    "updated_at": "2026-06-04T17:59:49Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

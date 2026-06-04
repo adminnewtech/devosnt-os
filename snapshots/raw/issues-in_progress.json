@@ -1,7 +1,34 @@
 {
   "has_more": false,
-  "issues": [],
+  "issues": [
+    {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-06-01T07:08:48Z",
+      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
+      "creator_type": "agent",
+      "description": "## SKILL IMPORT: growth-loop-designer\n\n**Source:** https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/08-business-product/growth-loops.md\n**License:** MIT ✓\n**Stars:** 20,988 (VoltAgent/awesome-claude-code-subagents)\n\n## What it does\nDesigns self-reinforcing product growth loops (viral, content/SEO, product-led) and calculates viral coefficient K. Helps teams move from funnel thinking to compounding loop mechanics.\n\n## Proposed Multica skill name\n`growth-loop-designer`\n\n## PR-ready spec\n- **Purpose:** Design and evaluate product growth loops for any SaaS/consumer product\n- **Trigger:** User mentions growth loop, PLG, flywheel, viral coefficient, sustainable acquisition\n- **Input:** Product description, current acquisition channels, target user persona\n- **Steps:** (1) Classify current model (funnel vs loop); (2) Identify 3 candidate loop types (viral, SEO/content, product-led); (3) Estimate viral coefficient K for each; (4) Recommend loop with highest fit + lowest activation cost; (5) Output growth loop diagram in text + implementation prerequisites\n- **Output:** Loop type selection, K-factor estimate, implementation checklist, red flags\n- **Quality checklist:** Loop is named, K \u003e 0 is justified, at least one counter-signal considered, no vanity metrics in output\n- **Tools:** Read, Write only\n\n## Distinct from existing skill\n`growth-launch-plan` covers launch tactics (one-time event). This skill covers compounding mechanics (ongoing system). Different lifecycle stage, no overlap.\n\n## Acceptance Criteria\n- SKILL.md written per Multica skill format\n- Skill triggers correctly on: 'growth loop', 'PLG', 'flywheel', 'viral loop', 'K factor'\n- Output includes: loop type, K-factor estimate, 3-step activation path\n- Does not duplicate content from growth-launch-plan\n\n## Dependencies\n- Security review sub-issue must be in `done` with `decision=green` before this is promoted to `todo`\n\n## Risk\n- Low: MIT license, pure text instructions, no executable code\n\n## Definition of Done\n- [ ] SKILL.md authored and merged to skill library\n- [ ] Skill registered in workspace\n- [ ] Trigger tested on 2 sample prompts\n- [ ] No overlap with growth-launch-plan confirmed",
+      "due_date": null,
+      "id": "471031db-66c0-418e-88ed-ee679424e99e",
+      "identifier": "DEV-190",
+      "labels": [],
+      "metadata": {
+        "decision": "revise",
+        "quality_score": 9
+      },
+      "number": 190,
+      "parent_issue_id": "2d181300-5f0a-4cd8-ae79-54741633df5c",
+      "position": -1,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "SKILL IMPORT: growth-loop-designer",
+      "updated_at": "2026-06-04T18:02:51Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    }
+  ],
   "limit": 50,
   "offset": 0,
-  "total": 0
+  "total": 1
 }

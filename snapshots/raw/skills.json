@@ -881,6 +881,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-04T17:55:53Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Before any build agent writes code, run a research pass that surfaces comparable products, a differentiation claim, and the riskiest assumption in the issue brief — outputs a 3-bullet pre-build brief as a comment and optionally gates code generation.",
+    "id": "ba524eef-33a3-4787-96e2-d1840c5be3c5",
+    "name": "pre-build-research-gate",
+    "updated_at": "2026-06-04T17:55:53Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:27:50Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Convert an approved product brief into a complete PRD.",

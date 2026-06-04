@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **130**
+Total skills in `devosnt`: **131**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -92,6 +92,7 @@ Total skills in `devosnt`: **130**
 | [pos-system-builder](./pos-system-builder.md) | `solution-architect` | Build a POS (point of sale) system: cart, tenders, receipts, shifts, end-of-day, KNet/MyFa |
 | [post-build-report-generator](./post-build-report-generator.md) | `release-manager`, `template-builder` | After a project lands, produce a one-page shipped/slipped/reuse report. |
 | [prd-to-user-stories](./prd-to-user-stories.md) | `ceo`, `product-manager` | Decompose a PRD into atomic build-ready user stories with acceptance criteria. |
+| [pre-build-research-gate](./pre-build-research-gate.md) | _(unowned)_ | Before any build agent writes code, run a research pass that surfaces comparable products, |
 | [product-brief-to-prd](./product-brief-to-prd.md) | `ceo`, `product-manager` | Convert an approved product brief into a complete PRD. |
 | [prompt-improvement-review](./prompt-improvement-review.md) | `prompt-optimizer`, `memory-curator` | Audit an agent's prompt + recent runs, propose targeted edits. |
 | [prompt-router-classifier](./prompt-router-classifier.md) | `ceo`, `product-manager` | Classify any raw user prompt into the right vertical builder + squad, auto-detecting Arabi |
