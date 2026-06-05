@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 65 (done: 43)
+- **Issues:** 66 (done: 43)
 
 ## Description
 
@@ -26,7 +26,8 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-200 | ADR-003 — Mobile Layer Default (Expo + EAS Build) | `in_review` | medium |
 | DEV-201 | Factory Health Audit — 2026-06-02 | `in_review` | none |
 | DEV-202 | Daily Command Center Digest — 2026-06-02 | `in_review` | none |
-| DEV-205 | Factory Health Audit — 2026-06-05 | `in_progress` | none |
+| DEV-205 | Factory Health Audit — 2026-06-05 | `in_review` | none |
+| DEV-206 | Daily Command Center Digest — 2026-06-05 | `in_progress` | none |
 
 ## Recent Done
 
