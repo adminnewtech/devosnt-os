@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-05T04:03:35.701440+00:00_
+_Generated: 2026-06-05T05:01:17.018163+00:00_
 
 ## Health Summary
 
@@ -15,7 +15,7 @@ _Generated: 2026-06-05T04:03:35.701440+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 2 |
-| in_review_parent_count | 17 |
+| in_review_parent_count | 18 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
