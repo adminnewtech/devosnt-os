@@ -336,6 +336,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-06T03:00:03Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-06 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "e70860ad-b5f4-4b68-8f56-eef5b80dffb6",
+      "identifier": "DEV-207",
+      "labels": [],
+      "metadata": {},
+      "number": 207,
+      "parent_issue_id": null,
+      "position": -2,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-06",
+      "updated_at": "2026-06-06T03:02:05Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-05T04:00:15Z",
@@ -1207,32 +1230,9 @@
       "title": "الان تحليل شامل متكامل",
       "updated_at": "2026-05-27T11:44:19Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
-      "created_at": "2026-05-27T11:26:18Z",
-      "creator_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-      "creator_type": "member",
-      "description": "حول كل الايجنتات بشكل كامل علي هيرمس رنتايمر vps",
-      "due_date": null,
-      "id": "0ffab015-668a-410b-9960-30c4ea697533",
-      "identifier": "DEV-157",
-      "labels": [],
-      "metadata": {},
-      "number": 157,
-      "parent_issue_id": null,
-      "position": 0,
-      "priority": "none",
-      "project_id": null,
-      "start_date": null,
-      "status": "done",
-      "title": "حول كل الايجنتات بشكل كامل علي هيرمس رنتايمر vps",
-      "updated_at": "2026-05-27T11:28:42Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 206
+  "total": 207
 }
