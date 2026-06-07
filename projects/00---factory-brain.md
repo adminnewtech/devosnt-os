@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 70 (done: 43)
+- **Issues:** 71 (done: 43)
 
 ## Description
 
@@ -32,6 +32,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-208 | Daily Command Center Digest — 2026-06-06 | `in_review` | none |
 | DEV-209 | Factory Health Audit — 2026-06-07 | `in_review` | none |
 | DEV-210 | Daily Command Center Digest — 2026-06-07 | `in_review` | none |
+| DEV-211 | Workspace Upgrade Report — 2026-06-07 | `in_progress` | none |
 
 ## Recent Done
 
