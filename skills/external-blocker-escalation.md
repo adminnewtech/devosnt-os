@@ -5,7 +5,7 @@
 
 ## Description
 
-Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:<resource> metadata, and stops pulse retries until cleared.
+Consolidated escalation to admin for external credential blockers. Mode A: per-issue. Mode B: ≥3 issues blocked — posts ONE comment with deadline, fallbacks, and a single CTA. Stops pulse retries via waiting_on=admin:* contract.
 
 ## Owned by
 

@@ -483,10 +483,10 @@
     "config": {},
     "created_at": "2026-05-26T16:38:29Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "description": "Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:\u003cresource\u003e metadata, and stops pulse retries until cleared.",
+    "description": "Consolidated escalation to admin for external credential blockers. Mode A: per-issue. Mode B: ≥3 issues blocked — posts ONE comment with deadline, fallbacks, and a single CTA. Stops pulse retries via waiting_on=admin:* contract.",
     "id": "74c65b85-3623-4a71-961b-536ae81c9dce",
     "name": "external-blocker-escalation",
-    "updated_at": "2026-05-26T16:38:29Z",
+    "updated_at": "2026-06-07T06:14:16Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -617,6 +617,16 @@
     "id": "f8207370-79ec-4ac0-b3bd-e9b8aa5e2dff",
     "name": "incident-response-runbook",
     "updated_at": "2026-05-25T15:53:40Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-07T06:12:29Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Automatically close or escalate stale autopilot-generated issues in in_review. Targets Daily Digest, Factory Health Audit, Workspace Upgrade Report, Skill Review patterns older than 7 days.",
+    "id": "4b0bb5e9-4ec3-413d-a0bb-72f27f5f34ea",
+    "name": "in-review-triage",
+    "updated_at": "2026-06-07T06:12:29Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

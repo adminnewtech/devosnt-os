@@ -81,7 +81,7 @@
         "name": "e2e-test-generator"
       },
       {
-        "description": "Single-shot consolidated escalation to admin when a build task is blocked on an external credential or resource. Posts one structured comment with provisioning steps + free-tier fallback, pins waiting_on=admin:\u003cresource\u003e metadata, and stops pulse retries until cleared.",
+        "description": "Consolidated escalation to admin for external credential blockers. Mode A: per-issue. Mode B: ≥3 issues blocked — posts ONE comment with deadline, fallbacks, and a single CTA. Stops pulse retries via waiting_on=admin:* contract.",
         "id": "74c65b85-3623-4a71-961b-536ae81c9dce",
         "name": "external-blocker-escalation"
       },
@@ -151,9 +151,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-07T06:02:38Z",
+    "updated_at": "2026-06-07T06:23:10Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -201,7 +201,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-07T06:02:38Z",
+    "updated_at": "2026-06-07T07:02:07Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-07T06:02:38Z",
+    "updated_at": "2026-06-07T07:02:07Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1972,7 +1972,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:08:10Z",
+    "updated_at": "2026-06-07T06:14:15Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2053,7 +2053,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-31T06:10:27Z",
+    "updated_at": "2026-06-07T06:16:06Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2101,7 +2101,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-31T06:11:59Z",
+    "updated_at": "2026-06-07T06:10:57Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

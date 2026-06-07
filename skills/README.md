@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **131**
+Total skills in `devosnt`: **132**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -52,7 +52,7 @@ Total skills in `devosnt`: **131**
 | [email-marketing-builder](./email-marketing-builder.md) | `solution-architect` | Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics |
 | [embeddings-semantic-search](./embeddings-semantic-search.md) | `database-architect`, `full-stack-engineer` | Default semantic search via pgvector. Embeddings + hybrid search + reranking. |
 | [error-tracking-setup](./error-tracking-setup.md) | `bug-hunter` | Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing. |
-| [external-blocker-escalation](./external-blocker-escalation.md) | `ceo` | Single-shot consolidated escalation to admin when a build task is blocked on an external c |
+| [external-blocker-escalation](./external-blocker-escalation.md) | `ceo` | Consolidated escalation to admin for external credential blockers. Mode A: per-issue. Mode |
 | [feature-flag-system](./feature-flag-system.md) | `release-manager` | Default feature flags + targeting rules + kill switches, Supabase-backed. |
 | [figma-to-ux-spec](./figma-to-ux-spec.md) | `ux-architect`, `ui-designer` | Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design |
 | [file-upload-storage-design](./file-upload-storage-design.md) | `backend-engineer` | Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN. |
@@ -65,6 +65,7 @@ Total skills in `devosnt`: **131**
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
 | [impact-analyst](./impact-analyst.md) | `impact-analyst` | On every Build PR, compute blast radius from the codegraph (changed symbols → callers → ca |
+| [in-review-triage](./in-review-triage.md) | _(unowned)_ | Automatically close or escalate stale autopilot-generated issues in in_review. Targets Dai |
 | [incident-response-runbook](./incident-response-runbook.md) | `workspace-operations-manager`, `deployment-engineer` | Standard incident response: severity, comms, postmortem template. |
 | [inventory-system-builder](./inventory-system-builder.md) | `solution-architect` | Build an inventory management system (SKUs, stock, movements, counts) from preset. |
 | [kw-civil-id-validator](./kw-civil-id-validator.md) | `integration-architect` | Kuwait Civil ID validation + age/gender extraction + PACI integration helper. |

@@ -1,13 +1,13 @@
 # Integration Audit Report
 
-_Generated: 2026-06-07T06:03:50.553971+00:00_
+_Generated: 2026-06-07T07:02:49.620096+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 4 |
+| orphan_skills | 5 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
@@ -15,18 +15,18 @@ _Generated: 2026-06-07T06:03:50.553971+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 2 |
-| in_review_parent_count | 21 |
+| in_review_parent_count | 15 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 131 (owned: 127, orphan: 4)
+- **Skills:** 132 (owned: 127, orphan: 5)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 6 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 7 warnings, no blockers
 
 ## Findings
 
@@ -37,6 +37,7 @@ _Generated: 2026-06-07T06:03:50.553971+00:00_
 | 🟡 WARN | `skill.orphan` | Skill `ab-test-analysis` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `growth-loop-designer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `hipaa-compliance-checklist` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `in-review-triage` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `pre-build-research-gate` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

@@ -88,6 +88,8 @@
       "identifier": "DEV-108",
       "labels": [],
       "metadata": {
+        "consolidated_escalation_posted": true,
+        "escalation_deadline": "2026-06-14",
         "waiting_on": "admin: (1) GH PAT for newtechkw org, (2) codegraph+understand-anything runtime install, (3) Factory Pulse v3 deploy approval"
       },
       "number": 108,
@@ -98,7 +100,7 @@
       "start_date": null,
       "status": "blocked",
       "title": "ARCH ACTION: Consolidate and resolve ADR-002 admin credential blockers",
-      "updated_at": "2026-05-26T17:31:46Z",
+      "updated_at": "2026-06-07T06:15:24Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
