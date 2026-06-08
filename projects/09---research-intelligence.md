@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 75 (done: 58)
+- **Issues:** 76 (done: 58)
 
 ## Description
 
@@ -16,6 +16,7 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 | DEV-187 | BENCHMARK ACTION: Pre-build Research Gate skill | `in_review` | high |
 | DEV-189 | Weekly GitHub Research Sweep — 2026-06-01 | `in_review` | none |
 | DEV-204 | QA Gate: DEV-190 — SKILL IMPORT: growth-loop-designer | `in_review` | high |
+| DEV-218 | Weekly Benchmark Sweep — 2026-06-08 (in progress) | `in_progress` | none |
 
 ## Recent Done
 

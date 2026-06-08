@@ -34,7 +34,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 - DEV-212 — Workspace Upgrade Action — Build in-review-triage automation skill
 - DEV-213 — Workspace Upgrade Action — Rewrite admin-escalation prompt to drive credential u
-- DEV-168 — Factory Health Audit — 2026-05-31
 - DEV-206 — Daily Command Center Digest — 2026-06-05
 - DEV-202 — Daily Command Center Digest — 2026-06-02
 - DEV-178 — Daily Command Center Digest — 2026-06-01
@@ -42,3 +41,4 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 - DEV-172 — Workspace Upgrade Action — Fix quality-gate-manager prompt: auto-close autopilot
 - DEV-198 — ARCH ACTION: Document runtime failover policy for CEO agent orchestration
 - DEV-173 — Workspace Upgrade Action — Sweep and close 27 stale in_review autopilot issues
+- DEV-174 — Workspace Upgrade Action — Diagnose and rewrite android-apk-local-builder skill 
