@@ -1069,8 +1069,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T06:00:04Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
       "creator_type": "agent",
@@ -1082,6 +1082,7 @@
       "metadata": {
         "baseline_brief_id": "DEV-180",
         "dispatched_count": 1,
+        "lifecycle_phase": "integrate",
         "material_change_vendors": "Lovable,Cursor,Replit,Antigravity",
         "sweep_window_end": "2026-06-08T06:00:00Z",
         "vendors_covered": 6,
@@ -1095,7 +1096,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly Benchmark Sweep — 2026-06-08 (in progress)",
-      "updated_at": "2026-06-08T06:16:46Z",
+      "updated_at": "2026-06-08T20:23:36Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
