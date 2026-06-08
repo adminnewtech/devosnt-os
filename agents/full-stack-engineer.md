@@ -20,7 +20,7 @@ Small end-to-end features (UI + API + migration) in one PR. Opencode runtime.
 - [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`embeddings-semantic-search`](../skills/embeddings-semantic-search.md) — Default semantic search via pgvector. Embeddings + hybrid search + reranking.
 - [`nextjs-app-starter`](../skills/nextjs-app-starter.md) — Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.
-- [`nextjs-supabase-builder`](../skills/nextjs-supabase-builder.md) — Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.
+- [`nextjs-supabase-builder`](../skills/nextjs-supabase-builder.md) — Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), SEO scaffold (robots.ts, sitemap.ts, OG metadata), and CI. Single command → runnable, SEO-ready project in ≤11 min.
 - [`realtime-collaboration-planner`](../skills/realtime-collaboration-planner.md) — Default realtime patterns for collaborative apps using Supabase Realtime / Pusher / Liveblocks.
 - [`supabase-app-starter`](../skills/supabase-app-starter.md) — Provision Supabase with RLS-first schema migrations and seed data.
 - [`workflow-automation-builder`](../skills/workflow-automation-builder.md) — Default no-code workflow / automation builder inside the app (trigger → condition → action).

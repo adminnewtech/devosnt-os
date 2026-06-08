@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **132**
+Total skills in `devosnt`: **135**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -94,6 +94,7 @@ Total skills in `devosnt`: **132**
 | [post-build-report-generator](./post-build-report-generator.md) | `release-manager`, `template-builder` | After a project lands, produce a one-page shipped/slipped/reuse report. |
 | [prd-to-user-stories](./prd-to-user-stories.md) | `ceo`, `product-manager` | Decompose a PRD into atomic build-ready user stories with acceptance criteria. |
 | [pre-build-research-gate](./pre-build-research-gate.md) | _(unowned)_ | Before any build agent writes code, run a research pass that surfaces comparable products, |
+| [pre-deploy-scan](./pre-deploy-scan.md) | _(unowned)_ | Fast (<30s) pre-flight security + SEO scan that runs before any user-facing deliverable is |
 | [product-brief-to-prd](./product-brief-to-prd.md) | `ceo`, `product-manager` | Convert an approved product brief into a complete PRD. |
 | [prompt-improvement-review](./prompt-improvement-review.md) | `prompt-optimizer`, `memory-curator` | Audit an agent's prompt + recent runs, propose targeted edits. |
 | [prompt-router-classifier](./prompt-router-classifier.md) | `ceo`, `product-manager` | Classify any raw user prompt into the right vertical builder + squad, auto-detecting Arabi |
@@ -117,6 +118,7 @@ Total skills in `devosnt`: **132**
 | [security-review-checklist](./security-review-checklist.md) | `ceo`, `quality-gate-manager`, `security-auditor` | Block release of any user-visible feature that fails the 15-point security gate. |
 | [seed-data-factory](./seed-data-factory.md) | `qa-engineer`, `template-builder` | Default seed data generator per vertical so empty states are demoable from minute one. |
 | [self-hosted-supabase-tunnel](./self-hosted-supabase-tunnel.md) | `solution-architect`, `database-architect` | Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), |
+| [seo-audit-checklist](./seo-audit-checklist.md) | _(unowned)_ | Standalone QA checklist to verify SEO readiness on any deployed web app. Run before in_rev |
 | [seo-baseline-setup](./seo-baseline-setup.md) | `frontend-engineer`, `growth-lead`, `seo-specialist` | Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang. |
 | [shopify-dashboard-builder](./shopify-dashboard-builder.md) | `integration-architect` | Build a Shopify analytics + ops dashboard via the Admin API. |
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
@@ -125,9 +127,10 @@ Total skills in `devosnt`: **132**
 | [technical-debt-tracker](./technical-debt-tracker.md) | `ceo` | After every project closes, catalog technical debt items, score by impact and fix cost, an |
 | [threat-modeling](./threat-modeling.md) | `ceo` | STRIDE threat analysis on any new app or feature before architecture is finalized. Output: |
 | [tool-comparison-workflow](./tool-comparison-workflow.md) | `research-scout`, `docs-analyst`, `tool-evaluator` | Compare 2-4 tools/services and produce a one-page decision doc. |
+| [universal-connector-install](./universal-connector-install.md) | _(unowned)_ | Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) a |
 | [usability-test-script](./usability-test-script.md) | `product-manager`, `qa-engineer` | Default 5-user usability test script for any new feature before launch. |
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |
-| [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. |
+| [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. Automatically |
 | [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
 | [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | `research-scout` | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |

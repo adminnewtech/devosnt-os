@@ -5,7 +5,7 @@
 
 ## Description
 
-Convert approved user stories into build-ready Multica issues with full DoD.
+Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.
 
 ## Owned by
 

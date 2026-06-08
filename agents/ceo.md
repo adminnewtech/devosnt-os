@@ -38,7 +38,7 @@ CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → D
 - [`security-review-checklist`](../skills/security-review-checklist.md) — Block release of any user-visible feature that fails the 15-point security gate.
 - [`technical-debt-tracker`](../skills/technical-debt-tracker.md) — After every project closes, catalog technical debt items, score by impact and fix cost, and create prioritized backlog issues for the next quarter.
 - [`threat-modeling`](../skills/threat-modeling.md) — STRIDE threat analysis on any new app or feature before architecture is finalized. Output: threat register with mitigations.
-- [`user-stories-to-issues`](../skills/user-stories-to-issues.md) — Convert approved user stories into build-ready Multica issues with full DoD.
+- [`user-stories-to-issues`](../skills/user-stories-to-issues.md) — Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.
 
 ## Instructions
 

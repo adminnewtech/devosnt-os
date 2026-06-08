@@ -20,7 +20,7 @@ Next.js + TS + Tailwind frontend implementation with accessibility + responsive.
 - [`i18n-multilang-setup`](../skills/i18n-multilang-setup.md) — Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.
 - [`landing-page-builder`](../skills/landing-page-builder.md) — Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in <1 day.
 - [`nextjs-app-starter`](../skills/nextjs-app-starter.md) — Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.
-- [`nextjs-supabase-builder`](../skills/nextjs-supabase-builder.md) — Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.
+- [`nextjs-supabase-builder`](../skills/nextjs-supabase-builder.md) — Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), SEO scaffold (robots.ts, sitemap.ts, OG metadata), and CI. Single command → runnable, SEO-ready project in ≤11 min.
 - [`pwa-offline-first`](../skills/pwa-offline-first.md) — Default PWA setup: installable, offline, push, background sync.
 - [`react-dashboard-builder`](../skills/react-dashboard-builder.md) — Build a responsive role-aware dashboard shell (sidebar + topbar + content).
 - [`realtime-dashboards-builder`](../skills/realtime-dashboards-builder.md) — Default realtime KPI dashboards with live updates, drilldowns, export.

@@ -763,10 +763,10 @@
     "config": {},
     "created_at": "2026-05-26T16:41:47Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.",
+    "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), SEO scaffold (robots.ts, sitemap.ts, OG metadata), and CI. Single command → runnable, SEO-ready project in ≤11 min.",
     "id": "9f1399a6-8cb1-4a7f-95c6-c3a4fb349184",
     "name": "nextjs-supabase-builder",
-    "updated_at": "2026-05-26T16:41:47Z",
+    "updated_at": "2026-06-08T06:19:57Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -897,6 +897,16 @@
     "id": "ba524eef-33a3-4787-96e2-d1840c5be3c5",
     "name": "pre-build-research-gate",
     "updated_at": "2026-06-04T17:55:53Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-08T06:18:10Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Fast (\u003c30s) pre-flight security + SEO scan that runs before any user-facing deliverable is marked in_review. Covers exposed secrets, missing RLS, unauthenticated write paths, env/credential patterns, and SEO basics (title, meta description, sitemap, aria-labels). Outputs a structured pass|warn|block verdict. Extends security-review-checklist (which runs later, at in_review → done).",
+    "id": "4fe7be2e-00ab-480b-b63b-bbbac2abb67c",
+    "name": "pre-deploy-scan",
+    "updated_at": "2026-06-08T06:18:10Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -1131,6 +1141,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-08T06:16:58Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Standalone QA checklist to verify SEO readiness on any deployed web app. Run before in_review → done transition on any user-facing web build.",
+    "id": "9bf9c843-adcb-4827-9a0e-ad1f78a106cb",
+    "name": "seo-audit-checklist",
+    "updated_at": "2026-06-08T06:16:58Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:27Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.",
@@ -1211,6 +1231,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-08T06:22:44Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) and expose any Multica-built app as an MCP server for Claude Desktop, ChatGPT, or Cursor — no raw credential paste.",
+    "id": "a1468c20-4dfa-423a-a54b-4a7e82a92100",
+    "name": "universal-connector-install",
+    "updated_at": "2026-06-08T06:22:44Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:54:04Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default 5-user usability test script for any new feature before launch.",
@@ -1233,10 +1263,10 @@
     "config": {},
     "created_at": "2026-05-25T10:27:53Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
-    "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
+    "description": "Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.",
     "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
     "name": "user-stories-to-issues",
-    "updated_at": "2026-05-25T10:27:53Z",
+    "updated_at": "2026-06-08T06:16:19Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

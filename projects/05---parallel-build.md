@@ -2,7 +2,7 @@
 
 - **ID:** `adf682fe-0b45-4e30-a1b6-dbd2d04ccce1`
 - **Status:** `planned`
-- **Issues:** 7 (done: 6)
+- **Issues:** 8 (done: 6)
 
 ## Description
 
@@ -10,7 +10,9 @@ Frontend, backend, mobile, integrations, automation, coding tasks executed in pa
 
 ## Open Issues (snapshot)
 
-_(no open issues)_
+| ID | Title | Status | Priority |
+|---|---|---|---|
+| DEV-232 | BUILD: Marketing website scaffold for devosnt homepage [SEO scaffold demo] | `backlog` | medium |
 
 ## Recent Done
 

@@ -146,14 +146,14 @@
         "name": "threat-modeling"
       },
       {
-        "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
+        "description": "Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.",
         "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
         "name": "user-stories-to-issues"
       }
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T04:10:14Z",
+    "updated_at": "2026-06-08T06:55:02Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -194,14 +194,14 @@
         "name": "parallel-issue-dispatcher"
       },
       {
-        "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
+        "description": "Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.",
         "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:02:40Z",
+    "updated_at": "2026-06-08T06:53:55Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -279,7 +279,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:04:13Z",
+    "updated_at": "2026-06-08T06:43:51Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:02:39Z",
+    "updated_at": "2026-06-08T07:03:40Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -398,7 +398,7 @@
         "name": "usability-test-script"
       },
       {
-        "description": "Convert approved user stories into build-ready Multica issues with full DoD.",
+        "description": "Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.",
         "id": "3ddb84b0-c603-4722-a5ee-ac0b203ae567",
         "name": "user-stories-to-issues"
       },
@@ -1092,7 +1092,7 @@
         "name": "nextjs-app-starter"
       },
       {
-        "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.",
+        "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), SEO scaffold (robots.ts, sitemap.ts, OG metadata), and CI. Single command → runnable, SEO-ready project in ≤11 min.",
         "id": "9f1399a6-8cb1-4a7f-95c6-c3a4fb349184",
         "name": "nextjs-supabase-builder"
       },
@@ -1301,7 +1301,7 @@
         "name": "nextjs-app-starter"
       },
       {
-        "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), and CI. Single command → runnable project in ≤10 min.",
+        "description": "Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), SEO scaffold (robots.ts, sitemap.ts, OG metadata), and CI. Single command → runnable, SEO-ready project in ≤11 min.",
         "id": "9f1399a6-8cb1-4a7f-95c6-c3a4fb349184",
         "name": "nextjs-supabase-builder"
       },
@@ -1972,7 +1972,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T04:07:42Z",
+    "updated_at": "2026-06-08T06:25:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2015,7 +2015,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-05-27T12:08:57Z",
+    "updated_at": "2026-06-08T06:21:19Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2157,9 +2157,9 @@
         "name": "workspace-upgrade-report"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:02:39Z",
+    "updated_at": "2026-06-08T06:44:22Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2208,9 +2208,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-04T18:14:17Z",
+    "updated_at": "2026-06-08T07:02:40Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2324,7 +2324,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-06T16:21:53Z",
+    "updated_at": "2026-06-08T06:42:15Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
