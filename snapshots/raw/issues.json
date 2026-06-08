@@ -764,9 +764,9 @@
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_progress",
+      "status": "blocked",
       "title": "BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern",
-      "updated_at": "2026-06-08T16:21:59Z",
+      "updated_at": "2026-06-08T18:05:03Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
