@@ -755,7 +755,7 @@
       "metadata": {
         "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate",
-        "retry_log": 2,
+        "retry_log": 3,
         "skill_id": "a1468c20-4dfa-423a-a54b-4a7e82a92100"
       },
       "number": 223,
@@ -766,7 +766,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern",
-      "updated_at": "2026-06-08T14:40:33Z",
+      "updated_at": "2026-06-08T16:21:59Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
