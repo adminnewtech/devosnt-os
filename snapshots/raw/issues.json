@@ -1081,6 +1081,7 @@
       "labels": [],
       "metadata": {
         "baseline_brief_id": "DEV-180",
+        "deploy_gate_hold_noted": true,
         "dispatched_count": 1,
         "lifecycle_phase": "integrate",
         "material_change_vendors": "Lovable,Cursor,Replit,Antigravity",
@@ -1096,7 +1097,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly Benchmark Sweep — 2026-06-08 (in progress)",
-      "updated_at": "2026-06-08T20:23:36Z",
+      "updated_at": "2026-06-08T21:48:56Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
