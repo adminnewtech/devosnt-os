@@ -33,8 +33,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T08:08:59Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -43,7 +43,9 @@
       "id": "6b0bafa6-73ae-4f9a-b6d1-4c670214c52b",
       "identifier": "DEV-200",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 200,
       "parent_issue_id": null,
       "position": -5,
@@ -52,7 +54,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "ADR-003 — Mobile Layer Default (Expo + EAS Build)",
-      "updated_at": "2026-06-01T08:10:08Z",
+      "updated_at": "2026-06-08T12:23:26Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -79,8 +81,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T04:00:06Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -92,6 +94,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-08T04:09:00Z",
+        "lifecycle_phase": "integrate",
         "lifecycle_phase_snapshot": "{\"1a1c2fb3\":\"—\",\"f3089a97\":\"—\",\"0ef266f6\":\"—\",\"88c09466\":\"—\",\"e977793d\":\"—\"}",
         "top3_count": 3
       },
@@ -103,7 +106,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-08",
-      "updated_at": "2026-06-08T04:10:05Z",
+      "updated_at": "2026-06-08T12:21:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -137,8 +140,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T04:00:03Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -147,7 +150,9 @@
       "id": "7533f071-4dc2-4ada-a340-911d3a00f677",
       "identifier": "DEV-216",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 216,
       "parent_issue_id": null,
       "position": -2,
@@ -156,12 +161,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — Weekly Loop 2026-06-08",
-      "updated_at": "2026-06-08T04:07:33Z",
+      "updated_at": "2026-06-08T12:21:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T03:00:03Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -170,7 +175,9 @@
       "id": "2ba5ff6d-9dbe-4507-8ef9-d18f0ab0e272",
       "identifier": "DEV-215",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 215,
       "parent_issue_id": null,
       "position": -2,
@@ -179,7 +186,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-08 06:00 Kuwait",
-      "updated_at": "2026-06-08T03:05:11Z",
+      "updated_at": "2026-06-08T12:21:49Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -210,8 +217,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-07T04:00:05Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -223,6 +230,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-07T04:06:31Z",
+        "lifecycle_phase": "integrate",
         "lifecycle_phase_snapshot": "{}",
         "top3_count": 3
       },
@@ -234,12 +242,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-07",
-      "updated_at": "2026-06-07T04:06:46Z",
+      "updated_at": "2026-06-08T12:21:53Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-07T03:00:02Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -248,7 +256,9 @@
       "id": "87cf8ab1-1012-4433-a1e8-a5a5ab990e15",
       "identifier": "DEV-209",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 209,
       "parent_issue_id": null,
       "position": -2,
@@ -257,12 +267,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-07",
-      "updated_at": "2026-06-07T03:06:23Z",
+      "updated_at": "2026-06-08T12:21:58Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-06T04:00:06Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -274,6 +284,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-06T04:09:03Z",
+        "lifecycle_phase": "integrate",
         "lifecycle_phase_snapshot": "{}",
         "top3_count": 3
       },
@@ -285,12 +296,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-06",
-      "updated_at": "2026-06-06T04:09:14Z",
+      "updated_at": "2026-06-08T12:22:05Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-06T03:00:03Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -299,7 +310,9 @@
       "id": "e70860ad-b5f4-4b68-8f56-eef5b80dffb6",
       "identifier": "DEV-207",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 207,
       "parent_issue_id": null,
       "position": -2,
@@ -308,12 +321,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-06",
-      "updated_at": "2026-06-06T03:05:17Z",
+      "updated_at": "2026-06-08T12:22:12Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-05T03:00:12Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -322,7 +335,9 @@
       "id": "d82e4940-fad8-497a-8c32-f94349c5c414",
       "identifier": "DEV-205",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 205,
       "parent_issue_id": null,
       "position": -2,
@@ -331,7 +346,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-05",
-      "updated_at": "2026-06-05T03:06:20Z",
+      "updated_at": "2026-06-08T12:22:18Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -358,8 +373,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-02T03:00:01Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -368,7 +383,9 @@
       "id": "8342a098-fb95-481f-bc02-dd4801d4b75f",
       "identifier": "DEV-201",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 201,
       "parent_issue_id": null,
       "position": -2,
@@ -377,7 +394,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-02",
-      "updated_at": "2026-06-02T03:04:55Z",
+      "updated_at": "2026-06-08T12:22:22Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -495,8 +512,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T04:10:07Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -505,7 +522,9 @@
       "id": "653d78f8-e4a4-48da-9379-72fc6672620b",
       "identifier": "DEV-179",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 179,
       "parent_issue_id": null,
       "position": -2,
@@ -514,12 +533,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "SKILL ASSIGN: delivery-comment-checklist → QA + Build agents",
-      "updated_at": "2026-06-01T04:15:58Z",
+      "updated_at": "2026-06-08T12:22:27Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T04:00:12Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -528,7 +547,9 @@
       "id": "2de2662f-eb84-471a-bb30-262b9cddae94",
       "identifier": "DEV-177",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 177,
       "parent_issue_id": null,
       "position": -2,
@@ -537,12 +558,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — Weekly Loop 2026-06-01",
-      "updated_at": "2026-06-01T04:10:11Z",
+      "updated_at": "2026-06-08T12:22:32Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T03:00:08Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -551,7 +572,9 @@
       "id": "5676d710-66ee-4f95-9d1d-2847da568e14",
       "identifier": "DEV-175",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 175,
       "parent_issue_id": null,
       "position": -1,
@@ -560,7 +583,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-01 06:00 KWT",
-      "updated_at": "2026-06-01T03:06:01Z",
+      "updated_at": "2026-06-08T12:22:37Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -593,8 +616,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-05-27T12:43:52Z",
       "creator_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "creator_type": "member",
@@ -603,7 +626,9 @@
       "id": "35d7c5fc-2df4-4d5f-85e7-81dcfcf23add",
       "identifier": "DEV-160",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 160,
       "parent_issue_id": null,
       "position": 0,
@@ -612,11 +637,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "https://companies.sh/ ابحث وحل كل شي هنا وشوف كيف ممكن نطور الوركسبيس الحالي وشنو نضيف",
-      "updated_at": "2026-05-27T12:52:40Z",
+      "updated_at": "2026-06-08T12:28:14Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "925a3e48-37f2-4620-870c-b57fe9003981",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-05-27T07:54:32Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
@@ -626,7 +651,9 @@
       "id": "53d68ee8-38c1-486b-80f8-80c1b775e636",
       "identifier": "DEV-150",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 150,
       "parent_issue_id": null,
       "position": 0,
@@ -635,7 +662,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "SKILL: Vendor Brief + Changelog Verification — extract as reusable skill",
-      "updated_at": "2026-05-27T09:02:40Z",
+      "updated_at": "2026-06-08T12:22:46Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -802,8 +829,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-05-26T16:36:48Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -812,7 +839,9 @@
       "id": "51f4dc6c-2af0-42aa-9413-212af0b64c72",
       "identifier": "DEV-64",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 64,
       "parent_issue_id": null,
       "position": 0,
@@ -821,7 +850,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "ESCALATION: Production-credentials pack for Android Attendance — one consolidated ask",
-      "updated_at": "2026-05-26T16:42:25Z",
+      "updated_at": "2026-06-08T12:22:50Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -851,8 +880,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-05-26T16:28:13Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -863,6 +892,7 @@
       "labels": [],
       "metadata": {
         "decision": "Fast Factory Mode entered. 20 gap-closing issues created (DEV-46..DEV-65). 5 new autopilots queued. Critical asks: DEV-64 (prod creds) + DEV-65 (repo provision).",
+        "lifecycle_phase": "integrate",
         "waiting_on": "admin@newtechkw.com — approval on DEV-64 production-credentials pack (Firebase + Supabase cloud + GitHub PAT verify)"
       },
       "number": 45,
@@ -873,7 +903,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Enter Fast Factory Mode: Workspace Audit, Command Center, First 20 Issues/Skills, 24h + 7d Upgrade Plan",
-      "updated_at": "2026-05-26T16:39:01Z",
+      "updated_at": "2026-06-08T12:27:07Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -941,7 +971,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-08T11:02Z",
+        "kb_sync_status": "yellow@2026-06-08T12:02Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -953,7 +983,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-08T11:02:59Z",
+      "updated_at": "2026-06-08T12:02:45Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],

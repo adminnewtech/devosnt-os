@@ -475,8 +475,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-01T08:08:59Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -485,7 +485,9 @@
       "id": "6b0bafa6-73ae-4f9a-b6d1-4c670214c52b",
       "identifier": "DEV-200",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 200,
       "parent_issue_id": null,
       "position": -5,
@@ -494,7 +496,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "ADR-003 — Mobile Layer Default (Expo + EAS Build)",
-      "updated_at": "2026-06-01T08:10:08Z",
+      "updated_at": "2026-06-08T12:23:26Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -752,6 +754,7 @@
       "metadata": {
         "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate",
+        "retry_log": 1,
         "skill_id": "a1468c20-4dfa-423a-a54b-4a7e82a92100"
       },
       "number": 223,
@@ -762,7 +765,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern",
-      "updated_at": "2026-06-08T11:08:30Z",
+      "updated_at": "2026-06-08T12:53:45Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -792,8 +795,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T04:00:06Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -805,6 +808,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-08T04:09:00Z",
+        "lifecycle_phase": "integrate",
         "lifecycle_phase_snapshot": "{\"1a1c2fb3\":\"—\",\"f3089a97\":\"—\",\"0ef266f6\":\"—\",\"88c09466\":\"—\",\"e977793d\":\"—\"}",
         "top3_count": 3
       },
@@ -816,7 +820,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-08",
-      "updated_at": "2026-06-08T04:10:05Z",
+      "updated_at": "2026-06-08T12:21:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1093,8 +1097,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T04:00:03Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -1103,7 +1107,9 @@
       "id": "7533f071-4dc2-4ada-a340-911d3a00f677",
       "identifier": "DEV-216",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 216,
       "parent_issue_id": null,
       "position": -2,
@@ -1112,12 +1118,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — Weekly Loop 2026-06-08",
-      "updated_at": "2026-06-08T04:07:33Z",
+      "updated_at": "2026-06-08T12:21:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-08T03:00:03Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -1126,7 +1132,9 @@
       "id": "2ba5ff6d-9dbe-4507-8ef9-d18f0ab0e272",
       "identifier": "DEV-215",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 215,
       "parent_issue_id": null,
       "position": -2,
@@ -1135,7 +1143,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-08 06:00 Kuwait",
-      "updated_at": "2026-06-08T03:05:11Z",
+      "updated_at": "2026-06-08T12:21:49Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1189,8 +1197,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-07T04:00:05Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -1202,6 +1210,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-07T04:06:31Z",
+        "lifecycle_phase": "integrate",
         "lifecycle_phase_snapshot": "{}",
         "top3_count": 3
       },
@@ -1213,7 +1222,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-07",
-      "updated_at": "2026-06-07T04:06:46Z",
+      "updated_at": "2026-06-08T12:21:53Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
