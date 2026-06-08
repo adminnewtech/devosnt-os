@@ -155,6 +155,7 @@
       "labels": [],
       "metadata": {
         "candidates_total": 7,
+        "deploy_gate_hold_noted": true,
         "dispatched_count": 3,
         "imported_count": 3,
         "lifecycle_phase": "integrate",
@@ -169,7 +170,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly GitHub Research Sweep — 2026-06-08",
-      "updated_at": "2026-06-08T07:51:36Z",
+      "updated_at": "2026-06-08T08:07:19Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
