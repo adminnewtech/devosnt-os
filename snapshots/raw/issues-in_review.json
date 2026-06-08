@@ -44,6 +44,7 @@
       "identifier": "DEV-200",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 200,
@@ -54,7 +55,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "ADR-003 — Mobile Layer Default (Expo + EAS Build)",
-      "updated_at": "2026-06-08T12:23:26Z",
+      "updated_at": "2026-06-08T14:40:36Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -92,6 +93,7 @@
       "identifier": "DEV-217",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-08T04:09:00Z",
         "lifecycle_phase": "integrate",
@@ -106,7 +108,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-08",
-      "updated_at": "2026-06-08T12:21:39Z",
+      "updated_at": "2026-06-08T14:40:38Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -151,6 +153,7 @@
       "identifier": "DEV-216",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 216,
@@ -161,7 +164,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — Weekly Loop 2026-06-08",
-      "updated_at": "2026-06-08T12:21:44Z",
+      "updated_at": "2026-06-08T14:40:40Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -176,6 +179,7 @@
       "identifier": "DEV-215",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 215,
@@ -186,7 +190,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-08 06:00 Kuwait",
-      "updated_at": "2026-06-08T12:21:49Z",
+      "updated_at": "2026-06-08T14:40:42Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -228,6 +232,7 @@
       "identifier": "DEV-210",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-07T04:06:31Z",
         "lifecycle_phase": "integrate",
@@ -242,7 +247,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-07",
-      "updated_at": "2026-06-08T12:21:53Z",
+      "updated_at": "2026-06-08T14:40:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -257,6 +262,7 @@
       "identifier": "DEV-209",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 209,
@@ -267,7 +273,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-07",
-      "updated_at": "2026-06-08T12:21:58Z",
+      "updated_at": "2026-06-08T14:40:47Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -282,6 +288,7 @@
       "identifier": "DEV-208",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-06T04:09:03Z",
         "lifecycle_phase": "integrate",
@@ -296,7 +303,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-06",
-      "updated_at": "2026-06-08T12:22:05Z",
+      "updated_at": "2026-06-08T14:40:49Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -311,6 +318,7 @@
       "identifier": "DEV-207",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 207,
@@ -321,7 +329,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-06",
-      "updated_at": "2026-06-08T12:22:12Z",
+      "updated_at": "2026-06-08T14:40:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -336,6 +344,7 @@
       "identifier": "DEV-205",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 205,
@@ -346,7 +355,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-05",
-      "updated_at": "2026-06-08T12:22:18Z",
+      "updated_at": "2026-06-08T14:40:53Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -384,6 +393,7 @@
       "identifier": "DEV-201",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 201,
@@ -394,7 +404,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-02",
-      "updated_at": "2026-06-08T12:22:22Z",
+      "updated_at": "2026-06-08T14:40:56Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -523,6 +533,7 @@
       "identifier": "DEV-179",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 179,
@@ -533,7 +544,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "SKILL ASSIGN: delivery-comment-checklist → QA + Build agents",
-      "updated_at": "2026-06-08T12:22:27Z",
+      "updated_at": "2026-06-08T14:40:58Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -548,6 +559,7 @@
       "identifier": "DEV-177",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 177,
@@ -558,7 +570,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — Weekly Loop 2026-06-01",
-      "updated_at": "2026-06-08T12:22:32Z",
+      "updated_at": "2026-06-08T14:41:00Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -573,6 +585,7 @@
       "identifier": "DEV-175",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 175,
@@ -583,7 +596,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-01 06:00 KWT",
-      "updated_at": "2026-06-08T12:22:37Z",
+      "updated_at": "2026-06-08T14:41:03Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -627,6 +640,7 @@
       "identifier": "DEV-160",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 160,
@@ -637,7 +651,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "https://companies.sh/ ابحث وحل كل شي هنا وشوف كيف ممكن نطور الوركسبيس الحالي وشنو نضيف",
-      "updated_at": "2026-06-08T12:28:14Z",
+      "updated_at": "2026-06-08T14:41:06Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -652,6 +666,7 @@
       "identifier": "DEV-150",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 150,
@@ -662,7 +677,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "SKILL: Vendor Brief + Changelog Verification — extract as reusable skill",
-      "updated_at": "2026-06-08T12:22:46Z",
+      "updated_at": "2026-06-08T14:41:08Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -840,6 +855,7 @@
       "identifier": "DEV-64",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 64,
@@ -850,7 +866,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "ESCALATION: Production-credentials pack for Android Attendance — one consolidated ask",
-      "updated_at": "2026-06-08T12:22:50Z",
+      "updated_at": "2026-06-08T14:41:10Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -971,7 +987,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-08T13:03Z",
+        "kb_sync_status": "yellow@2026-06-08T14:02Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -983,7 +999,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-08T13:04:11Z",
+      "updated_at": "2026-06-08T14:02:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
