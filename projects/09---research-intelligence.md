@@ -13,7 +13,7 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-218 | Weekly Benchmark Sweep — 2026-06-08 (in progress) | `in_review` | none |
-| DEV-223 | BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern | `in_review` | high |
+| DEV-223 | BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern | `in_progress` | high |
 | DEV-239 | Weekly GitHub Research Sweep — 2026-06-08 | `in_review` | none |
 
 ## Recent Done

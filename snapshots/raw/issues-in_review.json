@@ -79,31 +79,6 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-06-08T06:14:19Z",
-      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "creator_type": "agent",
-      "description": "## BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern\n\n**Source sweep:** DEV-218 — Weekly Benchmark Sweep 2026-06-08\n**Score:** 12.0 (frequency=3/6, impact=4, effort=S)\n\n---\n\n## Input\n\n**Pattern observed:** 3 of 6 benchmarked vendors now ship MCP/connector-as-app-install as a first-class feature:\n- **Lovable** (Jun 3, 2026): Launched mcp.lovable.dev MCP server on ALL plans (including free), enabling any MCP-compatible client (ChatGPT, Claude Desktop, Cursor, etc.) to call Lovable as a tool. Also added a connector sidebar with permission controls.\n- **Replit Agent** (Jun 1–5, 2026): One-click Stripe and Microsoft Fabric integration with no API key copying — user grants permission, not credentials.\n- **Bolt.new** (May 29, 2026): Design System Agents — ingest team's npm package, Storybook, or repo as a \"connector\" that Bolt uses for every generation in that project.\n\nThe pattern is a structural shift: integrations go from \"paste API key\" → \"install connector as app\" (OAuth grant + permission model). The secondary form is: \"expose your platform as an MCP server so external clients can drive it.\"\n\n---\n\n## Expected Output\n\nA new Multica skill `universal-connector-install` that:\n\n1. **Templates integration scaffolding as installable connector patterns** — OAuth-grant-based, not credential-paste. Covers at least: Stripe, Supabase, third-party REST APIs.\n2. **MCP server exposure template** — if a client asks to expose their Multica-built app as an MCP server (for use with Claude Desktop, ChatGPT, Cursor), provides the SKILL.md + scaffold code to wire it up.\n3. **Connector sidebar spec** — a standard UX pattern (issue template or UI spec) for surfacing available connectors with permission controls in generated apps.\n\n---\n\n## Acceptance Criteria\n\n- [ ] `universal-connector-install` SKILL.md written and registered in workspace (08 - Skill Library)\n- [ ] Covers: OAuth-based connector install, credential-free integration scaffolding, MCP server exposure option\n- [ ] Trigger phrases defined and tested on 2 scenarios (Stripe integration, MCP server setup)\n- [ ] Security model documented: what the MCP server exposes vs. what it doesn't, auth requirements\n- [ ] No API keys or credentials stored in the skill definition itself\n\n---\n\n## Dependencies\n\n- Security review of the MCP server exposure scaffold (create as sub-issue before final approval)\n\n---\n\n## Risk\n\n**Medium** — MCP server exposure has a security surface area: what the server exposes to external clients must be explicitly scoped. The credential-free connector pattern itself is low-risk (follows OAuth best practices).\n\n---\n\n## Definition of Done\n\n- [ ] Skill file written, passing quality checklist, and merged to skill library\n- [ ] Skill registered in workspace and triggerable\n- [ ] Connector install pattern tested end-to-end on at least one integration (Stripe)\n- [ ] MCP server template tested with at least one MCP client (Claude Desktop or Cursor)\n- [ ] Security model review attached as comment\n- [ ] Skill extraction report updated (3-times rule check)",
-      "due_date": null,
-      "id": "398409f4-bca3-4255-b7f3-79669e5e7fd6",
-      "identifier": "DEV-223",
-      "labels": [],
-      "metadata": {
-        "skill_id": "a1468c20-4dfa-423a-a54b-4a7e82a92100"
-      },
-      "number": 223,
-      "parent_issue_id": "da479879-0f11-46fa-bfc4-c0100be99e44",
-      "position": -3,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "in_review",
-      "title": "BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern",
-      "updated_at": "2026-06-08T06:36:41Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-08T04:00:06Z",
@@ -966,7 +941,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-08T09:03Z",
+        "kb_sync_status": "yellow@2026-06-08T10:03Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -978,11 +953,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-08T09:03:53Z",
+      "updated_at": "2026-06-08T10:06:15Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 39
+  "total": 38
 }

@@ -739,7 +739,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-08T06:14:19Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
@@ -750,6 +750,7 @@
       "identifier": "DEV-223",
       "labels": [],
       "metadata": {
+        "lifecycle_phase": "integrate",
         "skill_id": "a1468c20-4dfa-423a-a54b-4a7e82a92100"
       },
       "number": 223,
@@ -758,9 +759,9 @@
       "priority": "high",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "start_date": null,
-      "status": "in_review",
+      "status": "in_progress",
       "title": "BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern",
-      "updated_at": "2026-06-08T06:36:41Z",
+      "updated_at": "2026-06-08T10:42:18Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
