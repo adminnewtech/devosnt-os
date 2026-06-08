@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 75 (done: 52)
+- **Issues:** 76 (done: 52)
 
 ## Description
 
@@ -27,17 +27,18 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-210 | Daily Command Center Digest — 2026-06-07 | `in_review` | none |
 | DEV-211 | Workspace Upgrade Report — 2026-06-07 | `in_review` | none |
 | DEV-214 | Workspace Upgrade Action — Capture in_review queue-clog as standing workspace me | `in_review` | high |
-| DEV-215 | Daily Factory Health Audit — 2026-06-08 06:00 Kuwait | `in_progress` | none |
+| DEV-215 | Daily Factory Health Audit — 2026-06-08 06:00 Kuwait | `in_review` | none |
+| DEV-217 | Daily Command Center Digest — 2026-06-08 | `in_progress` | none |
 
 ## Recent Done
 
 - DEV-212 — Workspace Upgrade Action — Build in-review-triage automation skill
 - DEV-213 — Workspace Upgrade Action — Rewrite admin-escalation prompt to drive credential u
 - DEV-168 — Factory Health Audit — 2026-05-31
-- DEV-166 — Factory Health Audit — 2026-05-30
 - DEV-206 — Daily Command Center Digest — 2026-06-05
 - DEV-202 — Daily Command Center Digest — 2026-06-02
 - DEV-178 — Daily Command Center Digest — 2026-06-01
 - DEV-170 — Daily Command Center Digest — 2026-05-31
-- DEV-167 — Daily Command Center Digest — 2026-05-30
 - DEV-172 — Workspace Upgrade Action — Fix quality-gate-manager prompt: auto-close autopilot
+- DEV-198 — ARCH ACTION: Document runtime failover policy for CEO agent orchestration
+- DEV-173 — Workspace Upgrade Action — Sweep and close 27 stale in_review autopilot issues

@@ -2,7 +2,7 @@
 
 - **ID:** `88c09466-8a25-419d-b28e-d3d5973197c4`
 - **Status:** `planned`
-- **Issues:** 26 (done: 16)
+- **Issues:** 27 (done: 16)
 
 ## Description
 
@@ -14,6 +14,7 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 |---|---|---|---|
 | DEV-177 | Skill Improvement Review — Weekly Loop 2026-06-01 | `in_review` | none |
 | DEV-179 | SKILL ASSIGN: delivery-comment-checklist → QA + Build agents | `in_review` | medium |
+| DEV-216 | Skill Improvement Review — 2026-06-08 | `in_progress` | none |
 
 ## Recent Done
 
