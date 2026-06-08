@@ -14,7 +14,7 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 |---|---|---|---|
 | DEV-177 | Skill Improvement Review — Weekly Loop 2026-06-01 | `in_review` | none |
 | DEV-179 | SKILL ASSIGN: delivery-comment-checklist → QA + Build agents | `in_review` | medium |
-| DEV-216 | Skill Improvement Review — 2026-06-08 | `in_progress` | none |
+| DEV-216 | Skill Improvement Review — Weekly Loop 2026-06-08 | `in_review` | none |
 
 ## Recent Done
 

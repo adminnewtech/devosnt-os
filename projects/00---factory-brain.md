@@ -28,7 +28,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-211 | Workspace Upgrade Report — 2026-06-07 | `in_review` | none |
 | DEV-214 | Workspace Upgrade Action — Capture in_review queue-clog as standing workspace me | `in_review` | high |
 | DEV-215 | Daily Factory Health Audit — 2026-06-08 06:00 Kuwait | `in_review` | none |
-| DEV-217 | Daily Command Center Digest — 2026-06-08 | `in_progress` | none |
+| DEV-217 | Daily Command Center Digest — 2026-06-08 | `in_review` | none |
 
 ## Recent Done
 
