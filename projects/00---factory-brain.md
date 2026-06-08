@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 74 (done: 52)
+- **Issues:** 75 (done: 52)
 
 ## Description
 
@@ -27,6 +27,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-210 | Daily Command Center Digest — 2026-06-07 | `in_review` | none |
 | DEV-211 | Workspace Upgrade Report — 2026-06-07 | `in_review` | none |
 | DEV-214 | Workspace Upgrade Action — Capture in_review queue-clog as standing workspace me | `in_review` | high |
+| DEV-215 | Daily Factory Health Audit — 2026-06-08 06:00 Kuwait | `in_progress` | none |
 
 ## Recent Done
 
