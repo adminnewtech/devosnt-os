@@ -1051,6 +1051,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-08T07:21:44Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on macOS, bubblewrap on Linux) with explicit filesystem write paths and network domain allowlists using @anthropic-ai/sandbox-runtime (srt). No Docker required.",
+    "id": "a8e38853-76a2-4e9b-b29c-6db0f7e6f3c3",
+    "name": "sandbox-process-runner",
+    "updated_at": "2026-06-08T07:21:44Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-27T13:02:59Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Static Application Security Testing: scan source code for security vulnerabilities before every PR merge. Integrates with CI/CD.",
@@ -1187,6 +1197,35 @@
     "id": "a7067388-ff05-4abb-a9fe-5c07ad8ff9a0",
     "name": "supabase-app-starter",
     "updated_at": "2026-05-25T10:41:35Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-08T07:21:10Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Configure and validate the official Supabase MCP server so AI agents can operate directly on Supabase databases with least-privilege access.",
+    "id": "e2ba4fd6-d28a-484e-aced-d73bde1802bd",
+    "name": "supabase-mcp-setup",
+    "updated_at": "2026-06-08T07:21:10Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {
+      "origin": {
+        "owner": "supabase",
+        "path": "skills/supabase-postgres-best-practices",
+        "ref": "main",
+        "repo": "agent-skills",
+        "source_url": "https://github.com/supabase/agent-skills/tree/main/skills/supabase-postgres-best-practices",
+        "type": "github"
+      }
+    },
+    "created_at": "2026-06-08T07:16:45Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+    "id": "5aeb4a66-ceff-451d-bef2-8beda050413a",
+    "name": "supabase-postgres-best-practices",
+    "updated_at": "2026-06-08T07:16:45Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

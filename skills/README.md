@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **135**
+Total skills in `devosnt`: **138**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -109,6 +109,7 @@ Total skills in `devosnt`: **135**
 | [reusable-template-extractor](./reusable-template-extractor.md) | `ceo`, `claude-code-lead-developer`, `skill-builder`, `template-builder` | Promote a 3-times-repeated workflow into a reusable skill or template. |
 | [rollback-plan-generator](./rollback-plan-generator.md) | `deployment-engineer`, `environment-manager`, `release-manager` | Produce a deploy-specific rollback plan the on-call can execute under stress. |
 | [rtl-arabic-ui-planner](./rtl-arabic-ui-planner.md) | `arabic-rtl-experience-agent` | Plan an RTL-correct Arabic UI variant with Kuwaiti-Arabic copy guidance. |
+| [sandbox-process-runner](./sandbox-process-runner.md) | _(unowned)_ | Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on macOS, bubble |
 | [sast-scan](./sast-scan.md) | `ceo` | Static Application Security Testing: scan source code for security vulnerabilities before  |
 | [school-system-builder](./school-system-builder.md) | `solution-architect` | Build a school / SIS system: students, classes, attendance, grades, parents, fees. |
 | [search-system-builder](./search-system-builder.md) | `solution-architect` | Default end-user search with autocomplete, typo tolerance, filters, facets. |
@@ -123,6 +124,8 @@ Total skills in `devosnt`: **135**
 | [shopify-dashboard-builder](./shopify-dashboard-builder.md) | `integration-architect` | Build a Shopify analytics + ops dashboard via the Admin API. |
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
+| [supabase-mcp-setup](./supabase-mcp-setup.md) | _(unowned)_ | Configure and validate the official Supabase MCP server so AI agents can operate directly  |
+| [supabase-postgres-best-practices](./supabase-postgres-best-practices.md) | _(unowned)_ | Postgres performance optimization and best practices from Supabase. Use this skill when wr |
 | [tdd-mastery](./tdd-mastery.md) | `qa-engineer` | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
 | [technical-debt-tracker](./technical-debt-tracker.md) | `ceo` | After every project closes, catalog technical debt items, score by impact and fix cost, an |
 | [threat-modeling](./threat-modeling.md) | `ceo` | STRIDE threat analysis on any new app or feature before architecture is finalized. Output: |

@@ -13,10 +13,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-200 | ADR-003 — Mobile Layer Default (Expo + EAS Build) | `in_review` | medium |
-| DEV-205 | Factory Health Audit — 2026-06-05 | `in_review` | none |
-| DEV-207 | Factory Health Audit — 2026-06-06 | `in_review` | none |
-| DEV-208 | Daily Command Center Digest — 2026-06-06 | `in_review` | none |
-| DEV-209 | Factory Health Audit — 2026-06-07 | `in_review` | none |
 | DEV-210 | Daily Command Center Digest — 2026-06-07 | `in_review` | none |
 | DEV-211 | Workspace Upgrade Report — 2026-06-07 | `in_review` | none |
 | DEV-214 | Workspace Upgrade Action — Capture in_review queue-clog as standing workspace me | `in_review` | high |
@@ -27,7 +23,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 - DEV-212 — Workspace Upgrade Action — Build in-review-triage automation skill
 - DEV-213 — Workspace Upgrade Action — Rewrite admin-escalation prompt to drive credential u
-- DEV-206 — Daily Command Center Digest — 2026-06-05
 - DEV-178 — Daily Command Center Digest — 2026-06-01
 - DEV-198 — ARCH ACTION: Document runtime failover policy for CEO agent orchestration
 - DEV-174 — Workspace Upgrade Action — Diagnose and rewrite android-apk-local-builder skill 

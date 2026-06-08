@@ -1,13 +1,13 @@
 # Integration Audit Report
 
-_Generated: 2026-06-08T07:04:33.187192+00:00_
+_Generated: 2026-06-08T08:03:04.747907+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 8 |
+| orphan_skills | 11 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
@@ -15,18 +15,18 @@ _Generated: 2026-06-08T07:04:33.187192+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 0 |
-| in_review_parent_count | 11 |
+| in_review_parent_count | 8 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 135 (owned: 127, orphan: 8)
+- **Skills:** 138 (owned: 127, orphan: 11)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 8 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 11 warnings, no blockers
 
 ## Findings
 
@@ -38,7 +38,10 @@ _Generated: 2026-06-08T07:04:33.187192+00:00_
 | 🟡 WARN | `skill.orphan` | Skill `in-review-triage` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `pre-build-research-gate` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `pre-deploy-scan` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `sandbox-process-runner` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `seo-audit-checklist` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `supabase-mcp-setup` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `supabase-postgres-best-practices` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `universal-connector-install` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

@@ -153,7 +153,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:55:02Z",
+    "updated_at": "2026-06-08T07:43:05Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -199,9 +199,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:53:55Z",
+    "updated_at": "2026-06-08T08:01:38Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -279,7 +279,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:43:51Z",
+    "updated_at": "2026-06-08T07:42:08Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +327,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-08T07:03:40Z",
+    "updated_at": "2026-06-08T08:01:38Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1639,7 +1639,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-01T07:12:50Z",
+    "updated_at": "2026-06-08T07:17:43Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1972,7 +1972,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:25:01Z",
+    "updated_at": "2026-06-08T07:22:17Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2208,9 +2208,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T07:02:40Z",
+    "updated_at": "2026-06-08T07:43:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2324,7 +2324,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T06:42:15Z",
+    "updated_at": "2026-06-08T07:53:41Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
