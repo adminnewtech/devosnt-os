@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 77 (done: 52)
+- **Issues:** 78 (done: 52)
 
 ## Description
 
@@ -13,11 +13,11 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-200 | ADR-003 — Mobile Layer Default (Expo + EAS Build) | `in_review` | medium |
-| DEV-211 | Workspace Upgrade Report — 2026-06-07 | `in_review` | none |
 | DEV-214 | Workspace Upgrade Action — Capture in_review queue-clog as standing workspace me | `in_review` | high |
 | DEV-215 | Daily Factory Health Audit — 2026-06-08 06:00 Kuwait | `in_review` | none |
 | DEV-217 | Daily Command Center Digest — 2026-06-08 | `in_review` | none |
-| DEV-247 | Factory Health Audit — 2026-06-09 | `in_progress` | none |
+| DEV-247 | Factory Health Audit — 2026-06-09 | `in_review` | none |
+| DEV-248 | Daily Command Center Digest — 2026-06-09 | `in_progress` | none |
 
 ## Recent Done
 
