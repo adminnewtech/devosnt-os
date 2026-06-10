@@ -94,6 +94,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-10T03:00:10Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-10 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "ba395ef7-8bea-479d-9b77-c728114fdabe",
+      "identifier": "DEV-249",
+      "labels": [],
+      "metadata": {},
+      "number": 249,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-10 06:00 Kuwait",
+      "updated_at": "2026-06-10T03:01:11Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-09T04:00:04Z",
@@ -1202,32 +1225,9 @@
       "title": "Daily Factory Health Audit — 2026-06-08 06:00 Kuwait",
       "updated_at": "2026-06-08T14:40:42Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-06-07T06:07:42Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\n\nSignal: 33 of 38 in_review issues are stale \u003e48h (87%). The workspace accumulates Daily Digest (DEV-167→DEV-210), Factory Health Audit (DEV-168→DEV-209), and QA Gate issues (DEV-132, DEV-134, DEV-135, DEV-141) that age indefinitely with no automated close path. The CEO quality-gate sweep dispatches sub-issues but autopilot-generated digest/audit issues are never auto-closed.\n\nScore: 10 (Impact=4, Effort=S, Confidence=5)\nSource: Workspace Upgrade Report 2026-06-07, DEV-211\n\n## Expected Output\n\nA new workspace skill named `in-review-triage` that:\n1. Identifies autopilot-generated issues in `in_review` stale \u003e7 days (Daily Digest, Factory Health Audit, Workspace Upgrade Report, Skill Improvement Review patterns).\n2. Posts a batch closure proposal comment on the oldest such issue listing all candidates.\n3. For issues with no open sub-issues and `last_run_verdict=posted` metadata, marks them `done` (digest delivered, no further action needed).\n4. Logs a one-line summary of how many were closed and how many were escalated to CEO.\n\n## Acceptance Criteria\n- [ ] Skill definition written and importable via `multica skill import`\n- [ ] Identifies all autopilot-generated issue patterns (Daily Digest, Health Audit, Upgrade Report, Skill Review)\n- [ ] Closes (marks done) stale digest/audit issues that have `last_run_verdict=posted` and no open children\n- [ ] Escalates ambiguous cases to CEO instead of auto-closing\n- [ ] Does not touch DEV-36\n\n## Dependencies\n- Workspace skill import capability\n- Pattern identification must be conservative (only auto-close issues with clear autopilot signatures)\n\n## Risk\nLow — auto-closing the wrong issue would lose work. Mitigate by: only closing issues with `last_run_verdict=posted` metadata OR whose title matches `Daily Digest — YYYY-MM-DD` / `Factory Health Audit — YYYY-MM-DD` / `Workspace Upgrade Report — YYYY-MM-DD` patterns, and only when they have no open children.\n\n## Definition of Done\n- Skill definition complete and registered in the workspace\n- At least 5 stale autopilot digest/audit issues closed or proposed for closure\n- Summary comment posted on DEV-211\n- No non-autopilot issues accidentally closed",
-      "due_date": null,
-      "id": "94a1a867-362e-4fc8-8f98-b8efd29b5b00",
-      "identifier": "DEV-212",
-      "labels": [],
-      "metadata": {},
-      "number": 212,
-      "parent_issue_id": "9ed15d09-fdd2-4cd5-877f-662ad1d62e2f",
-      "position": -2,
-      "priority": "high",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "start_date": null,
-      "status": "done",
-      "title": "Workspace Upgrade Action — Build in-review-triage automation skill",
-      "updated_at": "2026-06-07T06:21:18Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 248
+  "total": 249
 }

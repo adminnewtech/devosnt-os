@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 78 (done: 52)
+- **Issues:** 79 (done: 52)
 
 ## Description
 
@@ -18,10 +18,10 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-217 | Daily Command Center Digest — 2026-06-08 | `in_review` | none |
 | DEV-247 | Factory Health Audit — 2026-06-09 | `in_review` | none |
 | DEV-248 | Daily Command Center Digest — 2026-06-09 | `in_review` | none |
+| DEV-249 | Factory Health Audit — 2026-06-10 06:00 Kuwait | `in_progress` | none |
 
 ## Recent Done
 
-- DEV-212 — Workspace Upgrade Action — Build in-review-triage automation skill
 - DEV-213 — Workspace Upgrade Action — Rewrite admin-escalation prompt to drive credential u
 - DEV-178 — Daily Command Center Digest — 2026-06-01
 - DEV-198 — ARCH ACTION: Document runtime failover policy for CEO agent orchestration
