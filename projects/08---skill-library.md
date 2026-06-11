@@ -12,7 +12,6 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-216 | Skill Improvement Review — Weekly Loop 2026-06-08 | `in_review` | none |
 | DEV-224 | slash-skill-invoker | `todo` | high |
 | DEV-225 | redesign | `todo` | medium |
 | DEV-226 | accessibility | `todo` | medium |
