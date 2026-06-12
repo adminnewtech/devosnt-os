@@ -25,5 +25,5 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-245 — SECURITY REVIEW: supabase-mcp-setup import
 - DEV-243 — SECURITY REVIEW: supabase-postgres-best-practices import
 - DEV-236 — QA Gate: DEV-219 — BENCHMARK ACTION: SEO-by-default scaffolding on new app gener
-- DEV-219 — BENCHMARK ACTION: SEO-by-default scaffolding on new app generation
 - DEV-238 — QA Gate: DEV-220 — BENCHMARK ACTION: pre-deploy-scan skill
+- DEV-220 — BENCHMARK ACTION: pre-deploy-scan skill
