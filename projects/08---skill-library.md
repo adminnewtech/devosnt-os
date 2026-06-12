@@ -24,6 +24,5 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 - DEV-235 — SKILL: universal-connector-install — OAuth connector + MCP server exposure
 - DEV-233 — Test slash-skill-invoker: run /seo-review and /qa-check on 2 real build tasks
-- DEV-222 — Create slash-skill-invoker skill + 5 built-in starter skills
 - DEV-234 — SKILL UPDATE: SEO-by-default scaffold — nextjs-supabase-builder + user-stories-t
 - DEV-188 — SKILL: pre-build-research-gate — research + differentiation gate before any buil
