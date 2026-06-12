@@ -95,11 +95,11 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-12T12:00:28Z",
+      "last_run_at": "2026-06-12T15:00:16Z",
       "project_id": null,
       "status": "active",
       "title": "KB Sync — Hourly Refresh",
-      "updated_at": "2026-06-12T12:00:28Z",
+      "updated_at": "2026-06-12T15:00:16Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -112,11 +112,11 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-12T12:00:31Z",
+      "last_run_at": "2026-06-12T15:00:17Z",
       "project_id": null,
       "status": "active",
       "title": "Factory Pulse — Auto-route \u0026 Unblock",
-      "updated_at": "2026-06-12T12:00:31Z",
+      "updated_at": "2026-06-12T15:00:17Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
