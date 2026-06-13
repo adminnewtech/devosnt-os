@@ -10,9 +10,7 @@ Frontend, backend, mobile, integrations, automation, coding tasks executed in pa
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-232 | BUILD: Marketing website scaffold for devosnt homepage [SEO scaffold demo] | `backlog` | medium |
+_(no open issues)_
 
 ## Recent Done
 
