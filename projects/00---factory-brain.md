@@ -29,6 +29,5 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 ## Recent Done
 
 - DEV-213 — Workspace Upgrade Action — Rewrite admin-escalation prompt to drive credential u
-- DEV-178 — Daily Command Center Digest — 2026-06-01
 - DEV-198 — ARCH ACTION: Document runtime failover policy for CEO agent orchestration
 - DEV-199 — ARCH ACTION: Extend ADR-001 with formal mobile layer (Expo + EAS Build as defaul

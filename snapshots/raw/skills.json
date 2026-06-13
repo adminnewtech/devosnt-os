@@ -146,7 +146,7 @@
     "description": "Bootstrap a new App Hub project, GitHub repo, and codegraph baseline for every new classified App Request. Runs before app-idea-to-product-brief.",
     "id": "60aa6bfd-041b-45e0-8938-dd9d12d27d06",
     "name": "app-hub-bootstrap",
-    "updated_at": "2026-05-25T18:01:00Z",
+    "updated_at": "2026-06-13T11:57:36Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

@@ -313,7 +313,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
       "assignee_type": "squad",
       "created_at": "2026-06-07T06:08:10Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
@@ -332,7 +332,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Workspace Upgrade Action — Capture in_review queue-clog as standing workspace memory",
-      "updated_at": "2026-06-07T06:20:28Z",
+      "updated_at": "2026-06-13T11:53:42Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -727,7 +727,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
       "assignee_type": "squad",
       "created_at": "2026-06-01T06:16:29Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
@@ -746,7 +746,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "BENCHMARK ACTION: Pre-build Research Gate skill",
-      "updated_at": "2026-06-04T17:56:37Z",
+      "updated_at": "2026-06-13T11:53:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1030,32 +1030,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T16:59:04Z",
-      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "creator_type": "agent",
-      "description": "# Top-20 MCP Server Inventory — devosnt App Factory\n\n**Prepared by:** research-scout · **Date:** 2026-05-26  \n**Parent:** DEV-61 · **Stack baseline:** Next.js + Supabase + Vercel\n\n---\n\n## Methodology\n\nSurveyed 30 candidates across official registries, Anthropic/MCP reference servers, and first-party vendor implementations. Filtered against App Factory build categories (CRM, HR, delivery, booking, SaaS, dashboards, mobile) and current stack. Eliminated redundant/secondary options. 20 servers made the cut; 10 deferred or rejected with reasons.\n\n---\n\n## Top-20 Inventory\n\n| # | Server | GitHub URL | Purpose | Maintainer | Perms / Tools Exposed | Risk | Recommended Agents | Decision |\n|---|--------|-----------|---------|-----------|----------------------|------|-------------------|---------|\n| 1 | **GitHub MCP** | [github/github-mcp-server](https://github.com/github/github-mcp-server) | Repo management, issues, PRs, code review, branch ops | GitHub (official) | Full GitHub API (read + write); scoped to PAT or GitHub App token | **Medium** — token scope is critical; restrict to specific repos | claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, qa-engineer, github-analyst | **IMPORT** |\n| 2 | **Supabase MCP** | [supabase-community/supabase-mcp](https://github.com/supabase-community/supabase-mcp) | DB queries, migrations, edge functions, auth, storage — full Supabase project access | Supabase Community | 20+ tools: SQL, schema, migrations, auth admin, Storage; `read_only` flag available | **High** — management API can run migrations; use project-scoped PAT + `read_only` for non-architect agents | database-architect, backend-engineer, full-stack-engineer | **IMPORT** |\n| 3 | **Playwright MCP** | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | Browser automation, E2E testing, visual regression, web scraping | Microsoft (official) | Browser control, screenshots, form fill, network intercept; sandboxed browser context | **Medium** — autonomous browser execution; sandbox + network policy recommended | qa-engineer, bug-hunter | **IMPORT** |\n| 4 | **Context7 MCP** | [upstash/context7](https://github.com/upstash/context7) | Injects version-specific library docs into prompts; prevents hallucinated API calls | Upstash | 2 tools: `resolve-library-id`, `get-library-docs`; read-only external API call | **Low** — read-only, no data egress; requires CONTEXT7_API_KEY | frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, claude-code-lead-developer | **IMPORT** |\n| 5 | **Sentry MCP** | [getsentry/sentry-mcp](https://github.com/getsentry/sentry-mcp) | Error tracking, stack traces, performance telemetry for post-launch monitoring | Sentry (official) | Read error events, releases, issues; write: assign/resolve issues | **Medium** — exposes raw stack traces + user context; restrict to read for most agents | deployment-engineer, qa-engineer, security-auditor | **IMPORT** |\n| 6 | **Stripe MCP** | [stripe/ai](https://github.com/stripe/ai) | Payments, subscriptions, invoices, customers — 25 tools across 13 resource types | Stripe (official) | Full Stripe API; remote hosted at mcp.stripe.com with OAuth | **High** — financial data; wire test-mode key only; prod key requires explicit approval gate | integration-architect, backend-engineer | **IMPORT** |\n| 7 | **Vercel MCP** | [vercel/vercel-mcp-overview](https://github.com/vercel/vercel-mcp-overview) | Deployment status, rollback, env var management, preview URL inspection | Vercel (official) | Deploy/manage projects, list deployments, read env vars; OAuth | **Medium** — can trigger deploys; deployment-engineer should gate prod actions | deployment-engineer, environment-manager, release-manager | **IMPORT** |\n| 8 | **Figma MCP** | [figma/mcp-server-guide](https://github.com/figma/mcp-server-guide) | Design specs → code; pull design tokens, layers, annotations; write-to-canvas (beta) | Figma (official, open beta) | Read design files; write-to-canvas; hosted at mcp.figma.com | **Low** — read-only in default config; write-to-canvas gated by Figma auth | ui-designer, ux-architect, frontend-engineer | **IMPORT** |\n| 9 | **Cloudflare MCP** | [cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare) | Workers, KV, R2, D1, DNS, security rules — Cloudflare account management | Cloudflare (official) | Broad CF account access; domain-specific sub-servers available | **High** — can modify DNS + firewall rules; scope to specific zones; deployment-engineer gate | deployment-engineer, solution-architect | **IMPORT** |\n| 10 | **Memory MCP** | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Knowledge graph persistent memory (entities + relations) per agent | Anthropic / MCP steering (official) | Local file system read/write only; no external calls | **Low** — local only; choose storage path carefully | ceo, solution-architect, memory-curator, product-manager | **IMPORT** |\n| 11 | **Sequential Thinking MCP** | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Dynamic multi-step reasoning; structured thought chains | Anthropic / MCP steering (official) | No external access; pure computation | **Low** — stateless, no data egress | ceo, product-manager, api-architect, solution-architect | **IMPORT** |\n| 12 | **Fetch MCP** | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Fetch + convert web pages / docs into LLM-ready markdown | Anthropic / MCP steering (official) | External HTTP GET; URL-based; no auth | **Low** — outbound HTTP; SSRF risk if user-supplied URLs not validated | research-scout, docs-analyst, github-analyst | **IMPORT** |\n| 13 | **Git MCP** | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Local git repo operations: read history, diff, search, commits | Anthropic / MCP steering (official) | Local filesystem git ops; read + write local repo | **Low** — local only; no remote push in default config | frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer | **IMPORT** |\n| 14 | **Tavily MCP** | [tavily-ai/tavily-mcp](https://github.com/tavily-ai/tavily-mcp) | Production-ready web search + extract + crawl with citations | Tavily (official) | 4 tools: search, extract, map, crawl; requires TAVILY_API_KEY | **Low** — outbound only; paid per query | research-scout, docs-analyst, github-analyst | **IMPORT** |\n| 15 | **PostgreSQL MCP** | [crystaldba/postgres-mcp](https://github.com/crystaldba/postgres-mcp) | Schema analysis, query tuning, direct SQL for DB introspection | crystaldba (community, active) | Direct Postgres connection; read + write; connection string required | **High** — direct DB access; use read-only DB user for non-architect agents | database-architect, backend-engineer | **IMPORT (read-only user)** |\n| 16 | **Docker Hub MCP** | [docker/hub-mcp](https://github.com/docker/hub-mcp) | Container image search, repository management, Docker Hub API | Docker (official) | Docker Hub API; image pull, push, repo management | **Medium** — can push images; scope to specific org | deployment-engineer, environment-manager | **IMPORT** |\n| 17 | **Brave Search MCP** | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived) | Privacy-first web search; no tracking | Anthropic ref (archived — community forks active) | Web search API; requires BRAVE_API_KEY | **Low** — read-only; note: archived, use community fork or substitute Tavily | research-scout | **IMPORT (verify active fork — github-analyst to confirm)** |\n| 18 | **Exa MCP** | URL to be verified by github-analyst | Semantic neural web + code search; ideal for prior-art research | Exa (official) | Web + code search API; requires EXA_API_KEY | **Low** — read-only search | research-scout, github-analyst | **IMPORT (URL pending verification)** |\n| 19 | **Google Maps MCP** | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived) | Location, routing, distance — delivery + booking apps | Google / Anthropic ref (archived) | Maps API read; GOOGLE_MAPS_API_KEY required | **Low** — read-only geo data | integration-architect | **IMPORT (archived — verify maintained fork)** |\n| 20 | **Resend MCP** | URL to be verified by github-analyst | Transactional email sending for SaaS + notification flows | Resend (official or community) | Email send API; RESEND_API_KEY; From address required | **Medium** — email send; restrict to verified domain; rate-limit | integration-architect, backend-engineer | **IMPORT (URL pending verification)** |\n\n---\n\n## Rejected / Deferred (10)\n\n| Server | Reason |\n|--------|--------|\n| AWS MCP (awslabs/mcp) | Stack is Vercel + Supabase; AWS is secondary. Revisit if multi-cloud. |\n| MongoDB MCP | Stack uses PostgreSQL exclusively. Redundant. |\n| Linear MCP | Workspace uses Multica, not Linear. |\n| Discord MCP | Not in current stack; Slack preferred if comms MCP ever needed. |\n| Slack MCP | Nice-to-have for team comms automation, but not on critical path now. Defer to Q3. |\n| Notion MCP | Not in stack. If knowledge base need emerges, revisit. |\n| Terraform MCP (HashiCorp) | IaC needs currently covered by Vercel + Cloudflare native tools. Defer. |\n| dbt MCP | Analytics semantic layer; relevant only post-scale, not in build phase. |\n| Filesystem MCP | Redundant — Claude Code runtime already provides local file ops natively. |\n| Vantage MCP (cloud cost) | Useful post-launch for cost visibility. Defer until first production apps are live. |\n\n---\n\n## Top-5 Import Priority + Wiring Plan\n\n| Priority | Server | Primary Agents to Wire | Risk Mitigation | Wiring Steps |\n|----------|--------|----------------------|-----------------|-------------|\n| **P1** | GitHub MCP | claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, qa-engineer, github-analyst | Scope PAT to workspace repos only; read-only for QA agents | `multica agent update \u003cid\u003e --mcp-config ...` with token scoped per agent |\n| **P2** | Supabase MCP | database-architect, backend-engineer, full-stack-engineer | `project_ref` scoped per app; `read_only: true` for engineer agents; management-level only for database-architect | Set per-agent `mcp_config` with separate tokens per role |\n| **P3** | Playwright MCP | qa-engineer, bug-hunter | Run in sandboxed browser; no credential storage in browser session | Add to qa-engineer + bug-hunter `mcp_config`; network policy: block internal endpoints |\n| **P4** | Context7 MCP | claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer | Read-only; no sensitive data; API key from Upstash | Wire `CONTEXT7_API_KEY` via environment-manager; add to all code agent `mcp_config` |\n| **P5** | Sentry MCP | deployment-engineer, qa-engineer, security-auditor | Read-only token for qa + security; write token only for deployment-engineer | Provision Sentry auth token per agent role |\n\n---\n\n## Sources\n\n- [github/github-mcp-server](https://github.com/github/github-mcp-server)  \n- [supabase-community/supabase-mcp](https://github.com/supabase-community/supabase-mcp)  \n- [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)  \n- [upstash/context7](https://github.com/upstash/context7)  \n- [getsentry/sentry-mcp](https://github.com/getsentry/sentry-mcp)  \n- [stripe/ai](https://github.com/stripe/ai)  \n- [vercel/vercel-mcp-overview](https://github.com/vercel/vercel-mcp-overview)  \n- [figma/mcp-server-guide](https://github.com/figma/mcp-server-guide)  \n- [cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)  \n- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) (Memory, Sequential Thinking, Fetch, Git)  \n- [tavily-ai/tavily-mcp](https://github.com/tavily-ai/tavily-mcp)  \n- [crystaldba/postgres-mcp](https://github.com/crystaldba/postgres-mcp)  \n- [docker/hub-mcp](https://github.com/docker/hub-mcp)  \n- [Official MCP Registry](https://registry.modelcontextprotocol.io/)  ",
-      "due_date": null,
-      "id": "4656ad38-0684-45a6-bab1-b0d367eed6bc",
-      "identifier": "DEV-86",
-      "labels": [],
-      "metadata": {
-        "decision": "accepted_with_gates; cloudflare_mcp_vetoed"
-      },
-      "number": 86,
-      "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "in_review",
-      "title": "INVENTORY: Top-20 MCP Servers for devosnt App Factory",
-      "updated_at": "2026-05-28T18:21:38Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
       "assignee_type": "squad",
       "created_at": "2026-05-26T16:52:57Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
@@ -1074,30 +1049,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "RESEARCH DEEP-DIVE: rohitg00/awesome-claude-code-toolkit — inventory \u0026 security gate",
-      "updated_at": "2026-05-26T17:12:08Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T16:42:14Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\nEvery launching app needs a landing page that ships in \u003c1 day, is SEO-instrumented, analytics-instrumented, bilingual when the PRD is bilingual, and converts.\n\n## Expected Output\n- Skill `landing-page-builder` registered in the workspace skills catalog\n- Trigger: parent sub-issue assigned to frontend-engineer + content-writer-ar-en + seo-specialist by `growth-launch-plan`\n- Steps:\n  1. Pull PRD + brand voice + role matrix.\n  2. content-writer-ar-en drafts H1 + H2 + CTA + 3-feature bullets + social proof slot in both languages where bilingual.\n  3. seo-specialist runs `seo-baseline-setup` on the page (meta, OG, JSON-LD, robots, sitemap entry).\n  4. frontend-engineer ships the page (Next.js app router page, default stack, Tailwind, RTL-aware for Arabic).\n  5. analytics-lead wires `LandingViewed` + `PrimaryCtaFired` events.\n  6. Pin live URL to parent metadata key `landing_url` on the Growth parent.\n- Quality checklist: primary CTA above the fold, page weight \u003c200KB gzipped, Lighthouse perf \u003e85, no PII in events, Arabic copy reviewed by arabic-rtl-experience-agent.\n\n## Acceptance Criteria\n- [ ] Skill file shipped to `08 - Skill Library`\n- [ ] Skill registered in Multica skills catalog and assigned to growth-lead + content-writer-ar-en + seo-specialist + frontend-engineer\n- [ ] First run on a sample app produces a live URL pinned to `landing_url`\n\n## Dependencies\n- Growth Squad live (DEV-46)\n- `growth-launch-plan` skill exists (sibling)\n- `seo-baseline-setup` skill present (already in catalog)\n\n## Risk\nMulti-owner sub-issue can stall on coordination. Mitigation: frontend-engineer is single-point assignee; content + SEO + analytics deliver their bundles into the sub-issue as comments.\n\n## Definition of Done\nSkill registered, first landing page shipped, URL pinned, Lighthouse + Arabic + analytics gates green.",
-      "due_date": null,
-      "id": "0c39bdb9-99f2-424d-8c97-2544060cbd05",
-      "identifier": "DEV-68",
-      "labels": [],
-      "metadata": {},
-      "number": 68,
-      "parent_issue_id": "1c0c5f35-a70a-494a-b773-78282080357e",
-      "position": 0,
-      "priority": "high",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "in_review",
-      "title": "SKILL: landing-page-builder — production-ready bilingual landing page with SEO + analytics baked in",
-      "updated_at": "2026-05-26T17:12:10Z",
+      "updated_at": "2026-06-13T11:53:48Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1181,7 +1133,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
       "assignee_type": "squad",
       "created_at": "2026-05-25T17:59:32Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
@@ -1200,7 +1152,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill: app-hub-bootstrap (per-app project + GitHub repo + codegraph baseline)",
-      "updated_at": "2026-05-26T17:19:29Z",
+      "updated_at": "2026-06-13T11:58:17Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1245,7 +1197,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-13T10:03Z",
+        "kb_sync_status": "yellow@2026-06-13T11:03Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -1257,11 +1209,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-13T10:03:58Z",
+      "updated_at": "2026-06-13T11:03:06Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 48
+  "total": 46
 }

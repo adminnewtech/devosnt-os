@@ -18,10 +18,10 @@
   {
     "created_at": "2026-05-25T10:24:14Z",
     "description": "Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practices, tool evaluations.",
-    "done_count": 72,
+    "done_count": 73,
     "icon": "🔬",
     "id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-    "issue_count": 92,
+    "issue_count": 93,
     "lead_id": null,
     "lead_type": null,
     "priority": "none",
@@ -34,7 +34,7 @@
   {
     "created_at": "2026-05-25T10:24:12Z",
     "description": "Reusable skills, app templates, prompt templates, workflow templates — the workspace's compounding asset.",
-    "done_count": 20,
+    "done_count": 21,
     "icon": "📚",
     "id": "88c09466-8a25-419d-b28e-d3d5973197c4",
     "issue_count": 38,
