@@ -2,6 +2,31 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
+      "assignee_type": "agent",
+      "created_at": "2026-06-13T11:55:01Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Verify and decide on [DEV-187](mention://issue/46330939-7313-4f10-a4d9-0392555fe8b3).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` if the issue is user-facing.\n3. Check every item in the Definition of Done checklist.\n\n**Context for quick verification:**\n- Skill `pre-build-research-gate` v1.0.0 registered in Multica skill registry as ID `ba524eef-33a3-4787-96e2-d1840c5be3c5`\n- Skill Library issue: DEV-188 (status: done)\n- Live test performed on DEV-35 (pre-build brief posted, metadata pinned, riskiest assumption matched real blocker)\n- All 7 acceptance criteria confirmed in prior CEO runs (comments from 2026-06-01 and 2026-06-04)\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 46330939-7313-4f10-a4d9-0392555fe8b3 done`\n- VETO (DoD not met or security failure) → `multica issue status 46330939-7313-4f10-a4d9-0392555fe8b3 backlog` + `multica issue metadata set 46330939-7313-4f10-a4d9-0392555fe8b3 --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
+      "due_date": null,
+      "id": "ca0ee52b-83b2-4db0-82af-03e194722d0f",
+      "identifier": "DEV-257",
+      "labels": [],
+      "metadata": {
+        "retry_log": 3
+      },
+      "number": 257,
+      "parent_issue_id": "46330939-7313-4f10-a4d9-0392555fe8b3",
+      "position": -11,
+      "priority": "none",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "start_date": null,
+      "status": "blocked",
+      "title": "QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate skill",
+      "updated_at": "2026-06-13T18:06:24Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-08T06:14:19Z",
@@ -467,5 +492,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 18
+  "total": 19
 }

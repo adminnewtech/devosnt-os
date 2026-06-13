@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-13T18:01:37.636372+00:00_
+_Generated: 2026-06-13T19:03:30.107438+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-06-13T18:01:37.636372+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 1 |
+| blocked_issues | 2 |
 | in_review_parent_count | 13 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,12 +26,13 @@ _Generated: 2026-06-13T18:01:37.636372+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 12 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 13 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-257 blocked: QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-223 blocked: BENCHMARK ACTION: Universal MCP/connector-as-app-install pat | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `ab-test-analysis` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `growth-loop-designer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

@@ -14,7 +14,7 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 |---|---|---|---|
 | DEV-223 | BENCHMARK ACTION: Universal MCP/connector-as-app-install pattern | `blocked` | high |
 | DEV-239 | Weekly GitHub Research Sweep — 2026-06-08 | `in_review` | none |
-| DEV-257 | QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate skill | `in_progress` | none |
+| DEV-257 | QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate skill | `blocked` | none |
 
 ## Recent Done
 
