@@ -1091,6 +1091,7 @@
       "labels": [],
       "metadata": {
         "autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate",
         "squad_id": "3ff01911-bb76-4e3b-8eb9-ffbee295803a"
       },
@@ -1102,7 +1103,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Create Growth Squad + operating manual",
-      "updated_at": "2026-06-13T13:24:06Z",
+      "updated_at": "2026-06-13T15:53:23Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1177,7 +1178,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-13T14:03Z",
+        "kb_sync_status": "yellow@2026-06-13T15:02Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -1189,7 +1190,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-13T14:04:26Z",
+      "updated_at": "2026-06-13T15:02:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
