@@ -104,7 +104,9 @@
       "id": "ca0ee52b-83b2-4db0-82af-03e194722d0f",
       "identifier": "DEV-257",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "retry_log": 1
+      },
       "number": 257,
       "parent_issue_id": "46330939-7313-4f10-a4d9-0392555fe8b3",
       "position": -11,
@@ -113,7 +115,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate skill",
-      "updated_at": "2026-06-13T11:55:40Z",
+      "updated_at": "2026-06-13T14:35:23Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
