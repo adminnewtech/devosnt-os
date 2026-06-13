@@ -4,10 +4,10 @@ Scheduled / triggered automations that keep the factory running without manual i
 
 | Autopilot | Status | Mode | Last Run | Assignee |
 |---|---|---|---|---|
-| [Daily Command Center Digest](./daily-command-center-digest.md) | `active` | `create_issue` | 2026-06-12T04:00:12Z | `d9f942b9…` |
+| [Daily Command Center Digest](./daily-command-center-digest.md) | `active` | `create_issue` | 2026-06-13T04:00:16Z | `d9f942b9…` |
 | [Factory Health Daily Audit](./factory-health-daily-audit.md) | `active` | `create_issue` | 2026-06-13T03:00:14Z | `f3a68587…` |
-| [Factory Pulse — Auto-route & Unblock](./factory-pulse-auto-route-unblock.md) | `active` | `run_only` | 2026-06-13T03:00:17Z | `ebd03ec3…` |
-| [KB Sync — Hourly Refresh](./kb-sync-hourly-refresh.md) | `active` | `run_only` | 2026-06-13T03:00:16Z | `f3a68587…` |
+| [Factory Pulse — Auto-route & Unblock](./factory-pulse-auto-route-unblock.md) | `active` | `run_only` | 2026-06-13T04:00:18Z | `ebd03ec3…` |
+| [KB Sync — Hourly Refresh](./kb-sync-hourly-refresh.md) | `active` | `run_only` | 2026-06-13T04:00:16Z | `f3a68587…` |
 | [Monthly Architecture & Tool-stack Review](./monthly-architecture-tool-stack-review.md) | `active` | `create_issue` | 2026-06-01T08:00:08Z | `77da9a0d…` |
 | [Skill Improvement Weekly Loop](./skill-improvement-weekly-loop.md) | `active` | `create_issue` | 2026-06-08T04:00:03Z | `5822179b…` |
 | [Weekly Benchmark Sweep](./weekly-benchmark-sweep.md) | `active` | `create_issue` | 2026-06-08T06:00:04Z | `606dde5b…` |
