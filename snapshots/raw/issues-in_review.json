@@ -313,7 +313,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-06-07T06:08:10Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
@@ -332,7 +332,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Workspace Upgrade Action — Capture in_review queue-clog as standing workspace memory",
-      "updated_at": "2026-06-13T11:53:42Z",
+      "updated_at": "2026-06-13T12:04:37Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -727,7 +727,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-06-01T06:16:29Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
@@ -746,7 +746,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "BENCHMARK ACTION: Pre-build Research Gate skill",
-      "updated_at": "2026-06-13T11:53:44Z",
+      "updated_at": "2026-06-13T12:04:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1030,7 +1030,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-05-26T16:52:57Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
@@ -1049,7 +1049,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "RESEARCH DEEP-DIVE: rohitg00/awesome-claude-code-toolkit — inventory \u0026 security gate",
-      "updated_at": "2026-06-13T11:53:48Z",
+      "updated_at": "2026-06-13T12:04:41Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1133,29 +1133,6 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
-      "assignee_type": "squad",
-      "created_at": "2026-05-25T17:59:32Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "# Skill — `app-hub-bootstrap`\n\n**Trigger:** A new App Request lands in `01 - App Requests` AND classifier outputs `vertical: \u003cany\u003e`. Run **before** `app-idea-to-product-brief`.\n\n**Required input:** App slug (kebab-case), display name (English + Arabic), one-line purpose.\n\n## Steps\n\n1. **Create the App Hub project**\n   ```bash\n   multica project create \\\n     --title \"APP — \u003cDisplay Name\u003e\" \\\n     --icon \"\u003cemoji\u003e\" \\\n     --description \"App Hub for \u003cDisplay Name\u003e. All execution lives here (per ADR-002).\" \\\n     --lead ceo \\\n     --output json\n   ```\n   Capture the returned `id` as `\u003cAPP_PROJECT_ID\u003e`.\n\n2. **Provision the GitHub repo** (escalates to admin if no PAT in runtime env)\n   - `gh repo create newtechkw/\u003cslug\u003e --template newtechkw/app-template --private --description \"\u003cone-liner\u003e\"`\n   - Seed branches: `main` (default, protected) + `integrate` (continuous-integration target).\n   - If `GH_TOKEN` is missing → open an escalation sub-issue on the parent App Request mentioning workspace-operations-manager with the exact `gh` command, **do not proceed without the repo**.\n\n3. **Attach repo to hub**\n   ```bash\n   multica project resource add \u003cAPP_PROJECT_ID\u003e \\\n     --type github_repo \\\n     --url https://github.com/newtechkw/\u003cslug\u003e \\\n     --default-branch-hint main\n   ```\n\n4. **Initialize the codegraph baseline**\n   ```bash\n   multica repo checkout https://github.com/newtechkw/\u003cslug\u003e --ref main\n   cd \u003cslug\u003e\n   codegraph init \u0026\u0026 codegraph index\n   npx understand-anything init \u0026\u0026 npx understand-anything scan\n   git add .codegraph .understand \u0026\u0026 git commit -m \"chore: codegraph + understand baseline\" \u0026\u0026 git push\n   ```\n\n5. **MCP auth gate (mandatory if app includes any MCP server)**\n   If the app scaffold includes any MCP server:\n   - Add `MCP_SECRET=\u003cgenerate-32-char-hex\u003e` placeholder to `.env.example` (never the real value).\n   - Confirm the MCP server implementation enforces auth at the **execution layer** (not presentation-only) per `MCP_SERVER_AUTH_POLICY.md`.\n   - Create a `backlog` sub-issue assigned to security-auditor (17759d29-f9bb-4c4c-910c-b4476723db87) with title \"SECURITY REVIEW: MCP server auth for \u003cslug\u003e\". Promote it to `todo` when MCP server code is ready for review.\n   - Reference `MCP_SERVER_AUTH_POLICY.md` in the app's `CLAUDE.md` under `## Security`.\n   - **No MCP server deploy proceeds without security-auditor sign-off on that sub-issue.**\n\n6. **Pin the metadata contract on the parent App Request issue**\n   - `app_project_id=\u003cAPP_PROJECT_ID\u003e`\n   - `app_repo_url=https://github.com/newtechkw/\u003cslug\u003e`\n   - `lifecycle_phase=intake`\n   - `integration_branch=integrate`\n   - `local_run_command=\u003cinferred from template\u003e` (e.g. `pnpm dev`, `expo start`)\n   - `deploy_gate=blocked: pre-build`\n   - `codegraph_status=fresh@\u003cISO\u003e` (set by the init in step 4)\n\n7. **Hand off to Product UX Squad** by reassigning the parent issue.\n   The Product UX Squad runs `app-idea-to-product-brief` and writes the brief **inside the App Hub project**, not in `02 - Product Specs`.\n\n## Output\n\n- One Multica project (`APP — \u003cname\u003e`) ready to accept sub-issues.\n- One GitHub repo with codegraph + understand baseline.\n- Parent App Request issue carries the full metadata contract.\n- If MCP tools present: security-auditor sub-issue created in `backlog`.\n- Comment on the parent: \"App Hub bootstrap complete. Project: [link]. Repo: \u003curl\u003e. Handing to Product UX.\"\n\n## Quality checklist\n\n- [ ] Project exists with correct title + icon + lead.\n- [ ] Repo exists, both branches present, branch protection on `main`.\n- [ ] `.codegraph/codegraph.db` and `.understand/graph.json` exist on `main`.\n- [ ] Parent issue has all 7 metadata keys pinned.\n- [ ] Repo attached to project (visible in `multica project resource list \u003cAPP_PROJECT_ID\u003e`).\n- [ ] **If MCP tools present:** `.env.example` has non-empty `MCP_SECRET` placeholder; security-auditor sub-issue created in `backlog`; `MCP_SERVER_AUTH_POLICY.md` referenced in app's `CLAUDE.md`.\n\n## Failure handling\n\n- Missing GH PAT → escalation issue + halt. Do not silently skip the repo step.\n- Repo create failed (name taken) → append `-v2` and retry; pin the actual name in metadata.\n- codegraph install missing on runtime → open issue against workspace-operations-manager to install on the runtime image.\n\n## Improvement rule\n\nIf the same app vertical (e.g. CRM, HR, delivery) bootstraps ≥3 times with the same template, promote that template variant via `template-builder` (e.g. `app-template-crm`, `app-template-hr`).",
-      "due_date": null,
-      "id": "966afcbc-047b-4a86-8d5e-02d9fe5caab6",
-      "identifier": "DEV-38",
-      "labels": [],
-      "metadata": {},
-      "number": 38,
-      "parent_issue_id": "48897b79-5ef0-4ae1-9742-2d1e770bb27e",
-      "position": 0,
-      "priority": "high",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "in_review",
-      "title": "Skill: app-hub-bootstrap (per-app project + GitHub repo + codegraph baseline)",
-      "updated_at": "2026-06-13T11:58:17Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-05-25T17:57:48Z",
@@ -1197,7 +1174,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-13T11:03Z",
+        "kb_sync_status": "yellow@2026-06-13T12:01Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -1209,11 +1186,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-13T11:03:06Z",
+      "updated_at": "2026-06-13T12:02:07Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 46
+  "total": 45
 }
