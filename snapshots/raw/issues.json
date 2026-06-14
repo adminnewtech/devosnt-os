@@ -104,16 +104,21 @@
       "id": "ab01e5d6-484c-444d-8c58-e7e2f4784739",
       "identifier": "DEV-259",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-14T07:00:00Z",
+        "lifecycle_phase_snapshot": "{\"e977793d-b825-448a-a3f1-bb8f59cc1266\":\"integrate\"}",
+        "top3_count": 3
+      },
       "number": 259,
       "parent_issue_id": null,
       "position": -11,
       "priority": "none",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-14",
-      "updated_at": "2026-06-14T04:01:35Z",
+      "updated_at": "2026-06-14T04:07:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -495,7 +500,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly GitHub Research Sweep — 2026-06-08",
-      "updated_at": "2026-06-08T08:07:19Z",
+      "updated_at": "2026-06-14T04:22:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
