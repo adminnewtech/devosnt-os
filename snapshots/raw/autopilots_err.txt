@@ -1,0 +1,4 @@
+unknown command "autopilots" for "multica"
+
+Did you mean this?
+	autopilot

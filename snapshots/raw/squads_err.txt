@@ -1,0 +1,4 @@
+unknown command "squads" for "multica"
+
+Did you mean this?
+	squad
