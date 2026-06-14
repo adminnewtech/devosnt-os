@@ -1,13 +1,13 @@
 # Integration Audit Report
 
-_Generated: 2026-06-14T06:03:03.207493+00:00_
+_Generated: 2026-06-14T07:03:42.950721+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 11 |
+| orphan_skills | 10 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
@@ -21,12 +21,12 @@ _Generated: 2026-06-14T06:03:03.207493+00:00_
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 138 (owned: 127, orphan: 11)
+- **Skills:** 138 (owned: 128, orphan: 10)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 13 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 12 warnings, no blockers
 
 ## Findings
 
@@ -37,7 +37,6 @@ _Generated: 2026-06-14T06:03:03.207493+00:00_
 | 🟡 WARN | `skill.orphan` | Skill `ab-test-analysis` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `growth-loop-designer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `hipaa-compliance-checklist` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `in-review-triage` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `pre-build-research-gate` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `pre-deploy-scan` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `sandbox-process-runner` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

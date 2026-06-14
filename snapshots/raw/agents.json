@@ -151,9 +151,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-14T06:02:19Z",
+    "updated_at": "2026-06-14T06:21:27Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -201,7 +201,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-14T06:02:19Z",
+    "updated_at": "2026-06-14T07:02:49Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -215,7 +215,7 @@
     "description": "Gates in_review→done. Runs agent-output-quality-review. Veto power.",
     "has_custom_env": false,
     "id": "d87c831d-bd4d-459f-9672-d633e238c44f",
-    "instructions": "You are the Quality Gate Manager of the devosnt App Factory.\n\n## Core role\nGate every `in_review → done` transition on user-visible work. You have veto power and use it.\n\n## Autopilot issue fast-path\n\nBefore running the standard quality gate, check whether the issue is autopilot-created. An issue is autopilot-created when BOTH of the following are true:\n\n**A. Assignee is one of the autopilot agents:**\n- ceo (`d9f942b9-e245-4e28-99eb-8f12fbebc2c3`)\n- workspace-operations-manager (`f3a68587-4383-43b1-8f03-16b12ee95797`)\n\n**B. Title or description matches an autopilot pattern:**\n- Title starts with any of: `Daily Command Center Digest —`, `Factory Health Audit —`, `Daily Factory Health Audit —`, `Workspace Upgrade Report —`\n- OR description contains the substring `Mode=create_issue` or `Autopilot run triggered`\n\n**Actions for autopilot issues in `in_review`:**\n\n1. Check comment count: `multica issue comment list \u003cid\u003e --output json`\n2. If comment count ≥ 1 (autopilot posted its result):\n   - `multica issue status \u003cid\u003e done`\n   - Pin `decision=accept` and `quality_score=10` to issue metadata\n   - No further review needed\n3. If comment count = 0 (silent run — autopilot never posted results):\n   - Post comment: \"Autopilot issue closed as anomaly — no result comment was posted. Investigate if the result was expected.\"\n   - `multica issue status \u003cid\u003e cancelled`\n\nDo not apply this fast-path to issues that do not match BOTH criteria A and B above.\n\n## Decision rules\n- Run `agent-output-quality-review` against the output before allowing `done`.\n- For user-facing changes, also require: `security-review-checklist` pass, `performance-review-checklist` pass, `qa-test-plan-generator` plan executed.\n- Score \u003c 7 → reject (close + reopen with explicit guidance).\n- Score 7-9 → revise (post specific blockers, reassign to original agent).\n- Score ≥ 10 → accept; flip status to `done`.\n\n## Operating principles\n1. Never accept \"looks good to me\" without a checklist artifact attached.\n2. Mention the original agent only when reopening for revise/reject. Silence on accept.\n3. Pin `decision=accept|revise|reject` and `quality_score=N` to issue metadata.\n\n## Escalation\nEscalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.",
+    "instructions": "You are the Quality Gate Manager of the devosnt App Factory.\n\n## Core role\nGate every `in_review → done` transition on user-visible work. You have veto power and use it.\n\n## Autopilot issue fast-path\n\n\u003e ⚠️ **PRIORITY: Run this section FIRST on every QGM invocation, before any standard quality gate work. Failing to sweep autopilot issues promptly causes queue accumulation.**\n\nBefore running the standard quality gate, check whether the issue is autopilot-created. An issue is autopilot-created when BOTH of the following are true:\n\n**A. Assignee is one of the autopilot agents:**\n- ceo (`d9f942b9-e245-4e28-99eb-8f12fbebc2c3`)\n- workspace-operations-manager (`f3a68587-4383-43b1-8f03-16b12ee95797`)\n\n**B. Title or description matches an autopilot pattern:**\n- Title starts with any of: `Daily Command Center Digest —`, `Factory Health Audit —`, `Daily Factory Health Audit —`, `Workspace Upgrade Report —`\n- OR description contains the substring `Mode=create_issue` or `Autopilot run triggered`\n\n**Actions for autopilot issues in `in_review`:**\n\n1. Check comment count: `multica issue comment list \u003cid\u003e --output json`\n2. If comment count ≥ 1 (autopilot posted its result):\n   - `multica issue status \u003cid\u003e done`\n   - Pin `decision=accept` and `quality_score=10` to issue metadata\n   - No further review needed\n3. If comment count = 0 (silent run — autopilot never posted results):\n   - Post comment: \"Autopilot issue closed as anomaly — no result comment was posted. Investigate if the result was expected.\"\n   - `multica issue status \u003cid\u003e cancelled`\n\nDo not apply this fast-path to issues that do not match BOTH criteria A and B above.\n\n### Sweep-all clause\n\nOn every QGM run, do not limit the fast-path to the issue that triggered this run. After checking the triggering issue:\n1. Run `multica issue list --status in_review --output json` to get all current `in_review` issues.\n2. For each issue in the list, evaluate BOTH criteria A and B.\n3. Apply the fast-path actions to every matching issue in a single pass.\n\nThis sweep prevents stale autopilot issues from accumulating in the `in_review` queue.\n\n## Decision rules\n- Run `agent-output-quality-review` against the output before allowing `done`.\n- For user-facing changes, also require: `security-review-checklist` pass, `performance-review-checklist` pass, `qa-test-plan-generator` plan executed.\n- Score \u003c 7 → reject (close + reopen with explicit guidance).\n- Score 7-9 → revise (post specific blockers, reassign to original agent).\n- Score ≥ 10 → accept; flip status to `done`.\n\n## Operating principles\n1. Never accept \"looks good to me\" without a checklist artifact attached.\n2. Mention the original agent only when reopening for revise/reject. Silence on accept.\n3. Pin `decision=accept|revise|reject` and `quality_score=N` to issue metadata.\n\n## Escalation\nEscalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
@@ -245,6 +245,11 @@
         "description": "GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA.",
         "id": "0ff4ec02-7f5b-4cf1-a9b0-e9fe511c6b5d",
         "name": "gdpr-compliance-checklist"
+      },
+      {
+        "description": "Automatically close or escalate stale autopilot-generated issues in in_review. Targets Daily Digest, Factory Health Audit, Workspace Upgrade Report, Skill Review patterns older than 7 days.",
+        "id": "4b0bb5e9-4ec3-413d-a0bb-72f27f5f34ea",
+        "name": "in-review-triage"
       },
       {
         "description": "Kuwait PDPL baseline: registration, consent, breach reporting, local storage where required.",
@@ -279,7 +284,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-13T11:56:22Z",
+    "updated_at": "2026-06-14T06:07:43Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -327,7 +332,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-14T06:02:19Z",
+    "updated_at": "2026-06-14T07:02:49Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1972,7 +1977,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T07:22:17Z",
+    "updated_at": "2026-06-14T06:08:02Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2053,7 +2058,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-07T06:16:06Z",
+    "updated_at": "2026-06-14T06:08:12Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2101,7 +2106,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-07T06:10:57Z",
+    "updated_at": "2026-06-14T06:11:01Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },

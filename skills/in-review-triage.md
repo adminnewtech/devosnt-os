@@ -9,7 +9,7 @@ Automatically close or escalate stale autopilot-generated issues in in_review. T
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`quality-gate-manager`](../agents/quality-gate-manager.md)
 
 ## Config
 

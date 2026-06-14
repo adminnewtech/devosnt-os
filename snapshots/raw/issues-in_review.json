@@ -2,6 +2,56 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-06-14T06:07:06Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Input\n\nSignal from 2026-06-14 Workspace Upgrade Report (DEV-260):\n- 19 blocked issues, 9 of which are blocked specifically waiting on admin credentials:\n  - DEV-108: GH PAT for newtechkw org + codegraph install + Pulse v3 approval (escalation_deadline=2026-06-14 TODAY, waiting_on present since 2026-06-07)\n  - DEV-93: GitHub PAT (RW + RO) for Build Squad agents\n  - DEV-96: CONTEXT7_API_KEY for code agents\n  - DEV-97: Sentry credentials for deployment/QA/security agents\n  - DEV-126: FIGMA_TOKEN for figma-to-ux-spec skill\n  - DEV-169: CEO desktop daemon offline (urgent, since 2026-05-31)\n  - DEV-197: ADR-002 App Hub Model blockers (re-escalation, since 2026-06-01)\n  - DEV-39 + DEV-40: adminnewtech/attendance-app GitHub repo not provisioned\n- No workspace memory entry exists that standardises: (a) which credentials are outstanding, (b) when each was first requested, (c) re-escalation cadence (current pattern: silent drift for weeks).\n\n## Expected Output\n\nA set of memory entries (one per outstanding admin blocker) that the CEO/autopilot can load on each run to:\n1. Know which credentials are still missing without re-scanning all blocked issues.\n2. Know when each was first requested and when to re-escalate.\n3. Know the escalation contact (admin@newtechkw.com) and the issue to comment on.\n\nConcrete deliverables:\n- Create/update workspace memory entries documenting the outstanding blockers using available memory tooling (note in comment if a `multica memory` command exists; otherwise document the default fact-capture approach used in CLAUDE.md).\n- If no multica memory CLI exists, post a structured `##Admin Blockers Summary` comment on the Workspace Operations Dialog (DEV-36 is excluded per rules — find an appropriate ops issue or post to the parent of DEV-108) so the pattern survives across agent runs.\n- Recommended memory keys per blocker: `credential_name`, `first_requested_at`, `escalation_deadline`, `waiting_on_issue`, `re_escalation_interval_days`.\n\n## Acceptance Criteria\n\n- [ ] All 9 admin-blocked issues captured with: credential name, first-request date, deadline/urgency\n- [ ] Re-escalation cadence defined: suggest every 7 days for medium-priority, every 3 days for urgent (DEV-169)\n- [ ] Memory accessible to future CEO runs (either workspace memory or pinned ops comment)\n- [ ] DEV-108 escalation_deadline=2026-06-14 flagged as overdue → post a re-escalation note on DEV-108\n- [ ] No secrets or credential values stored — only the names/types of missing credentials\n\n## Dependencies\n\n- DEV-108 (parent blocker, today's deadline): issue ID `4850d6c3-e432-4b72-9add-1d0e27a7cfe5`\n- DEV-169 (urgent runtime offline): issue ID `4ba6e4f2-a285-4048-add8-389d8a5f5dbc`\n- No external blockers for capture; admin must supply credentials to actually unblock\n\n## Risk\n\nLow. Read-only scan + memory write. No side effects on issues except adding a re-escalation comment on DEV-108 (which is appropriate and explicitly needed — deadline passed today).\n\n## Definition of Done\n\n- Memory entries or structured comment created for all 9 admin blockers\n- Re-escalation note posted on DEV-108 (overdue today)\n- DEV-169 urgent runtime blocker flagged as top priority for admin\n- Result comment on this issue listing what was captured",
+      "due_date": null,
+      "id": "bbb249d3-b33d-45e3-b13b-ebe2805fdca5",
+      "identifier": "DEV-263",
+      "labels": [],
+      "metadata": {},
+      "number": 263,
+      "parent_issue_id": "a6b806a4-a444-46f2-ac6c-bcc363275e9d",
+      "position": -13,
+      "priority": "high",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "Workspace Upgrade Action — Capture admin-escalation blockers as memory defaults",
+      "updated_at": "2026-06-14T06:21:19Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "assignee_type": "agent",
+      "created_at": "2026-06-14T06:00:15Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Workspace Upgrade Weekly Loop — recursive workspace self-improvement. Mode=create_issue. Runs every Sunday 09:00 Asia/Kuwait (GMT+3).\n\nRun the `workspace-upgrade-report` skill against the live workspace and post a single ranked action list as a comment on the issue this autopilot creates. Auto-dispatch the top 3 actions to skill-builder, prompt-optimizer, and memory-curator. Never skip a week — a silent skip is itself a finding.\n\nCRITICAL SAFETY RULES:\n- Mode is create_issue. Do not create additional issues except the three sub-issues for top-3 dispatch in step (6).\n- NEVER mention CEO in any comment — CEO is the assignee and re-mentioning would loop (Factory Pulse v3 no-mention rule).\n- NEVER mention any agent in a wrap-up. Only mention agents to delegate first-touch work on a fresh sub-issue.\n- NEVER touch DEV-36 (the workspace-operations dialog).\n- Read each issue's metadata before pinning anything; do not log run state. Stay within the issue this autopilot creates.\n\nSTEPS:\n\n(1) Scope the scan window. Treat `since = now - 7 days` (RFC3339, UTC). Use `--output json` on every CLI call. Continue on single-call failure (log to stdout and skip that signal).\n\n(2) Collect the five input signals:\n\n   (a) retry_logs (last 7 days). Walk every issue updated in the past 7 days and pull metadata. Any `retry_log` key present is a failure signature. Aggregate by skill name / agent / failure_reason.\n       - `multica issue list --output json --status in_progress` and `--status blocked` and `--status in_review` (paged if needed).\n       - For each issue, `multica issue metadata list \u003cid\u003e --output json` — keep only entries with a `retry_log` key.\n\n   (b) Blocked issues — every issue currently `status=blocked`:\n       - `multica issue list --status blocked --output json`\n       - For each: capture id, identifier, title, assignee, age (now - updated_at), and `blocked_reason` metadata.\n\n   (c) Stale in_review (\u003e48h) — every issue currently `status=in_review` whose `updated_at` is more than 48h ago:\n       - `multica issue list --status in_review --output json`\n       - Filter client-side by `updated_at`.\n\n   (d) Agent WIP imbalance — for every agent in the workspace, count `in_progress` issues assigned to them. Flag any agent with WIP=0 (cold) or WIP≥4 (overloaded). Flag any squad whose total WIP ≥7.\n       - `multica agent list --output json`\n       - `multica issue list --status in_progress --output json` and group by `assignee_id`.\n\n   (e) Skill orphans — every skill not assigned to any agent (`agent_count==0`), and every agent with zero skills attached.\n       - `multica skill list --output json`\n       - For each skill, attempt `multica skill get \u003cid\u003e --output json` (or inspect the skill→agent join if exposed). If the CLI exposes no join command, infer from agent definitions (`multica agent get \u003cid\u003e --output json` per agent) — cap the scan at 30 agents per run.\n\n(3) Score and rank actions. For each candidate upgrade action, score on:\n   - Impact (how many issues/agents this would unblock or accelerate; 1–5)\n   - Effort (1=trivial, 5=multi-day)\n   - Confidence (1=speculative, 5=clear pattern with ≥3 occurrences)\n   Final score = (Impact × Confidence) / Effort. Surface the Top 5.\n\n(4) Compose the upgrade report comment. Post ONE comment on this autopilot's created issue, using this exact shape so step (6) can parse it:\n\n```\n# Workspace Upgrade Report — \u003cYYYY-MM-DD\u003e\n\n**Window:** \u003csince\u003e → \u003cnow\u003e (UTC)\n**Signals scanned:** retry_logs=N | blocked=N | stale_in_review_48h=N | wip_outliers=N | skill_orphans=N\n\n## Top 5 Upgrade Actions\n\n1. **\u003cshort title\u003e** — owner=\u003cagent-name\u003e | effort=\u003cS|M|L\u003e | impact=\u003c1-5\u003e | score=\u003cn\u003e\n   - Rationale: \u003cone sentence, cite source issue identifiers like DEV-NN\u003e\n   - Expected impact: \u003cone sentence\u003e\n\n2. … (same shape)\n3. … (same shape)\n4. … (same shape)\n5. … (same shape)\n\n## Signal Summary\n- Retry log hotspots: \u003cskill / agent / count\u003e …\n- Stale in_review: \u003cDEV-NN list\u003e\n- Blocked: \u003cDEV-NN list\u003e\n- WIP outliers: \u003cagent: count\u003e …\n- Skill orphans: \u003cskill names\u003e\n\n## Next Steps\n- Top 3 actions auto-dispatched to skill-builder, prompt-optimizer, memory-curator (see linked sub-issues).\n- Remaining actions parked on this issue for CEO triage.\n```\n\nPost via: `multica issue comment add \u003cthis-issue-id\u003e --content-stdin` (HEREDOC the body in). Do NOT include any `mention://agent/...` link in this comment.\n\n(5) Pin metadata on this issue ONLY if a value is materially needed by future runs. Recommended keys: `report_window_end` (RFC3339), `top_action_count` (number, expect 5), `dispatched_action_count` (number, expect 3). Use `multica issue metadata set` once each. Skip any key whose value is identical to what you already see in `metadata list`.\n\n(6) Auto-dispatch top 3 actions. Each top-3 action gets its own sub-issue under this autopilot's created issue, assigned to the named owner. Owner mapping rules:\n   - Owner agent named in the action header (skill-builder / prompt-optimizer / memory-curator) is the assignee.\n   - If the top-3 already names a different agent (e.g. action #1 is a runtime fix that belongs elsewhere), still cap dispatch at exactly three sub-issues among {skill-builder, prompt-optimizer, memory-curator}. Pick the highest-scoring action that fits each agent's domain:\n       * skill-builder → new skill, skill rewrite, skill orphan adoption\n       * prompt-optimizer → agent prompt edit, prompt-improvement-review target, retry_log root-cause in prompts\n       * memory-curator → memory cleanup, stale-fact removal, missing-default capture\n   - If no candidate fits an agent's domain this week, comment on the parent: \"No skill-builder/prompt-optimizer/memory-curator action this week — backlog empty for that lane.\" Do NOT mint a filler sub-issue.\n\n   For each of the three dispatch sub-issues:\n   - `multica issue create --title \"Workspace Upgrade Action — \u003cshort title\u003e\" --project 1a1c2fb3-41ee-4b99-b820-d10f1c564052 --parent \u003cthis-issue-id\u003e --status todo --priority high --assignee-id \u003cagent-id\u003e --description-stdin` with body that includes:\n     * Input (the signal that triggered this)\n     * Expected Output (concrete deliverable: prompt patch / new skill / memory entry)\n     * Acceptance Criteria\n     * Dependencies\n     * Risk\n     * Definition of Done\n   - The sub-issue assignment fires the agent. Do not also `@mention` the agent in the sub-issue body — assignment is the trigger.\n\n(7) Flip this issue's status to `in_review` so the CEO Command Squad can verify (`multica issue status \u003cthis-issue-id\u003e in_review`). Do NOT close it. Top-3 sub-issues stay `todo` for the owner agents.\n\n(8) Output to stdout: `Workspace Upgrade @ \u003cRFC3339\u003e | top5=5 | dispatched=N | blocked=B stale=S wip_out=W orphans=O retry=R`. This is the only non-comment output.\n\nOperating rules:\n- Never block on a single CLI failure. Log \"skipped \u003csignal\u003e: \u003creason\u003e\" and continue with the remaining signals.\n- All comments go on the auto-created issue. Never comment on DEV-36 or on issues you did not create.\n- Do not use `multica issue update --status done` anywhere. The owners close their own sub-issues.\n- Do not create more than 3 dispatch sub-issues. Cap is hard.\n- The created issue MUST land in `in_review`, never `done` — CEO verifies week-over-week trend.\n\n---\n*Autopilot run triggered at 2026-06-14 09:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "a6b806a4-a444-46f2-ac6c-bcc363275e9d",
+      "identifier": "DEV-260",
+      "labels": [],
+      "metadata": {
+        "dispatched_action_count": 3,
+        "report_window_end": "2026-06-14T06:00:00Z",
+        "top_action_count": 5
+      },
+      "number": 260,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_review",
+      "title": "Workspace Upgrade Report — 2026-06-14",
+      "updated_at": "2026-06-14T06:07:19Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-14T04:00:17Z",
@@ -1229,7 +1279,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-14T05:04Z",
+        "kb_sync_status": "yellow@2026-06-14T06:03Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -1241,11 +1291,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-14T05:04:27Z",
+      "updated_at": "2026-06-14T06:03:29Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 47
+  "total": 49
 }

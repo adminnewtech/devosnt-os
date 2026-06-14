@@ -65,7 +65,7 @@ Total skills in `devosnt`: **138**
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
 | [impact-analyst](./impact-analyst.md) | `impact-analyst` | On every Build PR, compute blast radius from the codegraph (changed symbols → callers → ca |
-| [in-review-triage](./in-review-triage.md) | _(unowned)_ | Automatically close or escalate stale autopilot-generated issues in in_review. Targets Dai |
+| [in-review-triage](./in-review-triage.md) | `quality-gate-manager` | Automatically close or escalate stale autopilot-generated issues in in_review. Targets Dai |
 | [incident-response-runbook](./incident-response-runbook.md) | `workspace-operations-manager`, `deployment-engineer` | Standard incident response: severity, comms, postmortem template. |
 | [inventory-system-builder](./inventory-system-builder.md) | `solution-architect` | Build an inventory management system (SKUs, stock, movements, counts) from preset. |
 | [kw-civil-id-validator](./kw-civil-id-validator.md) | `integration-architect` | Kuwait Civil ID validation + age/gender extraction + PACI integration helper. |

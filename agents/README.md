@@ -32,7 +32,7 @@ Total agents in `devosnt`: **41**
 | [product-manager](./product-manager.md) | `claude-sonnet-4-6` | `local` | 11 | Idea → PRD → user stories → MVP scope cut. Hands off to UX + Architecture. |
 | [prompt-optimizer](./prompt-optimizer.md) | `claude-sonnet-4-6` | `local` | 2 | Improves agent prompts via prompt-improvement-review. |
 | [qa-engineer](./qa-engineer.md) | `claude-sonnet-4-6` | `local` | 7 | Writes + executes QA test plans. Pass/fail every shippable feature. |
-| [quality-gate-manager](./quality-gate-manager.md) | `claude-sonnet-4-6` | `local` | 10 | Gates in_review→done. Runs agent-output-quality-review. Veto power. |
+| [quality-gate-manager](./quality-gate-manager.md) | `claude-sonnet-4-6` | `local` | 11 | Gates in_review→done. Runs agent-output-quality-review. Veto power. |
 | [release-manager](./release-manager.md) | `claude-sonnet-4-6` | `local` | 6 | Release notes, customer comms, post-deploy verification. |
 | [research-scout](./research-scout.md) | `claude-sonnet-4-6` | `local` | 6 | Weekly frontier scan: AI tools, SaaS competitors, patterns. |
 | [security-auditor](./security-auditor.md) | `claude-sonnet-4-6` | `local` | 9 | Runs security-review-checklist. Veto on fail. |
