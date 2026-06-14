@@ -94,6 +94,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-14T03:00:14Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-14 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "37bace6e-7b7d-4788-81d3-e28c946267e4",
+      "identifier": "DEV-258",
+      "labels": [],
+      "metadata": {},
+      "number": 258,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-14",
+      "updated_at": "2026-06-14T03:02:33Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
       "assignee_type": "agent",
       "created_at": "2026-06-13T11:55:01Z",
@@ -1200,32 +1223,9 @@
       "title": "SKILL IMPORT: ab-test-analysis",
       "updated_at": "2026-06-04T17:56:57Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-01T06:11:40Z",
-      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "creator_type": "agent",
-      "description": "## Bolt.new — Competitive Brief (2026-06-01)\n\n**Run date:** 2026-06-01 | **Window:** 2026-05-25 → 2026-06-01 | **Baseline:** DEV-62 (2026-05-26)\n\n---\n\n### What It Builds\nReact/Vite/TypeScript web apps generated entirely in-browser via StackBlitz WebContainers, with Expo-based iOS/Android from a single prompt. The AI has full filesystem, Node server, package manager, terminal, and browser console control. Design System Agents (May 29) now let teams ingest their own design system (npm package, Storybook, or repo) so Bolt generates production-fidelity code using real tokens and real components instead of hallucinated elements.\n\n### Onboarding Flow\nZero-install browser session → prompt → live app. Dual agent system: Standard (Sonnet 4.6, balanced) for routine builds; Max (Opus 4.6, deep reasoning) for complex projects. Design System Agents activated by connecting npm package/Storybook/repo. Real-time multi-user collaboration live since Apr 2026.\n\n### Pricing (2026-06-01)\n| Plan | Price | Tokens/mo | Notes |\n|------|-------|-----------|-------|\n| Free | $0 | 1M | Bolt branding on sites |\n| Pro | $25/mo | 10M+ | Token rollover, custom domains, AI image edit |\n| Teams | $30/member/mo | 10M+/member | Private NPM, Design Systems, admin controls |\n| Enterprise | Custom | Custom | SSO, audit logs, SLAs |\n\nNo changes from May 26 baseline. \"MaxPro\" appearing in UI — likely internal beta label, not a published tier.\n\n### Strengths\n1. **Design System Agents (May 29)** — Ingest team's npm package, Storybook, or repo; Bolt generates using real design tokens and real components. Closes the \"Bolt generates ugly generic UIs\" complaint. [Source: bolt.new blog, May 29 2026]\n2. **OSS surface** — `stackblitz-labs/bolt.diy` (MIT, 15+ LLM providers, 19K+ stars) enables self-hosted/custom-model deployments — no competitor has this. [Source: github.com/stackblitz-labs/bolt.diy]\n3. **Zero-install + in-browser** — No local setup, no VM spin-up latency; entire stack runs in WebContainer. [Source: bolt.new]\n\n### Weaknesses\n1. **Token wall** — High token burn on complex apps; free tier exhausts quickly; v1 hard sunset Aug 3 2026 creates migration trust gap.\n2. **Positioning drift** — \"98% less errors\" and \"1,000x larger projects\" claims without published benchmarks undermine credibility.\n3. **Deployment gap** — Bolt V2 Cloud is newer; enterprise teams may still need external infra.\n\n### Patterns to Copy\n- **Design system ingest** — accept a team's npm package or Storybook and use real tokens/components in generated code instead of generic defaults.\n- **Dual-agent routing** — route routine tasks to a fast/cheap model (Sonnet 4.6) and complex tasks to a deep-reasoning model (Opus 4.6) automatically, not manually.\n\n### Patterns to Beat\n- **v1 hard sunset (Aug 3, 2026)** — forced migrations erode trust; our rolling skill-upgrade approach keeps backward compatibility.\n- **Token opacity** — users don't know how many tokens a build will cost; our credit model should be transparent and bounded per task type.\n\n### Decision\n**Adapt** — Design System Agents and dual-agent routing are worth implementing. Design system ingest is a high-impact, low-effort skill (S effort, direct win-rate improvement for design-led clients). The v1 migration trust failure is an exploitable competitive gap.\n\n### Sources\n- https://bolt.new\n- https://bolt.new/blog (Design System Agents, May 29 2026)\n- https://github.com/stackblitz-labs/bolt.diy\n- https://bolt.new/pricing\n\n### Diff vs 2026-05-26 Baseline\n- **new_features:** Design System Agents (May 29) — ingest npm/Storybook/repo for production-fidelity code generation\n- **pricing_changes:** —\n- **new_flows:** Design System Agent onboarding (connect design system before build)\n- **removed:** \"Open in StackBlitz\" export no longer available for new projects\n- **positioning:** Speed-first → reliability/scale (\"98% less errors,\" \"1,000x larger projects\"); \"MaxPro\" internal beta label appearing in UI",
-      "due_date": null,
-      "id": "259b137a-9a83-4a1b-99ef-1ce78ef70884",
-      "identifier": "DEV-182",
-      "labels": [],
-      "metadata": {},
-      "number": 182,
-      "parent_issue_id": null,
-      "position": -3,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "done",
-      "title": "VENDOR BRIEF: Bolt.new — Weekly Benchmark Snapshot 2026-06-01",
-      "updated_at": "2026-06-01T06:11:40Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 257
+  "total": 258
 }
