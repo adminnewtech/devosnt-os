@@ -13,7 +13,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-263 | Workspace Upgrade Action — Capture admin-escalation blockers as memory defaults | `in_review` | high |
-| DEV-264 | Factory Health Audit — 2026-06-15 | `in_progress` | none |
+| DEV-264 | Factory Health Audit — 2026-06-15 | `blocked` | none |
 
 ## Recent Done
 
