@@ -2,7 +2,7 @@
 
 - **ID:** `88c09466-8a25-419d-b28e-d3d5973197c4`
 - **Status:** `planned`
-- **Issues:** 38 (done: 22)
+- **Issues:** 39 (done: 22)
 
 ## Description
 
@@ -19,6 +19,7 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 | DEV-229 | qa-check | `todo` | high |
 | DEV-230 | [TEST SCAFFOLD] Product Listing Page — demonstrates SEO AC auto-injection | `todo` | medium |
 | DEV-231 | security-scan | `todo` | high |
+| DEV-265 | Skill Improvement Review — 2026-06-15 | `in_progress` | none |
 
 ## Recent Done
 

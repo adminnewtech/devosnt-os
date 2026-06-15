@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-15T03:04:03.624048+00:00_
+_Generated: 2026-06-15T04:02:47.395220+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-06-15T03:04:03.624048+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 2 |
+| blocked_issues | 1 |
 | in_review_parent_count | 15 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,14 +26,13 @@ _Generated: 2026-06-15T03:04:03.624048+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 12 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 11 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
 | 🟡 WARN | `issue.blocked` | DEV-257 blocked: QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate | Review blocker — autopilot caps at 3 retries |
-| 🟡 WARN | `issue.blocked` | DEV-223 blocked: BENCHMARK ACTION: Universal MCP/connector-as-app-install pat | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `ab-test-analysis` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `growth-loop-designer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `hipaa-compliance-checklist` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

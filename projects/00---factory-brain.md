@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 93 (done: 54)
+- **Issues:** 94 (done: 54)
 
 ## Description
 
@@ -29,6 +29,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-260 | Workspace Upgrade Report — 2026-06-14 | `in_review` | none |
 | DEV-263 | Workspace Upgrade Action — Capture admin-escalation blockers as memory defaults | `in_review` | high |
 | DEV-264 | Factory Health Audit — 2026-06-15 | `in_progress` | none |
+| DEV-266 | Daily Command Center Digest — 2026-06-15 | `in_progress` | none |
 
 ## Recent Done
 
