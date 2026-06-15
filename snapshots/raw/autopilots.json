@@ -11,9 +11,14 @@
       "id": "048a7b9c-15dc-4baa-861f-d008c19b675a",
       "issue_title_template": "Monthly Architecture \u0026 Tool-stack Review — {{date}}",
       "last_run_at": "2026-06-01T08:00:08Z",
+      "last_run_status": "completed",
+      "next_run_at": "2026-07-01T08:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
       "title": "Monthly Architecture \u0026 Tool-stack Review",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-01T08:00:08Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
@@ -28,9 +33,14 @@
       "id": "5c4d2248-77af-47f6-bb1c-54578b8b0952",
       "issue_title_template": "Weekly Benchmark Sweep — {{date}}",
       "last_run_at": "2026-06-15T06:00:14Z",
+      "last_run_status": "completed",
+      "next_run_at": "2026-06-22T06:00:00Z",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "status": "active",
       "title": "Weekly Benchmark Sweep",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-15T06:00:14Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
@@ -45,9 +55,14 @@
       "id": "8393adbb-7250-4738-9a5b-b3bbf3480132",
       "issue_title_template": "Weekly GitHub Research Sweep — {{date}}",
       "last_run_at": "2026-06-15T07:00:15Z",
+      "last_run_status": "completed",
+      "next_run_at": "2026-06-22T07:00:00Z",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "status": "active",
       "title": "Weekly GitHub Research Sweep",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-15T07:00:15Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
@@ -62,9 +77,14 @@
       "id": "a0af1952-8173-4b21-bf8a-05940101fa4e",
       "issue_title_template": "Daily Command Center Digest — {{date}}",
       "last_run_at": "2026-06-15T04:00:17Z",
+      "last_run_status": "completed",
+      "next_run_at": "2026-06-16T04:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
       "title": "Daily Command Center Digest",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-15T04:00:17Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
@@ -79,9 +99,14 @@
       "id": "b1088844-cd4a-4139-b467-7afcd59591e1",
       "issue_title_template": "Workspace Upgrade Report — {{date}}",
       "last_run_at": "2026-06-14T06:00:15Z",
+      "last_run_status": "completed",
+      "next_run_at": "2026-06-21T06:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
       "title": "Workspace Upgrade Weekly Loop",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-14T06:00:15Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
@@ -95,11 +120,16 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-15T10:00:16Z",
+      "last_run_at": "2026-06-15T11:00:03Z",
+      "last_run_status": "running",
+      "next_run_at": "2026-06-15T12:00:00Z",
       "project_id": null,
       "status": "active",
       "title": "KB Sync — Hourly Refresh",
-      "updated_at": "2026-06-15T10:00:16Z",
+      "trigger_kinds": [
+        "schedule"
+      ],
+      "updated_at": "2026-06-15T11:00:03Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -112,11 +142,16 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-15T10:00:19Z",
+      "last_run_at": "2026-06-15T11:00:06Z",
+      "last_run_status": "running",
+      "next_run_at": "2026-06-15T11:15:00Z",
       "project_id": null,
       "status": "active",
       "title": "Factory Pulse — Auto-route \u0026 Unblock",
-      "updated_at": "2026-06-15T10:00:19Z",
+      "trigger_kinds": [
+        "schedule"
+      ],
+      "updated_at": "2026-06-15T11:00:06Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -130,9 +165,14 @@
       "id": "656afad6-c9eb-40b3-8fb3-26ef3676f859",
       "issue_title_template": "Skill Improvement Review — {{date}}",
       "last_run_at": "2026-06-15T04:00:16Z",
+      "last_run_status": "completed",
+      "next_run_at": "2026-06-22T04:00:00Z",
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "status": "active",
       "title": "Skill Improvement Weekly Loop",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-15T04:00:16Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
@@ -147,9 +187,14 @@
       "id": "0cf43035-4ef9-4b41-b99a-9f84a4ec9872",
       "issue_title_template": "Factory Health Audit — {{date}}",
       "last_run_at": "2026-06-15T03:00:16Z",
+      "last_run_status": "failed",
+      "next_run_at": "2026-06-16T03:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
       "title": "Factory Health Daily Audit",
+      "trigger_kinds": [
+        "schedule"
+      ],
       "updated_at": "2026-06-15T03:00:16Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
