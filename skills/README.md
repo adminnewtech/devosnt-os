@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **138**
+Total skills in `devosnt`: **140**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -133,11 +133,13 @@ Total skills in `devosnt`: **138**
 | [universal-connector-install](./universal-connector-install.md) | _(unowned)_ | Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) a |
 | [usability-test-script](./usability-test-script.md) | `product-manager`, `qa-engineer` | Default 5-user usability test script for any new feature before launch. |
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |
+| [user-skill-creation-wizard](./user-skill-creation-wizard.md) | _(unowned)_ | Guide any workspace member through a 4-step conversation to define a mini-skill, then prod |
 | [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. Automatically |
 | [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
 | [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | `research-scout` | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |
 | [webhooks-framework-planner](./webhooks-framework-planner.md) | `api-architect`, `integration-architect`, `backend-engineer` | Default inbound + outbound webhook framework with signing, retries, and dead-letter queue. |
+| [weekly-status-email](./weekly-status-email.md) | _(unowned)_ | Generate a structured weekly status email summarizing shipped work, blockers, and next-wee |
 | [whatsapp-automation-planner](./whatsapp-automation-planner.md) | `integration-architect` | Plan a WhatsApp Business / Cloud API automation. |
 | [workflow-automation-builder](./workflow-automation-builder.md) | `full-stack-engineer` | Default no-code workflow / automation builder inside the app (trigger → condition → action |
 | [workspace-upgrade-report](./workspace-upgrade-report.md) | `workspace-operations-manager`, `memory-curator`, `research-scout` | Quarterly self-audit of the App Factory and bets for next quarter. |

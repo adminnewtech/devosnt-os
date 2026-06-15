@@ -2,7 +2,7 @@
 
 - **ID:** `88c09466-8a25-419d-b28e-d3d5973197c4`
 - **Status:** `planned`
-- **Issues:** 39 (done: 22)
+- **Issues:** 41 (done: 23)
 
 ## Description
 
@@ -20,10 +20,11 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 | DEV-230 | [TEST SCAFFOLD] Product Listing Page — demonstrates SEO AC auto-injection | `todo` | medium |
 | DEV-231 | security-scan | `todo` | high |
 | DEV-265 | Skill Improvement Review — 2026-06-15 (10 orphans, 34 stale in_review, Mode B sw | `in_review` | none |
+| DEV-270 | [Wizard Draft] weekly-status-email | `in_review` | medium |
 
 ## Recent Done
 
+- DEV-269 — Create user-skill-creation-wizard skill
 - DEV-235 — SKILL: universal-connector-install — OAuth connector + MCP server exposure
 - DEV-233 — Test slash-skill-invoker: run /seo-review and /qa-check on 2 real build tasks
 - DEV-234 — SKILL UPDATE: SEO-by-default scaffold — nextjs-supabase-builder + user-stories-t
-- DEV-188 — SKILL: pre-build-research-gate — research + differentiation gate before any buil

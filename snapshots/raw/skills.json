@@ -1300,6 +1300,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-15T06:14:00Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Guide any workspace member through a 4-step conversation to define a mini-skill, then produce a well-formed SKILL.md draft and open a Skill Library review issue.",
+    "id": "2d4c91e4-dbf9-42b0-a4d8-4b15a46a9f12",
+    "name": "user-skill-creation-wizard",
+    "updated_at": "2026-06-15T06:14:00Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:27:53Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Convert approved user stories into build-ready Multica issues with full DoD. Automatically injects SEO acceptance criteria for web app issues.",
@@ -1346,6 +1356,16 @@
     "id": "ed409334-5f25-487f-b175-9155d50b5629",
     "name": "webhooks-framework-planner",
     "updated_at": "2026-05-25T15:53:33Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-15T06:15:45Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Generate a structured weekly status email summarizing shipped work, blockers, and next-week priorities from Multica issue data.",
+    "id": "65309d94-ee9b-4404-ada7-9a7bbd949faf",
+    "name": "weekly-status-email",
+    "updated_at": "2026-06-15T06:15:45Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

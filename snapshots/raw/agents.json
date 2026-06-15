@@ -153,7 +153,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T04:06:43Z",
+    "updated_at": "2026-06-15T06:24:41Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -201,7 +201,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:02:21Z",
+    "updated_at": "2026-06-15T07:00:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -284,7 +284,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-14T06:07:43Z",
+    "updated_at": "2026-06-15T06:26:22Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -332,7 +332,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:02:20Z",
+    "updated_at": "2026-06-15T07:00:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1977,7 +1977,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T04:08:48Z",
+    "updated_at": "2026-06-15T06:16:13Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2162,9 +2162,9 @@
         "name": "workspace-upgrade-report"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:02:21Z",
+    "updated_at": "2026-06-15T06:24:36Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2213,9 +2213,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-08T07:43:20Z",
+    "updated_at": "2026-06-15T07:00:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2329,7 +2329,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-13T15:53:34Z",
+    "updated_at": "2026-06-15T06:51:40Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
