@@ -334,6 +334,7 @@
       "identifier": "DEV-270",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 270,
@@ -344,7 +345,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "[Wizard Draft] weekly-status-email",
-      "updated_at": "2026-06-15T18:52:39Z",
+      "updated_at": "2026-06-15T20:54:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -439,6 +440,7 @@
       "identifier": "DEV-265",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 265,
@@ -449,7 +451,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — 2026-06-15 (10 orphans, 34 stale in_review, Mode B sweep overdue)",
-      "updated_at": "2026-06-15T18:52:41Z",
+      "updated_at": "2026-06-15T20:54:22Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
