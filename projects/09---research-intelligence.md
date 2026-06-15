@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 93 (done: 73)
+- **Issues:** 94 (done: 73)
 
 ## Description
 
@@ -14,6 +14,7 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 |---|---|---|---|
 | DEV-239 | Weekly GitHub Research Sweep — 2026-06-08 | `in_review` | none |
 | DEV-257 | QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate skill | `blocked` | none |
+| DEV-267 | Weekly Benchmark Sweep — 2026-06-15 | `in_progress` | none |
 
 ## Recent Done
 
