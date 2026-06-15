@@ -323,8 +323,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-15T06:14:49Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -333,7 +333,9 @@
       "id": "87c6da9f-40d1-4f8e-8e41-db02b29b87eb",
       "identifier": "DEV-270",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 270,
       "parent_issue_id": null,
       "position": -11,
@@ -342,7 +344,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "[Wizard Draft] weekly-status-email",
-      "updated_at": "2026-06-15T06:16:07Z",
+      "updated_at": "2026-06-15T18:52:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -426,8 +428,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-15T04:00:16Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -436,7 +438,9 @@
       "id": "13f6597a-dcf1-44fe-889f-92999b3fe861",
       "identifier": "DEV-265",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 265,
       "parent_issue_id": null,
       "position": -11,
@@ -445,7 +449,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — 2026-06-15 (10 orphans, 34 stale in_review, Mode B sweep overdue)",
-      "updated_at": "2026-06-15T04:08:34Z",
+      "updated_at": "2026-06-15T18:52:41Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
