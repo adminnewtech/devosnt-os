@@ -41,6 +41,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-15T07:15:15Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+    "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+    "name": "aegis-method-pack",
+    "updated_at": "2026-06-15T07:15:15Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:54:02Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
@@ -431,6 +441,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-15T07:15:34Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies. Dispatches one focused agent per problem domain for concurrent investigation.",
+    "id": "53d7b1a8-1aa4-48b5-bf17-7d5909512e8f",
+    "name": "dispatching-parallel-agents",
+    "updated_at": "2026-06-15T07:15:34Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T10:41:47Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Generate developer-facing docs (README, ARCHITECTURE, RUNBOOK) from the codebase.",
@@ -477,6 +497,16 @@
     "id": "d0b5c22a-65a7-4cb8-9978-06cb5f2dc1cb",
     "name": "error-tracking-setup",
     "updated_at": "2026-05-25T15:53:28Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-15T07:16:57Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+    "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+    "name": "establishing-project-context",
+    "updated_at": "2026-06-15T07:16:57Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -1230,6 +1260,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-15T07:15:49Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+    "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+    "name": "systematic-debugging",
+    "updated_at": "2026-06-15T07:15:49Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-26T17:19:48Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primary, Python, Go) and enforced 80% line / 75% branch coverage thresholds. Pairs with qa-test-plan-generator at the QA gate.",
@@ -1246,6 +1286,16 @@
     "id": "8c279486-7301-4a6c-8f98-2592eb85edea",
     "name": "technical-debt-tracker",
     "updated_at": "2026-05-27T13:04:14Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-15T07:16:14Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.",
+    "id": "a414b918-4992-4a14-9f8b-ff665304efc5",
+    "name": "test-driven-development",
+    "updated_at": "2026-06-15T07:16:14Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {
@@ -1336,6 +1386,16 @@
     "id": "171c3217-8b5f-4ae2-bfd3-64a5c3a62b05",
     "name": "vendor-brief-changelog-verification",
     "updated_at": "2026-05-27T09:01:52Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-15T07:16:30Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+    "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+    "name": "verification-before-completion",
+    "updated_at": "2026-06-15T07:16:30Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

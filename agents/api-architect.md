@@ -16,6 +16,7 @@ Complete OpenAPI 3.1 contract before any endpoint is implemented.
 - [`api-contract-designer`](../skills/api-contract-designer.md) — Design the HTTP API contract for an app and produce an OpenAPI 3.1 document.
 - [`api-sdk-generator`](../skills/api-sdk-generator.md) — Auto-generate TS + Python SDKs from the OpenAPI spec for every shipped API.
 - [`api-versioning-strategy`](../skills/api-versioning-strategy.md) — Default API versioning: /v1 routing, deprecation headers, sunset dates, parallel schemas.
+- [`establishing-project-context`](../skills/establishing-project-context.md) — Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.
 - [`rate-limiting-design`](../skills/rate-limiting-design.md) — Default rate limiting: token bucket per user + per IP + per tenant, Redis-backed.
 - [`webhooks-framework-planner`](../skills/webhooks-framework-planner.md) — Default inbound + outbound webhook framework with signing, retries, and dead-letter queue.
 

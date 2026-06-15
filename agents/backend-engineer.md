@@ -13,6 +13,7 @@ API endpoints, DB access, jobs, webhooks. Codex runtime.
 
 ## Skills
 
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`api-contract-designer`](../skills/api-contract-designer.md) — Design the HTTP API contract for an app and produce an OpenAPI 3.1 document.
 - [`audit-log-designer`](../skills/audit-log-designer.md) — Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff.
@@ -22,6 +23,9 @@ API endpoints, DB access, jobs, webhooks. Codex runtime.
 - [`file-upload-storage-design`](../skills/file-upload-storage-design.md) — Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN.
 - [`rate-limiting-design`](../skills/rate-limiting-design.md) — Default rate limiting: token bucket per user + per IP + per tenant, Redis-backed.
 - [`supabase-app-starter`](../skills/supabase-app-starter.md) — Provision Supabase with RLS-first schema migrations and seed data.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`test-driven-development`](../skills/test-driven-development.md) — Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 - [`webhooks-framework-planner`](../skills/webhooks-framework-planner.md) — Default inbound + outbound webhook framework with signing, retries, and dead-letter queue.
 
 ## Instructions

@@ -13,10 +13,13 @@ Hunts edge-case defects QA didn't cover. Thinks like a power user/attacker.
 
 ## Skills
 
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`autonomous-test-fix-loop`](../skills/autonomous-test-fix-loop.md) — After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.
 - [`bug-report-template`](../skills/bug-report-template.md) — Standard bug report shape so issues are reproducible on first read.
 - [`dependency-vulnerability-scanner`](../skills/dependency-vulnerability-scanner.md) — Default supply chain security: npm audit + Snyk + Dependabot + lockfile lint.
 - [`error-tracking-setup`](../skills/error-tracking-setup.md) — Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 
 ## Instructions
 

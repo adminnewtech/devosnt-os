@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **140**
+Total skills in `devosnt`: **146**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -8,6 +8,7 @@ Total skills in `devosnt`: **140**
 | [ab-testing-framework](./ab-testing-framework.md) | `product-manager`, `release-manager`, `growth-lead`, `analytics-lead` | Lightweight A/B testing wired to PostHog + feature flags. |
 | [admin-console-builder](./admin-console-builder.md) | `full-stack-engineer` | Default internal admin console: tenants, users, impersonation, support actions, audit-boun |
 | [admin-guide-generator](./admin-guide-generator.md) | `documentation-agent` | Generate an end-user admin guide (EN + AR-KW when needed). |
+| [aegis-method-pack](./aegis-method-pack.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer`, `qa-engineer`, `bug-hunter`, `security-auditor`, `performance-tester` | Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or arc |
 | [agent-output-quality-review](./agent-output-quality-review.md) | `quality-gate-manager`, `memory-curator` | Score an agent's output against a 6-point rubric and decide accept/revise/reject. |
 | [agent-self-healing-policy](./agent-self-healing-policy.md) | `ceo`, `sprint-commander`, `claude-code-lead-developer`, `skill-builder`, `prompt-optimizer` | Auto-retry failed agent runs with a different runtime/model and surface only after two fai |
 | [agentic-codegen-loop](./agentic-codegen-loop.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer` | Default codegen loop for build agents: read issue → write code → run tests → revise. |
@@ -47,11 +48,13 @@ Total skills in `devosnt`: **140**
 | [dependency-vulnerability-scanner](./dependency-vulnerability-scanner.md) | `bug-hunter`, `security-auditor`, `github-analyst` | Default supply chain security: npm audit + Snyk + Dependabot + lockfile lint. |
 | [deployment-checklist](./deployment-checklist.md) | `ceo`, `deployment-engineer`, `environment-manager`, `release-manager` | Ship safely to production with a rollback drill and post-deploy smoke tests. |
 | [design-system-tokens-builder](./design-system-tokens-builder.md) | `ux-architect`, `ui-designer`, `frontend-engineer`, `mobile-engineer` | Default design system tokens: colours, type, spacing, radii, motion, generated for Tailwin |
+| [dispatching-parallel-agents](./dispatching-parallel-agents.md) | `ceo`, `sprint-commander`, `claude-code-lead-developer` | Use when facing 2+ independent tasks that can be worked on without shared state or sequent |
 | [documentation-generator](./documentation-generator.md) | `documentation-agent` | Generate developer-facing docs (README, ARCHITECTURE, RUNBOOK) from the codebase. |
 | [e2e-test-generator](./e2e-test-generator.md) | `ceo` | Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and accepta |
 | [email-marketing-builder](./email-marketing-builder.md) | `solution-architect` | Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics |
 | [embeddings-semantic-search](./embeddings-semantic-search.md) | `database-architect`, `full-stack-engineer` | Default semantic search via pgvector. Embeddings + hybrid search + reranking. |
 | [error-tracking-setup](./error-tracking-setup.md) | `bug-hunter` | Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing. |
+| [establishing-project-context](./establishing-project-context.md) | `solution-architect`, `database-architect`, `api-architect`, `integration-architect`, `claude-code-lead-developer`, `codebase-cartographer` | Use when entering a project for the first time, or when the user asks to establish shared  |
 | [external-blocker-escalation](./external-blocker-escalation.md) | `ceo` | Consolidated escalation to admin for external credential blockers. Mode A: per-issue. Mode |
 | [feature-flag-system](./feature-flag-system.md) | `release-manager` | Default feature flags + targeting rules + kill switches, Supabase-backed. |
 | [figma-to-ux-spec](./figma-to-ux-spec.md) | `ux-architect`, `ui-designer` | Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design |
@@ -126,8 +129,10 @@ Total skills in `devosnt`: **140**
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
 | [supabase-mcp-setup](./supabase-mcp-setup.md) | _(unowned)_ | Configure and validate the official Supabase MCP server so AI agents can operate directly  |
 | [supabase-postgres-best-practices](./supabase-postgres-best-practices.md) | _(unowned)_ | Postgres performance optimization and best practices from Supabase. Use this skill when wr |
+| [systematic-debugging](./systematic-debugging.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer`, `qa-engineer`, `bug-hunter`, `security-auditor`, `performance-tester` | Use when encountering any bug, test failure, or unexpected behavior — before proposing fix |
 | [tdd-mastery](./tdd-mastery.md) | `qa-engineer` | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
 | [technical-debt-tracker](./technical-debt-tracker.md) | `ceo` | After every project closes, catalog technical debt items, score by impact and fix cost, an |
+| [test-driven-development](./test-driven-development.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer` | Use when strict TDD is explicitly requested, or when implementing features/bugfixes under  |
 | [threat-modeling](./threat-modeling.md) | `ceo` | STRIDE threat analysis on any new app or feature before architecture is finalized. Output: |
 | [tool-comparison-workflow](./tool-comparison-workflow.md) | `research-scout`, `docs-analyst`, `tool-evaluator` | Compare 2-4 tools/services and produce a one-page decision doc. |
 | [universal-connector-install](./universal-connector-install.md) | _(unowned)_ | Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) a |
@@ -137,6 +142,7 @@ Total skills in `devosnt`: **140**
 | [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. Automatically |
 | [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
 | [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | `research-scout` | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
+| [verification-before-completion](./verification-before-completion.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer`, `qa-engineer`, `bug-hunter`, `security-auditor`, `performance-tester` | Use when about to claim work is complete, fixed, passing, verified, release-ready, or read |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |
 | [webhooks-framework-planner](./webhooks-framework-planner.md) | `api-architect`, `integration-architect`, `backend-engineer` | Default inbound + outbound webhook framework with signing, retries, and dead-letter queue. |
 | [weekly-status-email](./weekly-status-email.md) | _(unowned)_ | Generate a structured weekly status email summarizing shipped work, blockers, and next-wee |

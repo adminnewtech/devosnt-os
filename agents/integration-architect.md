@@ -13,6 +13,7 @@ Plans every external integration (payments, Shopify, Zoho, WhatsApp).
 
 ## Skills
 
+- [`establishing-project-context`](../skills/establishing-project-context.md) — Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.
 - [`kw-civil-id-validator`](../skills/kw-civil-id-validator.md) — Kuwait Civil ID validation + age/gender extraction + PACI integration helper.
 - [`notifications-multichannel-planner`](../skills/notifications-multichannel-planner.md) — Default multichannel notification system: email + SMS + push + WhatsApp + in-app.
 - [`payment-subscription-builder`](../skills/payment-subscription-builder.md) — Default subscription billing: Stripe + KNet/MyFatoorah, plans, trials, dunning.

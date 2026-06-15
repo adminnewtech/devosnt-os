@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-15T07:01:45.380043+00:00_
+_Generated: 2026-06-15T08:03:16.637562+00:00_
 
 ## Health Summary
 
@@ -21,7 +21,7 @@ _Generated: 2026-06-15T07:01:45.380043+00:00_
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 140 (owned: 128, orphan: 12)
+- **Skills:** 146 (owned: 134, orphan: 12)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
@@ -66,16 +66,16 @@ _Generated: 2026-06-15T07:01:45.380043+00:00_
 
 ## Top skills by adoption
 
+- `aegis-method-pack` — 9 owner(s): claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, qa-engineer, bug-hunter, security-auditor, performance-tester
+- `systematic-debugging` — 9 owner(s): claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, qa-engineer, bug-hunter, security-auditor, performance-tester
+- `verification-before-completion` — 9 owner(s): claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, qa-engineer, bug-hunter, security-auditor, performance-tester
 - `delivery-comment-checklist` — 8 owner(s): ceo, quality-gate-manager, claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer, skill-builder
+- `establishing-project-context` — 6 owner(s): solution-architect, database-architect, api-architect, integration-architect, claude-code-lead-developer, codebase-cartographer
 - `agent-self-healing-policy` — 5 owner(s): ceo, sprint-commander, claude-code-lead-developer, skill-builder, prompt-optimizer
 - `wcag-accessibility-checklist` — 5 owner(s): quality-gate-manager, ux-architect, ui-designer, frontend-engineer, qa-engineer
 - `onboarding-flow-builder` — 5 owner(s): product-manager, ux-architect, growth-lead, content-writer-ar-en, onboarding-designer
 - `i18n-multilang-setup` — 5 owner(s): ux-architect, ui-designer, arabic-rtl-experience-agent, frontend-engineer, mobile-engineer
 - `agentic-codegen-loop` — 5 owner(s): claude-code-lead-developer, frontend-engineer, backend-engineer, full-stack-engineer, mobile-engineer
-- `analytics-tracking-setup` — 5 owner(s): frontend-engineer, growth-lead, seo-specialist, analytics-lead, onboarding-designer
-- `api-contract-designer` — 4 owner(s): ceo, solution-architect, api-architect, backend-engineer
-- `auth-permission-matrix` — 4 owner(s): ceo, solution-architect, database-architect, security-auditor
-- `cross-project-pattern-extractor` — 4 owner(s): ceo, skill-builder, memory-curator, research-scout
 
 ## Self-improvement loop status
 

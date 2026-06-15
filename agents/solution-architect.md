@@ -25,6 +25,7 @@ Tech stack + ADRs + build graph. Default Next.js + Supabase + Vercel.
 - [`database-schema-designer`](../skills/database-schema-designer.md) — Design the relational data model for an app from its PRD with RLS-first defaults.
 - [`delivery-system-builder`](../skills/delivery-system-builder.md) — Build a delivery / dispatch system (orders, drivers, routes, POD) from preset.
 - [`email-marketing-builder`](../skills/email-marketing-builder.md) — Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics.
+- [`establishing-project-context`](../skills/establishing-project-context.md) — Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.
 - [`gym-system-builder`](../skills/gym-system-builder.md) — Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing.
 - [`hr-system-builder`](../skills/hr-system-builder.md) — Build an HR system (employees, attendance, leaves, payroll, reviews) from preset.
 - [`inventory-system-builder`](../skills/inventory-system-builder.md) — Build an inventory management system (SKUs, stock, movements, counts) from preset.

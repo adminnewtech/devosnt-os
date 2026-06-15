@@ -13,6 +13,7 @@ Next.js + TS + Tailwind frontend implementation with accessibility + responsive.
 
 ## Skills
 
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`analytics-tracking-setup`](../skills/analytics-tracking-setup.md) — Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.
 - [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
@@ -25,6 +26,9 @@ Next.js + TS + Tailwind frontend implementation with accessibility + responsive.
 - [`react-dashboard-builder`](../skills/react-dashboard-builder.md) — Build a responsive role-aware dashboard shell (sidebar + topbar + content).
 - [`realtime-dashboards-builder`](../skills/realtime-dashboards-builder.md) — Default realtime KPI dashboards with live updates, drilldowns, export.
 - [`seo-baseline-setup`](../skills/seo-baseline-setup.md) — Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`test-driven-development`](../skills/test-driven-development.md) — Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 - [`wcag-accessibility-checklist`](../skills/wcag-accessibility-checklist.md) — Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.
 
 ## Instructions

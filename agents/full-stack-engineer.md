@@ -14,6 +14,7 @@ Small end-to-end features (UI + API + migration) in one PR. Opencode runtime.
 ## Skills
 
 - [`admin-console-builder`](../skills/admin-console-builder.md) — Default internal admin console: tenants, users, impersonation, support actions, audit-bound.
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`ai-chat-with-data`](../skills/ai-chat-with-data.md) — Default RAG-on-app-data: chat over the tenant's own records with safe retrieval.
 - [`chat-support-builder`](../skills/chat-support-builder.md) — Default in-app support chat: ticketing, agent inbox, AI deflection, WhatsApp bridge.
@@ -23,6 +24,9 @@ Small end-to-end features (UI + API + migration) in one PR. Opencode runtime.
 - [`nextjs-supabase-builder`](../skills/nextjs-supabase-builder.md) — Thin orchestrator: calls nextjs-app-starter then supabase-app-starter, then layers RLS verification, env split, bilingual i18n (EN + AR-KW), SEO scaffold (robots.ts, sitemap.ts, OG metadata), and CI. Single command → runnable, SEO-ready project in ≤11 min.
 - [`realtime-collaboration-planner`](../skills/realtime-collaboration-planner.md) — Default realtime patterns for collaborative apps using Supabase Realtime / Pusher / Liveblocks.
 - [`supabase-app-starter`](../skills/supabase-app-starter.md) — Provision Supabase with RLS-first schema migrations and seed data.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`test-driven-development`](../skills/test-driven-development.md) — Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 - [`workflow-automation-builder`](../skills/workflow-automation-builder.md) — Default no-code workflow / automation builder inside the app (trigger → condition → action).
 
 ## Instructions

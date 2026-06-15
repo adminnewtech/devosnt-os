@@ -14,6 +14,7 @@ Owns the human-readable architecture overview per app: docs/ARCHITECTURE.md, gui
 ## Skills
 
 - [`codebase-cartographer`](../skills/codebase-cartographer.md) — Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync with the machine-readable codegraph for every app repo.
+- [`establishing-project-context`](../skills/establishing-project-context.md) — Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.
 
 ## Instructions
 

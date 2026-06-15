@@ -24,6 +24,7 @@ CEO Orchestrator — founding agent. Routes every issue, enforces the IDEA → D
 - [`database-schema-designer`](../skills/database-schema-designer.md) — Design the relational data model for an app from its PRD with RLS-first defaults.
 - [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`deployment-checklist`](../skills/deployment-checklist.md) — Ship safely to production with a rollback drill and post-deploy smoke tests.
+- [`dispatching-parallel-agents`](../skills/dispatching-parallel-agents.md) — Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies. Dispatches one focused agent per problem domain for concurrent investigation.
 - [`e2e-test-generator`](../skills/e2e-test-generator.md) — Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and acceptance criteria. Output: ready-to-run test files.
 - [`external-blocker-escalation`](../skills/external-blocker-escalation.md) — Consolidated escalation to admin for external credential blockers. Mode A: per-issue. Mode B: ≥3 issues blocked — posts ONE comment with deadline, fallbacks, and a single CTA. Stops pulse retries via waiting_on=admin:* contract.
 - [`one-prompt-to-app`](../skills/one-prompt-to-app.md) — Master orchestrator: turn a single raw user prompt into a deployed system end-to-end without further input.

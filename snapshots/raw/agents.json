@@ -76,6 +76,11 @@
         "name": "deployment-checklist"
       },
       {
+        "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies. Dispatches one focused agent per problem domain for concurrent investigation.",
+        "id": "53d7b1a8-1aa4-48b5-bf17-7d5909512e8f",
+        "name": "dispatching-parallel-agents"
+      },
+      {
         "description": "Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and acceptance criteria. Output: ready-to-run test files.",
         "id": "47232add-09ff-41c1-9fbf-da46da062a33",
         "name": "e2e-test-generator"
@@ -153,7 +158,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:24:41Z",
+    "updated_at": "2026-06-15T07:42:00Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -184,6 +189,11 @@
         "name": "agent-self-healing-policy"
       },
       {
+        "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies. Dispatches one focused agent per problem domain for concurrent investigation.",
+        "id": "53d7b1a8-1aa4-48b5-bf17-7d5909512e8f",
+        "name": "dispatching-parallel-agents"
+      },
+      {
         "description": "Coordinate concurrent agents across Multica issues: DAG-based dependency ordering on parent/child hierarchies, deadlock prevention via blocked-status workflow, issue-based message routing, and fault tolerance aligned with agent-self-healing-policy.",
         "id": "d80e5678-abe0-49f9-aff8-b47fcd308cec",
         "name": "multi-agent-coordinator"
@@ -201,7 +211,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-15T07:00:50Z",
+    "updated_at": "2026-06-15T08:02:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -284,7 +294,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:26:22Z",
+    "updated_at": "2026-06-15T07:42:11Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -332,7 +342,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-15T07:00:50Z",
+    "updated_at": "2026-06-15T08:02:20Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -665,6 +675,11 @@
         "name": "email-marketing-builder"
       },
       {
+        "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+        "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+        "name": "establishing-project-context"
+      },
+      {
         "description": "Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing.",
         "id": "4d7ac62d-ef86-435c-a90a-755ca9d9f5b6",
         "name": "gym-system-builder"
@@ -810,6 +825,11 @@
         "name": "embeddings-semantic-search"
       },
       {
+        "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+        "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+        "name": "establishing-project-context"
+      },
+      {
         "description": "Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across orgs.",
         "id": "fd6d0f9a-8326-40f7-8520-ea3276608bdd",
         "name": "multi-tenant-architecture"
@@ -863,6 +883,11 @@
         "name": "api-versioning-strategy"
       },
       {
+        "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+        "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+        "name": "establishing-project-context"
+      },
+      {
         "description": "Default rate limiting: token bucket per user + per IP + per tenant, Redis-backed.",
         "id": "dfd3c158-b718-4bb9-b7c9-860833cf6eb2",
         "name": "rate-limiting-design"
@@ -900,6 +925,11 @@
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
+      {
+        "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+        "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+        "name": "establishing-project-context"
+      },
       {
         "description": "Kuwait Civil ID validation + age/gender extraction + PACI integration helper.",
         "id": "36ac5182-67e1-4120-b286-ebb247639000",
@@ -979,6 +1009,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
         "id": "95580252-933b-441a-8748-b2f765b9a3ea",
         "name": "agentic-codegen-loop"
@@ -997,6 +1032,16 @@
         "description": "Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.",
         "id": "3b9f9896-4085-41ca-b197-8de59fe9456e",
         "name": "delivery-comment-checklist"
+      },
+      {
+        "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies. Dispatches one focused agent per problem domain for concurrent investigation.",
+        "id": "53d7b1a8-1aa4-48b5-bf17-7d5909512e8f",
+        "name": "dispatching-parallel-agents"
+      },
+      {
+        "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+        "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+        "name": "establishing-project-context"
       },
       {
         "description": "Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link.",
@@ -1022,6 +1067,21 @@
         "description": "Provision Supabase with RLS-first schema migrations and seed data.",
         "id": "a7067388-ff05-4abb-a9fe-5c07ad8ff9a0",
         "name": "supabase-app-starter"
+      },
+      {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.",
+        "id": "a414b918-4992-4a14-9f8b-ff665304efc5",
+        "name": "test-driven-development"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       }
     ],
     "status": "idle",
@@ -1061,6 +1121,11 @@
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
+      {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
       {
         "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
         "id": "95580252-933b-441a-8748-b2f765b9a3ea",
@@ -1122,6 +1187,21 @@
         "name": "seo-baseline-setup"
       },
       {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.",
+        "id": "a414b918-4992-4a14-9f8b-ff665304efc5",
+        "name": "test-driven-development"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
+      },
+      {
         "description": "Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.",
         "id": "736fccb6-f965-4a17-867f-48a2c5d6a5a2",
         "name": "wcag-accessibility-checklist"
@@ -1174,6 +1254,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
         "id": "95580252-933b-441a-8748-b2f765b9a3ea",
         "name": "agentic-codegen-loop"
@@ -1217,6 +1302,21 @@
         "description": "Provision Supabase with RLS-first schema migrations and seed data.",
         "id": "a7067388-ff05-4abb-a9fe-5c07ad8ff9a0",
         "name": "supabase-app-starter"
+      },
+      {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.",
+        "id": "a414b918-4992-4a14-9f8b-ff665304efc5",
+        "name": "test-driven-development"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       },
       {
         "description": "Default inbound + outbound webhook framework with signing, retries, and dead-letter queue.",
@@ -1276,6 +1376,11 @@
         "name": "admin-console-builder"
       },
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
         "id": "95580252-933b-441a-8748-b2f765b9a3ea",
         "name": "agentic-codegen-loop"
@@ -1321,6 +1426,21 @@
         "name": "supabase-app-starter"
       },
       {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.",
+        "id": "a414b918-4992-4a14-9f8b-ff665304efc5",
+        "name": "test-driven-development"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
+      },
+      {
         "description": "Default no-code workflow / automation builder inside the app (trigger → condition → action).",
         "id": "47ab0459-4f72-4186-a26d-5f097a158d6e",
         "name": "workflow-automation-builder"
@@ -1364,6 +1484,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "Default codegen loop for build agents: read issue → write code → run tests → revise.",
         "id": "95580252-933b-441a-8748-b2f765b9a3ea",
         "name": "agentic-codegen-loop"
@@ -1397,6 +1522,21 @@
         "description": "Default PWA setup: installable, offline, push, background sync.",
         "id": "e45fa089-30a7-4988-a60c-66a8d487dcff",
         "name": "pwa-offline-first"
+      },
+      {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.",
+        "id": "a414b918-4992-4a14-9f8b-ff665304efc5",
+        "name": "test-driven-development"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       }
     ],
     "status": "idle",
@@ -1455,6 +1595,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.",
         "id": "622391e4-2b94-4a93-a858-305148e2344b",
         "name": "autonomous-test-fix-loop"
@@ -1475,6 +1620,11 @@
         "name": "seed-data-factory"
       },
       {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
         "description": "Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primary, Python, Go) and enforced 80% line / 75% branch coverage thresholds. Pairs with qa-test-plan-generator at the QA gate.",
         "id": "035f76ed-3f96-42bd-91ef-152d11d359b2",
         "name": "tdd-mastery"
@@ -1483,6 +1633,11 @@
         "description": "Default 5-user usability test script for any new feature before launch.",
         "id": "a53ec8bc-06b5-4cb3-b734-59434bc3e8ea",
         "name": "usability-test-script"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       },
       {
         "description": "Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work.",
@@ -1533,6 +1688,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "After a build issue goes in_review, runs the QA test plan against the preview URL, creates a fix sub-issue on failure, and loops until all green or the 3-cycle retry cap triggers escalation.",
         "id": "622391e4-2b94-4a93-a858-305148e2344b",
         "name": "autonomous-test-fix-loop"
@@ -1551,6 +1711,16 @@
         "description": "Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing.",
         "id": "d0b5c22a-65a7-4cb8-9978-06cb5f2dc1cb",
         "name": "error-tracking-setup"
+      },
+      {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       }
     ],
     "status": "idle",
@@ -1597,6 +1767,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff.",
         "id": "4d57c829-4aa4-4dd9-989d-16b25d84d28c",
         "name": "audit-log-designer"
@@ -1640,11 +1815,21 @@
         "description": "SOC2 Type II baseline controls for B2B SaaS launches.",
         "id": "dec32646-2ce6-4b34-81ee-2c5030102c32",
         "name": "soc2-readiness-checklist"
+      },
+      {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       }
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-08T07:17:43Z",
+    "updated_at": "2026-06-15T07:12:47Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -1670,6 +1855,11 @@
     "runtime_mode": "local",
     "skills": [
       {
+        "description": "Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.",
+        "id": "f73a526a-27a8-4036-8825-8afd9ba0328b",
+        "name": "aegis-method-pack"
+      },
+      {
         "description": "Default monitoring: uptime, latency, error rate, with on-call paging.",
         "id": "4a2e6d5f-435c-4124-a66b-39ebdffff9ae",
         "name": "monitoring-alerting-setup"
@@ -1683,6 +1873,16 @@
         "description": "12-point performance gate run before a user-facing feature is allowed to ship.",
         "id": "f274b4fb-5774-4cfa-a2c7-48ff0315fed7",
         "name": "performance-review-checklist"
+      },
+      {
+        "description": "Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.",
+        "id": "1d56149b-3887-4322-abc3-4c0e1dfd75bd",
+        "name": "systematic-debugging"
+      },
+      {
+        "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.",
+        "id": "5be6de74-3459-4343-8b3d-eb5bf8e54102",
+        "name": "verification-before-completion"
       }
     ],
     "status": "idle",
@@ -1977,7 +2177,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:16:13Z",
+    "updated_at": "2026-06-15T07:18:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2213,9 +2413,9 @@
         "name": "github-research-workflow"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T07:00:50Z",
+    "updated_at": "2026-06-15T07:41:04Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2329,7 +2529,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:51:40Z",
+    "updated_at": "2026-06-15T07:59:35Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2358,6 +2558,11 @@
         "description": "Keep the human-readable architecture docs (ARCHITECTURE.md, TOUR.md, GLOSSARY.md) in sync with the machine-readable codegraph for every app repo.",
         "id": "8fdc1eca-1ca7-4d84-a7c1-88bcc8b60668",
         "name": "codebase-cartographer"
+      },
+      {
+        "description": "Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.",
+        "id": "caa47a02-0d68-4ef4-b8a2-87d73a1d3176",
+        "name": "establishing-project-context"
       }
     ],
     "status": "idle",

@@ -13,15 +13,21 @@ Orchestrates Build Squad. Decomposes parents, assigns engineers, unblocks.
 
 ## Skills
 
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`agent-self-healing-policy`](../skills/agent-self-healing-policy.md) — Auto-retry failed agent runs with a different runtime/model and surface only after two failures.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`ci-cd-pipeline-builder`](../skills/ci-cd-pipeline-builder.md) — Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy.
 - [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
+- [`dispatching-parallel-agents`](../skills/dispatching-parallel-agents.md) — Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies. Dispatches one focused agent per problem domain for concurrent investigation.
+- [`establishing-project-context`](../skills/establishing-project-context.md) — Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.
 - [`live-preview-deploys`](../skills/live-preview-deploys.md) — Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link.
 - [`nextjs-app-starter`](../skills/nextjs-app-starter.md) — Bootstrap a production-ready Next.js + TypeScript + Tailwind app skeleton.
 - [`react-dashboard-builder`](../skills/react-dashboard-builder.md) — Build a responsive role-aware dashboard shell (sidebar + topbar + content).
 - [`reusable-template-extractor`](../skills/reusable-template-extractor.md) — Promote a 3-times-repeated workflow into a reusable skill or template.
 - [`supabase-app-starter`](../skills/supabase-app-starter.md) — Provision Supabase with RLS-first schema migrations and seed data.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`test-driven-development`](../skills/test-driven-development.md) — Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 
 ## Instructions
 

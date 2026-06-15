@@ -13,6 +13,7 @@ Runs security-review-checklist. Veto on fail.
 
 ## Skills
 
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`audit-log-designer`](../skills/audit-log-designer.md) — Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff.
 - [`auth-permission-matrix`](../skills/auth-permission-matrix.md) — Produce the authoritative role × action permission matrix wired to RLS and route guards.
 - [`dependency-vulnerability-scanner`](../skills/dependency-vulnerability-scanner.md) — Default supply chain security: npm audit + Snyk + Dependabot + lockfile lint.
@@ -22,6 +23,8 @@ Runs security-review-checklist. Veto on fail.
 - [`security-hardening-owasp`](../skills/security-hardening-owasp.md) — OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validation, output encoding, SQL injection, CSRF, CSP, JWT, secrets management, and dependency auditing. Extends security-review-checklist. Adapted from rohitg00/awesome-claude-code-toolkit (Apache 2.0).
 - [`security-review-checklist`](../skills/security-review-checklist.md) — Block release of any user-visible feature that fails the 15-point security gate.
 - [`soc2-readiness-checklist`](../skills/soc2-readiness-checklist.md) — SOC2 Type II baseline controls for B2B SaaS launches.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 
 ## Instructions
 

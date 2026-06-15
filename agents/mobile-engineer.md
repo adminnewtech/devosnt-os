@@ -13,6 +13,7 @@ React Native (Expo) mobile apps. Claude runtime (swapped from Openclaw→Codex�
 
 ## Skills
 
+- [`aegis-method-pack`](../skills/aegis-method-pack.md) — Zero-dependency workflow method-pack. Use for any non-trivial build, debug, review, or architecture task. Selects the applicable Aegis sub-skill and follows its guided workflow gates.
 - [`agentic-codegen-loop`](../skills/agentic-codegen-loop.md) — Default codegen loop for build agents: read issue → write code → run tests → revise.
 - [`android-apk-local-builder`](../skills/android-apk-local-builder.md) — Build a sideloadable Android APK from an Expo project locally (no EAS cloud) using Expo prebuild → Gradle assembleRelease with a debug keystore. Includes idempotent SDK install, env-var injection, and mandatory smoke-test step. Promoted from DEV-43.
 - [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
@@ -20,6 +21,9 @@ React Native (Expo) mobile apps. Claude runtime (swapped from Openclaw→Codex�
 - [`i18n-multilang-setup`](../skills/i18n-multilang-setup.md) — Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready.
 - [`mobile-app-planner`](../skills/mobile-app-planner.md) — Plan a React Native (Expo) companion or standalone mobile app.
 - [`pwa-offline-first`](../skills/pwa-offline-first.md) — Default PWA setup: installable, offline, push, background sync.
+- [`systematic-debugging`](../skills/systematic-debugging.md) — Use when encountering any bug, test failure, or unexpected behavior — before proposing fixes. Structured root-cause analysis through diagnostic layers with evidence-first discipline.
+- [`test-driven-development`](../skills/test-driven-development.md) — Use when strict TDD is explicitly requested, or when implementing features/bugfixes under TDD Route strict. Enforces RED→GREEN→REFACTOR cycle with no production code before a failing test.
+- [`verification-before-completion`](../skills/verification-before-completion.md) — Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off. Run the verification command first, then claim.
 
 ## Instructions
 
