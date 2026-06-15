@@ -81,16 +81,20 @@
       "id": "6220df2c-8097-41cd-af3b-a9b10615d1e2",
       "identifier": "DEV-266",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-15T04:00:00Z",
+        "top3_count": 3
+      },
       "number": 266,
       "parent_issue_id": null,
       "position": -12,
       "priority": "none",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-15",
-      "updated_at": "2026-06-15T04:02:14Z",
+      "updated_at": "2026-06-15T04:06:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -180,9 +184,9 @@
       "priority": "none",
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "start_date": null,
-      "status": "in_progress",
-      "title": "Skill Improvement Review — 2026-06-15",
-      "updated_at": "2026-06-15T04:02:10Z",
+      "status": "in_review",
+      "title": "Skill Improvement Review — 2026-06-15 (10 orphans, 34 stale in_review, Mode B sweep overdue)",
+      "updated_at": "2026-06-15T04:08:34Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
