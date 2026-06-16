@@ -24,8 +24,8 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-271 — QA Gate: DEV-268 — BENCHMARK ACTION: WorkspaceAgentSkillPersonalization
 - DEV-268 — BENCHMARK ACTION: WorkspaceAgentSkillPersonalization
 - DEV-246 — QA Gate: DEV-240 — SKILL IMPORT: supabase-postgres-best-practices
-- DEV-242 — SKILL IMPORT: supabase-mcp-setup
 - DEV-244 — SECURITY REVIEW: sandbox-process-runner import
 - DEV-245 — SECURITY REVIEW: supabase-mcp-setup import
 - DEV-243 — SECURITY REVIEW: supabase-postgres-best-practices import
 - DEV-236 — QA Gate: DEV-219 — BENCHMARK ACTION: SEO-by-default scaffolding on new app gener
+- DEV-238 — QA Gate: DEV-220 — BENCHMARK ACTION: pre-deploy-scan skill
