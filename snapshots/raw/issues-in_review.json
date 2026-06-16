@@ -25,8 +25,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-16T04:00:05Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -38,6 +38,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-16T04:01:00Z",
+        "lifecycle_phase": "integrate",
         "top3_count": 3
       },
       "number": 279,
@@ -48,12 +49,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-16",
-      "updated_at": "2026-06-16T04:04:48Z",
+      "updated_at": "2026-06-16T15:25:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-16T03:00:04Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -62,7 +63,9 @@
       "id": "2c09c201-d4dd-4240-a55d-7e99d1db0184",
       "identifier": "DEV-278",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 278,
       "parent_issue_id": null,
       "position": -11,
@@ -71,7 +74,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-16",
-      "updated_at": "2026-06-16T03:04:04Z",
+      "updated_at": "2026-06-16T15:25:48Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1112,7 +1115,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-06-16T14:02Z",
+        "kb_sync_status": "yellow@2026-06-16T15:04Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42."
       },
@@ -1124,7 +1127,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-06-16T14:02:37Z",
+      "updated_at": "2026-06-16T15:04:03Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
