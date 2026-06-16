@@ -12,7 +12,6 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-225 | redesign | `todo` | medium |
 | DEV-226 | accessibility | `todo` | medium |
 | DEV-228 | seo-review | `todo` | medium |
 | DEV-229 | qa-check | `todo` | high |
