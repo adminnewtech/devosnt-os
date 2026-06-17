@@ -162,6 +162,7 @@
         "app_project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
         "app_repo_url": "https://github.com/adminnewtech/attendance-app",
         "blocked_reason": "QA gate VETO: DoD not met. 5 items remain: (1) DEV-39 Deployment Plan BLOCKED (GitHub PAT missing), (2) DEV-40 User+Admin Guides BLOCKED (GitHub PAT missing), (3) DEV-35 FCM Push in_review (Firebase project not provisioned), (4) production-signed APK/AAB not built (needs EAS + Firebase), (5) admin dashboard preview URL not confirmed. Code is complete and security-reviewed. All blockers are admin credentials — promote back to in_review once admin provides Firebase + GitHub PAT + Supabase cloud project.",
+        "codegraph_status": "failed@2026-06-17T15:58:00Z reason=repo-not-configured+understand-anything-missing",
         "deploy_gate": "demo-apk-track: bypasses external creds via self-hosted Supabase + FCM-disabled; production-track still waits on Firebase + Supabase-cloud + GitHub PAT",
         "integration_branch": "integrate",
         "lifecycle_phase": "integrate",
@@ -178,7 +179,7 @@
       "start_date": null,
       "status": "backlog",
       "title": "Android Attendance App — تطبيق حضور وانصراف متكامل (one-prompt-to-app)",
-      "updated_at": "2026-05-27T12:07:29Z",
+      "updated_at": "2026-06-17T15:59:04Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
