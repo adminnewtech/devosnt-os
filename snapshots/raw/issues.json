@@ -169,6 +169,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "assignee_type": "agent",
+      "created_at": "2026-06-17T04:00:08Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Daily Command Center Digest. Mode=create_issue. Runs every day 07:00 Asia/Kuwait (GMT+3). Produces ONE per-project status briefing comment on the dated issue this autopilot creates, so the CEO + workspace owner can see — at a glance — every project's state and what to push today.\n\nCRITICAL SAFETY RULES:\n- Mode is create_issue. Do not create additional issues. Do not change status on any other issue.\n- NEVER mention any agent or member in the digest comment. Owner reads the dated issue directly; mentions would loop (Factory Pulse no-mention rule).\n- NEVER touch DEV-36 (workspace-operations dialog) — exclude it from every list, count, and section.\n- Quiet on green days: if NOTHING actionable changed since yesterday's digest (no new blockers, no stale in_review, no new approval ask, no project lifecycle_phase change, no new app-request), do NOT post any comment. Leave the auto-created issue body empty so it can be auto-cancelled by step (8).\n- Use `--output json` on every CLI call. Continue on single-call failure (log to stdout and skip that signal).\n\nSTEPS:\n\n(1) Snapshot the workspace.\n    - `multica project list --output json` → all projects.\n    - `multica issue list --output json` → all issues (paged if needed).\n    - For each non-cancelled issue: record id, identifier, title, status, project_id, parent_issue_id, assignee_id, assignee_type, updated_at.\n    - Exclude DEV-36 (id e60d5be5-b9dd-48aa-b949-28286ea80f1b) everywhere.\n    - Build agent + squad name maps once: `multica agent list --output json` and `multica squad list --output json`. Used for assignee names; never for mention links.\n\n(2) Detect \"since yesterday\" deltas. Treat `since = (now - 24h)` UTC.\n    - new_blockers: issues that flipped to status=blocked in the window (updated_at \u003e= since AND status=blocked).\n    - cleared_blockers: issues that left blocked in the window (status != blocked AND prior blocked_reason metadata key present — best-effort).\n    - new_approval_asks: any issue whose metadata gained `waiting_on=owner` or `waiting_on=admin` in the window, or whose body/comments contain a fresh \"Approval needed\" line written in the window (cheap heuristic: latest comment created_at \u003e= since and contains \"approval needed\" case-insensitive).\n    - stale_in_review_48h: any issue status=in_review with updated_at older than 48h.\n    - lifecycle_phase changes: any parent issue whose metadata `lifecycle_phase` changed (compare to value from yesterday's pin — see step 7).\n    - new_app_requests: any issue created_at \u003e= since in project `01 - App Requests` (f3089a97-c608-4599-913c-f331335e1abe).\n    If ALL six lists are empty AND there is no stale in_review and no current blocked anywhere → green day. Skip to step (8) without posting.\n\n(3) Per-project section assembly. For each project (sorted by project title prefix `00 -`, `01 -`, … and then APP projects):\n    - Skip the project entirely if it has zero open issues (status in {todo, in_progress, in_review, blocked}) AND no new_app_requests AND no lifecycle change.\n    - Goal: 1 sentence from project.description (truncate to ~140 chars at the first sentence boundary).\n    - lifecycle_phase: read from the project's \"anchor\" parent issue (heuristic: the parent issue with the most children in this project; if APP project, the parent whose title starts with \"APP — \"). Show the value of metadata `lifecycle_phase` or \"—\" if unset.\n    - Active issues: counts by status — `todo=N in_progress=N in_review=N blocked=N` (exclude DEV-36).\n    - Blockers + waiting_on: list every issue in this project with status=blocked OR metadata `waiting_on` set. Format: `DEV-NN \u003ctitle\u003e — waiting_on=\u003cvalue\u003e | blocked_reason=\u003cvalue\u003e`. Cap 5 per project; \"+N more\" if truncated.\n    - Next action + owner: the single highest-priority issue in this project that is `todo` or `in_progress` and not blocked. Format: `DEV-NN \u003ctitle\u003e — owner=\u003cagent-or-squad name\u003e` (plain name, NO mention link).\n    - Risk: 1 line — pick the most material risk: stale in_review item, oldest blocker, or \"WIP imbalance: \u003cname\u003e has N in_progress\" if any agent in this project has \u003e=4 open issues. If nothing material, write \"Risk: low — no stale or overloaded items.\".\n    - Approval needed: yes/no. If yes, quote the exact ask (one sentence from the requesting issue's body/comment). Format: `Approval needed: yes — DEV-NN: \"\u003cexact ask\u003e\"` or `Approval needed: no`.\n\n(4) Compose the Top-3 block. Score every open issue across the workspace by:\n    - urgency: blocked=4, stale_in_review_48h=3, has approval ask=3, deploy_gate=red=4, priority=urgent=4 / high=3 / medium=2 / low=1.\n    - momentum: in_progress=2, in_review=1, todo=1, backlog=0.\n    - age penalty: +1 per 24h since updated_at, cap +3.\n    Final score = urgency + momentum + age_penalty. Pick the top 3 distinct issues (no two from the same parent unless nothing else qualifies).\n\n(5) Render the digest comment using this exact shape (parseable by humans and future audits):\n\n```\n# Daily Command Center Digest — \u003cYYYY-MM-DD KW\u003e\n\n**Window:** \u003csince\u003e → \u003cnow\u003e (UTC) | **Projects scanned:** N | **Open issues:** N | **Blocked:** N | **Stale in_review (48h):** N | **Approval asks:** N\n\n## Per-Project Status\n\n### \u003cproject icon\u003e \u003cproject title\u003e\n- **Goal:** \u003cone sentence\u003e\n- **Phase:** \u003clifecycle_phase\u003e\n- **Active:** todo=\u003cn\u003e in_progress=\u003cn\u003e in_review=\u003cn\u003e blocked=\u003cn\u003e\n- **Blockers / waiting_on:** \u003clist or \"none\"\u003e\n- **Next action:** \u003cDEV-NN title — owner=name\u003e\n- **Risk:** \u003cone line\u003e\n- **Approval needed:** \u003cyes/no\u003e [— \"\u003cexact ask\u003e\"]\n\n### \u003cnext project\u003e\n… (same shape)\n\n## Top 3 to Push Today\n\n1. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n2. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n3. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n\n## Deltas Since Yesterday\n- New blockers: \u003cDEV-NN list or \"none\"\u003e\n- Cleared blockers: \u003cDEV-NN list or \"none\"\u003e\n- New approval asks: \u003cDEV-NN list or \"none\"\u003e\n- Stale in_review (48h+): \u003cDEV-NN list or \"none\"\u003e\n- New app requests: \u003cDEV-NN list or \"none\"\u003e\n- Lifecycle phase changes: \u003cproject: old→new or \"none\"\u003e\n```\n\nPost via: `multica issue comment add \u003cthis-issue-id\u003e --content-stdin` (HEREDOC the body). NEVER include any `mention://agent/...` or `mention://member/...` link. Issue references should be plain `DEV-NN` text (no `mention://issue/...` either — keep the digest scannable).\n\n(6) On a green day (step 2 short-circuited), do NOT post any comment. Skip to step (8).\n\n(7) Pin metadata on THIS issue only if a value materially helps tomorrow's run:\n    - `last_run_verdict` = \"green\" or \"posted\" (overwrite each run).\n    - `last_window_end` = \u003cRFC3339-now\u003e (overwrite each run).\n    - `lifecycle_phase_snapshot` = JSON map `{project_id: phase}` so step (2) can detect phase changes tomorrow.\n    - `top3_count` = number (expect 0 on green days, 3 otherwise).\n    Use `multica issue metadata set` once per changed key. Skip any key whose value is identical to what `metadata list` already shows.\n\n(8) Status finalization.\n    - If a digest was posted: flip THIS issue to `in_review` (`multica issue status \u003cthis-issue-id\u003e in_review`). CEO + owner read it, then close.\n    - If green day (no digest posted): flip THIS issue to `cancelled` with no comment so it stops cluttering the inbox.\n\n(9) Output one line to stdout (only non-comment output): `Daily Digest @ \u003cRFC3339\u003e | verdict=\u003cgreen|posted\u003e | projects=N | top3=N | blocked=B stale=S approvals=A`.\n\nOPERATING RULES:\n- Never block on a single CLI failure. Log \"skipped \u003csignal\u003e: \u003creason\u003e\" and continue with the remaining signals.\n- All comments go ONLY on the issue this autopilot creates. Never comment on any other issue.\n- Never mention any agent or member anywhere. Plain names only.\n- Read this issue's existing metadata before pinning. Only update keys whose values changed.\n- Do not create sub-issues, do not reassign any other issue, do not change any other issue's status.\n- The created issue MUST land in `in_review` (when posted) or `cancelled` (green day) — never `done` (owner closes), never left in `todo`.\n\n---\n*Autopilot run triggered at 2026-06-17 07:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "363b2acf-b9f2-43f4-9219-234d3355b86c",
+      "identifier": "DEV-281",
+      "labels": [],
+      "metadata": {},
+      "number": 281,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Daily Command Center Digest — 2026-06-17",
+      "updated_at": "2026-06-17T04:02:02Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "assignee_type": "agent",
       "created_at": "2026-06-17T03:00:05Z",
@@ -186,9 +209,9 @@
       "priority": "none",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Factory Health Audit — 2026-06-17",
-      "updated_at": "2026-06-17T03:00:37Z",
+      "updated_at": "2026-06-17T03:03:22Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1255,32 +1278,9 @@
       "title": "VENDOR BRIEF: Atoms.dev — Weekly Benchmark Snapshot 2026-06-01",
       "updated_at": "2026-06-01T06:13:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-08T06:16:33Z",
-      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "creator_type": "agent",
-      "description": "# /accessibility\n\n## Name\naccessibility\n\n## Purpose\nAudit and fix accessibility issues to meet WCAG 2.1 AA standard.\n\n## Trigger\nAgent task prompt starts with `/accessibility` (e.g. `/accessibility Audit the login form`)\n\n## Required Input\n- Target component, page, or screen\n- Existing code\n\n## Steps\n1. Audit against WCAG 2.1 AA checklist:\n   - Semantic HTML (correct heading hierarchy, landmark elements)\n   - ARIA labels on interactive elements that lack visible text\n   - Keyboard navigation: all interactive elements reachable via Tab; correct focus order\n   - Focus management: focus trapped in modals; restored after modal close\n   - Color contrast: 4.5:1 for normal text, 3:1 for large text / UI components\n   - Alt text: all `\u003cimg\u003e` elements have descriptive alt; decorative images use `alt=\"\"`\n   - Form labels: every input has an associated `\u003clabel\u003e` or `aria-label`\n   - Error messages: programmatically associated with their input via `aria-describedby`\n2. Fix each identified issue in the code.\n3. Produce an accessibility report listing each issue found, its WCAG criterion, and the fix applied.\n\n## Output\n- Fixed code with accessibility improvements\n- Accessibility report: issue | WCAG criterion | fix applied | status (fixed / deferred)\n\n## Quality Checklist\n- [ ] Semantic HTML structure verified\n- [ ] All interactive elements keyboard-accessible\n- [ ] Focus order logical and visible\n- [ ] Color contrast passes at all text sizes\n- [ ] All images have appropriate alt text\n- [ ] All form inputs have labels\n- [ ] Error messages linked to inputs\n- [ ] Screen-reader announcements for dynamic content (live regions where needed)\n- [ ] Report posted as comment\n\n## Failure Handling\n- Cannot assess contrast without rendered output: flag as \"manual check required\" and explain.\n- Third-party components with no accessibility props: document as known limitation.\n\n## Improvement Rule\nReview after 5 uses. Update checklist if WCAG 2.2 criteria become workspace standard.",
-      "due_date": null,
-      "id": "c5fe9e85-ceaf-43bb-8fb0-376a558cf62c",
-      "identifier": "DEV-226",
-      "labels": [],
-      "metadata": {},
-      "number": 226,
-      "parent_issue_id": null,
-      "position": -6,
-      "priority": "medium",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "todo",
-      "title": "accessibility",
-      "updated_at": "2026-06-08T06:16:33Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 280
+  "total": 281
 }
