@@ -169,6 +169,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-17T03:00:05Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-17 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "828d5c00-c646-4444-9cea-78142bdc8e7f",
+      "identifier": "DEV-280",
+      "labels": [],
+      "metadata": {},
+      "number": 280,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-17",
+      "updated_at": "2026-06-17T03:00:37Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-16T04:00:05Z",
@@ -1255,32 +1278,9 @@
       "title": "accessibility",
       "updated_at": "2026-06-08T06:16:33Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-01T06:13:07Z",
-      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "creator_type": "agent",
-      "description": "## Antigravity 2.0 (Google) — Competitive Brief (2026-06-01)\n\n**Run date:** 2026-06-01 | **Window:** 2026-05-25 → 2026-06-01 | **Baseline:** DEV-62 (2026-05-26, just 7 days after GA launch)\n\n---\n\n### What It Builds\nGoogle's agentic developer platform — a VS Code-forked desktop IDE plus CLI, SDK, and Managed Agents API. Handles full-stack web apps, long-running automated workflows (dependency upgrades, security scans, multi-repo refactoring), and agentic CI/CD pipelines. Dynamic subagents run frontend/backend/testing in parallel; a browser subagent (live Chrome instance) visually verifies generated UI without manual DevTools. This week: post-launch stabilization (v2.0.6, v2.0.10 patches), Linux sandboxing extended, IDE integration button added.\n\n### Onboarding Flow\nInstall Antigravity desktop app (macOS/Linux/Windows) → connect GitHub repo or Google Cloud workspace → prompt agent. Manager Surface: observe multiple agents across workspaces from one interface. Scheduled tasks: cron-based background agents for dependency scans, security sweeps. IDE integration button (v2.0.6): one-click open of current workspace in Antigravity IDE.\n\n### Pricing (2026-06-01)\n| Plan | Price | Notes |\n|------|-------|-------|\n| Free (Individuals) | $0 | 20 req/day (slashed from 250); full feature access |\n| AI Pro (bundled) | ~$20/mo | Google AI Pro subscription |\n| AI Ultra | $100/mo | 5× Pro limits |\n| AI Ultra Premium | $200/mo | 20× Pro limits (was $250) |\n| Enterprise | Custom | VPC, SSO, audit logs, BigQuery |\n\n**Key change:** Free tier slashed from 250 → 20 req/day. $100 bonus credits promo expired May 25.\n\n### Strengths\n1. **Parallel dynamic subagents** — frontend/backend/testing agents run concurrently by default; A2A protocol enables inter-agent communication. Only platform in cohort to architect this at the OS level. [Source: google.com/antigravity, Google I/O 2026]\n2. **Scheduled cron agents** — agents run background jobs on schedule (dependency scans, security sweeps) without user prompts. No competitor ships this as a first-class feature. [Source: Antigravity 2.0 docs]\n3. **Google ecosystem depth** — native Firebase, Android, AI Studio, Google Cloud integrations; enterprise VPC/SSO/audit via Managed Agents API. [Source: Google I/O 2026 blog]\n\n### Weaknesses\n1. **Free tier gutted** — 250 → 20 req/day is a 92% reduction; makes experimentation impractical without paid plan.\n2. **Post-launch stability** — v2.0.2–v2.0.9 were emergency patches (config wipes, data loss, SSH/WSL breakage from automatic upgrade); trust damage is real.\n3. **No built-in deploy** — requires existing infra; contrast Lovable/Bolt one-click deploy.\n\n### Patterns to Copy\n- **Scheduled cron agents** — agents run on schedule for routine maintenance (dependency checks, security scans, changelog summaries). Directly applicable to our weekly sweep autopilot and QA automation.\n- **A2A inter-agent protocol** — typed message contracts between agents enable handoff without free-text context passing.\n\n### Patterns to Beat\n- **Free tier gutted** — our accessible pricing (or volume-based model) is a competitive wedge for individual developers and small teams.\n- **Desktop-only** — our browser-accessible agents vs Antigravity's install-required approach.\n\n### Decision\n**Study only** — Parallel subagent orchestration and scheduled cron agent patterns are architecturally worth studying; A2A protocol is directly applicable to our squad handoff model. Do not recommend Antigravity to clients until MCP auth fragmentation and the slashed free tier are addressed.\n\n### Sources\n- https://antigravity.google (or current URL)\n- https://developers.google.com/antigravity (changelog)\n- https://techcrunch.com (Google I/O 2026 coverage, May 19 2026)\n- https://gradually.ai (Antigravity changelog tracker)\n\n### Diff vs 2026-05-26 Baseline\n- **new_features:** v2.0.6 IDE integration button (one-click open workspace in Antigravity IDE, May 22); v2.0.10 G1 credit bug fix + reliability (May 28); Linux sandboxing extended (previously macOS-only)\n- **pricing_changes:** Free tier slashed 250 → 20 req/day; $100 bonus credits promo expired May 25\n- **new_flows:** IDE integration button reduces context-switch friction\n- **removed:** —\n- **positioning:** Unchanged (professional developer platform, Google ecosystem depth)",
-      "due_date": null,
-      "id": "6933cd31-80d5-496f-b740-9f0813a074ea",
-      "identifier": "DEV-185",
-      "labels": [],
-      "metadata": {},
-      "number": 185,
-      "parent_issue_id": null,
-      "position": -6,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "done",
-      "title": "VENDOR BRIEF: Antigravity 2.0 — Weekly Benchmark Snapshot 2026-06-01",
-      "updated_at": "2026-06-01T06:13:07Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 279
+  "total": 280
 }
