@@ -169,6 +169,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-18T03:00:05Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-18 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "ab610555-9909-4f21-ae2a-e8d62d7043b6",
+      "identifier": "DEV-282",
+      "labels": [],
+      "metadata": {},
+      "number": 282,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Daily Factory Health Audit — 2026-06-18 06:00 Kuwait",
+      "updated_at": "2026-06-18T03:02:36Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-17T04:00:08Z",
@@ -180,6 +203,7 @@
       "identifier": "DEV-281",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-17T07:00:00Z",
         "lifecycle_phase": "integrate",
@@ -194,7 +218,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-17",
-      "updated_at": "2026-06-17T15:52:26Z",
+      "updated_at": "2026-06-18T02:25:58Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -209,6 +233,7 @@
       "identifier": "DEV-280",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 280,
@@ -219,7 +244,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-17",
-      "updated_at": "2026-06-17T15:52:32Z",
+      "updated_at": "2026-06-18T02:25:57Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1263,32 +1288,9 @@
       "title": "seo-review",
       "updated_at": "2026-06-08T06:16:44Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-01T06:13:30Z",
-      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "creator_type": "agent",
-      "description": "## Atoms.dev — Competitive Brief (2026-06-01)\n\n**Run date:** 2026-06-01 | **Window:** 2026-05-25 → 2026-06-01 | **Baseline:** DEV-62 (2026-05-26)\n\n---\n\n### What It Builds\nFull-stack web apps and SaaS products from a natural-language prompt, using a simulated team of 8 named AI agents (Iris: research; Emma: PM; Bob: architecture; Alex: engineering; Mike: lead; Sarah: SEO; David: data; Adrian: ads). Ships with auth, PostgreSQL, Stripe, SEO, and one-click deploy. Race Mode (Max plan): four AI models build simultaneously; user picks the best result. No material product change this week; blog has had no posts since May 5, 2026.\n\n### Onboarding Flow\nPrompt → Iris does pre-build market research → 8-agent team builds concurrently → one-click deploy to Atoms Cloud. Race Mode (Max): four model builds run simultaneously. No changelog or /whats-new surface (/changelog and /whats-new both 404 as of 2026-06-01).\n\n### Pricing (2026-06-01)\n| Plan | Price | Credits/mo | Storage | Notes |\n|------|-------|------------|---------|-------|\n| Free | $0 | 15/day (25/mo) | 2 GB | 2 Cloud projects |\n| Pro | $20/mo | 100 | 10 GB | Private projects, custom domains |\n| Max | $100/mo | 500 | 100 GB | Race Mode, higher accuracy |\n\nTeam Plan (Apr 2026) absent from public pricing page — likely still in limited beta.\n\n### Strengths\n1. **Named-agent UX transparency** — 8 visible specialist agents with defined roles create user trust: \"a real team is working on this.\" No competitor shows this. [Source: atoms.dev homepage]\n2. **Pre-build research gate (Iris)** — market research, competitive analysis, and audience sizing before any code runs. 4/6 competitors now ship some form of this. [Source: atoms.dev/blog]\n3. **Race Mode** — 4 parallel model iterations; user picks best result. Quality multiplier unavailable in any other platform. [Source: atoms.dev/blog]\n\n### Weaknesses\n1. **No public changelog** — /changelog and /whats-new both 404; opacity about what changed makes trust-building difficult.\n2. **Race Mode gated at $100/mo** — the quality multiplier is locked behind Max tier; Pro users get no parallel-model benefit.\n3. **No Arabic/RTL support found** — zero evidence of MENA market consideration.\n\n### Patterns to Copy\n- **Named-agent UX** — surface agent roles (researcher, PM, architect, engineer, QA) visibly in our build interface; builds trust without adding friction.\n- **Pre-build research gate** — before starting a build, run a lightweight market/competitive research step (what exists, who uses it, what differentiates it). Iris pattern.\n\n### Patterns to Beat\n- **Arabic/RTL gap** — Atoms ships no Arabic/RTL support; our MENA-native defaults are a structural competitive advantage in the Kuwait/GCC market.\n- **Changelog opacity** — our transparent, queryable issue/comment history is a trust differentiator vs Atoms' 404 changelog.\n\n### Decision\n**Study only** — Named-agent UX and pre-build research gate are worth absorbing as prompt/UX patterns; no import or rebuild warranted. Race Mode is architecturally interesting but the $100 price point and closed API limit practical adoption.\n\n### Sources\n- https://atoms.dev\n- https://atoms.dev/blog (last post May 5, 2026)\n- https://github.com/FoundationAgents/MetaGPT\n- https://toolworthy.ai (Atoms.dev analysis)\n\n### Diff vs 2026-05-26 Baseline\n- **new_features:** No material new features this week (no blog posts since May 5)\n- **pricing_changes:** —\n- **new_flows:** —\n- **removed:** —\n- **positioning:** Hero headline changed from \"world's first AI software company\" (MGX era) to \"Turn ideas into products that sell / AI employees to validate ideas, build products, and acquire customers\" — pivoting from tech identity to founder/operator GTM; 8th agent (David, Data Analyst) now explicitly listed on homepage separately from Adrian",
-      "due_date": null,
-      "id": "e335d689-eb73-4f8b-8967-37bf880f54d2",
-      "identifier": "DEV-186",
-      "labels": [],
-      "metadata": {},
-      "number": 186,
-      "parent_issue_id": null,
-      "position": -7,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "start_date": null,
-      "status": "done",
-      "title": "VENDOR BRIEF: Atoms.dev — Weekly Benchmark Snapshot 2026-06-01",
-      "updated_at": "2026-06-01T06:13:30Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 281
+  "total": 282
 }
