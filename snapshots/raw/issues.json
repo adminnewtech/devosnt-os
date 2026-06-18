@@ -169,8 +169,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-18T04:00:08Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -179,21 +179,26 @@
       "id": "74d7355a-7ec6-4c5a-a7fd-19387c27ade9",
       "identifier": "DEV-283",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-18T04:03:57Z",
+        "lifecycle_phase": "integrate",
+        "top3_count": 3
+      },
       "number": 283,
       "parent_issue_id": null,
       "position": -11,
       "priority": "none",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-18",
-      "updated_at": "2026-06-18T04:00:28Z",
+      "updated_at": "2026-06-18T04:22:13Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-18T03:00:05Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -202,7 +207,9 @@
       "id": "ab610555-9909-4f21-ae2a-e8d62d7043b6",
       "identifier": "DEV-282",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 282,
       "parent_issue_id": null,
       "position": -11,
@@ -211,7 +218,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-18 06:00 Kuwait",
-      "updated_at": "2026-06-18T03:04:19Z",
+      "updated_at": "2026-06-18T04:22:17Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
