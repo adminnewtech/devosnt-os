@@ -180,6 +180,7 @@
       "identifier": "DEV-283",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-18T04:03:57Z",
         "lifecycle_phase": "integrate",
@@ -193,7 +194,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-18",
-      "updated_at": "2026-06-18T04:22:13Z",
+      "updated_at": "2026-06-18T05:50:36Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -208,6 +209,7 @@
       "identifier": "DEV-282",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 282,
@@ -218,7 +220,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Factory Health Audit — 2026-06-18 06:00 Kuwait",
-      "updated_at": "2026-06-18T04:22:17Z",
+      "updated_at": "2026-06-18T05:50:36Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
