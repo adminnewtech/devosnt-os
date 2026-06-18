@@ -12,7 +12,6 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-228 | seo-review | `todo` | medium |
 | DEV-229 | qa-check | `todo` | high |
 | DEV-230 | [TEST SCAFFOLD] Product Listing Page — demonstrates SEO AC auto-injection | `todo` | medium |
 | DEV-231 | security-scan | `todo` | high |
