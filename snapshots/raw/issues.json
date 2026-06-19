@@ -169,6 +169,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-19T03:00:06Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-19 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "0ad41ed4-0a77-43d7-a23d-9fa9085d3486",
+      "identifier": "DEV-284",
+      "labels": [],
+      "metadata": {},
+      "number": 284,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-19",
+      "updated_at": "2026-06-19T03:01:58Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-18T04:00:08Z",
@@ -1274,32 +1297,9 @@
       "title": "SKILL UPDATE: SEO-by-default scaffold — nextjs-supabase-builder + user-stories-to-issues",
       "updated_at": "2026-06-08T06:20:55Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-08T06:16:57Z",
-      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "creator_type": "agent",
-      "description": "# /qa-check\n\n## Name\nqa-check\n\n## Purpose\nQA checklist before merge — verifies that acceptance criteria, edge cases, UI states, validation, and security basics are all covered.\n\n## Trigger\nAgent task prompt starts with `/qa-check` (e.g. `/qa-check PR #42 — user auth flow`)\n\n## Required Input\n- The PR URL or diff to review\n- The original acceptance criteria (from the issue or PR description)\n- The feature under test (component, route, or flow)\n\n## Steps\n1. Read the issue acceptance criteria and PR diff together.\n2. For each acceptance criterion, verify it is demonstrably met in the diff.\n3. Check UI states:\n   - Loading state present (spinner, skeleton, or placeholder)\n   - Empty state present (helpful message, not blank)\n   - Error state present (user-friendly message, no raw stack traces)\n4. Check form validation:\n   - Required fields validated client-side\n   - Appropriate error messages shown inline\n   - Server-side validation errors displayed to user\n5. Check edge cases:\n   - Empty inputs / null values handled\n   - Long text does not break layout\n   - Network failure / timeout handled gracefully\n6. Check mobile responsiveness (375px viewport at minimum).\n7. Verify no `console.error` or warning-level logs in the happy path.\n8. Verify no hardcoded credentials, API keys, or tokens in the diff.\n9. Post a QA pass/fail checklist as a comment on the issue.\n\n## Output\nQA checklist comment with pass/fail per criterion:\n- Acceptance criteria: [AC1] pass | [AC2] fail — reason\n- UI states: loading ✓ | empty ✓ | error ✓\n- Form validation: ✓ / ✗\n- Edge cases: ✓ / ✗\n- Mobile responsive: ✓ / ✗\n- No console errors: ✓ / ✗\n- No hardcoded secrets: ✓ / ✗\n- **Overall: PASS / FAIL**\n\n## Quality Checklist\n- [ ] Every acceptance criterion addressed (pass or documented failure)\n- [ ] All three UI states verified\n- [ ] Form validation verified\n- [ ] At least 3 edge cases checked\n- [ ] Mobile layout verified\n- [ ] Secret scan done\n- [ ] Overall verdict (PASS/FAIL) stated clearly\n\n## Failure Handling\n- No acceptance criteria found: flag as \"AC missing — QA blocked\" and request them before proceeding.\n- Cannot run the code: perform static analysis of the diff and note \"runtime verification required.\"\n\n## Improvement Rule\nReview after 5 uses. Add platform-specific checks (e.g. Supabase RLS, Arabic RTL layout) as the workspace's tech stack stabilizes.",
-      "due_date": null,
-      "id": "a75ef43c-b099-4e68-9cb6-8a137a48cc50",
-      "identifier": "DEV-229",
-      "labels": [],
-      "metadata": {},
-      "number": 229,
-      "parent_issue_id": null,
-      "position": -8,
-      "priority": "high",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "todo",
-      "title": "qa-check",
-      "updated_at": "2026-06-08T06:16:57Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 283
+  "total": 284
 }
