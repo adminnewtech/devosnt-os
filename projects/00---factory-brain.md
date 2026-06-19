@@ -21,7 +21,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-282 | Daily Factory Health Audit — 2026-06-18 06:00 Kuwait | `in_review` | none |
 | DEV-283 | Daily Command Center Digest — 2026-06-18 | `in_review` | none |
 | DEV-284 | Factory Health Audit — 2026-06-19 | `in_review` | none |
-| DEV-285 | Daily Command Center Digest — 2026-06-19 | `in_progress` | none |
+| DEV-285 | Daily Command Center Digest — 2026-06-19 | `in_review` | none |
 
 ## Recent Done
 
