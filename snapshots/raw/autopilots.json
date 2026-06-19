@@ -125,9 +125,9 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-19T09:00:08Z",
+      "last_run_at": "2026-06-19T10:00:09Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-19T10:00:00Z",
+      "next_run_at": "2026-06-19T11:00:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -135,7 +135,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-19T09:00:08Z",
+      "updated_at": "2026-06-19T10:00:09Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -148,9 +148,9 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-19T09:00:11Z",
+      "last_run_at": "2026-06-19T10:00:13Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-19T09:15:00Z",
+      "next_run_at": "2026-06-19T10:15:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -158,7 +158,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-19T09:00:11Z",
+      "updated_at": "2026-06-19T10:00:13Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
