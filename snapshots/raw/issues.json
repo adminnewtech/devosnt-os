@@ -179,16 +179,22 @@
       "id": "f5ba4e4e-02cf-41f5-8d12-fec2b79b4b8f",
       "identifier": "DEV-287",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-20T04:06:00Z",
+        "retry_count": 1,
+        "retry_last": "2026-06-20T09:00:00Z",
+        "top3_count": 3
+      },
       "number": 287,
       "parent_issue_id": null,
       "position": -11,
       "priority": "none",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-20",
-      "updated_at": "2026-06-20T04:00:59Z",
+      "updated_at": "2026-06-20T04:07:00Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
