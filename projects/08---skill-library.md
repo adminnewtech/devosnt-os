@@ -21,5 +21,4 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 - DEV-276 — QA Gate: DEV-275 — ASSIGN SKILLS: aegis-method-pack bundle to build/coding agent
 - DEV-275 — ASSIGN SKILLS: aegis-method-pack bundle to build/coding agents
 - DEV-269 — Create user-skill-creation-wizard skill
-- DEV-235 — SKILL: universal-connector-install — OAuth connector + MCP server exposure
 - DEV-233 — Test slash-skill-invoker: run /seo-review and /qa-check on 2 real build tasks
