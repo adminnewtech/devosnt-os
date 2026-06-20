@@ -169,6 +169,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-20T03:00:06Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-20 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "82464ba1-4f03-4b43-8c81-81c5f96ffff3",
+      "identifier": "DEV-286",
+      "labels": [],
+      "metadata": {},
+      "number": 286,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-20",
+      "updated_at": "2026-06-20T03:02:30Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-19T04:00:09Z",
@@ -1284,32 +1307,9 @@
       "title": "SKILL: universal-connector-install — OAuth connector + MCP server exposure",
       "updated_at": "2026-06-08T06:54:34Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-08T06:17:15Z",
-      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "creator_type": "agent",
-      "description": "## Purpose\nThis issue was created to demonstrate the updated `user-stories-to-issues` scaffold (v2, Jun 2026) producing SEO checklist items automatically in the Acceptance Criteria section for a web app build task.\n\n## Input\n- User story: \"As a visitor, I want to view a public product listing page so that I can browse available items before registering.\"\n- Architecture: Next.js + Supabase, publicly accessible product catalog, authenticated checkout flow.\n- Labels: `frontend`, `full-stack`\n\n## Expected Output\nA working product listing page at `/products` with server-side rendering, proper pagination, and search.\n\n## Acceptance Criteria\n\n### Functional\n- [ ] `/products` page loads and renders all active product records from Supabase.\n- [ ] Products are paginated (20 per page); pagination controls visible.\n- [ ] Client-side search filters products by name in real time.\n- [ ] Unauthenticated visitors can view the listing; add-to-cart requires auth (redirect to `/login`).\n- [ ] Loading skeleton shown while data fetches; empty state shown when no products match.\n- [ ] Error state shown (with retry) if the Supabase query fails.\n\n### SEO (auto-injected — required for all web app issues)\n- [ ] Semantic HTML: `\u003ch1\u003e`→`\u003ch2\u003e`→`\u003ch3\u003e` hierarchy correct; `\u003cnav\u003e`, `\u003cmain\u003e`, `\u003carticle\u003e`, `\u003csection\u003e`, `\u003cfooter\u003e` used semantically.\n- [ ] Meta title: unique per page, ≤60 characters, describes the page accurately.\n- [ ] Meta description: unique per page, ≤160 characters, written for click-through.\n- [ ] Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url` present on every public-facing page.\n- [ ] `robots.txt` at `/robots.txt`: allows crawlers on public routes; disallows `/dashboard`, `/admin`, and all auth-gated routes.\n- [ ] `sitemap.xml` at `/sitemap.xml`: auto-generated, covers all public URLs, noted for Google Search Console submission.\n\n## Dependencies\n- Supabase `products` table and RLS policies must exist (see architecture issue).\n- Auth redirect middleware must be in place.\n\n## Risk\nLow. Read-only data display; no write paths on the public listing page.\n\n## Definition of Done\n- `/products` renders in a browser with real data.\n- All functional and SEO acceptance criteria checked off.\n- QA has run `seo-audit-checklist` against the deployed preview URL and posted a PASS verdict.\n- No secrets in the client bundle (grep verified).",
-      "due_date": null,
-      "id": "5214f209-bd1d-4ac8-8f62-ff7569820280",
-      "identifier": "DEV-230",
-      "labels": [],
-      "metadata": {},
-      "number": 230,
-      "parent_issue_id": null,
-      "position": -9,
-      "priority": "medium",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "todo",
-      "title": "[TEST SCAFFOLD] Product Listing Page — demonstrates SEO AC auto-injection",
-      "updated_at": "2026-06-08T06:17:15Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 285
+  "total": 286
 }
