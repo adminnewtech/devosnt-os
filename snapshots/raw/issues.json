@@ -169,6 +169,29 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-21T03:00:07Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-21 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "d648139b-d875-49a2-88c7-777581de0818",
+      "identifier": "DEV-288",
+      "labels": [],
+      "metadata": {},
+      "number": 288,
+      "parent_issue_id": null,
+      "position": -11,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-21",
+      "updated_at": "2026-06-21T03:00:33Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-20T04:00:08Z",
@@ -1295,32 +1318,9 @@
       "title": "Test slash-skill-invoker: run /seo-review and /qa-check on 2 real build tasks",
       "updated_at": "2026-06-08T06:25:25Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": null,
-      "assignee_type": null,
-      "created_at": "2026-06-08T06:17:15Z",
-      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "creator_type": "agent",
-      "description": "# /security-scan\n\n## Name\nsecurity-scan\n\n## Purpose\nSecurity pre-merge scan — checks the diff for secrets, injection vulnerabilities, auth gaps, and data-access controls before code lands in production.\n\n## Trigger\nAgent task prompt starts with `/security-scan` (e.g. `/security-scan Scan PR #55 before merge`)\n\n## Required Input\n- The PR URL, branch name, or diff to scan\n- The tech stack and framework (for targeted checks)\n\n## Steps\n1. **Secret detection** — scan the diff for:\n   - Patterns: `password`, `api_key`, `secret`, `token`, `private_key`, `credentials` in variable names or string literals\n   - File patterns: `.env`, `credentials.*`, `*.pem`, `*.key`\n   - Base64 blobs that look like encoded secrets\n   - Any hardcoded strings matching common API key formats (AWS, Stripe, etc.)\n2. **Injection prevention**:\n   - SQL injection: raw string interpolation into queries (no parameterized queries / ORM)\n   - XSS: user-controlled data rendered via `innerHTML`, `dangerouslySetInnerHTML`, or equivalent without sanitization\n   - Command injection: user input passed to shell commands\n3. **Auth and authorization**:\n   - All new write routes (POST, PUT, PATCH, DELETE) require authentication\n   - All data-access queries scoped to the authenticated user (no `SELECT *` without user filter)\n   - No privilege escalation: user cannot access another user's resources\n4. **CSRF protection**: mutation routes use CSRF tokens or SameSite cookie policy.\n5. **Input validation**: external input validated at system boundaries (API routes, webhooks, form handlers).\n6. **RLS policies** (Supabase): every new user-scoped table has row-level-security enabled and policies defined; verify RLS is not bypassed with `service_role` key in client code.\n7. **Dependency audit**: if new packages were added, flag any with known CVEs or unusual permissions.\n8. Post a security gate comment: pass/fail per category with findings.\n\n## Output\nSecurity gate comment:\n- Secrets: PASS / FAIL (findings listed)\n- Injection: PASS / FAIL (findings listed)\n- Auth / authz: PASS / FAIL (findings listed)\n- CSRF: PASS / FAIL\n- Input validation: PASS / FAIL\n- RLS (if Supabase): PASS / FAIL / N/A\n- Dependencies: PASS / FAIL / N/A\n- **Gate: PASS / FAIL — merge recommended / blocked**\n\n## Quality Checklist\n- [ ] Full diff reviewed (not just changed files at a glance)\n- [ ] Secret patterns checked with regex, not just eyeballing\n- [ ] Every new API route checked for auth middleware\n- [ ] RLS checked for every new Supabase table\n- [ ] Gate verdict stated explicitly (PASS = merge OK, FAIL = merge blocked)\n\n## Failure Handling\n- Diff not accessible: request the diff or branch name.\n- Ambiguous finding (may or may not be a secret): flag as \"manual review required\" and do not block unless certain.\n- Known false positive pattern: document why it was cleared.\n\n## Improvement Rule\nReview after 5 uses. Add OWASP Top 10 checks incrementally. Retire specific checks if the CI pipeline adds automated equivalents (e.g. secret scanning via GitHub Advanced Security).",
-      "due_date": null,
-      "id": "6540a0ac-6b3e-420d-b5ef-a7449d85c66c",
-      "identifier": "DEV-231",
-      "labels": [],
-      "metadata": {},
-      "number": 231,
-      "parent_issue_id": null,
-      "position": -10,
-      "priority": "high",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "start_date": null,
-      "status": "todo",
-      "title": "security-scan",
-      "updated_at": "2026-06-08T06:17:15Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 287
+  "total": 288
 }

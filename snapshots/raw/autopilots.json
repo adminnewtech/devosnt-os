@@ -125,9 +125,9 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-21T02:00:11Z",
+      "last_run_at": "2026-06-21T03:00:09Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-21T03:00:00Z",
+      "next_run_at": "2026-06-21T04:00:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -135,7 +135,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-21T02:00:11Z",
+      "updated_at": "2026-06-21T03:00:09Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -148,9 +148,9 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-21T02:00:15Z",
+      "last_run_at": "2026-06-21T03:00:12Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-21T02:15:00Z",
+      "next_run_at": "2026-06-21T03:15:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -158,7 +158,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-21T02:00:15Z",
+      "updated_at": "2026-06-21T03:00:12Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -194,9 +194,9 @@
       "execution_mode": "create_issue",
       "id": "0cf43035-4ef9-4b41-b99a-9f84a4ec9872",
       "issue_title_template": "Factory Health Audit — {{date}}",
-      "last_run_at": "2026-06-20T03:00:06Z",
-      "last_run_status": "completed",
-      "next_run_at": "2026-06-21T03:00:00Z",
+      "last_run_at": "2026-06-21T03:00:07Z",
+      "last_run_status": "issue_created",
+      "next_run_at": "2026-06-22T03:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
       "subscribers": [],
@@ -204,7 +204,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-20T03:00:06Z",
+      "updated_at": "2026-06-21T03:00:07Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
