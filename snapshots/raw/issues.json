@@ -249,6 +249,7 @@
       "identifier": "DEV-290",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "dispatched_action_count": 3,
         "lifecycle_phase": "integrate",
         "report_window_end": "2026-06-21T09:00:00Z",
@@ -262,7 +263,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Workspace Upgrade Report — 2026-06-21",
-      "updated_at": "2026-06-21T06:52:03Z",
+      "updated_at": "2026-06-21T07:24:29Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
