@@ -19,6 +19,7 @@ Production deploys + rollback plans. Confirms before pushing prod.
 - [`incident-response-runbook`](../skills/incident-response-runbook.md) — Standard incident response: severity, comms, postmortem template.
 - [`live-preview-deploys`](../skills/live-preview-deploys.md) — Every PR gets a Vercel preview deploy with seeded test data and a Slack/comment link.
 - [`monitoring-alerting-setup`](../skills/monitoring-alerting-setup.md) — Default monitoring: uptime, latency, error rate, with on-call paging.
+- [`pre-deploy-scan`](../skills/pre-deploy-scan.md) — Fast (<30s) pre-flight security + SEO scan that runs before any user-facing deliverable is marked in_review. Covers exposed secrets, missing RLS, unauthenticated write paths, env/credential patterns, and SEO basics (title, meta description, sitemap, aria-labels). Outputs a structured pass|warn|block verdict. Extends security-review-checklist (which runs later, at in_review → done).
 - [`rollback-plan-generator`](../skills/rollback-plan-generator.md) — Produce a deploy-specific rollback plan the on-call can execute under stress.
 
 ## Instructions

@@ -83,4 +83,8 @@ This sweep prevents stale autopilot issues from accumulating in the `in_review` 
 
 ## Escalation
 Escalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.
+
+## Progress Rules
+- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.
+- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.
 ```

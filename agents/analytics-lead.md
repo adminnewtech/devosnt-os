@@ -13,6 +13,7 @@ Analytics event plan + conversion funnel + dashboards. Wires PostHog / Plausible
 
 ## Skills
 
+- [`ab-test-analysis`](../skills/ab-test-analysis.md) — Interpret A/B experiment results with statistical rigour — p-values, effect size, power, novelty effects, SRM check, multiple comparison corrections — and produce a binary SHIP / NO-SHIP / EXTEND verdict.
 - [`ab-testing-framework`](../skills/ab-testing-framework.md) — Lightweight A/B testing wired to PostHog + feature flags.
 - [`analytics-tracking-setup`](../skills/analytics-tracking-setup.md) — Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.
 - [`growth-launch-plan`](../skills/growth-launch-plan.md) — Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, fan out 5 parallel sub-issues (landing, SEO, onboarding, analytics, comms), and gate DevOps handoff on growth_gate=green.

@@ -4,7 +4,7 @@ Total skills in `devosnt`: **146**
 
 | Skill | Owners | Description |
 |---|---|---|
-| [ab-test-analysis](./ab-test-analysis.md) | _(unowned)_ | Interpret A/B experiment results with statistical rigour — p-values, effect size, power, n |
+| [ab-test-analysis](./ab-test-analysis.md) | `analytics-lead` | Interpret A/B experiment results with statistical rigour — p-values, effect size, power, n |
 | [ab-testing-framework](./ab-testing-framework.md) | `product-manager`, `release-manager`, `growth-lead`, `analytics-lead` | Lightweight A/B testing wired to PostHog + feature flags. |
 | [admin-console-builder](./admin-console-builder.md) | `full-stack-engineer` | Default internal admin console: tenants, users, impersonation, support actions, audit-boun |
 | [admin-guide-generator](./admin-guide-generator.md) | `documentation-agent` | Generate an end-user admin guide (EN + AR-KW when needed). |
@@ -62,9 +62,9 @@ Total skills in `devosnt`: **146**
 | [gdpr-compliance-checklist](./gdpr-compliance-checklist.md) | `quality-gate-manager`, `security-auditor` | GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA. |
 | [github-research-workflow](./github-research-workflow.md) | `research-scout`, `github-analyst`, `docs-analyst` | Research GitHub for prior art before building (top repos, license, patterns). |
 | [growth-launch-plan](./growth-launch-plan.md) | `analytics-lead` | Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, |
-| [growth-loop-designer](./growth-loop-designer.md) | _(unowned)_ | Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led |
+| [growth-loop-designer](./growth-loop-designer.md) | `growth-lead` | Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led |
 | [gym-system-builder](./gym-system-builder.md) | `solution-architect` | Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing. |
-| [hipaa-compliance-checklist](./hipaa-compliance-checklist.md) | _(unowned)_ | HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits techn |
+| [hipaa-compliance-checklist](./hipaa-compliance-checklist.md) | `security-auditor` | HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits techn |
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
 | [impact-analyst](./impact-analyst.md) | `impact-analyst` | On every Build PR, compute blast radius from the codegraph (changed symbols → callers → ca |
@@ -96,8 +96,8 @@ Total skills in `devosnt`: **146**
 | [pos-system-builder](./pos-system-builder.md) | `solution-architect` | Build a POS (point of sale) system: cart, tenders, receipts, shifts, end-of-day, KNet/MyFa |
 | [post-build-report-generator](./post-build-report-generator.md) | `release-manager`, `template-builder` | After a project lands, produce a one-page shipped/slipped/reuse report. |
 | [prd-to-user-stories](./prd-to-user-stories.md) | `ceo`, `product-manager` | Decompose a PRD into atomic build-ready user stories with acceptance criteria. |
-| [pre-build-research-gate](./pre-build-research-gate.md) | _(unowned)_ | Before any build agent writes code, run a research pass that surfaces comparable products, |
-| [pre-deploy-scan](./pre-deploy-scan.md) | _(unowned)_ | Fast (<30s) pre-flight security + SEO scan that runs before any user-facing deliverable is |
+| [pre-build-research-gate](./pre-build-research-gate.md) | `github-analyst` | Before any build agent writes code, run a research pass that surfaces comparable products, |
+| [pre-deploy-scan](./pre-deploy-scan.md) | `deployment-engineer` | Fast (<30s) pre-flight security + SEO scan that runs before any user-facing deliverable is |
 | [product-brief-to-prd](./product-brief-to-prd.md) | `ceo`, `product-manager` | Convert an approved product brief into a complete PRD. |
 | [prompt-improvement-review](./prompt-improvement-review.md) | `prompt-optimizer`, `memory-curator` | Audit an agent's prompt + recent runs, propose targeted edits. |
 | [prompt-router-classifier](./prompt-router-classifier.md) | `ceo`, `product-manager` | Classify any raw user prompt into the right vertical builder + squad, auto-detecting Arabi |
@@ -112,7 +112,7 @@ Total skills in `devosnt`: **146**
 | [reusable-template-extractor](./reusable-template-extractor.md) | `ceo`, `claude-code-lead-developer`, `skill-builder`, `template-builder` | Promote a 3-times-repeated workflow into a reusable skill or template. |
 | [rollback-plan-generator](./rollback-plan-generator.md) | `deployment-engineer`, `environment-manager`, `release-manager` | Produce a deploy-specific rollback plan the on-call can execute under stress. |
 | [rtl-arabic-ui-planner](./rtl-arabic-ui-planner.md) | `arabic-rtl-experience-agent` | Plan an RTL-correct Arabic UI variant with Kuwaiti-Arabic copy guidance. |
-| [sandbox-process-runner](./sandbox-process-runner.md) | _(unowned)_ | Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on macOS, bubble |
+| [sandbox-process-runner](./sandbox-process-runner.md) | `environment-manager` | Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on macOS, bubble |
 | [sast-scan](./sast-scan.md) | `ceo` | Static Application Security Testing: scan source code for security vulnerabilities before  |
 | [school-system-builder](./school-system-builder.md) | `solution-architect` | Build a school / SIS system: students, classes, attendance, grades, parents, fees. |
 | [search-system-builder](./search-system-builder.md) | `solution-architect` | Default end-user search with autocomplete, typo tolerance, filters, facets. |
@@ -122,30 +122,30 @@ Total skills in `devosnt`: **146**
 | [security-review-checklist](./security-review-checklist.md) | `ceo`, `quality-gate-manager`, `security-auditor` | Block release of any user-visible feature that fails the 15-point security gate. |
 | [seed-data-factory](./seed-data-factory.md) | `qa-engineer`, `template-builder` | Default seed data generator per vertical so empty states are demoable from minute one. |
 | [self-hosted-supabase-tunnel](./self-hosted-supabase-tunnel.md) | `solution-architect`, `database-architect` | Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), |
-| [seo-audit-checklist](./seo-audit-checklist.md) | _(unowned)_ | Standalone QA checklist to verify SEO readiness on any deployed web app. Run before in_rev |
+| [seo-audit-checklist](./seo-audit-checklist.md) | `seo-specialist` | Standalone QA checklist to verify SEO readiness on any deployed web app. Run before in_rev |
 | [seo-baseline-setup](./seo-baseline-setup.md) | `frontend-engineer`, `growth-lead`, `seo-specialist` | Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang. |
 | [shopify-dashboard-builder](./shopify-dashboard-builder.md) | `integration-architect` | Build a Shopify analytics + ops dashboard via the Admin API. |
 | [soc2-readiness-checklist](./soc2-readiness-checklist.md) | `quality-gate-manager`, `security-auditor` | SOC2 Type II baseline controls for B2B SaaS launches. |
 | [supabase-app-starter](./supabase-app-starter.md) | `claude-code-lead-developer`, `backend-engineer`, `full-stack-engineer` | Provision Supabase with RLS-first schema migrations and seed data. |
-| [supabase-mcp-setup](./supabase-mcp-setup.md) | _(unowned)_ | Configure and validate the official Supabase MCP server so AI agents can operate directly  |
-| [supabase-postgres-best-practices](./supabase-postgres-best-practices.md) | _(unowned)_ | Postgres performance optimization and best practices from Supabase. Use this skill when wr |
+| [supabase-mcp-setup](./supabase-mcp-setup.md) | `database-architect` | Configure and validate the official Supabase MCP server so AI agents can operate directly  |
+| [supabase-postgres-best-practices](./supabase-postgres-best-practices.md) | `database-architect` | Postgres performance optimization and best practices from Supabase. Use this skill when wr |
 | [systematic-debugging](./systematic-debugging.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer`, `qa-engineer`, `bug-hunter`, `security-auditor`, `performance-tester` | Use when encountering any bug, test failure, or unexpected behavior — before proposing fix |
 | [tdd-mastery](./tdd-mastery.md) | `qa-engineer` | Red-Green-Refactor TDD workflow with language-specific patterns (TypeScript/Next.js primar |
 | [technical-debt-tracker](./technical-debt-tracker.md) | `ceo` | After every project closes, catalog technical debt items, score by impact and fix cost, an |
 | [test-driven-development](./test-driven-development.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer` | Use when strict TDD is explicitly requested, or when implementing features/bugfixes under  |
 | [threat-modeling](./threat-modeling.md) | `ceo` | STRIDE threat analysis on any new app or feature before architecture is finalized. Output: |
 | [tool-comparison-workflow](./tool-comparison-workflow.md) | `research-scout`, `docs-analyst`, `tool-evaluator` | Compare 2-4 tools/services and produce a one-page decision doc. |
-| [universal-connector-install](./universal-connector-install.md) | _(unowned)_ | Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) a |
+| [universal-connector-install](./universal-connector-install.md) | `integration-architect` | Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) a |
 | [usability-test-script](./usability-test-script.md) | `product-manager`, `qa-engineer` | Default 5-user usability test script for any new feature before launch. |
 | [user-guide-generator](./user-guide-generator.md) | `documentation-agent` | Generate an end-user (non-admin) guide focused on top journeys. |
-| [user-skill-creation-wizard](./user-skill-creation-wizard.md) | _(unowned)_ | Guide any workspace member through a 4-step conversation to define a mini-skill, then prod |
+| [user-skill-creation-wizard](./user-skill-creation-wizard.md) | `skill-builder` | Guide any workspace member through a 4-step conversation to define a mini-skill, then prod |
 | [user-stories-to-issues](./user-stories-to-issues.md) | `ceo`, `sprint-commander`, `product-manager` | Convert approved user stories into build-ready Multica issues with full DoD. Automatically |
 | [ux-screen-generator](./ux-screen-generator.md) | `product-manager`, `ux-architect` | Generate a complete, implementation-ready spec for any general UI screen (auth, settings,  |
 | [vendor-brief-changelog-verification](./vendor-brief-changelog-verification.md) | `research-scout` | Verify a vendor competitive brief against live changelog/release notes via a docs-analyst  |
 | [verification-before-completion](./verification-before-completion.md) | `claude-code-lead-developer`, `frontend-engineer`, `backend-engineer`, `full-stack-engineer`, `mobile-engineer`, `qa-engineer`, `bug-hunter`, `security-auditor`, `performance-tester` | Use when about to claim work is complete, fixed, passing, verified, release-ready, or read |
 | [wcag-accessibility-checklist](./wcag-accessibility-checklist.md) | `quality-gate-manager`, `ux-architect`, `ui-designer`, `frontend-engineer`, `qa-engineer` | Block any UI that does not pass WCAG 2.2 AA. Run before in_review → done on UI work. |
 | [webhooks-framework-planner](./webhooks-framework-planner.md) | `api-architect`, `integration-architect`, `backend-engineer` | Default inbound + outbound webhook framework with signing, retries, and dead-letter queue. |
-| [weekly-status-email](./weekly-status-email.md) | _(unowned)_ | Generate a structured weekly status email summarizing shipped work, blockers, and next-wee |
+| [weekly-status-email](./weekly-status-email.md) | `workspace-operations-manager` | Generate a structured weekly status email summarizing shipped work, blockers, and next-wee |
 | [whatsapp-automation-planner](./whatsapp-automation-planner.md) | `integration-architect` | Plan a WhatsApp Business / Cloud API automation. |
 | [workflow-automation-builder](./workflow-automation-builder.md) | `full-stack-engineer` | Default no-code workflow / automation builder inside the app (trigger → condition → action |
 | [workspace-upgrade-report](./workspace-upgrade-report.md) | `workspace-operations-manager`, `memory-curator`, `research-scout` | Quarterly self-audit of the App Factory and bets for next quarter. |

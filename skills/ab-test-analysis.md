@@ -9,7 +9,7 @@ Interpret A/B experiment results with statistical rigour — p-values, effect si
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`analytics-lead`](../agents/analytics-lead.md)
 
 ## Config
 

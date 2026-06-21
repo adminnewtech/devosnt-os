@@ -9,7 +9,7 @@ Fast (<30s) pre-flight security + SEO scan that runs before any user-facing deli
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`deployment-engineer`](../agents/deployment-engineer.md)
 
 ## Config
 

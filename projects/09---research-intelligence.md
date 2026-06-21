@@ -12,7 +12,6 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-239 | Weekly GitHub Research Sweep — 2026-06-08 | `in_review` | none |
 | DEV-257 | QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate skill | `blocked` | none |
 | DEV-267 | Weekly Benchmark Sweep — 2026-06-15 | `in_review` | none |
 | DEV-272 | Weekly GitHub Research Sweep — 2026-06-15 | `in_review` | none |
@@ -23,9 +22,7 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-274 — SECURITY REVIEW: Aegis method-pack import
 - DEV-271 — QA Gate: DEV-268 — BENCHMARK ACTION: WorkspaceAgentSkillPersonalization
 - DEV-268 — BENCHMARK ACTION: WorkspaceAgentSkillPersonalization
-- DEV-246 — QA Gate: DEV-240 — SKILL IMPORT: supabase-postgres-best-practices
 - DEV-244 — SECURITY REVIEW: sandbox-process-runner import
 - DEV-245 — SECURITY REVIEW: supabase-mcp-setup import
-- DEV-243 — SECURITY REVIEW: supabase-postgres-best-practices import
 - DEV-238 — QA Gate: DEV-220 — BENCHMARK ACTION: pre-deploy-scan skill
 - DEV-237 — QA Gate: DEV-221 — BENCHMARK ACTION: Slash-skill-invoker — reusable instruction 

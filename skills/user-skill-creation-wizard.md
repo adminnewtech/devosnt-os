@@ -9,7 +9,7 @@ Guide any workspace member through a 4-step conversation to define a mini-skill,
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`skill-builder`](../agents/skill-builder.md)
 
 ## Config
 

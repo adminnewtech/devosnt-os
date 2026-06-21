@@ -9,7 +9,7 @@ HIPAA gap analysis for healthcare tech products — determines BA vs CE status, 
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`security-auditor`](../agents/security-auditor.md)
 
 ## Config
 

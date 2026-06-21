@@ -22,6 +22,8 @@ RLS-first PostgreSQL schema with indexes, audit, money + timezone hygiene.
 - [`establishing-project-context`](../skills/establishing-project-context.md) — Use when entering a project for the first time, or when the user asks to establish shared language, define domain terms, or create a project glossary. Maintains a CONTEXT.md at project root.
 - [`multi-tenant-architecture`](../skills/multi-tenant-architecture.md) — Default multi-tenant architecture: tenant_id everywhere, RLS by tenant, no leaks across orgs.
 - [`self-hosted-supabase-tunnel`](../skills/self-hosted-supabase-tunnel.md) — Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.
+- [`supabase-mcp-setup`](../skills/supabase-mcp-setup.md) — Configure and validate the official Supabase MCP server so AI agents can operate directly on Supabase databases with least-privilege access.
+- [`supabase-postgres-best-practices`](../skills/supabase-postgres-best-practices.md) — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.
 
 ## Instructions
 

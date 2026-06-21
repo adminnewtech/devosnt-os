@@ -9,7 +9,7 @@ Before any build agent writes code, run a research pass that surfaces comparable
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`github-analyst`](../agents/github-analyst.md)
 
 ## Config
 

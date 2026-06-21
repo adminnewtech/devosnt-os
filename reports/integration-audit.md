@@ -1,13 +1,13 @@
 # Integration Audit Report
 
-_Generated: 2026-06-21T06:03:13.363531+00:00_
+_Generated: 2026-06-21T07:02:56.811020+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 12 |
+| orphan_skills | 0 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
@@ -21,12 +21,12 @@ _Generated: 2026-06-21T06:03:13.363531+00:00_
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 146 (owned: 134, orphan: 12)
+- **Skills:** 146 (owned: 146, orphan: 0)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 14 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 2 warnings, no blockers
 
 ## Findings
 
@@ -34,18 +34,6 @@ _Generated: 2026-06-21T06:03:13.363531+00:00_
 |---|---|---|---|
 | 🟡 WARN | `issue.blocked` | DEV-264 blocked: Factory Health Audit — 2026-06-15 | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-257 blocked: QA Gate: DEV-187 — BENCHMARK ACTION: Pre-build Research Gate | Review blocker — autopilot caps at 3 retries |
-| 🟡 WARN | `skill.orphan` | Skill `ab-test-analysis` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `growth-loop-designer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `hipaa-compliance-checklist` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `pre-build-research-gate` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `pre-deploy-scan` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `sandbox-process-runner` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `seo-audit-checklist` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `supabase-mcp-setup` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `supabase-postgres-best-practices` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `universal-connector-install` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `user-skill-creation-wizard` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
-| 🟡 WARN | `skill.orphan` | Skill `weekly-status-email` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🔵 INFO | `agent.no_squad` | Agent `workspace-operations-manager` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `ui-designer` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |
 | 🔵 INFO | `agent.no_squad` | Agent `arabic-rtl-experience-agent` not in member_preview of any squad | May still be member; member_preview shows top 3 only — confirm with squad detail |

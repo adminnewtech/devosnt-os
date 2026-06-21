@@ -18,6 +18,7 @@ Runs security-review-checklist. Veto on fail.
 - [`auth-permission-matrix`](../skills/auth-permission-matrix.md) — Produce the authoritative role × action permission matrix wired to RLS and route guards.
 - [`dependency-vulnerability-scanner`](../skills/dependency-vulnerability-scanner.md) — Default supply chain security: npm audit + Snyk + Dependabot + lockfile lint.
 - [`gdpr-compliance-checklist`](../skills/gdpr-compliance-checklist.md) — GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA.
+- [`hipaa-compliance-checklist`](../skills/hipaa-compliance-checklist.md) — HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits technical/administrative/physical safeguards, generates BAA checklist and prioritised gap matrix with breach-notification timelines.
 - [`pdpl-kuwait-compliance`](../skills/pdpl-kuwait-compliance.md) — Kuwait PDPL baseline: registration, consent, breach reporting, local storage where required.
 - [`security-auditor`](../skills/security-auditor.md) — Comprehensive security audit covering OWASP/RLS/auth, SOC2/ISO27001/GDPR compliance gaps, vulnerability assessment, and Red/Amber/Green risk scoring. Read/Grep/Glob only; opus model.
 - [`security-hardening-owasp`](../skills/security-hardening-owasp.md) — OWASP-aligned security hardening for devosnt apps (Next.js/Supabase/Vercel): input validation, output encoding, SQL injection, CSRF, CSP, JWT, secrets management, and dependency auditing. Extends security-review-checklist. Adapted from rohitg00/awesome-claude-code-toolkit (Apache 2.0).

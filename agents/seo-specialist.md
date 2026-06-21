@@ -15,6 +15,7 @@ SEO baseline + content discoverability. Owns sitemap, robots, meta, OG, JSON-LD,
 
 - [`analytics-tracking-setup`](../skills/analytics-tracking-setup.md) — Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.
 - [`landing-page-builder`](../skills/landing-page-builder.md) — Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in <1 day.
+- [`seo-audit-checklist`](../skills/seo-audit-checklist.md) — Standalone QA checklist to verify SEO readiness on any deployed web app. Run before in_review → done transition on any user-facing web build.
 - [`seo-baseline-setup`](../skills/seo-baseline-setup.md) — Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.
 
 ## Instructions

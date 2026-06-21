@@ -15,6 +15,7 @@ Owner of github-research-workflow. Prior-art research for any non-trivial build.
 
 - [`dependency-vulnerability-scanner`](../skills/dependency-vulnerability-scanner.md) — Default supply chain security: npm audit + Snyk + Dependabot + lockfile lint.
 - [`github-research-workflow`](../skills/github-research-workflow.md) — Research GitHub for prior art before building (top repos, license, patterns).
+- [`pre-build-research-gate`](../skills/pre-build-research-gate.md) — Before any build agent writes code, run a research pass that surfaces comparable products, a differentiation claim, and the riskiest assumption in the issue brief — outputs a 3-bullet pre-build brief as a comment and optionally gates code generation.
 
 ## Instructions
 

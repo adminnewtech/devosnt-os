@@ -9,7 +9,7 @@ Generate a structured weekly status email summarizing shipped work, blockers, an
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`workspace-operations-manager`](../agents/workspace-operations-manager.md)
 
 ## Config
 

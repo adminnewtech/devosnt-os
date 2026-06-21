@@ -9,7 +9,7 @@ Configure and validate the official Supabase MCP server so AI agents can operate
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`database-architect`](../agents/database-architect.md)
 
 ## Config
 

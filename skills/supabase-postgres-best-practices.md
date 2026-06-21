@@ -9,7 +9,7 @@ Postgres performance optimization and best practices from Supabase. Use this ski
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`database-architect`](../agents/database-architect.md)
 
 ## Config
 

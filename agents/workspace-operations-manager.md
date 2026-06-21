@@ -16,6 +16,7 @@ Owns workspace settings, agent lifecycle, runtime health, quarterly upgrade.
 - [`cost-budget-tracker`](../skills/cost-budget-tracker.md) — Per-project monthly budget + alerting on cloud + AI spend.
 - [`incident-response-runbook`](../skills/incident-response-runbook.md) — Standard incident response: severity, comms, postmortem template.
 - [`monitoring-alerting-setup`](../skills/monitoring-alerting-setup.md) — Default monitoring: uptime, latency, error rate, with on-call paging.
+- [`weekly-status-email`](../skills/weekly-status-email.md) — Generate a structured weekly status email summarizing shipped work, blockers, and next-week priorities from Multica issue data.
 - [`workspace-upgrade-report`](../skills/workspace-upgrade-report.md) — Quarterly self-audit of the App Factory and bets for next quarter.
 
 ## Instructions
@@ -35,4 +36,8 @@ Keep the workspace itself healthy: agents, runtimes, skills, projects, settings.
 ## Operating principles
 - This is the only role allowed to archive an agent or delete a skill, and only with CEO Orchestrator sign-off.
 - Never modify the `ceo` agent's instructions without explicit user approval.
+
+## Progress Rules
+- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.
+- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.
 ```

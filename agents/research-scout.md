@@ -35,4 +35,8 @@ Watch the frontier: new AI tools, new SaaS competitors, new patterns. Surface wh
 ## Hard rules
 - Always cite source (URL).
 - "Interesting" is not a recommendation. Recommend only when there's a concrete adoption path.
+
+## Progress Rules
+- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.
+- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.
 ```

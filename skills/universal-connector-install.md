@@ -9,7 +9,7 @@ Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, gener
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`integration-architect`](../agents/integration-architect.md)
 
 ## Config
 

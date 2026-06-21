@@ -18,6 +18,7 @@ Env vars, secrets, feature flags across local/preview/staging/prod.
 - [`deployment-checklist`](../skills/deployment-checklist.md) — Ship safely to production with a rollback drill and post-deploy smoke tests.
 - [`monitoring-alerting-setup`](../skills/monitoring-alerting-setup.md) — Default monitoring: uptime, latency, error rate, with on-call paging.
 - [`rollback-plan-generator`](../skills/rollback-plan-generator.md) — Produce a deploy-specific rollback plan the on-call can execute under stress.
+- [`sandbox-process-runner`](../skills/sandbox-process-runner.md) — Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on macOS, bubblewrap on Linux) with explicit filesystem write paths and network domain allowlists using @anthropic-ai/sandbox-runtime (srt). No Docker required.
 
 ## Instructions
 

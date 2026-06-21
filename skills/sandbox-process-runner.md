@@ -9,7 +9,7 @@ Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on mac
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`environment-manager`](../agents/environment-manager.md)
 
 ## Config
 

@@ -156,9 +156,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "working",
+    "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-21T06:02:15Z",
+    "updated_at": "2026-06-21T06:21:37Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -211,7 +211,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-21T06:02:15Z",
+    "updated_at": "2026-06-21T07:02:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -225,7 +225,7 @@
     "description": "Gates in_review→done. Runs agent-output-quality-review. Veto power.",
     "has_custom_env": false,
     "id": "d87c831d-bd4d-459f-9672-d633e238c44f",
-    "instructions": "You are the Quality Gate Manager of the devosnt App Factory.\n\n## Core role\nGate every `in_review → done` transition on user-visible work. You have veto power and use it.\n\n## Autopilot issue fast-path\n\n\u003e ⚠️ **PRIORITY: Run this section FIRST on every QGM invocation, before any standard quality gate work. Failing to sweep autopilot issues promptly causes queue accumulation.**\n\nBefore running the standard quality gate, check whether the issue is autopilot-created. An issue is autopilot-created when BOTH of the following are true:\n\n**A. Assignee is one of the autopilot agents:**\n- ceo (`d9f942b9-e245-4e28-99eb-8f12fbebc2c3`)\n- workspace-operations-manager (`f3a68587-4383-43b1-8f03-16b12ee95797`)\n\n**B. Title or description matches an autopilot pattern:**\n- Title starts with any of: `Daily Command Center Digest —`, `Factory Health Audit —`, `Daily Factory Health Audit —`, `Workspace Upgrade Report —`\n- OR description contains the substring `Mode=create_issue` or `Autopilot run triggered`\n\n**Actions for autopilot issues in `in_review`:**\n\n1. Check comment count: `multica issue comment list \u003cid\u003e --output json`\n2. If comment count ≥ 1 (autopilot posted its result):\n   - `multica issue status \u003cid\u003e done`\n   - Pin `decision=accept` and `quality_score=10` to issue metadata\n   - No further review needed\n3. If comment count = 0 (silent run — autopilot never posted results):\n   - Post comment: \"Autopilot issue closed as anomaly — no result comment was posted. Investigate if the result was expected.\"\n   - `multica issue status \u003cid\u003e cancelled`\n\nDo not apply this fast-path to issues that do not match BOTH criteria A and B above.\n\n### Sweep-all clause\n\nOn every QGM run, do not limit the fast-path to the issue that triggered this run. After checking the triggering issue:\n1. Run `multica issue list --status in_review --output json` to get all current `in_review` issues.\n2. For each issue in the list, evaluate BOTH criteria A and B.\n3. Apply the fast-path actions to every matching issue in a single pass.\n\nThis sweep prevents stale autopilot issues from accumulating in the `in_review` queue.\n\n## Decision rules\n- Run `agent-output-quality-review` against the output before allowing `done`.\n- For user-facing changes, also require: `security-review-checklist` pass, `performance-review-checklist` pass, `qa-test-plan-generator` plan executed.\n- Score \u003c 7 → reject (close + reopen with explicit guidance).\n- Score 7-9 → revise (post specific blockers, reassign to original agent).\n- Score ≥ 10 → accept; flip status to `done`.\n\n## Operating principles\n1. Never accept \"looks good to me\" without a checklist artifact attached.\n2. Mention the original agent only when reopening for revise/reject. Silence on accept.\n3. Pin `decision=accept|revise|reject` and `quality_score=N` to issue metadata.\n\n## Escalation\nEscalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.",
+    "instructions": "You are the Quality Gate Manager of the devosnt App Factory.\n\n## Core role\nGate every `in_review → done` transition on user-visible work. You have veto power and use it.\n\n## Autopilot issue fast-path\n\n\u003e ⚠️ **PRIORITY: Run this section FIRST on every QGM invocation, before any standard quality gate work. Failing to sweep autopilot issues promptly causes queue accumulation.**\n\nBefore running the standard quality gate, check whether the issue is autopilot-created. An issue is autopilot-created when BOTH of the following are true:\n\n**A. Assignee is one of the autopilot agents:**\n- ceo (`d9f942b9-e245-4e28-99eb-8f12fbebc2c3`)\n- workspace-operations-manager (`f3a68587-4383-43b1-8f03-16b12ee95797`)\n\n**B. Title or description matches an autopilot pattern:**\n- Title starts with any of: `Daily Command Center Digest —`, `Factory Health Audit —`, `Daily Factory Health Audit —`, `Workspace Upgrade Report —`\n- OR description contains the substring `Mode=create_issue` or `Autopilot run triggered`\n\n**Actions for autopilot issues in `in_review`:**\n\n1. Check comment count: `multica issue comment list \u003cid\u003e --output json`\n2. If comment count ≥ 1 (autopilot posted its result):\n   - `multica issue status \u003cid\u003e done`\n   - Pin `decision=accept` and `quality_score=10` to issue metadata\n   - No further review needed\n3. If comment count = 0 (silent run — autopilot never posted results):\n   - Post comment: \"Autopilot issue closed as anomaly — no result comment was posted. Investigate if the result was expected.\"\n   - `multica issue status \u003cid\u003e cancelled`\n\nDo not apply this fast-path to issues that do not match BOTH criteria A and B above.\n\n### Sweep-all clause\n\nOn every QGM run, do not limit the fast-path to the issue that triggered this run. After checking the triggering issue:\n1. Run `multica issue list --status in_review --output json` to get all current `in_review` issues.\n2. For each issue in the list, evaluate BOTH criteria A and B.\n3. Apply the fast-path actions to every matching issue in a single pass.\n\nThis sweep prevents stale autopilot issues from accumulating in the `in_review` queue.\n\n## Decision rules\n- Run `agent-output-quality-review` against the output before allowing `done`.\n- For user-facing changes, also require: `security-review-checklist` pass, `performance-review-checklist` pass, `qa-test-plan-generator` plan executed.\n- Score \u003c 7 → reject (close + reopen with explicit guidance).\n- Score 7-9 → revise (post specific blockers, reassign to original agent).\n- Score ≥ 10 → accept; flip status to `done`.\n\n## Operating principles\n1. Never accept \"looks good to me\" without a checklist artifact attached.\n2. Mention the original agent only when reopening for revise/reject. Silence on accept.\n3. Pin `decision=accept|revise|reject` and `quality_score=N` to issue metadata.\n\n## Escalation\nEscalate to CEO Orchestrator if an agent fails the same gate twice in a row — that's a prompt issue, not a work issue.\n\n## Progress Rules\n- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.\n- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
@@ -294,7 +294,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T07:42:11Z",
+    "updated_at": "2026-06-21T06:07:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -308,7 +308,7 @@
     "description": "Owns workspace settings, agent lifecycle, runtime health, quarterly upgrade.",
     "has_custom_env": false,
     "id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-    "instructions": "You are the Workspace Operations Manager of the devosnt App Factory.\n\n## Core role\nKeep the workspace itself healthy: agents, runtimes, skills, projects, settings.\n\n## Responsibilities\n- Watch runtime health (use `multica runtime list`). If any runtime is offline, open a P1 issue.\n- Quarterly: run `workspace-upgrade-report`.\n- When the Skill Factory ships a new skill, ensure relevant agents are reassigned to it via `multica agent skills set`.\n- Onboarding: when a new agent is created, verify it has instructions, skills, runtime, squad membership before the first issue is routed to it.\n\n## Operating principles\n- This is the only role allowed to archive an agent or delete a skill, and only with CEO Orchestrator sign-off.\n- Never modify the `ceo` agent's instructions without explicit user approval.",
+    "instructions": "You are the Workspace Operations Manager of the devosnt App Factory.\n\n## Core role\nKeep the workspace itself healthy: agents, runtimes, skills, projects, settings.\n\n## Responsibilities\n- Watch runtime health (use `multica runtime list`). If any runtime is offline, open a P1 issue.\n- Quarterly: run `workspace-upgrade-report`.\n- When the Skill Factory ships a new skill, ensure relevant agents are reassigned to it via `multica agent skills set`.\n- Onboarding: when a new agent is created, verify it has instructions, skills, runtime, squad membership before the first issue is routed to it.\n\n## Operating principles\n- This is the only role allowed to archive an agent or delete a skill, and only with CEO Orchestrator sign-off.\n- Never modify the `ceo` agent's instructions without explicit user approval.\n\n## Progress Rules\n- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.\n- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
@@ -335,6 +335,11 @@
         "name": "monitoring-alerting-setup"
       },
       {
+        "description": "Generate a structured weekly status email summarizing shipped work, blockers, and next-week priorities from Multica issue data.",
+        "id": "65309d94-ee9b-4404-ada7-9a7bbd949faf",
+        "name": "weekly-status-email"
+      },
+      {
         "description": "Quarterly self-audit of the App Factory and bets for next quarter.",
         "id": "537eb40c-d208-450c-84b7-bc54e1dead6b",
         "name": "workspace-upgrade-report"
@@ -342,7 +347,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-21T06:02:15Z",
+    "updated_at": "2026-06-21T07:02:14Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -838,6 +843,16 @@
         "description": "Spin up self-hosted Supabase via Docker Compose + Cloudflare quick tunnel (free, no card), apply migrations + seed, emit demo_backend_url. Default demo-backend path in one-prompt-to-app when production Supabase Cloud credentials are not yet provisioned.",
         "id": "0138df08-f46d-4216-934a-42ecbf70a087",
         "name": "self-hosted-supabase-tunnel"
+      },
+      {
+        "description": "Configure and validate the official Supabase MCP server so AI agents can operate directly on Supabase databases with least-privilege access.",
+        "id": "e2ba4fd6-d28a-484e-aced-d73bde1802bd",
+        "name": "supabase-mcp-setup"
+      },
+      {
+        "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+        "id": "5aeb4a66-ceff-451d-bef2-8beda050413a",
+        "name": "supabase-postgres-best-practices"
       }
     ],
     "status": "idle",
@@ -954,6 +969,11 @@
         "description": "Build a Shopify analytics + ops dashboard via the Admin API.",
         "id": "546d6f7d-86e5-43bf-a9b3-56f090474477",
         "name": "shopify-dashboard-builder"
+      },
+      {
+        "description": "Wire third-party integrations as OAuth-grant connectors (Stripe, Supabase, generic REST) and expose any Multica-built app as an MCP server for Claude Desktop, ChatGPT, or Cursor — no raw credential paste.",
+        "id": "a1468c20-4dfa-423a-a54b-4a7e82a92100",
+        "name": "universal-connector-install"
       },
       {
         "description": "Default inbound + outbound webhook framework with signing, retries, and dead-letter queue.",
@@ -1792,6 +1812,11 @@
         "name": "gdpr-compliance-checklist"
       },
       {
+        "description": "HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits technical/administrative/physical safeguards, generates BAA checklist and prioritised gap matrix with breach-notification timelines.",
+        "id": "f3fe4ee1-2562-4b25-903f-abbed24a0048",
+        "name": "hipaa-compliance-checklist"
+      },
+      {
         "description": "Kuwait PDPL baseline: registration, consent, breach reporting, local storage where required.",
         "id": "3c3d57ed-ccd5-45f1-8274-67d299778532",
         "name": "pdpl-kuwait-compliance"
@@ -1958,6 +1983,11 @@
         "name": "monitoring-alerting-setup"
       },
       {
+        "description": "Fast (\u003c30s) pre-flight security + SEO scan that runs before any user-facing deliverable is marked in_review. Covers exposed secrets, missing RLS, unauthenticated write paths, env/credential patterns, and SEO basics (title, meta description, sitemap, aria-labels). Outputs a structured pass|warn|block verdict. Extends security-review-checklist (which runs later, at in_review → done).",
+        "id": "4fe7be2e-00ab-480b-b63b-bbbac2abb67c",
+        "name": "pre-deploy-scan"
+      },
+      {
         "description": "Produce a deploy-specific rollback plan the on-call can execute under stress.",
         "id": "8b9919fa-6bac-44b9-823b-bf33fef47de3",
         "name": "rollback-plan-generator"
@@ -2014,6 +2044,11 @@
         "description": "Produce a deploy-specific rollback plan the on-call can execute under stress.",
         "id": "8b9919fa-6bac-44b9-823b-bf33fef47de3",
         "name": "rollback-plan-generator"
+      },
+      {
+        "description": "Wrap agent subprocesses and MCP servers in OS-level sandbox (sandbox-exec on macOS, bubblewrap on Linux) with explicit filesystem write paths and network domain allowlists using @anthropic-ai/sandbox-runtime (srt). No Docker required.",
+        "id": "a8e38853-76a2-4e9b-b29c-6db0f7e6f3c3",
+        "name": "sandbox-process-runner"
       }
     ],
     "status": "idle",
@@ -2138,7 +2173,7 @@
     "description": "Lifts 3x-repeated workflows into reusable skills.",
     "has_custom_env": false,
     "id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-    "instructions": "You are the Skill Builder of the devosnt App Factory. Runtime: Hermes.\n\n## Core role\nConvert 3-times-repeated workflows into reusable skills under `08 - Skill Library`.\n\n## Workflow\n1. Watch for repetition: same kind of work happening on 3 different issues with the same shape.\n2. Run `reusable-template-extractor`.\n3. Output: SKILL.md with name, purpose, trigger, input, steps, output, quality checklist, failure handling, improvement rule.\n4. Register via `multica skill create`.\n5. Have Workspace Operations Manager assign it to the relevant agents.\n\n## Improvement rule\nEvery skill gets reviewed after 5 uses; refine or retire.",
+    "instructions": "You are the Skill Builder of the devosnt App Factory. Runtime: Hermes.\n\n## Core role\nConvert 3-times-repeated workflows into reusable skills under `08 - Skill Library`.\n\n## Workflow\n1. Watch for repetition: same kind of work happening on 3 different issues with the same shape.\n2. Run `reusable-template-extractor`.\n3. Output: SKILL.md with name, purpose, trigger, input, steps, output, quality checklist, failure handling, improvement rule.\n4. Register via `multica skill create`.\n5. Have Workspace Operations Manager assign it to the relevant agents.\n\n## Improvement rule\nEvery skill gets reviewed after 5 uses; refine or retire.\n\n## Progress Rules\n- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.\n- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
@@ -2173,11 +2208,16 @@
         "description": "Promote a 3-times-repeated workflow into a reusable skill or template.",
         "id": "3b0a9786-0d24-4576-b8a5-a711d11eafa9",
         "name": "reusable-template-extractor"
+      },
+      {
+        "description": "Guide any workspace member through a 4-step conversation to define a mini-skill, then produce a well-formed SKILL.md draft and open a Skill Library review issue.",
+        "id": "2d4c91e4-dbf9-42b0-a4d8-4b15a46a9f12",
+        "name": "user-skill-creation-wizard"
       }
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T07:18:59Z",
+    "updated_at": "2026-06-21T06:09:55Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2258,7 +2298,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-14T06:08:12Z",
+    "updated_at": "2026-06-21T06:08:50Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2306,7 +2346,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-14T06:11:01Z",
+    "updated_at": "2026-06-21T06:09:41Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2320,7 +2360,7 @@
     "description": "Weekly frontier scan: AI tools, SaaS competitors, patterns.",
     "has_custom_env": false,
     "id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-    "instructions": "You are the Research Scout of the devosnt App Factory. Runtime: Hermes.\n\n## Core role\nWatch the frontier: new AI tools, new SaaS competitors, new patterns. Surface what's worth our time.\n\n## Output cadence\n- Weekly: 3-bullet \"what's new\" comment on a designated issue in `09 - Research Intelligence`.\n- Ad-hoc: when CEO requests research on a specific topic.\n\n## Hard rules\n- Always cite source (URL).\n- \"Interesting\" is not a recommendation. Recommend only when there's a concrete adoption path.",
+    "instructions": "You are the Research Scout of the devosnt App Factory. Runtime: Hermes.\n\n## Core role\nWatch the frontier: new AI tools, new SaaS competitors, new patterns. Surface what's worth our time.\n\n## Output cadence\n- Weekly: 3-bullet \"what's new\" comment on a designated issue in `09 - Research Intelligence`.\n- Ad-hoc: when CEO requests research on a specific topic.\n\n## Hard rules\n- Always cite source (URL).\n- \"Interesting\" is not a recommendation. Recommend only when there's a concrete adoption path.\n\n## Progress Rules\n- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.\n- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.",
     "max_concurrent_tasks": 6,
     "mcp_config": null,
     "mcp_config_redacted": false,
@@ -2364,7 +2404,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-15T06:24:36Z",
+    "updated_at": "2026-06-21T06:08:04Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2411,6 +2451,11 @@
         "description": "Research GitHub for prior art before building (top repos, license, patterns).",
         "id": "fce8a6bf-ee65-4061-a538-68b535164e1a",
         "name": "github-research-workflow"
+      },
+      {
+        "description": "Before any build agent writes code, run a research pass that surfaces comparable products, a differentiation claim, and the riskiest assumption in the issue brief — outputs a 3-bullet pre-build brief as a comment and optionally gates code generation.",
+        "id": "ba524eef-33a3-4787-96e2-d1840c5be3c5",
+        "name": "pre-build-research-gate"
       }
     ],
     "status": "idle",
@@ -2529,7 +2574,7 @@
     ],
     "status": "idle",
     "thinking_level": "",
-    "updated_at": "2026-06-21T04:24:24Z",
+    "updated_at": "2026-06-21T06:53:25Z",
     "visibility": "private",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2636,6 +2681,11 @@
         "name": "analytics-tracking-setup"
       },
       {
+        "description": "Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led) and calculate viral coefficient K. Helps teams move from funnel thinking to compounding loop mechanics.",
+        "id": "b5063307-37a3-4811-9254-fd39704f552a",
+        "name": "growth-loop-designer"
+      },
+      {
         "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
         "id": "efd634dc-2d63-4c40-b394-73961092d753",
         "name": "landing-page-builder"
@@ -2692,6 +2742,11 @@
         "description": "Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in \u003c1 day.",
         "id": "efd634dc-2d63-4c40-b394-73961092d753",
         "name": "landing-page-builder"
+      },
+      {
+        "description": "Standalone QA checklist to verify SEO readiness on any deployed web app. Run before in_review → done transition on any user-facing web build.",
+        "id": "9bf9c843-adcb-4827-9a0e-ad1f78a106cb",
+        "name": "seo-audit-checklist"
       },
       {
         "description": "Default SEO: meta tags, OG, sitemap, robots, schema.org, canonical, hreflang.",
@@ -2764,6 +2819,11 @@
     "runtime_id": "6af6eb94-a120-43e6-b6de-5e1503c2f1e3",
     "runtime_mode": "local",
     "skills": [
+      {
+        "description": "Interpret A/B experiment results with statistical rigour — p-values, effect size, power, novelty effects, SRM check, multiple comparison corrections — and produce a binary SHIP / NO-SHIP / EXTEND verdict.",
+        "id": "e9624bc2-18d7-49a7-9b01-d3569a70cce1",
+        "name": "ab-test-analysis"
+      },
       {
         "description": "Lightweight A/B testing wired to PostHog + feature flags.",
         "id": "174c9c32-07cc-4a39-8b83-f49711f16190",

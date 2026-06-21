@@ -15,6 +15,7 @@ Growth Squad leader. Owns launch readiness, growth plan, conversion goals, and G
 
 - [`ab-testing-framework`](../skills/ab-testing-framework.md) — Lightweight A/B testing wired to PostHog + feature flags.
 - [`analytics-tracking-setup`](../skills/analytics-tracking-setup.md) — Default product analytics: PostHog (self-hosted or cloud) + Plausible for marketing.
+- [`growth-loop-designer`](../skills/growth-loop-designer.md) — Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led) and calculate viral coefficient K. Helps teams move from funnel thinking to compounding loop mechanics.
 - [`landing-page-builder`](../skills/landing-page-builder.md) — Orchestrate a bilingual EN/AR-KW RTL landing page: content, SEO, Next.js 14 build, analytics — all coordinated under one sub-issue, live in <1 day.
 - [`onboarding-flow-builder`](../skills/onboarding-flow-builder.md) — Default user onboarding: signup → verify → workspace setup → first value moment.
 - [`one-prompt-to-app`](../skills/one-prompt-to-app.md) — Master orchestrator: turn a single raw user prompt into a deployed system end-to-end without further input.

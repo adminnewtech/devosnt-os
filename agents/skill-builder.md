@@ -18,6 +18,7 @@ Lifts 3x-repeated workflows into reusable skills.
 - [`delivery-comment-checklist`](../skills/delivery-comment-checklist.md) — Prevents QA gate failures by requiring agents to explicitly verify every acceptance criterion before posting a delivery comment or marking an issue in_review.
 - [`mcp-server-evaluator`](../skills/mcp-server-evaluator.md) — Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject decision with mandatory security review and reject-by-default posture on filesystem write, shell exec, and unscoped network egress.
 - [`reusable-template-extractor`](../skills/reusable-template-extractor.md) — Promote a 3-times-repeated workflow into a reusable skill or template.
+- [`user-skill-creation-wizard`](../skills/user-skill-creation-wizard.md) — Guide any workspace member through a 4-step conversation to define a mini-skill, then produce a well-formed SKILL.md draft and open a Skill Library review issue.
 
 ## Instructions
 
@@ -36,4 +37,8 @@ Convert 3-times-repeated workflows into reusable skills under `08 - Skill Librar
 
 ## Improvement rule
 Every skill gets reviewed after 5 uses; refine or retire.
+
+## Progress Rules
+- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.
+- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.
 ```

@@ -9,7 +9,7 @@ Standalone QA checklist to verify SEO readiness on any deployed web app. Run bef
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`seo-specialist`](../agents/seo-specialist.md)
 
 ## Config
 

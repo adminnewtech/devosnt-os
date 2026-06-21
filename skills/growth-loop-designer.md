@@ -9,7 +9,7 @@ Design and evaluate self-reinforcing product growth loops (viral, content/SEO, p
 
 ## Owned by
 
-_⚠️ No agent owns this skill — orphan_
+- [`growth-lead`](../agents/growth-lead.md)
 
 ## Config
 

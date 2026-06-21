@@ -2,7 +2,7 @@
 
 | Icon | Project | Issues | Done | Description |
 |---|---|---|---|---|
-| 🧠 | [00 - Factory Brain](./00---factory-brain.md) | 107 | 68 | Master rules, strategy, workspace context, operating model, decisions, quality s |
+| 🧠 | [00 - Factory Brain](./00---factory-brain.md) | 110 | 71 | Master rules, strategy, workspace context, operating model, decisions, quality s |
 | 💡 | [01 - App Requests](./01---app-requests.md) | 3 | 1 | All new app ideas and system requests start here. Intake → triage → routed to Pr |
 | 📐 | [02 - Product Specs](./02---product-specs.md) | 2 | 2 | PRDs, user stories, requirements, role matrix, acceptance criteria, workflows. |
 | 🎨 | [03 - UX UI Design System](./03---ux-ui-design-system.md) | 3 | 3 | Sitemaps, screen lists, user flows, dashboard layouts, mobile layouts, RTL/Arabi |
