@@ -65,6 +65,7 @@
       "identifier": "DEV-289",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-21T07:00:00Z",
         "lifecycle_phase": "integrate",
@@ -79,7 +80,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-21",
-      "updated_at": "2026-06-21T04:22:26Z",
+      "updated_at": "2026-06-21T16:54:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
