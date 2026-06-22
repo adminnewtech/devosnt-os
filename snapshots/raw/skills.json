@@ -271,6 +271,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-22T07:15:01Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Configure and integrate the official Chrome DevTools MCP server so build and QA agents can inspect, screenshot, and interact with running UIs directly inside the agent loop.",
+    "id": "bb8fc224-3c31-4676-a95e-3b7565004891",
+    "name": "chrome-devtools-mcp-setup",
+    "updated_at": "2026-06-22T07:15:01Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:54:00Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy.",
@@ -551,6 +561,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-22T07:11:57Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Produce visually distinctive, non-template frontend interfaces — forces deliberate departure from the three AI-design defaults (warm cream serif, acid-green on black, newspaper broadsheet) via a subject-pin → token-brainstorm → critique → build loop.",
+    "id": "3d40a06c-839a-48ca-9e1a-2914f030bd48",
+    "name": "frontend-design-opinionated",
+    "updated_at": "2026-06-22T07:11:57Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-25T15:53:37Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA.",
@@ -607,6 +627,16 @@
     "id": "f3fe4ee1-2562-4b25-903f-abbed24a0048",
     "name": "hipaa-compliance-checklist",
     "updated_at": "2026-06-01T07:15:12Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
+    "created_at": "2026-06-22T07:21:11Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Enable agents and users to create, validate, and manage hookify guard-rail rules for Claude Code hooks (bash/file/stop/prompt events, warn/block actions).",
+    "id": "7a73771f-caab-4fa0-98db-19108bc92c56",
+    "name": "hookify-rule-writer",
+    "updated_at": "2026-06-22T07:21:11Z",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
   {

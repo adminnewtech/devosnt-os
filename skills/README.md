@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **147**
+Total skills in `devosnt`: **150**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -31,6 +31,7 @@ Total skills in `devosnt`: **147**
 | [booking-system-builder](./booking-system-builder.md) | `solution-architect` | Build a booking / appointment system from preset. |
 | [bug-report-template](./bug-report-template.md) | `qa-engineer`, `bug-hunter` | Standard bug report shape so issues are reproducible on first read. |
 | [chat-support-builder](./chat-support-builder.md) | `full-stack-engineer` | Default in-app support chat: ticketing, agent inbox, AI deflection, WhatsApp bridge. |
+| [chrome-devtools-mcp-setup](./chrome-devtools-mcp-setup.md) | _(unowned)_ | Configure and integrate the official Chrome DevTools MCP server so build and QA agents can |
 | [ci-cd-pipeline-builder](./ci-cd-pipeline-builder.md) | `claude-code-lead-developer`, `deployment-engineer` | Default GitHub Actions CI/CD: lint, type, test, build, preview, deploy. |
 | [clinic-system-builder](./clinic-system-builder.md) | `solution-architect` | Build a medical clinic system: patients, appointments, EMR, prescriptions, billing, insura |
 | [code-reviewer](./code-reviewer.md) | `quality-gate-manager` | OWASP-aware code review for logic errors, vulnerability patterns, complexity, and best pra |
@@ -59,12 +60,14 @@ Total skills in `devosnt`: **147**
 | [feature-flag-system](./feature-flag-system.md) | `release-manager` | Default feature flags + targeting rules + kill switches, Supabase-backed. |
 | [figma-to-ux-spec](./figma-to-ux-spec.md) | `ux-architect`, `ui-designer` | Accept a Figma file URL or exported JSON in the UX Planning stage; extract screens, design |
 | [file-upload-storage-design](./file-upload-storage-design.md) | `backend-engineer` | Default file upload pipeline: signed URLs, virus scan, image optimisation, CDN. |
+| [frontend-design-opinionated](./frontend-design-opinionated.md) | _(unowned)_ | Produce visually distinctive, non-template frontend interfaces — forces deliberate departu |
 | [gdpr-compliance-checklist](./gdpr-compliance-checklist.md) | `quality-gate-manager`, `security-auditor` | GDPR baseline: consent, DSAR, right-to-erasure, data minimisation, DPA. |
 | [github-research-workflow](./github-research-workflow.md) | `research-scout`, `github-analyst`, `docs-analyst` | Research GitHub for prior art before building (top repos, license, patterns). |
 | [growth-launch-plan](./growth-launch-plan.md) | `analytics-lead` | Orchestrate the full Growth phase launch sequence: read build artifacts, post launch plan, |
 | [growth-loop-designer](./growth-loop-designer.md) | `growth-lead` | Design and evaluate self-reinforcing product growth loops (viral, content/SEO, product-led |
 | [gym-system-builder](./gym-system-builder.md) | `solution-architect` | Build a gym / fitness studio system: memberships, classes, check-ins, trainers, billing. |
 | [hipaa-compliance-checklist](./hipaa-compliance-checklist.md) | `security-auditor` | HIPAA gap analysis for healthcare tech products — determines BA vs CE status, audits techn |
+| [hookify-rule-writer](./hookify-rule-writer.md) | _(unowned)_ | Enable agents and users to create, validate, and manage hookify guard-rail rules for Claud |
 | [hr-system-builder](./hr-system-builder.md) | `solution-architect` | Build an HR system (employees, attendance, leaves, payroll, reviews) from preset. |
 | [i18n-multilang-setup](./i18n-multilang-setup.md) | `ux-architect`, `ui-designer`, `arabic-rtl-experience-agent`, `frontend-engineer`, `mobile-engineer` | Default multi-language setup: next-intl, ICU messages, ar-KW + en baseline, RTL flip-ready |
 | [impact-analyst](./impact-analyst.md) | `impact-analyst` | On every Build PR, compute blast radius from the codegraph (changed symbols → callers → ca |
