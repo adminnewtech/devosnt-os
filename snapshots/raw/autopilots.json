@@ -34,7 +34,7 @@
       "id": "5c4d2248-77af-47f6-bb1c-54578b8b0952",
       "issue_title_template": "Weekly Benchmark Sweep — {{date}}",
       "last_run_at": "2026-06-22T06:00:06Z",
-      "last_run_status": "issue_created",
+      "last_run_status": "completed",
       "next_run_at": "2026-06-29T06:00:00Z",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "status": "active",
@@ -56,9 +56,9 @@
       "execution_mode": "create_issue",
       "id": "8393adbb-7250-4738-9a5b-b3bbf3480132",
       "issue_title_template": "Weekly GitHub Research Sweep — {{date}}",
-      "last_run_at": "2026-06-15T07:00:15Z",
-      "last_run_status": "completed",
-      "next_run_at": "2026-06-22T07:00:00Z",
+      "last_run_at": "2026-06-22T07:00:06Z",
+      "last_run_status": "issue_created",
+      "next_run_at": "2026-06-29T07:00:00Z",
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "status": "active",
       "subscribers": [],
@@ -66,7 +66,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-15T07:00:15Z",
+      "updated_at": "2026-06-22T07:00:06Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -125,9 +125,9 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-22T06:00:13Z",
+      "last_run_at": "2026-06-22T07:00:17Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-22T07:00:00Z",
+      "next_run_at": "2026-06-22T08:00:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -135,7 +135,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-22T06:00:13Z",
+      "updated_at": "2026-06-22T07:00:17Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -148,9 +148,9 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-22T06:00:15Z",
+      "last_run_at": "2026-06-22T07:00:18Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-22T06:15:00Z",
+      "next_run_at": "2026-06-22T07:15:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -158,7 +158,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-22T06:00:15Z",
+      "updated_at": "2026-06-22T07:00:18Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

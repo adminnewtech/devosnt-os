@@ -731,6 +731,16 @@
   },
   {
     "config": {},
+    "created_at": "2026-06-22T06:23:55Z",
+    "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
+    "description": "Produce and maintain a structured catalog of verified MCP servers with capability summaries, security classifications, and copy-paste activation snippets for one-tap agent integration.",
+    "id": "14ae0c9a-fcd4-4a73-9f03-93b044d22f7c",
+    "name": "mcp-catalog-curator",
+    "updated_at": "2026-06-22T06:23:55Z",
+    "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+  },
+  {
+    "config": {},
     "created_at": "2026-05-26T16:50:04Z",
     "created_by": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
     "description": "Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject decision with mandatory security review and reject-by-default posture on filesystem write, shell exec, and unscoped network egress.",

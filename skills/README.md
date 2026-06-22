@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **146**
+Total skills in `devosnt`: **147**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -77,6 +77,7 @@ Total skills in `devosnt`: **146**
 | [lms-system-builder](./lms-system-builder.md) | `solution-architect` | Build an LMS (learning management system): courses, lessons, quizzes, certificates, progre |
 | [maintenance-system-builder](./maintenance-system-builder.md) | `solution-architect` | Build a maintenance / CMMS work-order system from preset. |
 | [marketplace-system-builder](./marketplace-system-builder.md) | `solution-architect` | Build a multi-vendor marketplace: vendors, products, orders, payouts, escrow, ratings. |
+| [mcp-catalog-curator](./mcp-catalog-curator.md) | _(unowned)_ | Produce and maintain a structured catalog of verified MCP servers with capability summarie |
 | [mcp-server-evaluator](./mcp-server-evaluator.md) | `skill-builder` | Evaluate a GitHub-hosted MCP server and produce an import/adapt/recreate/study-only/reject |
 | [mobile-app-planner](./mobile-app-planner.md) | `mobile-engineer` | Plan a React Native (Expo) companion or standalone mobile app. |
 | [monitoring-alerting-setup](./monitoring-alerting-setup.md) | `workspace-operations-manager`, `performance-tester`, `deployment-engineer`, `environment-manager` | Default monitoring: uptime, latency, error rate, with on-call paging. |

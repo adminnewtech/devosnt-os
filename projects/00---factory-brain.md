@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 112 (done: 71)
+- **Issues:** 112 (done: 73)
 
 ## Description
 
@@ -27,18 +27,16 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-288 | Factory Health Audit — 2026-06-21 | `in_review` | none |
 | DEV-289 | Daily Command Center Digest — 2026-06-21 | `in_review` | none |
 | DEV-290 | Workspace Upgrade Report — 2026-06-21 | `in_review` | none |
-| DEV-294 | Factory Health Audit — 2026-06-22 | `in_review` | none |
-| DEV-296 | Daily Command Center Digest — 2026-06-22 | `in_review` | none |
 
 ## Recent Done
 
+- DEV-294 — Factory Health Audit — 2026-06-22
+- DEV-296 — Daily Command Center Digest — 2026-06-22
 - DEV-292 — Workspace Upgrade Action — Capture admin credential blockers as workspace memory
 - DEV-293 — Workspace Upgrade Action — Fix retry-loop prompt for research/QA stall agents
 - DEV-291 — Workspace Upgrade Action — Adopt 12 orphaned skills
-- DEV-254 — Daily Command Center Digest — 2026-06-12
-- DEV-255 — Factory Health Audit — 2026-06-13
-- DEV-256 — Daily Command Center Digest — 2026-06-13
 - DEV-258 — Factory Health Audit — 2026-06-14
 - DEV-259 — Daily Command Center Digest — 2026-06-14
 - DEV-260 — Workspace Upgrade Report — 2026-06-14
 - DEV-266 — Daily Command Center Digest — 2026-06-15
+- DEV-261 — Workspace Upgrade Action — Wire in-review-triage skill to quality-gate-manager
