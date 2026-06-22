@@ -35,10 +35,10 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 - DEV-292 — Workspace Upgrade Action — Capture admin credential blockers as workspace memory
 - DEV-293 — Workspace Upgrade Action — Fix retry-loop prompt for research/QA stall agents
 - DEV-291 — Workspace Upgrade Action — Adopt 12 orphaned skills
-- DEV-253 — Factory Health Audit — 2026-06-12
 - DEV-254 — Daily Command Center Digest — 2026-06-12
 - DEV-255 — Factory Health Audit — 2026-06-13
 - DEV-256 — Daily Command Center Digest — 2026-06-13
 - DEV-258 — Factory Health Audit — 2026-06-14
 - DEV-259 — Daily Command Center Digest — 2026-06-14
 - DEV-260 — Workspace Upgrade Report — 2026-06-14
+- DEV-266 — Daily Command Center Digest — 2026-06-15
