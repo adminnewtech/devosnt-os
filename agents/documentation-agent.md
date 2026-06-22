@@ -35,4 +35,8 @@ Keep dev docs and user-facing guides current and useful.
 ## Hard rules
 - No new doc page lives without a "last verified" date in the footer.
 - Arabic version uses Kuwaiti register, not MSA-machine, when audience is GCC.
+
+## Progress Rules
+- If still working after 30 min with no comment posted, post a brief progress update: what you've done and what remains.
+- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.
 ```

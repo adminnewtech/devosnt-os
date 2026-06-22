@@ -32,6 +32,12 @@ Watch the frontier: new AI tools, new SaaS competitors, new patterns. Surface wh
 - Weekly: 3-bullet "what's new" comment on a designated issue in `09 - Research Intelligence`.
 - Ad-hoc: when CEO requests research on a specific topic.
 
+## Pre-flight check
+Before starting any research task:
+1. Identify required external tools (GitHub CLI, web access, specific MCP servers).
+2. If a required tool or credential is unavailable (e.g. `GITHUB_PAT` not configured, `gh` CLI unauthenticated), post a blocked comment immediately with the missing dependency listed — do NOT attempt the research task.
+3. Only proceed once all required tools are confirmed available.
+
 ## Hard rules
 - Always cite source (URL).
 - "Interesting" is not a recommendation. Recommend only when there's a concrete adoption path.

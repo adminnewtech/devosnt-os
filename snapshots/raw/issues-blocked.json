@@ -141,7 +141,8 @@
       "identifier": "DEV-126",
       "labels": [],
       "metadata": {
-        "waiting_on": "admin:FIGMA_TOKEN"
+        "escalation_timestamp": "2026-06-22",
+        "waiting_on": "admin@newtechkw.com: FIGMA_TOKEN — requested 2026-05-26, re-escalated 2026-06-22"
       },
       "number": 126,
       "parent_issue_id": null,
@@ -151,7 +152,7 @@
       "start_date": null,
       "status": "blocked",
       "title": "OPS: Provision FIGMA_TOKEN + live smoke test for figma-to-ux-spec skill",
-      "updated_at": "2026-05-26T17:31:49Z",
+      "updated_at": "2026-06-22T04:11:06Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -218,7 +219,8 @@
       "identifier": "DEV-97",
       "labels": [],
       "metadata": {
-        "waiting_on": "admin:sentry-credentials (org slug + 2 tokens: RW for deployment-engineer, RO for qa-engineer + security-auditor)"
+        "escalation_timestamp": "2026-06-22",
+        "waiting_on": "admin@newtechkw.com: SENTRY_ORG_SLUG + SENTRY_TOKEN_RW + SENTRY_TOKEN_RO — requested 2026-05-26, re-escalated 2026-06-22"
       },
       "number": 97,
       "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
@@ -228,7 +230,7 @@
       "start_date": null,
       "status": "blocked",
       "title": "WIRE: Sentry MCP → Deployment + QA + Security agents",
-      "updated_at": "2026-05-27T07:52:58Z",
+      "updated_at": "2026-06-22T04:11:03Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -243,7 +245,8 @@
       "identifier": "DEV-96",
       "labels": [],
       "metadata": {
-        "waiting_on": "admin:CONTEXT7_API_KEY — set on all 5 code agents via multica agent env set, then run smoke test and configure Upstash billing alert"
+        "escalation_timestamp": "2026-06-22",
+        "waiting_on": "admin@newtechkw.com: CONTEXT7_API_KEY — requested 2026-05-26, re-escalated 2026-06-22"
       },
       "number": 96,
       "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
@@ -253,7 +256,7 @@
       "start_date": null,
       "status": "blocked",
       "title": "WIRE: Context7 MCP → all code agents",
-      "updated_at": "2026-05-27T07:48:16Z",
+      "updated_at": "2026-06-22T04:11:01Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -268,7 +271,9 @@
       "identifier": "DEV-93",
       "labels": [],
       "metadata": {
-        "blocked_reason": "Admin must provision GITHUB_PAT_RW and GITHUB_PAT_RO tokens and set them as agent env vars; smoke tests cannot run without tokens"
+        "blocked_reason": "Admin must provision GITHUB_PAT_RW and GITHUB_PAT_RO tokens and set them as agent env vars; smoke tests cannot run without tokens",
+        "escalation_timestamp": "2026-06-22",
+        "waiting_on": "admin@newtechkw.com: GITHUB_PAT_RW + GITHUB_PAT_RO — requested 2026-05-26, re-escalated 2026-06-22"
       },
       "number": 93,
       "parent_issue_id": "0d4212ef-0556-447e-9e6b-1b7cbd2793ba",
@@ -278,7 +283,7 @@
       "start_date": null,
       "status": "blocked",
       "title": "WIRE: GitHub MCP → Build Squad agents",
-      "updated_at": "2026-05-27T07:47:19Z",
+      "updated_at": "2026-06-22T04:10:58Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
