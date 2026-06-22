@@ -156,9 +156,9 @@
         "name": "user-stories-to-issues"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-21T06:21:37Z",
+    "updated_at": "2026-06-22T04:00:58Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -211,7 +211,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-22T03:02:15Z",
+    "updated_at": "2026-06-22T04:00:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -347,7 +347,7 @@
     ],
     "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-22T03:02:15Z",
+    "updated_at": "2026-06-22T04:00:59Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
@@ -2215,9 +2215,9 @@
         "name": "user-skill-creation-wizard"
       }
     ],
-    "status": "idle",
+    "status": "working",
     "thinking_level": "",
-    "updated_at": "2026-06-21T06:09:55Z",
+    "updated_at": "2026-06-22T04:00:58Z",
     "visibility": "workspace",
     "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
   },
