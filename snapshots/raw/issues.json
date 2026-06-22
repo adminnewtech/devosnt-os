@@ -409,8 +409,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-22T07:00:06Z",
       "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "creator_type": "agent",
@@ -421,8 +421,10 @@
       "labels": [],
       "metadata": {
         "candidates_total": 7,
+        "deploy_gate_hold_noted": true,
         "dispatched_count": 3,
         "imported_count": 3,
+        "lifecycle_phase": "integrate",
         "sources_skipped": "awesome-claude-code-toolkit,awesome-claude-code-subagents,awesome-agent-skills,hanoi-rainbow",
         "sweep_window_end": "2026-06-22T07:00:00Z"
       },
@@ -434,7 +436,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly GitHub Research Sweep — 2026-06-22",
-      "updated_at": "2026-06-22T07:08:02Z",
+      "updated_at": "2026-06-22T08:36:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -490,8 +492,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-22T06:00:06Z",
       "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
       "creator_type": "agent",
@@ -502,7 +504,9 @@
       "labels": [],
       "metadata": {
         "baseline_brief_id": "DEV-267",
+        "deploy_gate_hold_noted": true,
         "dispatched_count": 1,
+        "lifecycle_phase": "integrate",
         "material_change_vendors": "Lovable,Cursor,Replit,Antigravity",
         "sweep_window_end": "2026-06-22T09:00:00Z",
         "vendors_covered": 6
@@ -515,7 +519,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Weekly Benchmark Sweep — 2026-06-22",
-      "updated_at": "2026-06-22T06:17:05Z",
+      "updated_at": "2026-06-22T08:36:31Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
