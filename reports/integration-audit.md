@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-24T07:36:22.040549+00:00_
+_Generated: 2026-06-25T02:01:41.530758+00:00_
 
 ## Health Summary
 
@@ -14,8 +14,8 @@ _Generated: 2026-06-24T07:36:22.040549+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 1 |
-| in_review_parent_count | 19 |
+| blocked_issues | 0 |
+| in_review_parent_count | 17 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
@@ -26,13 +26,12 @@ _Generated: 2026-06-24T07:36:22.040549+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 5 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 4 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
-| 🟡 WARN | `issue.blocked` | DEV-264 blocked: Factory Health Audit — 2026-06-15 | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `chrome-devtools-mcp-setup` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `frontend-design-opinionated` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `hookify-rule-writer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

@@ -12,7 +12,6 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-267 | Weekly Benchmark Sweep — 2026-06-15 | `in_review` | none |
 | DEV-272 | Weekly GitHub Research Sweep — 2026-06-15 | `in_review` | none |
 | DEV-300 | Weekly Benchmark Sweep — 2026-06-22 | `in_review` | none |
 | DEV-303 | Weekly GitHub Research Sweep — 2026-06-22 | `in_review` | none |
