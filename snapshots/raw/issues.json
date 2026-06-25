@@ -2,6 +2,30 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-25T03:00:21Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-25 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "4d421955-8b47-499e-ad92-4bd7463697a8",
+      "identifier": "DEV-316",
+      "labels": [],
+      "metadata": {},
+      "number": 316,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-25",
+      "updated_at": "2026-06-25T03:02:10Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-24T04:00:10Z",
@@ -1301,33 +1325,9 @@
       "title": "[Wizard Draft] weekly-status-email",
       "updated_at": "2026-06-15T20:54:21Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-06-15T06:12:33Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Context\n\nBenchmark action from DEV-268: WorkspaceAgentSkillPersonalization. Replit Agent and Cursor have shipped workspace-level personalization UIs this week, letting non-technical users define reusable agent behaviors without CLI/CLAUDE.md knowledge. We need to close that gap.\n\n## Task\n\nDesign and publish a new skill: **`user-skill-creation-wizard`**\n\nThis skill is a guided conversation flow that any workspace member (non-technical) can invoke to define a mini-skill. No CLAUDE.md authoring knowledge required.\n\n## Required Skill Anatomy (every field is mandatory)\n\n- **Name:** `user-skill-creation-wizard`\n- **Purpose:** Guide any workspace member through a 4-step conversation to define a mini-skill, then produce a well-formed SKILL.md draft and open a Skill Library review issue.\n- **Trigger:** When a workspace member wants to define a reusable agent behavior but lacks skill-authoring knowledge.\n- **Required Input:** User must supply answers to 4 wizard questions (see Steps below).\n- **Steps:**\n  1. Ask for skill name and one-line description. Validate: name must be kebab-case, description ≤ 120 chars.\n  2. Ask for trigger condition in plain language (when should the agent invoke this skill?).\n  3. Ask what the agent should do: behavior, output format, constraints. Provide an example to anchor the user.\n  4. Ask for optional input fields the user must supply when invoking. Offer to skip if none.\n  5. Run `multica skill list` (if available) to check for naming collisions; rename if conflict found.\n  6. Apply the workspace quality checklist: purpose ✓, trigger ✓, required input ✓, steps ✓, output ✓, quality checklist ✓, failure handling ✓.\n  7. Generate SKILL.md content from the collected answers.\n  8. Create an issue in `08 - Skill Library` (project `88c09466-8a25-419d-b28e-d3d5973197c4`) titled `[Wizard Draft] \u003cskill-name\u003e` with the SKILL.md as the description and status `todo`, assignee: skill-builder.\n  9. Reply to the user with a link to the new issue and the generated SKILL.md preview.\n- **Output:** SKILL.md file content + a new `08 - Skill Library` issue in `todo` status ready for agent review.\n- **Quality checklist:** All 7 SKILL.md sections present; trigger condition is specific enough to auto-detect; steps are actionable without ambiguity; output is concrete; naming collision checked.\n- **Failure handling:** If user provides vague behavior description, re-ask with a concrete example. If naming collision found, suggest 2-3 alternatives before re-asking.\n- **Improvement rule:** Update when Multica adds a skill import UI or when 3+ wizard-generated skills are found to have low quality scores.\n\n## Acceptance Criteria\n\n- [ ] `user-skill-creation-wizard` skill file created and importable in the workspace\n- [ ] Skill passes the 7-section workspace quality checklist\n- [ ] Test case documented: invoke the wizard for a \"weekly status email template\" mini-skill and produce a ready-for-review SKILL.md\n- [ ] A `08 - Skill Library` issue created for the test case output\n- [ ] No hardcoded squad/assignee assumptions in the wizard (squad-agnostic)\n- [ ] Skill extraction note added as a comment on DEV-268\n\n## Definition of Done\n\n- Skill published and importable\n- At least one end-to-end test run documented (wizard invoked → SKILL.md produced → Skill Library review issue created)\n- Comment posted on parent issue DEV-268 with summary and links\n- No secrets exposed",
-      "due_date": null,
-      "id": "f92e36ff-6de6-439f-b971-daa8f784df68",
-      "identifier": "DEV-269",
-      "labels": [],
-      "metadata": {},
-      "number": 269,
-      "parent_issue_id": "3e6d6625-3619-4dc6-883c-35b95a702edd",
-      "position": -11,
-      "priority": "high",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "stage": null,
-      "start_date": null,
-      "status": "done",
-      "title": "Create user-skill-creation-wizard skill",
-      "updated_at": "2026-06-15T06:22:13Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 315
+  "total": 316
 }

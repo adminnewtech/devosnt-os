@@ -22,4 +22,3 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 - DEV-298 — Prompt patch: Add pre-flight dependency check to research-scout
 - DEV-276 — QA Gate: DEV-275 — ASSIGN SKILLS: aegis-method-pack bundle to build/coding agent
 - DEV-275 — ASSIGN SKILLS: aegis-method-pack bundle to build/coding agents
-- DEV-269 — Create user-skill-creation-wizard skill
