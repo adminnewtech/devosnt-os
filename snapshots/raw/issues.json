@@ -2,6 +2,30 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "assignee_type": "agent",
+      "created_at": "2026-06-25T04:00:15Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Daily Command Center Digest. Mode=create_issue. Runs every day 07:00 Asia/Kuwait (GMT+3). Produces ONE per-project status briefing comment on the dated issue this autopilot creates, so the CEO + workspace owner can see — at a glance — every project's state and what to push today.\n\nCRITICAL SAFETY RULES:\n- Mode is create_issue. Do not create additional issues. Do not change status on any other issue.\n- NEVER mention any agent or member in the digest comment. Owner reads the dated issue directly; mentions would loop (Factory Pulse no-mention rule).\n- NEVER touch DEV-36 (workspace-operations dialog) — exclude it from every list, count, and section.\n- Quiet on green days: if NOTHING actionable changed since yesterday's digest (no new blockers, no stale in_review, no new approval ask, no project lifecycle_phase change, no new app-request), do NOT post any comment. Leave the auto-created issue body empty so it can be auto-cancelled by step (8).\n- Use `--output json` on every CLI call. Continue on single-call failure (log to stdout and skip that signal).\n\nSTEPS:\n\n(1) Snapshot the workspace.\n    - `multica project list --output json` → all projects.\n    - `multica issue list --output json` → all issues (paged if needed).\n    - For each non-cancelled issue: record id, identifier, title, status, project_id, parent_issue_id, assignee_id, assignee_type, updated_at.\n    - Exclude DEV-36 (id e60d5be5-b9dd-48aa-b949-28286ea80f1b) everywhere.\n    - Build agent + squad name maps once: `multica agent list --output json` and `multica squad list --output json`. Used for assignee names; never for mention links.\n\n(2) Detect \"since yesterday\" deltas. Treat `since = (now - 24h)` UTC.\n    - new_blockers: issues that flipped to status=blocked in the window (updated_at \u003e= since AND status=blocked).\n    - cleared_blockers: issues that left blocked in the window (status != blocked AND prior blocked_reason metadata key present — best-effort).\n    - new_approval_asks: any issue whose metadata gained `waiting_on=owner` or `waiting_on=admin` in the window, or whose body/comments contain a fresh \"Approval needed\" line written in the window (cheap heuristic: latest comment created_at \u003e= since and contains \"approval needed\" case-insensitive).\n    - stale_in_review_48h: any issue status=in_review with updated_at older than 48h.\n    - lifecycle_phase changes: any parent issue whose metadata `lifecycle_phase` changed (compare to value from yesterday's pin — see step 7).\n    - new_app_requests: any issue created_at \u003e= since in project `01 - App Requests` (f3089a97-c608-4599-913c-f331335e1abe).\n    If ALL six lists are empty AND there is no stale in_review and no current blocked anywhere → green day. Skip to step (8) without posting.\n\n(3) Per-project section assembly. For each project (sorted by project title prefix `00 -`, `01 -`, … and then APP projects):\n    - Skip the project entirely if it has zero open issues (status in {todo, in_progress, in_review, blocked}) AND no new_app_requests AND no lifecycle change.\n    - Goal: 1 sentence from project.description (truncate to ~140 chars at the first sentence boundary).\n    - lifecycle_phase: read from the project's \"anchor\" parent issue (heuristic: the parent issue with the most children in this project; if APP project, the parent whose title starts with \"APP — \"). Show the value of metadata `lifecycle_phase` or \"—\" if unset.\n    - Active issues: counts by status — `todo=N in_progress=N in_review=N blocked=N` (exclude DEV-36).\n    - Blockers + waiting_on: list every issue in this project with status=blocked OR metadata `waiting_on` set. Format: `DEV-NN \u003ctitle\u003e — waiting_on=\u003cvalue\u003e | blocked_reason=\u003cvalue\u003e`. Cap 5 per project; \"+N more\" if truncated.\n    - Next action + owner: the single highest-priority issue in this project that is `todo` or `in_progress` and not blocked. Format: `DEV-NN \u003ctitle\u003e — owner=\u003cagent-or-squad name\u003e` (plain name, NO mention link).\n    - Risk: 1 line — pick the most material risk: stale in_review item, oldest blocker, or \"WIP imbalance: \u003cname\u003e has N in_progress\" if any agent in this project has \u003e=4 open issues. If nothing material, write \"Risk: low — no stale or overloaded items.\".\n    - Approval needed: yes/no. If yes, quote the exact ask (one sentence from the requesting issue's body/comment). Format: `Approval needed: yes — DEV-NN: \"\u003cexact ask\u003e\"` or `Approval needed: no`.\n\n(4) Compose the Top-3 block. Score every open issue across the workspace by:\n    - urgency: blocked=4, stale_in_review_48h=3, has approval ask=3, deploy_gate=red=4, priority=urgent=4 / high=3 / medium=2 / low=1.\n    - momentum: in_progress=2, in_review=1, todo=1, backlog=0.\n    - age penalty: +1 per 24h since updated_at, cap +3.\n    Final score = urgency + momentum + age_penalty. Pick the top 3 distinct issues (no two from the same parent unless nothing else qualifies).\n\n(5) Render the digest comment using this exact shape (parseable by humans and future audits):\n\n```\n# Daily Command Center Digest — \u003cYYYY-MM-DD KW\u003e\n\n**Window:** \u003csince\u003e → \u003cnow\u003e (UTC) | **Projects scanned:** N | **Open issues:** N | **Blocked:** N | **Stale in_review (48h):** N | **Approval asks:** N\n\n## Per-Project Status\n\n### \u003cproject icon\u003e \u003cproject title\u003e\n- **Goal:** \u003cone sentence\u003e\n- **Phase:** \u003clifecycle_phase\u003e\n- **Active:** todo=\u003cn\u003e in_progress=\u003cn\u003e in_review=\u003cn\u003e blocked=\u003cn\u003e\n- **Blockers / waiting_on:** \u003clist or \"none\"\u003e\n- **Next action:** \u003cDEV-NN title — owner=name\u003e\n- **Risk:** \u003cone line\u003e\n- **Approval needed:** \u003cyes/no\u003e [— \"\u003cexact ask\u003e\"]\n\n### \u003cnext project\u003e\n… (same shape)\n\n## Top 3 to Push Today\n\n1. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n2. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n3. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n\n## Deltas Since Yesterday\n- New blockers: \u003cDEV-NN list or \"none\"\u003e\n- Cleared blockers: \u003cDEV-NN list or \"none\"\u003e\n- New approval asks: \u003cDEV-NN list or \"none\"\u003e\n- Stale in_review (48h+): \u003cDEV-NN list or \"none\"\u003e\n- New app requests: \u003cDEV-NN list or \"none\"\u003e\n- Lifecycle phase changes: \u003cproject: old→new or \"none\"\u003e\n```\n\nPost via: `multica issue comment add \u003cthis-issue-id\u003e --content-stdin` (HEREDOC the body). NEVER include any `mention://agent/...` or `mention://member/...` link. Issue references should be plain `DEV-NN` text (no `mention://issue/...` either — keep the digest scannable).\n\n(6) On a green day (step 2 short-circuited), do NOT post any comment. Skip to step (8).\n\n(7) Pin metadata on THIS issue only if a value materially helps tomorrow's run:\n    - `last_run_verdict` = \"green\" or \"posted\" (overwrite each run).\n    - `last_window_end` = \u003cRFC3339-now\u003e (overwrite each run).\n    - `lifecycle_phase_snapshot` = JSON map `{project_id: phase}` so step (2) can detect phase changes tomorrow.\n    - `top3_count` = number (expect 0 on green days, 3 otherwise).\n    Use `multica issue metadata set` once per changed key. Skip any key whose value is identical to what `metadata list` already shows.\n\n(8) Status finalization.\n    - If a digest was posted: flip THIS issue to `in_review` (`multica issue status \u003cthis-issue-id\u003e in_review`). CEO + owner read it, then close.\n    - If green day (no digest posted): flip THIS issue to `cancelled` with no comment so it stops cluttering the inbox.\n\n(9) Output one line to stdout (only non-comment output): `Daily Digest @ \u003cRFC3339\u003e | verdict=\u003cgreen|posted\u003e | projects=N | top3=N | blocked=B stale=S approvals=A`.\n\nOPERATING RULES:\n- Never block on a single CLI failure. Log \"skipped \u003csignal\u003e: \u003creason\u003e\" and continue with the remaining signals.\n- All comments go ONLY on the issue this autopilot creates. Never comment on any other issue.\n- Never mention any agent or member anywhere. Plain names only.\n- Read this issue's existing metadata before pinning. Only update keys whose values changed.\n- Do not create sub-issues, do not reassign any other issue, do not change any other issue's status.\n- The created issue MUST land in `in_review` (when posted) or `cancelled` (green day) — never `done` (owner closes), never left in `todo`.\n\n---\n*Autopilot run triggered at 2026-06-25 07:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "702406a8-ffbe-4fd1-8a2f-ff4f5d2884f2",
+      "identifier": "DEV-317",
+      "labels": [],
+      "metadata": {},
+      "number": 317,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Daily Command Center Digest — 2026-06-25",
+      "updated_at": "2026-06-25T04:03:16Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "assignee_type": "agent",
       "created_at": "2026-06-25T03:00:21Z",
@@ -20,9 +44,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
-      "title": "Factory Health Audit — 2026-06-25",
-      "updated_at": "2026-06-25T03:02:10Z",
+      "status": "in_review",
+      "title": "Factory Health Audit — 2026-06-25 (Daily Automated)",
+      "updated_at": "2026-06-25T03:04:04Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1298,36 +1322,9 @@
       "title": "QA Gate: DEV-268 — BENCHMARK ACTION: WorkspaceAgentSkillPersonalization",
       "updated_at": "2026-06-15T06:26:12Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
-      "assignee_type": "squad",
-      "created_at": "2026-06-15T06:14:49Z",
-      "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "creator_type": "agent",
-      "description": "# Skill: weekly-status-email\n\n## Purpose\n\nGenerate a structured weekly status email summarizing what the team shipped, current blockers, and priorities for the coming week. Designed to be invoked by any team member or agent at the end of each work week or sprint, requiring no manual formatting.\n\n## Trigger\n\nInvoke when a team member or manager asks for a weekly status update email (e.g. \"send the weekly update\", \"draft the status email for this week\", \"write the end-of-sprint email\"). Also suitable for automation on a recurring Friday/end-of-sprint schedule.\n\n## Required Input\n\n- **project** — The project name or ID to query for closed issues (e.g. `DEV`, `88c09466-8a25-419d-b28e-d3d5973197c4`).\n- **week_start** — ISO date for the start of the reporting period (e.g. `2026-06-09`).\n- **week_end** — ISO date for the end of the reporting period (e.g. `2026-06-15`).\n- **recipient** — (Optional) Name of the recipient or audience. Defaults to \"Team\" if not provided.\n\n## Steps\n\n1. Run `multica issue list --project \u003cproject\u003e --status done --output json` (or equivalent) to retrieve all issues closed during the `week_start`–`week_end` period.\n2. Filter to issues whose `updated_at` or `done_at` falls within the date range.\n3. Extract human-readable titles only — strip internal IDs, URLs, and technical identifiers from the output.\n4. Query for any issues currently in `blocked` status within the same project to populate the Blockers section.\n5. Query for issues in `todo` or `in_progress` status to determine next week's priorities (top 5 by priority field).\n6. Compose the email:\n   - **Subject:** `Weekly Status Update — Week of \u003cweek_start\u003e`\n   - **Greeting:** `Hi \u003crecipient\u003e,`\n   - **What we shipped:** Bullet list of closed issue titles (plain language, no IDs).\n   - **Blockers:** Bullet list of blocked issue titles + one-line blocker reason if available in the issue description. If none, write \"No active blockers.\"\n   - **Next week:** Top 5 priority issue titles from `todo`/`in_progress`.\n   - **Sign-off:** `Best, [Agent / Team]`\n7. Output the email as plain text (no markdown headers, no internal URLs, no issue identifiers).\n8. Present the draft to the invoker for approval before sending (if a send action is available).\n\n## Output\n\nA plain-text email body ready to send or paste:\n- Subject line\n- Greeting\n- \"What we shipped\" section (bullet list, human-readable titles only)\n- \"Blockers\" section (bullet list or \"No active blockers\")\n- \"Next week\" section (up to 5 priorities)\n- Sign-off line\n\nMaximum length: 400 words. Tone: professional, concise, readable by non-technical stakeholders.\n\n## Quality Checklist\n\n- [ ] All four required inputs are present or defaulted before running.\n- [ ] Closed issues are filtered to the exact `week_start`–`week_end` window.\n- [ ] No internal issue IDs, UUIDs, or URLs appear in the email body.\n- [ ] Blockers section is present (even if it says \"No active blockers\").\n- [ ] Next week section lists ≤ 5 items.\n- [ ] Email is plain text with no markdown headers or code blocks.\n- [ ] Draft is presented for human approval before any send action.\n\n## Failure Handling\n\n- **No closed issues found for the period:** Write \"No issues were closed this week.\" in the shipped section and note it may mean the date range is wrong — ask the invoker to confirm.\n- **Project not found or access denied:** Report the error, ask the invoker to confirm the project name/ID, and retry.\n- **Blocker query fails:** Omit the blockers section and note it in the email draft as \"Blocker data unavailable — check manually.\"\n- **Draft exceeds 400 words:** Summarize each bullet to ≤ 15 words and truncate to top 7 shipped items.\n\n## Improvement Rule\n\nReview after 5 uses. Refine if:\n- Recipients report the email is too long or technical.\n- Closed-issue filtering misses or double-counts items (adjust date filter logic).\n- A scheduling autopilot is set up — add a step to post the draft to a Slack channel automatically.\n- Multica adds a native reporting export (retire the manual query steps).",
-      "due_date": null,
-      "id": "87c6da9f-40d1-4f8e-8e41-db02b29b87eb",
-      "identifier": "DEV-270",
-      "labels": [],
-      "metadata": {
-        "deploy_gate_hold_noted": true,
-        "lifecycle_phase": "integrate"
-      },
-      "number": 270,
-      "parent_issue_id": null,
-      "position": -11,
-      "priority": "medium",
-      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
-      "stage": null,
-      "start_date": null,
-      "status": "in_review",
-      "title": "[Wizard Draft] weekly-status-email",
-      "updated_at": "2026-06-15T20:54:21Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 316
+  "total": 317
 }

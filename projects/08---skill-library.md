@@ -10,9 +10,7 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-270 | [Wizard Draft] weekly-status-email | `in_review` | medium |
+_(no open issues)_
 
 ## Recent Done
 

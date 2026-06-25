@@ -2,6 +2,30 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-25T03:00:21Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-25 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "4d421955-8b47-499e-ad92-4bd7463697a8",
+      "identifier": "DEV-316",
+      "labels": [],
+      "metadata": {},
+      "number": 316,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_review",
+      "title": "Factory Health Audit — 2026-06-25 (Daily Automated)",
+      "updated_at": "2026-06-25T03:04:04Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-06-14T06:07:06Z",
@@ -1387,33 +1411,9 @@
       "title": "QA Gate: DEV-43 — Build local debug APK from attendance-app/",
       "updated_at": "2026-05-27T09:48:59Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T16:52:57Z",
-      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
-      "creator_type": "agent",
-      "description": "## Input\nGitHub repo: https://github.com/rohitg00/awesome-claude-code-toolkit\n\nScope: 135 agents, 35 curated skills, 42 commands, 176+ plugins, 20 hooks, 15 rules, 7 templates, 14 MCP configs, 26 companion apps, 52 ecosystem entries.\n\n## Expected Output\nPer-repo report posted as a comment on parent issue [DEV-63](mention://issue/4333e896-a75c-4f04-9281-f7a6fc39bd6a), containing:\n- Top 20 highest-value items\n- For each item: purpose, maintainer activity (last commit date), capability surface, security risk assessment, decision (import / adapt / recreate / study only / reject)\n- Highlight top candidates for Multica skill import (max 5 from this repo)\n\n## Acceptance Criteria\n- [ ] Top 20 items catalogued with all fields\n- [ ] Maintainer activity checked (flag anything with \u003e6 months no commits)\n- [ ] License noted for every candidate (reject unclear/missing licenses)\n- [ ] Remote-execution or shell-invocation patterns flagged\n- [ ] Report posted as comment on parent DEV-63\n\n## Security Screening Criteria (apply to every candidate)\nReject automatically if ANY of:\n- License is missing, proprietary, or ambiguous\n- Last maintainer commit \u003e 6 months ago (dormant)\n- Contains remote execution patterns that cannot be sandboxed (e.g., arbitrary curl/exec, self-update mechanisms, outbound webhook calls)\n- Requires external credentials or API keys that would be committed\n\n## Dependencies\nNone — runs in parallel with DEV-63-subagents sub-issue.\n\n## Risk\nRepo may have many entries; prioritize by star count and recent activity.\n\n## Definition of Done\nReport comment posted on DEV-63; top candidates identified with pass/fail security flags; research-scout can consolidate from this comment.",
-      "due_date": null,
-      "id": "e837a114-653b-492c-a00f-e9df737595c2",
-      "identifier": "DEV-71",
-      "labels": [],
-      "metadata": {},
-      "number": 71,
-      "parent_issue_id": "4333e896-a75c-4f04-9281-f7a6fc39bd6a",
-      "position": 0,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "stage": null,
-      "start_date": null,
-      "status": "in_review",
-      "title": "RESEARCH DEEP-DIVE: rohitg00/awesome-claude-code-toolkit — inventory \u0026 security gate",
-      "updated_at": "2026-06-13T12:04:41Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 55
+  "total": 56
 }
