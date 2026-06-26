@@ -13,7 +13,7 @@
       "identifier": "DEV-319",
       "labels": [],
       "metadata": {
-        "retry_log": "{\"attempts\":1,\"last_stall\":\"2026-06-26T05:48:37Z\"}"
+        "retry_log": "{\"attempts\":2,\"last_stall\":\"2026-06-26T07:36:00Z\"}"
       },
       "number": 319,
       "parent_issue_id": null,
@@ -24,7 +24,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "Daily Command Center Digest — 2026-06-26",
-      "updated_at": "2026-06-26T05:53:26Z",
+      "updated_at": "2026-06-26T07:36:01Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
