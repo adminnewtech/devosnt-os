@@ -92,6 +92,7 @@
       "identifier": "DEV-316",
       "labels": [],
       "metadata": {
+        "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate"
       },
       "number": 316,
@@ -103,7 +104,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-25 (Daily Automated)",
-      "updated_at": "2026-06-25T08:56:03Z",
+      "updated_at": "2026-06-26T08:24:55Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
