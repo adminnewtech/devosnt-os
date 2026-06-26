@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-26T09:02:36.952831+00:00_
+_Generated: 2026-06-26T10:02:07.584323+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-06-26T09:02:36.952831+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 0 |
+| blocked_issues | 1 |
 | in_review_parent_count | 18 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,12 +26,13 @@ _Generated: 2026-06-26T09:02:36.952831+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 4 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 5 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-319 blocked: Daily Command Center Digest — 2026-06-26 | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `chrome-devtools-mcp-setup` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `frontend-design-opinionated` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `hookify-rule-writer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

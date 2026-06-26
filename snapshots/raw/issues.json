@@ -13,7 +13,7 @@
       "identifier": "DEV-319",
       "labels": [],
       "metadata": {
-        "retry_log": "{\"attempts\":2,\"last_stall\":\"2026-06-26T07:36:00Z\"}"
+        "retry_log": "{\"attempts\":3,\"last_stall\":\"2026-06-26T07:36:00Z\",\"blocked_at\":\"2026-06-26T09:00:00Z\"}"
       },
       "number": 319,
       "parent_issue_id": null,
@@ -22,14 +22,14 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "blocked",
       "title": "Daily Command Center Digest — 2026-06-26",
-      "updated_at": "2026-06-26T07:36:01Z",
+      "updated_at": "2026-06-26T09:20:24Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-26T03:00:14Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -38,7 +38,9 @@
       "id": "1c44a31e-6aed-4afd-84dd-cc6fdfcde3bd",
       "identifier": "DEV-318",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 318,
       "parent_issue_id": null,
       "position": -15,
@@ -48,12 +50,12 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-06-26",
-      "updated_at": "2026-06-26T03:05:18Z",
+      "updated_at": "2026-06-26T09:39:54Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-25T04:00:15Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -65,6 +67,7 @@
       "metadata": {
         "last_run_verdict": "posted",
         "last_window_end": "2026-06-25T04:08:00Z",
+        "lifecycle_phase": "integrate",
         "lifecycle_phase_snapshot": "{\"1a1c2fb3-41ee-4b99-b820-d10f1c564052\":\"—\",\"f3089a97-c608-4599-913c-f331335e1abe\":\"—\",\"0ef266f6-8a27-410d-93a2-4ed479ae1752\":\"—\",\"88c09466-8a25-419d-b28e-d3d5973197c4\":\"—\",\"e977793d-b825-448a-a3f1-bb8f59cc1266\":\"—\"}",
         "top3_count": 3
       },
@@ -77,7 +80,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-25",
-      "updated_at": "2026-06-25T04:08:24Z",
+      "updated_at": "2026-06-26T09:39:59Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
