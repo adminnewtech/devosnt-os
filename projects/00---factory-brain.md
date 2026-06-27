@@ -35,7 +35,7 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-318 | Factory Health Audit — 2026-06-26 | `in_review` | none |
 | DEV-319 | Daily Command Center Digest — 2026-06-26 | `blocked` | none |
 | DEV-320 | Factory Health Audit — 2026-06-27 | `in_review` | none |
-| DEV-321 | Daily Command Center Digest — 2026-06-27 | `in_progress` | none |
+| DEV-321 | Daily Command Center Digest — 2026-06-27 | `in_review` | none |
 
 ## Recent Done
 

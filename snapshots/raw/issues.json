@@ -12,7 +12,12 @@
       "id": "9fb7a2ca-212e-4387-af4a-de37f432dac0",
       "identifier": "DEV-321",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-27T04:09:37Z",
+        "lifecycle_phase_snapshot": "{\"1a1c2fb3-41ee-4b99-b820-d10f1c564052\":\"—\",\"f3089a97-c608-4599-913c-f331335e1abe\":\"—\",\"0ef266f6-8a27-410d-93a2-4ed479ae1752\":\"—\",\"88c09466-8a25-419d-b28e-d3d5973197c4\":\"—\",\"e977793d-b825-448a-a3f1-bb8f59cc1266\":\"—\"}",
+        "top3_count": 3
+      },
       "number": 321,
       "parent_issue_id": null,
       "position": -15,
@@ -20,9 +25,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-27",
-      "updated_at": "2026-06-27T04:01:24Z",
+      "updated_at": "2026-06-27T04:09:57Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
