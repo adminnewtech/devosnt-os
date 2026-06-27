@@ -2,6 +2,30 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-27T03:00:22Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-27 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "32dc9615-fbaa-4181-8216-cfd40373bcfb",
+      "identifier": "DEV-320",
+      "labels": [],
+      "metadata": {},
+      "number": 320,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_review",
+      "title": "Factory Health Audit — 2026-06-27",
+      "updated_at": "2026-06-27T03:04:39Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-06-26T03:00:14Z",
@@ -1402,33 +1426,9 @@
       "title": "QA Gate: DEV-110 — Pin self-hosted-supabase-tunnel",
       "updated_at": "2026-05-27T09:33:24Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-05-26T20:26:20Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "Verify and decide on [DEV-81](mention://issue/5c04ebc6-398f-4c40-bceb-26e79ccf945b).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run security-review-checklist if the issue is user-facing.\n3. Check every item in the Definition of Done checklist.\n\nDecision:\n- PASS (DoD met, no security issues) → multica issue status 5c04ebc6-398f-4c40-bceb-26e79ccf945b done\n- VETO (DoD not met or security failure) → multica issue status 5c04ebc6-398f-4c40-bceb-26e79ccf945b backlog + multica issue metadata set 5c04ebc6-398f-4c40-bceb-26e79ccf945b --key blocked_reason --value \u003creason\u003e\n\nPost your verdict as a comment on the parent issue.",
-      "due_date": null,
-      "id": "eb45d88d-bf74-413f-91c1-bf7d2a208999",
-      "identifier": "DEV-135",
-      "labels": [],
-      "metadata": {},
-      "number": 135,
-      "parent_issue_id": "5c04ebc6-398f-4c40-bceb-26e79ccf945b",
-      "position": 0,
-      "priority": "none",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "stage": null,
-      "start_date": null,
-      "status": "in_review",
-      "title": "QA Gate: DEV-81 — VENDOR BRIEF: Atoms.dev",
-      "updated_at": "2026-05-27T09:33:28Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 58
+  "total": 59
 }

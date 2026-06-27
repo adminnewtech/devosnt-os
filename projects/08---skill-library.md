@@ -19,4 +19,3 @@ _(no open issues)_
 - DEV-297 — Prompt patch: Apply Progress Rules to documentation-agent
 - DEV-298 — Prompt patch: Add pre-flight dependency check to research-scout
 - DEV-276 — QA Gate: DEV-275 — ASSIGN SKILLS: aegis-method-pack bundle to build/coding agent
-- DEV-275 — ASSIGN SKILLS: aegis-method-pack bundle to build/coding agents
