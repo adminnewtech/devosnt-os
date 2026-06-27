@@ -25,5 +25,5 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-302 — QA Gate: DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
 - DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
 - DEV-277 — QA Gate: DEV-273 — SKILL IMPORT: aegis-method-pack
-- DEV-274 — SECURITY REVIEW: Aegis method-pack import
 - DEV-244 — SECURITY REVIEW: sandbox-process-runner import
+- DEV-245 — SECURITY REVIEW: supabase-mcp-setup import

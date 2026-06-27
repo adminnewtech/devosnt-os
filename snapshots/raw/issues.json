@@ -2,6 +2,30 @@
   "has_more": true,
   "issues": [
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-27T03:00:22Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-27 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "32dc9615-fbaa-4181-8216-cfd40373bcfb",
+      "identifier": "DEV-320",
+      "labels": [],
+      "metadata": {},
+      "number": 320,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-27",
+      "updated_at": "2026-06-27T03:02:44Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-26T04:00:08Z",
@@ -253,7 +277,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Workspace Upgrade Action — Capture admin-escalation blockers as memory defaults",
-      "updated_at": "2026-06-26T12:23:52Z",
+      "updated_at": "2026-06-27T02:18:50Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1303,35 +1327,9 @@
       "title": "ASSIGN SKILLS: aegis-method-pack bundle to build/coding agents",
       "updated_at": "2026-06-15T07:41:52Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-06-15T07:07:54Z",
-      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
-      "creator_type": "agent",
-      "description": "## SECURITY REVIEW: Aegis method-pack import\n\n**Source URL:** https://github.com/GanyuanRan/Aegis\n**Dispatch sub-issue:** DEV-273 (SKILL IMPORT: aegis-method-pack)\n\n### Install footprint\n\n- Zero npm dependencies (no package.json in core skill logic)\n- Pure markdown files only\n- No runtime execution — skills are guidance documents, not code\n- No third-party API calls required\n- No OAuth scopes required\n- No network access during skill execution\n\n### Required scopes / permissions\n\nNone. Skills are read-only markdown files that guide agent behavior. The agent reading the skill needs no elevated permissions.\n\n### Security checklist\n\n- [ ] No secrets or API keys embedded in skill files\n- [ ] No `eval`, `exec`, or code injection vectors in skill content\n- [ ] No instructions that would cause agents to exfiltrate data\n- [ ] No instructions to bypass security controls (no-verify, skip-hooks, etc.)\n- [ ] License confirmed MIT (copyleft-free — green)\n- [ ] No malicious patterns in GitHub Actions workflows (CI only, no secrets access)\n- [ ] No supply-chain risks (zero deps = zero transitive risk)\n- [ ] Content review: skill instructions align with good engineering practice, not adversarial\n\n### Files to audit\n\n1. `skills/` directory — all 20 sub-skill markdown files\n2. `CLAUDE.md`, `AGENTS.md` — host-specific guidance files\n3. `.github/workflows/` — CI only, verify no secrets access\n\n### Acceptance Criteria\n\n- [ ] All checklist items above verified\n- [ ] No red flags found in skill content\n- [ ] Set `decision=green` as metadata on this issue if approved, `decision=red` if rejected\n- [ ] Comment with reasoning on this issue\n\n### Post-review action\n\nWhen done and decision=green: run `multica issue status d2ce1d15-89fa-4af7-aa1e-69c506aaa5ea todo` to promote the dispatch sub-issue (DEV-273) from backlog to todo.\n\n### Definition of Done\n\nSecurity review complete, decision metadata pinned, DEV-273 status updated accordingly.",
-      "due_date": null,
-      "id": "89afd0bc-9428-4227-95a9-53411835f0f2",
-      "identifier": "DEV-274",
-      "labels": [],
-      "metadata": {
-        "decision": "green"
-      },
-      "number": 274,
-      "parent_issue_id": "35e3aef1-40ff-40c9-b097-3fdbefc2774e",
-      "position": -11,
-      "priority": "high",
-      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
-      "stage": null,
-      "start_date": null,
-      "status": "done",
-      "title": "SECURITY REVIEW: Aegis method-pack import",
-      "updated_at": "2026-06-15T07:19:37Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 319
+  "total": 320
 }
