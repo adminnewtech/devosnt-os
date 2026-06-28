@@ -24,6 +24,6 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-307 — SECURITY REVIEW: hookify writing-rules skill import
 - DEV-302 — QA Gate: DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
 - DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
-- DEV-277 — QA Gate: DEV-273 — SKILL IMPORT: aegis-method-pack
 - DEV-244 — SECURITY REVIEW: sandbox-process-runner import
 - DEV-245 — SECURITY REVIEW: supabase-mcp-setup import
+- DEV-238 — QA Gate: DEV-220 — BENCHMARK ACTION: pre-deploy-scan skill
