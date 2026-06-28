@@ -4,6 +4,30 @@
     {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
+      "created_at": "2026-06-28T06:00:00Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Workspace Upgrade Weekly Loop — recursive workspace self-improvement. Mode=create_issue. Runs every Sunday 09:00 Asia/Kuwait (GMT+3).\n\nRun the `workspace-upgrade-report` skill against the live workspace and post a single ranked action list as a comment on the issue this autopilot creates. Auto-dispatch the top 3 actions to skill-builder, prompt-optimizer, and memory-curator. Never skip a week — a silent skip is itself a finding.\n\nCRITICAL SAFETY RULES:\n- Mode is create_issue. Do not create additional issues except the three sub-issues for top-3 dispatch in step (6).\n- NEVER mention CEO in any comment — CEO is the assignee and re-mentioning would loop (Factory Pulse v3 no-mention rule).\n- NEVER mention any agent in a wrap-up. Only mention agents to delegate first-touch work on a fresh sub-issue.\n- NEVER touch DEV-36 (the workspace-operations dialog).\n- Read each issue's metadata before pinning anything; do not log run state. Stay within the issue this autopilot creates.\n\nSTEPS:\n\n(1) Scope the scan window. Treat `since = now - 7 days` (RFC3339, UTC). Use `--output json` on every CLI call. Continue on single-call failure (log to stdout and skip that signal).\n\n(2) Collect the five input signals:\n\n   (a) retry_logs (last 7 days). Walk every issue updated in the past 7 days and pull metadata. Any `retry_log` key present is a failure signature. Aggregate by skill name / agent / failure_reason.\n       - `multica issue list --output json --status in_progress` and `--status blocked` and `--status in_review` (paged if needed).\n       - For each issue, `multica issue metadata list \u003cid\u003e --output json` — keep only entries with a `retry_log` key.\n\n   (b) Blocked issues — every issue currently `status=blocked`:\n       - `multica issue list --status blocked --output json`\n       - For each: capture id, identifier, title, assignee, age (now - updated_at), and `blocked_reason` metadata.\n\n   (c) Stale in_review (\u003e48h) — every issue currently `status=in_review` whose `updated_at` is more than 48h ago:\n       - `multica issue list --status in_review --output json`\n       - Filter client-side by `updated_at`.\n\n   (d) Agent WIP imbalance — for every agent in the workspace, count `in_progress` issues assigned to them. Flag any agent with WIP=0 (cold) or WIP≥4 (overloaded). Flag any squad whose total WIP ≥7.\n       - `multica agent list --output json`\n       - `multica issue list --status in_progress --output json` and group by `assignee_id`.\n\n   (e) Skill orphans — every skill not assigned to any agent (`agent_count==0`), and every agent with zero skills attached.\n       - `multica skill list --output json`\n       - For each skill, attempt `multica skill get \u003cid\u003e --output json` (or inspect the skill→agent join if exposed). If the CLI exposes no join command, infer from agent definitions (`multica agent get \u003cid\u003e --output json` per agent) — cap the scan at 30 agents per run.\n\n(3) Score and rank actions. For each candidate upgrade action, score on:\n   - Impact (how many issues/agents this would unblock or accelerate; 1–5)\n   - Effort (1=trivial, 5=multi-day)\n   - Confidence (1=speculative, 5=clear pattern with ≥3 occurrences)\n   Final score = (Impact × Confidence) / Effort. Surface the Top 5.\n\n(4) Compose the upgrade report comment. Post ONE comment on this autopilot's created issue, using this exact shape so step (6) can parse it:\n\n```\n# Workspace Upgrade Report — \u003cYYYY-MM-DD\u003e\n\n**Window:** \u003csince\u003e → \u003cnow\u003e (UTC)\n**Signals scanned:** retry_logs=N | blocked=N | stale_in_review_48h=N | wip_outliers=N | skill_orphans=N\n\n## Top 5 Upgrade Actions\n\n1. **\u003cshort title\u003e** — owner=\u003cagent-name\u003e | effort=\u003cS|M|L\u003e | impact=\u003c1-5\u003e | score=\u003cn\u003e\n   - Rationale: \u003cone sentence, cite source issue identifiers like DEV-NN\u003e\n   - Expected impact: \u003cone sentence\u003e\n\n2. … (same shape)\n3. … (same shape)\n4. … (same shape)\n5. … (same shape)\n\n## Signal Summary\n- Retry log hotspots: \u003cskill / agent / count\u003e …\n- Stale in_review: \u003cDEV-NN list\u003e\n- Blocked: \u003cDEV-NN list\u003e\n- WIP outliers: \u003cagent: count\u003e …\n- Skill orphans: \u003cskill names\u003e\n\n## Next Steps\n- Top 3 actions auto-dispatched to skill-builder, prompt-optimizer, memory-curator (see linked sub-issues).\n- Remaining actions parked on this issue for CEO triage.\n```\n\nPost via: `multica issue comment add \u003cthis-issue-id\u003e --content-stdin` (HEREDOC the body in). Do NOT include any `mention://agent/...` link in this comment.\n\n(5) Pin metadata on this issue ONLY if a value is materially needed by future runs. Recommended keys: `report_window_end` (RFC3339), `top_action_count` (number, expect 5), `dispatched_action_count` (number, expect 3). Use `multica issue metadata set` once each. Skip any key whose value is identical to what you already see in `metadata list`.\n\n(6) Auto-dispatch top 3 actions. Each top-3 action gets its own sub-issue under this autopilot's created issue, assigned to the named owner. Owner mapping rules:\n   - Owner agent named in the action header (skill-builder / prompt-optimizer / memory-curator) is the assignee.\n   - If the top-3 already names a different agent (e.g. action #1 is a runtime fix that belongs elsewhere), still cap dispatch at exactly three sub-issues among {skill-builder, prompt-optimizer, memory-curator}. Pick the highest-scoring action that fits each agent's domain:\n       * skill-builder → new skill, skill rewrite, skill orphan adoption\n       * prompt-optimizer → agent prompt edit, prompt-improvement-review target, retry_log root-cause in prompts\n       * memory-curator → memory cleanup, stale-fact removal, missing-default capture\n   - If no candidate fits an agent's domain this week, comment on the parent: \"No skill-builder/prompt-optimizer/memory-curator action this week — backlog empty for that lane.\" Do NOT mint a filler sub-issue.\n\n   For each of the three dispatch sub-issues:\n   - `multica issue create --title \"Workspace Upgrade Action — \u003cshort title\u003e\" --project 1a1c2fb3-41ee-4b99-b820-d10f1c564052 --parent \u003cthis-issue-id\u003e --status todo --priority high --assignee-id \u003cagent-id\u003e --description-stdin` with body that includes:\n     * Input (the signal that triggered this)\n     * Expected Output (concrete deliverable: prompt patch / new skill / memory entry)\n     * Acceptance Criteria\n     * Dependencies\n     * Risk\n     * Definition of Done\n   - The sub-issue assignment fires the agent. Do not also `@mention` the agent in the sub-issue body — assignment is the trigger.\n\n(7) Flip this issue's status to `in_review` so the CEO Command Squad can verify (`multica issue status \u003cthis-issue-id\u003e in_review`). Do NOT close it. Top-3 sub-issues stay `todo` for the owner agents.\n\n(8) Output to stdout: `Workspace Upgrade @ \u003cRFC3339\u003e | top5=5 | dispatched=N | blocked=B stale=S wip_out=W orphans=O retry=R`. This is the only non-comment output.\n\nOperating rules:\n- Never block on a single CLI failure. Log \"skipped \u003csignal\u003e: \u003creason\u003e\" and continue with the remaining signals.\n- All comments go on the auto-created issue. Never comment on DEV-36 or on issues you did not create.\n- Do not use `multica issue update --status done` anywhere. The owners close their own sub-issues.\n- Do not create more than 3 dispatch sub-issues. Cap is hard.\n- The created issue MUST land in `in_review`, never `done` — CEO verifies week-over-week trend.\n\n---\n*Autopilot run triggered at 2026-06-28 09:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "fa847dbb-9696-41ba-8da7-48e6128f66e4",
+      "identifier": "DEV-324",
+      "labels": [],
+      "metadata": {},
+      "number": 324,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Workspace Upgrade Report — 2026-06-28",
+      "updated_at": "2026-06-28T06:01:03Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "assignee_type": "agent",
       "created_at": "2026-06-28T04:00:07Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -1306,36 +1330,9 @@
       "title": "Daily Command Center Digest — 2026-06-16",
       "updated_at": "2026-06-17T00:26:14Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
-      "assignee_type": "squad",
-      "created_at": "2026-06-16T03:00:04Z",
-      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "creator_type": "agent",
-      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-16 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
-      "due_date": null,
-      "id": "2c09c201-d4dd-4240-a55d-7e99d1db0184",
-      "identifier": "DEV-278",
-      "labels": [],
-      "metadata": {
-        "deploy_gate_hold_noted": true,
-        "lifecycle_phase": "integrate"
-      },
-      "number": 278,
-      "parent_issue_id": null,
-      "position": -11,
-      "priority": "none",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "stage": null,
-      "start_date": null,
-      "status": "in_review",
-      "title": "Factory Health Audit — 2026-06-16",
-      "updated_at": "2026-06-17T00:26:15Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 323
+  "total": 324
 }
