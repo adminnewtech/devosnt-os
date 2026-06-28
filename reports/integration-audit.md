@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-06-28T06:01:33.421902+00:00_
+_Generated: 2026-06-28T07:02:29.800381+00:00_
 
 ## Health Summary
 
@@ -15,13 +15,13 @@ _Generated: 2026-06-28T06:01:33.421902+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 1 |
-| in_review_parent_count | 21 |
+| in_review_parent_count | 14 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 150 (owned: 146, orphan: 4)
+- **Skills:** 151 (owned: 147, orphan: 4)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)

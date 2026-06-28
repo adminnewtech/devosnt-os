@@ -13,6 +13,7 @@ Owns workspace settings, agent lifecycle, runtime health, quarterly upgrade.
 
 ## Skills
 
+- [`autopilot-issue-lifecycle-closer`](../skills/autopilot-issue-lifecycle-closer.md) — Close stale autopilot report issues (Daily Digest, Health Audit, Upgrade Report) stuck in in_review after the report was delivered and no action items remain. Caps at 10 per run.
 - [`cost-budget-tracker`](../skills/cost-budget-tracker.md) — Per-project monthly budget + alerting on cloud + AI spend.
 - [`incident-response-runbook`](../skills/incident-response-runbook.md) — Standard incident response: severity, comms, postmortem template.
 - [`monitoring-alerting-setup`](../skills/monitoring-alerting-setup.md) — Default monitoring: uptime, latency, error rate, with on-call paging.

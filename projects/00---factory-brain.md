@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 125 (done: 73)
+- **Issues:** 130 (done: 83)
 
 ## Description
 
@@ -13,11 +13,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-263 | Workspace Upgrade Action — Capture admin-escalation blockers as memory defaults | `in_review` | high |
-| DEV-279 | Daily Command Center Digest — 2026-06-16 | `in_review` | none |
-| DEV-280 | Factory Health Audit — 2026-06-17 | `in_review` | none |
-| DEV-281 | Daily Command Center Digest — 2026-06-17 | `in_review` | none |
-| DEV-282 | Daily Factory Health Audit — 2026-06-18 06:00 Kuwait | `in_review` | none |
-| DEV-283 | Daily Command Center Digest — 2026-06-18 | `in_review` | none |
 | DEV-284 | Factory Health Audit — 2026-06-19 | `in_review` | none |
 | DEV-285 | Daily Command Center Digest — 2026-06-19 | `in_review` | none |
 | DEV-286 | Factory Health Audit — 2026-06-20 | `in_review` | none |
@@ -35,16 +30,16 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-319 | Daily Command Center Digest — 2026-06-26 | `blocked` | none |
 | DEV-320 | Factory Health Audit — 2026-06-27 | `in_review` | none |
 | DEV-321 | Daily Command Center Digest — 2026-06-27 | `in_review` | none |
-| DEV-322 | Factory Health Audit — 2026-06-28 | `in_review` | none |
-| DEV-323 | Daily Command Center Digest — 2026-06-28 | `in_review` | none |
-| DEV-324 | Workspace Upgrade Report — 2026-06-28 | `in_progress` | none |
 
 ## Recent Done
 
+- DEV-329 — QA Gate: DEV-326 — Build autopilot-issue lifecycle-closer skill
+- DEV-326 — Workspace Upgrade Action — Build autopilot-issue lifecycle-closer skill
+- DEV-328 — QA Gate: DEV-327 — CEO stall detection patch verification
+- DEV-327 — Workspace Upgrade Action — Add agent-stall detection and retry rules to CEO rout
+- DEV-322 — Factory Health Audit — 2026-06-28
+- DEV-323 — Daily Command Center Digest — 2026-06-28
+- DEV-324 — Workspace Upgrade Report — 2026-06-28
+- DEV-325 — Workspace Upgrade Action — Capture recurring credential blockers as workspace me
 - DEV-294 — Factory Health Audit — 2026-06-22
 - DEV-296 — Daily Command Center Digest — 2026-06-22
-- DEV-292 — Workspace Upgrade Action — Capture admin credential blockers as workspace memory
-- DEV-293 — Workspace Upgrade Action — Fix retry-loop prompt for research/QA stall agents
-- DEV-291 — Workspace Upgrade Action — Adopt 12 orphaned skills
-- DEV-266 — Daily Command Center Digest — 2026-06-15
-- DEV-262 — Workspace Upgrade Action — Fix QGM prompt to enforce autopilot fast-path for sta

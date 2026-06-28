@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **150**
+Total skills in `devosnt`: **151**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -25,6 +25,7 @@ Total skills in `devosnt`: **150**
 | [audit-log-designer](./audit-log-designer.md) | `solution-architect`, `database-architect`, `backend-engineer`, `security-auditor` | Universal audit log table + trigger pattern. Every write recorded with actor, tenant, diff |
 | [auth-permission-matrix](./auth-permission-matrix.md) | `ceo`, `solution-architect`, `database-architect`, `security-auditor` | Produce the authoritative role × action permission matrix wired to RLS and route guards. |
 | [autonomous-test-fix-loop](./autonomous-test-fix-loop.md) | `qa-engineer`, `bug-hunter` | After a build issue goes in_review, runs the QA test plan against the preview URL, creates |
+| [autopilot-issue-lifecycle-closer](./autopilot-issue-lifecycle-closer.md) | `workspace-operations-manager` | Close stale autopilot report issues (Daily Digest, Health Audit, Upgrade Report) stuck in  |
 | [background-jobs-design](./background-jobs-design.md) | `solution-architect`, `backend-engineer` | Default background job system: pg-boss / BullMQ / inngest, with retries + DLQ. |
 | [backup-restore-planner](./backup-restore-planner.md) | `database-architect`, `environment-manager` | Daily backups, weekly restore drill, point-in-time recovery, per-tenant export. |
 | [benchmark-vendor-tracker](./benchmark-vendor-tracker.md) | `research-scout` | Produce a structured one-page competitive brief for any AI-adjacent vendor. Input: vendor  |

@@ -44,4 +44,4 @@ Total agents in `devosnt`: **41**
 | [tool-evaluator](./tool-evaluator.md) | `claude-sonnet-4-6` | `local` | 2 | Runs tool-comparison-workflow for any new tool/service decision. |
 | [ui-designer](./ui-designer.md) | `claude-sonnet-4-6` | `local` | 6 | Design tokens, primitives, composed screens (LTR + RTL). |
 | [ux-architect](./ux-architect.md) | `claude-sonnet-4-6` | `local` | 7 | PRD → sitemap → user flows → screen list with states + role visibility. |
-| [workspace-operations-manager](./workspace-operations-manager.md) | `claude-sonnet-4-6` | `local` | 5 | Owns workspace settings, agent lifecycle, runtime health, quarterly upgrade. |
+| [workspace-operations-manager](./workspace-operations-manager.md) | `claude-sonnet-4-6` | `local` | 6 | Owns workspace settings, agent lifecycle, runtime health, quarterly upgrade. |

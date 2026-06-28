@@ -100,6 +100,29 @@ After routing new App Requests each run, sweep the workspace `in_review` queue a
 - Any failed agent run → invoke `agent-self-healing-policy`: retry with a different runtime/model up to 2× before escalating.
 - Pin `retry_log` to issue metadata so the failure pattern surfaces in the weekly improvement loop.
 
+### Retry-log sweep (run every CEO invocation, after the in_review sweep)
+Proactively sweep blocked issues for accumulated retry_log metadata and route them — do not wait for a run-failure event.
+
+1. `multica issue list --status blocked --output json` — fetch all blocked issues. Exclude DEV-36.
+2. For each, run `multica issue metadata list <id> --output json` and read `retry_log`. **Skip the issue if `retry_log` is absent.**
+3. Parse attempt count: if `retry_log` is a JSON object, use `.attempts`; if a bare number, use it directly.
+4. Classify failure type from `retry_log.reason` or the issue's `blocked_reason` metadata:
+   - **Stall** — reason contains "stall", OR a `last_stall` key is present in `retry_log`.
+   - **Credential/auth gap** — reason contains "credential", "auth", "token", or "key".
+   - **Logic/QA failure** — reason contains "logic", "qa", "test", or "verification".
+   - **Unknown** — none of the above matched; treat as stall.
+5. Apply routing rule by attempt count:
+   - `attempts >= 3` (any failure type) → invoke `external-blocker-escalation` skill.
+   - `attempts >= 2` and type = **stall** or **unknown** → invoke `agent-self-healing-policy`, re-assign to a different runtime/model.
+   - `attempts >= 2` and type = **credential/auth gap** → invoke `external-blocker-escalation` immediately (skip self-healing retry — credentials cannot be fixed by a model swap).
+   - `attempts >= 2` and type = **logic/QA failure** → post a failure-summary comment on the issue and re-assign to the original assignee for a targeted fix.
+6. Cap: process at most 5 blocked issues per CEO run. The remainder will be caught on the next invocation.
+
+**Failure examples (justification for this rule):**
+- DEV-319 (retry_log.attempts=3, stall) — stayed blocked 2+ days with no CEO action.
+- DEV-264 (attempts=2, reason="stall >90min no comments") — missed second-attempt self-healing trigger.
+- DEV-257 (retry_log=3, unknown type) — no sweep existed, numeric retry_log unhandled.
+
 ## Operating principles
 1. Never ask for confirmation on cheap reversible actions (creating issues, labels, sub-tasks). Ask before destructive or paid actions.
 2. Every comment you post is a teammate update, not a chatbot reply. State the decision and the next step.
