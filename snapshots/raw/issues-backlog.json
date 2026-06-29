@@ -2,6 +2,32 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
+      "assignee_type": "agent",
+      "created_at": "2026-06-29T07:08:42Z",
+      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
+      "creator_type": "agent",
+      "description": "## SKILL IMPORT: NotFair (Google Ads + Meta Ads + SEO MCP Plugin)\n\n**Source:** https://github.com/nowork-studio/NotFair\n**License:** MIT\n**Stars:** 3,011 ⭐  |  **Last pushed:** 2026-06-24  |  **Language:** TypeScript\n\n### What it does\nNotFair gives Multica agents direct read access to Google Ads, Meta Ads (Facebook/Instagram), and Google Search Console. It:\n- Audits Google Ads campaigns for wasted spend, keyword health, and search-term quality\n- Analyzes Meta Ads for ROAS, creative fatigue, and audience saturation\n- Diagnoses SEO drops and surfaces ranking/traffic issues from GSC\n- Can rewrite meta tags, fix headings, add structured data when the repo is accessible\n\n### Proposed Multica Skill Name\n`paid-ads-seo-auditor`\n\n### Gap vs Existing Skills\nWe have `seo-baseline-setup` and `seo-audit-checklist` but **no Google Ads or Meta Ads skills**. This is a clear fill.\n\n### PR-Ready Spec\n- **Purpose:** Audit Google Ads + Meta Ads spend efficiency and SEO rankings for any connected account\n- **Trigger:** User asks \"am I wasting ad spend?\", \"why did traffic drop?\", \"audit my Google Ads\"\n- **Input:** OAuth-connected Google Ads / Meta Ads / GSC accounts (one-time setup)\n- **Steps:**\n  1. Install: `claude plugin marketplace add nowork-studio/NotFair`\n  2. Connect OAuth: `/notfair:config`\n  3. Run audit: `/notfair:google-ads-audit` or `/notfair:meta-ads-analysis` or `/notfair:seo-audit`\n  4. Agent returns scored report with prioritized action list\n- **Output:** Scored scorecard per dimension, prioritized fixes, wasted-spend estimate\n- **Quality checklist:** OAuth scope minimum-privilege, no credentials in logs, actionable output, handles no-data-yet state\n\n### Acceptance Criteria\n- [ ] NotFair plugin installs cleanly via Claude Code marketplace\n- [ ] OAuth flow for Google Ads + Meta Ads + GSC connects without exposing tokens in logs\n- [ ] `/notfair:google-ads-audit` returns a scored report with at least Keywords and Conversion Tracking checks\n- [ ] `/notfair:seo-audit` surfaces GSC traffic data and top ranking opportunities\n- [ ] No credentials stored in issue metadata or comments\n\n### Dependencies\n- Blocked on: SECURITY REVIEW sub-issue for this import (must be `done` + `decision=green` before this moves to `todo`)\n- Requires: OAuth credentials for Google Ads + Meta Ads (user-provided, not stored in Multica)\n\n### Risk\n- OAuth token scope for Google Ads is broad (read + manage campaigns). Security review must confirm read-only scope is enforced.\n- NotFair's MCP server (`mcp.json`) sends queries to external NotFair services — need to confirm what data leaves the workspace.\n\n### Definition of Done\n- Security review sub-issue is `done` with `decision=green`\n- NotFair plugin imported and functional in at least one test agent\n- Skill spec written as `paid-ads-seo-auditor` in Skill Library (project 08)\n- Acceptance criteria above all met",
+      "due_date": null,
+      "id": "54c9c270-2af8-4f45-9d2c-0e53a9b121e4",
+      "identifier": "DEV-337",
+      "labels": [],
+      "metadata": {
+        "blocked_reason": "security_review_failed"
+      },
+      "number": 337,
+      "parent_issue_id": "34cf45af-5cd9-4f40-92e1-dc620c40837d",
+      "position": -3,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "stage": null,
+      "start_date": null,
+      "status": "backlog",
+      "title": "SKILL IMPORT: NotFair (Google Ads + Meta Ads + SEO MCP Plugin)",
+      "updated_at": "2026-06-29T07:17:18Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": null,
       "assignee_type": null,
       "created_at": "2026-06-08T06:20:28Z",
@@ -192,5 +218,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 7
+  "total": 8
 }

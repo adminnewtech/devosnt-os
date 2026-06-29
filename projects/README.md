@@ -11,5 +11,5 @@
 | 🛡️ | [06 - QA Security Performance](./06---qa-security-performance.md) | 2 | 2 | Test plans, bug reports, security reviews, performance tests, permissions valida |
 | 🚀 | [07 - Deploy Documentation Handover](./07---deploy-documentation-handover.md) | 8 | 4 | Deployment runbooks, environment setup, release notes, rollback plans, user guid |
 | 📚 | [08 - Skill Library](./08---skill-library.md) | 49 | 34 | Reusable skills, app templates, prompt templates, workflow templates — the works |
-| 🔬 | [09 - Research Intelligence](./09---research-intelligence.md) | 115 | 101 | Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice |
+| 🔬 | [09 - Research Intelligence](./09---research-intelligence.md) | 117 | 102 | Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice |
 | 📱 | [APP — Android Attendance](./app-android-attendance.md) | 0 | 0 | App Hub for the Android Attendance app (parent: DEV-25). Per the App Hub Model ( |

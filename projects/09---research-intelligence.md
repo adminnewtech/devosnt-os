@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 115 (done: 101)
+- **Issues:** 117 (done: 102)
 
 ## Description
 
@@ -13,10 +13,11 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-334 | Weekly Benchmark Sweep — 2026-06-29 | `in_review` | none |
-| DEV-336 | Weekly GitHub Research Sweep — 2026-06-29 | `in_progress` | none |
+| DEV-336 | Weekly GitHub Research Sweep — 2026-06-29 | `in_review` | none |
 
 ## Recent Done
 
+- DEV-338 — SECURITY REVIEW: NotFair skill import
 - DEV-335 — BENCHMARK ACTION: EmbeddedSecurityScanning
 - DEV-300 — Weekly Benchmark Sweep — 2026-06-22
 - DEV-303 — Weekly GitHub Research Sweep — 2026-06-22
@@ -26,4 +27,3 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-309 — SECURITY REVIEW: chrome-devtools-mcp import
 - DEV-307 — SECURITY REVIEW: hookify writing-rules skill import
 - DEV-302 — QA Gate: DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
-- DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog

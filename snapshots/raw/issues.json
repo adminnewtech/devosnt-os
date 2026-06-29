@@ -101,6 +101,32 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-06-29T07:09:05Z",
+      "creator_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
+      "creator_type": "agent",
+      "description": "## SECURITY REVIEW: NotFair skill import\n\n**Dispatch sub-issue:** DEV-337 (SKILL IMPORT: NotFair)\n**Source URL:** https://github.com/nowork-studio/NotFair\n**License:** MIT\n**Language:** TypeScript\n**Install footprint:** `npm install -g @notfair/cli` + Claude Code plugin via marketplace\n\n### What to review\n\n**1. OAuth scopes (high risk)**\nNotFair connects to Google Ads, Meta Ads (Facebook/Instagram), and Google Search Console via OAuth. Review:\n- Which OAuth scopes are requested for Google Ads — does it request read-only or read+write?\n- Which scopes for Meta Ads API?\n- Does it ever store tokens beyond the session?\n- Does the MCP server expose OAuth token material over MCP tool calls?\n\n**2. External data egress (medium risk)**\nNotFair has a `.mcp.json` and a companion SaaS at `notfair.co`. Review:\n- Does the MCP server call `notfair.co` or any external endpoint with user account data?\n- Does the plugin phone home for analytics or telemetry?\n- What data (account IDs, campaign metrics, search queries) leaves the user's environment?\n\n**3. Dependency audit (medium risk)**\n- Run `npm audit` on the package\n- Check for known CVEs in key deps\n- Verify no supply-chain indicators (postinstall scripts, unexpected network calls)\n\n**4. Credential handling (high risk)**\n- Verify OAuth tokens are not logged to stdout/stderr\n- Verify tokens are not written to any plain-text files\n- Check `.gitignore` to confirm credentials are excluded\n\n### Decision Criteria\n- **green**: OAuth is read-only + minimum-privilege, no external egress of account data to third parties, no credential leakage in logs\n- **red**: Any of the following: write-scope OAuth, account data sent to third-party servers without user consent, credentials logged or stored insecurely\n\n### When done\nSet `decision=green` or `decision=red` in this issue's metadata.\nIf green: promote DEV-337 to `todo` (`multica issue status 54c9c270-2af8-4f45-9d2c-0e53a9b121e4 todo`).\nIf red: set `blocked_reason=security_review_failed` on DEV-337 and leave it backlog.\n\n### Definition of Done\n- All 4 review areas above checked and documented in a comment\n- `decision` metadata key set on this issue\n- DEV-337 either promoted (green) or blocked with reason (red)",
+      "due_date": null,
+      "id": "7eb9a22e-eb1a-4857-82d8-8fa43cb85c03",
+      "identifier": "DEV-338",
+      "labels": [],
+      "metadata": {
+        "decision": "red"
+      },
+      "number": 338,
+      "parent_issue_id": "34cf45af-5cd9-4f40-92e1-dc620c40837d",
+      "position": -15,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "stage": null,
+      "start_date": null,
+      "status": "done",
+      "title": "SECURITY REVIEW: NotFair skill import",
+      "updated_at": "2026-06-29T07:17:40Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "assignee_type": "agent",
       "created_at": "2026-06-29T07:00:10Z",
@@ -111,7 +137,13 @@
       "id": "34cf45af-5cd9-4f40-92e1-dc620c40837d",
       "identifier": "DEV-336",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "candidates_total": 8,
+        "dispatched_count": 1,
+        "imported_count": 1,
+        "sources_skipped": "hanoi-rainbow",
+        "sweep_window_end": "2026-06-29T07:02:45Z"
+      },
       "number": 336,
       "parent_issue_id": null,
       "position": -15,
@@ -119,9 +151,9 @@
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Weekly GitHub Research Sweep — 2026-06-29",
-      "updated_at": "2026-06-29T07:02:44Z",
+      "updated_at": "2026-06-29T07:09:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1273,33 +1305,9 @@
       "title": "Factory Health Audit — 2026-06-22",
       "updated_at": "2026-06-22T06:36:34Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
-      "created_at": "2026-06-21T06:06:13Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "## Input\n\nSignal from 2026-06-21 Workspace Upgrade Report (DEV-290):\n- 12 skills have zero agent assignments (agent_count=0) and cannot be triggered by any automation:\n  - ab-test-analysis (e9624bc2)\n  - growth-loop-designer (b5063307)\n  - hipaa-compliance-checklist (f3fe4ee1)\n  - pre-build-research-gate (ba524eef)\n  - pre-deploy-scan (4fe7be2e)\n  - sandbox-process-runner (a8e38853)\n  - seo-audit-checklist (9bf9c843)\n  - supabase-mcp-setup (e2ba4fd6)\n  - supabase-postgres-best-practices (5aeb4a66)\n  - universal-connector-install (a1468c20)\n  - user-skill-creation-wizard (2d4c91e4)\n  - weekly-status-email (65309d94)\n- The in-review-triage skill exists (id: 4b0bb5e9) but is also unassigned — include it in the sweep.\n\n## Expected Output\n\nEach orphaned skill assigned to the most appropriate agent in the workspace, with a comment on this issue listing each skill → agent binding made.\n\nConcrete deliverables:\n1. For each orphaned skill, identify the best-fit agent using `multica agent get \u003cid\u003e --output json` to read agent instructions/domains.\n2. Run `multica agent skill add \u003cagent-id\u003e --skill-id \u003cskill-id\u003e` (or equivalent CLI) to bind the skill.\n3. Post a summary table: skill | assigned-to-agent.\n4. If a skill has no clear agent owner, document it and recommend a new agent or skill deprecation.\n\n## Acceptance Criteria\n- All 12 orphaned skills (plus in-review-triage) have at least one agent assignment.\n- No skill is assigned to an agent outside its domain (e.g., security skills must go to security-auditor or qa-engineer, not frontend-engineer).\n- Summary table posted as a comment on DEV-290.\n\n## Dependencies\n- multica CLI skill assignment command must be available (`multica agent skill --help`).\n\n## Risk\n- Wrong-domain assignment makes the skill trigger in inappropriate contexts.\n- If skill assignment requires admin rights, escalate to admin@newtechkw.com.\n\n## Definition of Done\n- All 12+ orphaned skills assigned to appropriate agents.\n- Comment posted on DEV-290 with the binding table.\n- No orphaned skills remain (verify with `multica skill list --output json` cross-referenced against agent skill counts).",
-      "due_date": null,
-      "id": "3fe733a7-921e-4870-94b2-a1fa7e057949",
-      "identifier": "DEV-291",
-      "labels": [],
-      "metadata": {},
-      "number": 291,
-      "parent_issue_id": "86e18042-fece-43af-b925-2a6bde5c29a0",
-      "position": -11,
-      "priority": "high",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "stage": null,
-      "start_date": null,
-      "status": "done",
-      "title": "Workspace Upgrade Action — Adopt 12 orphaned skills",
-      "updated_at": "2026-06-21T06:19:10Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 336
+  "total": 338
 }
