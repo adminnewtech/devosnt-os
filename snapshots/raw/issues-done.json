@@ -77,6 +77,30 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "925a3e48-37f2-4620-870c-b57fe9003981",
+      "assignee_type": "squad",
+      "created_at": "2026-06-29T06:10:14Z",
+      "creator_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
+      "creator_type": "agent",
+      "description": "## BENCHMARK ACTION: EmbeddedSecurityScanning\n\n**Source sweep:** DEV-334 (2026-06-29)\n**Pattern origin:** Lovable shipped Aikido Security penetration testing on ALL plans (including Free) on June 22, 2026 — the first vendor in the six-vendor cohort to offer automated security scanning at zero cost, raising the security floor for all builders and positioning \"security by default\" as a marketing differentiator. Pattern name: **EmbeddedSecurityScanning**.\n\n## Input\n\n- **Pattern observed:** Automated security scanning (Aikido pen-testing) integrated into the build platform and available on every plan tier, including Free. Lovable ships this as a no-configuration feature — builders get it without setting anything up. Source: https://docs.lovable.dev/changelog (entry: \"Aikido penetration testing is now available on all plans,\" June 22, 2026).\n- **Vendors shipping it:** Lovable (1/6 explicitly; closest adjacent is our existing `security-review` checklist skill).\n- **Why it matters:** Lovable is the first in the cohort to automate security scanning at the platform layer, not just the advice layer. This narrows the gap between Lovable's build-and-deploy pipeline and our App Factory QA Gate. Our existing `security-review` skill is checklist-driven and agent-run; an automated scanner would move this from \"agent-executed checklist\" to \"always-on scan with structured output.\"\n\n## Expected Output\n\nAn updated or new skill that formally integrates a security scanner as a mandatory phase in the App Factory Build → QA Gate transition:\n\n1. **Primary:** New skill `embedded-security-scan` (or update to existing `security-review`) that:\n   - Defines the integration contract for Aikido API (or equivalent: Snyk, Semgrep, or Trivy for open-source alternative)\n   - Runs scan as a structured step and emits results as an issue comment in a standard format\n   - Includes graceful fallback to the existing checklist when no scanner credentials are configured (fallback must be the default, not the edge case)\n2. **Secondary (if API credentials are not yet available):** Publish the skill spec with the integration point fully documented and the fallback mode confirmed working — so any build agent can activate full scanning when credentials arrive via `multica agent custom_env set`.\n\n## Acceptance Criteria\n\n- [ ] Skill published in Project 08 - Skill Library and discoverable via `multica skill list`\n- [ ] Skill trigger is clear: invocable as `/embedded-security-scan` or auto-triggered by the QA Gate skill at the Build→QA transition\n- [ ] Skill includes: (a) scanner API call step (spec the Aikido/Snyk/Semgrep integration point), (b) checklist fallback confirmed working without credentials, (c) scan result → issue comment in a standard structured format\n- [ ] No credentials committed to skill content — all credentials via `custom_env`\n- [ ] At least one end-to-end test run documented (fallback mode acceptable as first run)\n- [ ] Skill content passes security-review-checklist (no secrets, no executable injection risk)\n\n## Dependencies\n\n- Existing `security-review` skill (baseline to extend rather than replace; avoid regression)\n- Aikido API credentials (or Snyk/Semgrep/Trivy) from admin@newtechkw.com — optional for first delivery; fallback mode must work without them\n- Project 08 - Skill Library write access (standard for Skill Factory squad)\n\n## Risk\n\n- **Credential dependency:** If Aikido or another scanner is not provisioned, the skill must gracefully degrade to checklist mode. Do not block delivery on credentials — deliver the spec + fallback first, activate scanner when credentials land.\n- **Scope creep:** The skill specifies the integration point; it does NOT need to provision the scanner account or run a full audit of existing projects. First delivery is the skill artifact, not a workspace-wide retroactive scan.\n- **Regression:** The existing `security-review` skill must continue to work. If extending it, preserve all existing checklist steps.\n\n## Definition of Done\n\n- Skill published and discoverable in Project 08\n- Fallback mode (existing checklist) confirmed working in at least one test run without scanner credentials\n- Aikido/scanner integration point fully documented in SKILL.md even if not yet active\n- Scan output format defined (structured comment format for downstream QA Gate agents to parse)\n- No secrets in any committed skill content\n- QA Gate agent briefed or skill updated to invoke this skill at Build→QA transition",
+      "due_date": null,
+      "id": "7f9f778f-9413-4b04-b48c-c853ea9e27e4",
+      "identifier": "DEV-335",
+      "labels": [],
+      "metadata": {},
+      "number": 335,
+      "parent_issue_id": "58d6343a-e0b7-4942-ad42-abc116f50d39",
+      "position": -15,
+      "priority": "high",
+      "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
+      "stage": null,
+      "start_date": null,
+      "status": "done",
+      "title": "BENCHMARK ACTION: EmbeddedSecurityScanning",
+      "updated_at": "2026-06-29T06:15:39Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-06-28T06:21:12Z",
@@ -1320,36 +1344,9 @@
       "title": "Daily Command Center Digest — 2026-06-16",
       "updated_at": "2026-06-29T04:19:07Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
-      "assignee_type": "squad",
-      "created_at": "2026-06-16T03:00:04Z",
-      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "creator_type": "agent",
-      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-16 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
-      "due_date": null,
-      "id": "2c09c201-d4dd-4240-a55d-7e99d1db0184",
-      "identifier": "DEV-278",
-      "labels": [],
-      "metadata": {
-        "deploy_gate_hold_noted": true,
-        "lifecycle_phase": "integrate"
-      },
-      "number": 278,
-      "parent_issue_id": null,
-      "position": -11,
-      "priority": "none",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "stage": null,
-      "start_date": null,
-      "status": "done",
-      "title": "Factory Health Audit — 2026-06-16",
-      "updated_at": "2026-06-29T04:19:06Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 251
+  "total": 252
 }

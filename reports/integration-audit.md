@@ -1,13 +1,13 @@
 # Integration Audit Report
 
-_Generated: 2026-06-29T06:03:13.961314+00:00_
+_Generated: 2026-06-29T07:03:20.152507+00:00_
 
 ## Health Summary
 
 | Metric | Count |
 |---|---|
 | agents_without_model | 0 |
-| orphan_skills | 4 |
+| orphan_skills | 5 |
 | agents_without_skills | 0 |
 | empty_squads | 0 |
 | squads_without_leader | 0 |
@@ -15,18 +15,18 @@ _Generated: 2026-06-29T06:03:13.961314+00:00_
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
 | blocked_issues | 1 |
-| in_review_parent_count | 3 |
+| in_review_parent_count | 4 |
 | agents_outside_squad_preview | 18 |
 
 ## Coverage Matrix
 
 - **Agents:** 41 (with skills: 41, without: 0)
-- **Skills:** 151 (owned: 147, orphan: 4)
+- **Skills:** 152 (owned: 147, orphan: 5)
 - **Squads:** 10 (active members: 10)
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 5 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 6 warnings, no blockers
 
 ## Findings
 
@@ -34,6 +34,7 @@ _Generated: 2026-06-29T06:03:13.961314+00:00_
 |---|---|---|---|
 | 🟡 WARN | `issue.blocked` | DEV-319 blocked: Daily Command Center Digest — 2026-06-26 | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `chrome-devtools-mcp-setup` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
+| 🟡 WARN | `skill.orphan` | Skill `embedded-security-scan` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `frontend-design-opinionated` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `hookify-rule-writer` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `mcp-catalog-curator` has no agent owner | Assign to the most relevant agent, or archive if obsolete |

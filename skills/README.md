@@ -1,6 +1,6 @@
 # Skills
 
-Total skills in `devosnt`: **151**
+Total skills in `devosnt`: **152**
 
 | Skill | Owners | Description |
 |---|---|---|
@@ -54,6 +54,7 @@ Total skills in `devosnt`: **151**
 | [documentation-generator](./documentation-generator.md) | `documentation-agent` | Generate developer-facing docs (README, ARCHITECTURE, RUNBOOK) from the codebase. |
 | [e2e-test-generator](./e2e-test-generator.md) | `ceo` | Generate Playwright (web) or Detox (mobile) end-to-end tests from user stories and accepta |
 | [email-marketing-builder](./email-marketing-builder.md) | `solution-architect` | Build a Mailchimp-class email marketing platform: lists, campaigns, automations, analytics |
+| [embedded-security-scan](./embedded-security-scan.md) | _(unowned)_ | Automated security scanner for the App Factory Build → QA Gate transition. Runs Aikido/Sny |
 | [embeddings-semantic-search](./embeddings-semantic-search.md) | `database-architect`, `full-stack-engineer` | Default semantic search via pgvector. Embeddings + hybrid search + reranking. |
 | [error-tracking-setup](./error-tracking-setup.md) | `bug-hunter` | Default error tracking: Sentry (or self-hosted GlitchTip) with PII scrubbing. |
 | [establishing-project-context](./establishing-project-context.md) | `solution-architect`, `database-architect`, `api-architect`, `integration-architect`, `claude-code-lead-developer`, `codebase-cartographer` | Use when entering a project for the first time, or when the user asks to establish shared  |
