@@ -23,7 +23,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 
 ## Recent Done
 
-- DEV-288 — Factory Health Audit — 2026-06-21
 - DEV-289 — Daily Command Center Digest — 2026-06-21
 - DEV-290 — Workspace Upgrade Report — 2026-06-21
 - DEV-316 — Factory Health Audit — 2026-06-25 (Daily Automated)
@@ -33,3 +32,4 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 - DEV-321 — Daily Command Center Digest — 2026-06-27
 - DEV-329 — QA Gate: DEV-326 — Build autopilot-issue lifecycle-closer skill
 - DEV-326 — Workspace Upgrade Action — Build autopilot-issue lifecycle-closer skill
+- DEV-328 — QA Gate: DEV-327 — CEO stall detection patch verification

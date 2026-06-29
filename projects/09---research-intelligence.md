@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 112 (done: 100)
+- **Issues:** 113 (done: 100)
 
 ## Description
 
@@ -10,7 +10,9 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 ## Open Issues (snapshot)
 
-_(no open issues)_
+| ID | Title | Status | Priority |
+|---|---|---|---|
+| DEV-334 | Weekly Benchmark Sweep — 2026-06-29 | `in_progress` | none |
 
 ## Recent Done
 
