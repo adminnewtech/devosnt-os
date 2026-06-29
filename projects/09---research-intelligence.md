@@ -2,7 +2,7 @@
 
 - **ID:** `e977793d-b825-448a-a3f1-bb8f59cc1266`
 - **Status:** `planned`
-- **Issues:** 112 (done: 88)
+- **Issues:** 112 (done: 100)
 
 ## Description
 
@@ -10,13 +10,12 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 ## Open Issues (snapshot)
 
-| ID | Title | Status | Priority |
-|---|---|---|---|
-| DEV-300 | Weekly Benchmark Sweep — 2026-06-22 | `in_review` | none |
-| DEV-303 | Weekly GitHub Research Sweep — 2026-06-22 | `in_review` | none |
+_(no open issues)_
 
 ## Recent Done
 
+- DEV-300 — Weekly Benchmark Sweep — 2026-06-22
+- DEV-303 — Weekly GitHub Research Sweep — 2026-06-22
 - DEV-311 — QA Gate: DEV-304 — SKILL IMPORT: hookify writing-rules
 - DEV-310 — QA Gate: DEV-306 — SKILL IMPORT: chrome-devtools-mcp
 - DEV-308 — SECURITY REVIEW: frontend-design skill import (v1.1.0)
@@ -25,5 +24,3 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-302 — QA Gate: DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
 - DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
 - DEV-244 — SECURITY REVIEW: sandbox-process-runner import
-- DEV-245 — SECURITY REVIEW: supabase-mcp-setup import
-- DEV-238 — QA Gate: DEV-220 — BENCHMARK ACTION: pre-deploy-scan skill

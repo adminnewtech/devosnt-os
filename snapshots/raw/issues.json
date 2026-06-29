@@ -44,9 +44,9 @@
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
-      "title": "Skill Improvement Review — 2026-06-29",
-      "updated_at": "2026-06-29T04:02:40Z",
+      "status": "in_review",
+      "title": "Skill Improvement Review — 2026-06-29 (1 new stall; 5 actions: lifecycle-closer scale-run, progress-rules, stuck-todo patch, credential-cancel, stall-verify)",
+      "updated_at": "2026-06-29T04:08:32Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -101,6 +101,30 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-06-29T04:15:43Z",
+      "creator_id": "234b4466-aaac-4c1a-bbff-731157620f42",
+      "creator_type": "agent",
+      "description": "## Input\n\nThe `autopilot-issue-lifecycle-closer` skill (ID: `051459d3`) was built in DEV-326, QA-passed in DEV-329, and pilot-run on 2 issues. There are 31+ stale `in_review` autopilot report issues (Jun 16–26) that were confirmed candidates but not yet closed.\n\nThe skill has been updated (DEV-332, Step 0) to also escalate stuck-todo issues.\n\n## Expected Output\n\nRun `autopilot-issue-lifecycle-closer` skill at full scale:\n- Close all 31+ confirmed stale `in_review` autopilot report issues\n- Escalate any stuck-todo autopilot issues (DEV-312, DEV-313, DEV-314, DEV-315 already identified)\n- Cap at 5 stuck-todo escalations per run if more exist\n\n## Source Issues\n\nDEV-318, DEV-317, DEV-316, DEV-289, DEV-288, and approximately 26 more stale `in_review` autopilot report issues from Jun 16–26.\n\n## Acceptance Criteria\n\n- [ ] All 31+ stale `in_review` autopilot issues closed (done or cancelled per skill logic)\n- [ ] Stuck-todo autopilot issues (≥48h with no pickup) escalated via comment on DEV-36\n- [ ] Summary posted as comment on this issue\n\n## Risk\n\nLow. Skill has already been QA-verified and pilot-run. Existing guardrails cap stuck-todo escalations at 5/run.\n\n## Definition of Done\n\nFull-scale run complete, summary comment posted here.",
+      "due_date": null,
+      "id": "db46fb00-690d-4fd2-ade1-170e06666411",
+      "identifier": "DEV-333",
+      "labels": [],
+      "metadata": {},
+      "number": 333,
+      "parent_issue_id": "80663fd0-9ac5-452a-84d3-4e12b4583681",
+      "position": -15,
+      "priority": "high",
+      "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
+      "stage": null,
+      "start_date": null,
+      "status": "in_review",
+      "title": "Run autopilot-issue-lifecycle-closer at full scale — 31+ stale in_review issues",
+      "updated_at": "2026-06-29T04:37:40Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-29T04:00:08Z",
@@ -111,7 +135,12 @@
       "id": "825ab844-d1d1-46ab-b03c-2ed02829f0dc",
       "identifier": "DEV-331",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-06-29T07:00:00Z",
+        "lifecycle_phase_snapshot": "{}",
+        "top3_count": 3
+      },
       "number": 331,
       "parent_issue_id": null,
       "position": -15,
@@ -119,9 +148,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-06-29",
-      "updated_at": "2026-06-29T04:02:41Z",
+      "updated_at": "2026-06-29T04:09:20Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -309,9 +338,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Daily Command Center Digest — 2026-06-27",
-      "updated_at": "2026-06-28T23:35:48Z",
+      "updated_at": "2026-06-29T04:36:29Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -336,9 +365,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Factory Health Audit — 2026-06-27",
-      "updated_at": "2026-06-28T23:35:50Z",
+      "updated_at": "2026-06-29T04:36:30Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -389,9 +418,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Factory Health Audit — 2026-06-26",
-      "updated_at": "2026-06-26T13:09:42Z",
+      "updated_at": "2026-06-29T04:36:31Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -420,9 +449,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Daily Command Center Digest — 2026-06-25",
-      "updated_at": "2026-06-26T13:09:45Z",
+      "updated_at": "2026-06-29T04:36:33Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -447,9 +476,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Factory Health Audit — 2026-06-25 (Daily Automated)",
-      "updated_at": "2026-06-26T08:24:55Z",
+      "updated_at": "2026-06-29T04:36:34Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -999,9 +1028,9 @@
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Weekly GitHub Research Sweep — 2026-06-22",
-      "updated_at": "2026-06-27T11:40:16Z",
+      "updated_at": "2026-06-29T04:36:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1085,9 +1114,9 @@
       "project_id": "e977793d-b825-448a-a3f1-bb8f59cc1266",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Weekly Benchmark Sweep — 2026-06-22",
-      "updated_at": "2026-06-27T11:40:20Z",
+      "updated_at": "2026-06-29T04:36:37Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1214,9 +1243,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Workspace Upgrade Report — 2026-06-21",
-      "updated_at": "2026-06-27T11:40:03Z",
+      "updated_at": "2026-06-29T04:36:38Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1245,9 +1274,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Daily Command Center Digest — 2026-06-21",
-      "updated_at": "2026-06-21T16:54:30Z",
+      "updated_at": "2026-06-29T04:36:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -1272,45 +1301,13 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "done",
       "title": "Factory Health Audit — 2026-06-21",
-      "updated_at": "2026-06-21T08:05:44Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
-      "assignee_type": "squad",
-      "created_at": "2026-06-20T04:00:08Z",
-      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "creator_type": "agent",
-      "description": "Daily Command Center Digest. Mode=create_issue. Runs every day 07:00 Asia/Kuwait (GMT+3). Produces ONE per-project status briefing comment on the dated issue this autopilot creates, so the CEO + workspace owner can see — at a glance — every project's state and what to push today.\n\nCRITICAL SAFETY RULES:\n- Mode is create_issue. Do not create additional issues. Do not change status on any other issue.\n- NEVER mention any agent or member in the digest comment. Owner reads the dated issue directly; mentions would loop (Factory Pulse no-mention rule).\n- NEVER touch DEV-36 (workspace-operations dialog) — exclude it from every list, count, and section.\n- Quiet on green days: if NOTHING actionable changed since yesterday's digest (no new blockers, no stale in_review, no new approval ask, no project lifecycle_phase change, no new app-request), do NOT post any comment. Leave the auto-created issue body empty so it can be auto-cancelled by step (8).\n- Use `--output json` on every CLI call. Continue on single-call failure (log to stdout and skip that signal).\n\nSTEPS:\n\n(1) Snapshot the workspace.\n    - `multica project list --output json` → all projects.\n    - `multica issue list --output json` → all issues (paged if needed).\n    - For each non-cancelled issue: record id, identifier, title, status, project_id, parent_issue_id, assignee_id, assignee_type, updated_at.\n    - Exclude DEV-36 (id e60d5be5-b9dd-48aa-b949-28286ea80f1b) everywhere.\n    - Build agent + squad name maps once: `multica agent list --output json` and `multica squad list --output json`. Used for assignee names; never for mention links.\n\n(2) Detect \"since yesterday\" deltas. Treat `since = (now - 24h)` UTC.\n    - new_blockers: issues that flipped to status=blocked in the window (updated_at \u003e= since AND status=blocked).\n    - cleared_blockers: issues that left blocked in the window (status != blocked AND prior blocked_reason metadata key present — best-effort).\n    - new_approval_asks: any issue whose metadata gained `waiting_on=owner` or `waiting_on=admin` in the window, or whose body/comments contain a fresh \"Approval needed\" line written in the window (cheap heuristic: latest comment created_at \u003e= since and contains \"approval needed\" case-insensitive).\n    - stale_in_review_48h: any issue status=in_review with updated_at older than 48h.\n    - lifecycle_phase changes: any parent issue whose metadata `lifecycle_phase` changed (compare to value from yesterday's pin — see step 7).\n    - new_app_requests: any issue created_at \u003e= since in project `01 - App Requests` (f3089a97-c608-4599-913c-f331335e1abe).\n    If ALL six lists are empty AND there is no stale in_review and no current blocked anywhere → green day. Skip to step (8) without posting.\n\n(3) Per-project section assembly. For each project (sorted by project title prefix `00 -`, `01 -`, … and then APP projects):\n    - Skip the project entirely if it has zero open issues (status in {todo, in_progress, in_review, blocked}) AND no new_app_requests AND no lifecycle change.\n    - Goal: 1 sentence from project.description (truncate to ~140 chars at the first sentence boundary).\n    - lifecycle_phase: read from the project's \"anchor\" parent issue (heuristic: the parent issue with the most children in this project; if APP project, the parent whose title starts with \"APP — \"). Show the value of metadata `lifecycle_phase` or \"—\" if unset.\n    - Active issues: counts by status — `todo=N in_progress=N in_review=N blocked=N` (exclude DEV-36).\n    - Blockers + waiting_on: list every issue in this project with status=blocked OR metadata `waiting_on` set. Format: `DEV-NN \u003ctitle\u003e — waiting_on=\u003cvalue\u003e | blocked_reason=\u003cvalue\u003e`. Cap 5 per project; \"+N more\" if truncated.\n    - Next action + owner: the single highest-priority issue in this project that is `todo` or `in_progress` and not blocked. Format: `DEV-NN \u003ctitle\u003e — owner=\u003cagent-or-squad name\u003e` (plain name, NO mention link).\n    - Risk: 1 line — pick the most material risk: stale in_review item, oldest blocker, or \"WIP imbalance: \u003cname\u003e has N in_progress\" if any agent in this project has \u003e=4 open issues. If nothing material, write \"Risk: low — no stale or overloaded items.\".\n    - Approval needed: yes/no. If yes, quote the exact ask (one sentence from the requesting issue's body/comment). Format: `Approval needed: yes — DEV-NN: \"\u003cexact ask\u003e\"` or `Approval needed: no`.\n\n(4) Compose the Top-3 block. Score every open issue across the workspace by:\n    - urgency: blocked=4, stale_in_review_48h=3, has approval ask=3, deploy_gate=red=4, priority=urgent=4 / high=3 / medium=2 / low=1.\n    - momentum: in_progress=2, in_review=1, todo=1, backlog=0.\n    - age penalty: +1 per 24h since updated_at, cap +3.\n    Final score = urgency + momentum + age_penalty. Pick the top 3 distinct issues (no two from the same parent unless nothing else qualifies).\n\n(5) Render the digest comment using this exact shape (parseable by humans and future audits):\n\n```\n# Daily Command Center Digest — \u003cYYYY-MM-DD KW\u003e\n\n**Window:** \u003csince\u003e → \u003cnow\u003e (UTC) | **Projects scanned:** N | **Open issues:** N | **Blocked:** N | **Stale in_review (48h):** N | **Approval asks:** N\n\n## Per-Project Status\n\n### \u003cproject icon\u003e \u003cproject title\u003e\n- **Goal:** \u003cone sentence\u003e\n- **Phase:** \u003clifecycle_phase\u003e\n- **Active:** todo=\u003cn\u003e in_progress=\u003cn\u003e in_review=\u003cn\u003e blocked=\u003cn\u003e\n- **Blockers / waiting_on:** \u003clist or \"none\"\u003e\n- **Next action:** \u003cDEV-NN title — owner=name\u003e\n- **Risk:** \u003cone line\u003e\n- **Approval needed:** \u003cyes/no\u003e [— \"\u003cexact ask\u003e\"]\n\n### \u003cnext project\u003e\n… (same shape)\n\n## Top 3 to Push Today\n\n1. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n2. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n3. **DEV-NN** \u003ctitle\u003e — assignee=\u003cname\u003e | why: \u003cone phrase\u003e\n\n## Deltas Since Yesterday\n- New blockers: \u003cDEV-NN list or \"none\"\u003e\n- Cleared blockers: \u003cDEV-NN list or \"none\"\u003e\n- New approval asks: \u003cDEV-NN list or \"none\"\u003e\n- Stale in_review (48h+): \u003cDEV-NN list or \"none\"\u003e\n- New app requests: \u003cDEV-NN list or \"none\"\u003e\n- Lifecycle phase changes: \u003cproject: old→new or \"none\"\u003e\n```\n\nPost via: `multica issue comment add \u003cthis-issue-id\u003e --content-stdin` (HEREDOC the body). NEVER include any `mention://agent/...` or `mention://member/...` link. Issue references should be plain `DEV-NN` text (no `mention://issue/...` either — keep the digest scannable).\n\n(6) On a green day (step 2 short-circuited), do NOT post any comment. Skip to step (8).\n\n(7) Pin metadata on THIS issue only if a value materially helps tomorrow's run:\n    - `last_run_verdict` = \"green\" or \"posted\" (overwrite each run).\n    - `last_window_end` = \u003cRFC3339-now\u003e (overwrite each run).\n    - `lifecycle_phase_snapshot` = JSON map `{project_id: phase}` so step (2) can detect phase changes tomorrow.\n    - `top3_count` = number (expect 0 on green days, 3 otherwise).\n    Use `multica issue metadata set` once per changed key. Skip any key whose value is identical to what `metadata list` already shows.\n\n(8) Status finalization.\n    - If a digest was posted: flip THIS issue to `in_review` (`multica issue status \u003cthis-issue-id\u003e in_review`). CEO + owner read it, then close.\n    - If green day (no digest posted): flip THIS issue to `cancelled` with no comment so it stops cluttering the inbox.\n\n(9) Output one line to stdout (only non-comment output): `Daily Digest @ \u003cRFC3339\u003e | verdict=\u003cgreen|posted\u003e | projects=N | top3=N | blocked=B stale=S approvals=A`.\n\nOPERATING RULES:\n- Never block on a single CLI failure. Log \"skipped \u003csignal\u003e: \u003creason\u003e\" and continue with the remaining signals.\n- All comments go ONLY on the issue this autopilot creates. Never comment on any other issue.\n- Never mention any agent or member anywhere. Plain names only.\n- Read this issue's existing metadata before pinning. Only update keys whose values changed.\n- Do not create sub-issues, do not reassign any other issue, do not change any other issue's status.\n- The created issue MUST land in `in_review` (when posted) or `cancelled` (green day) — never `done` (owner closes), never left in `todo`.\n\n---\n*Autopilot run triggered at 2026-06-20 07:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
-      "due_date": null,
-      "id": "f5ba4e4e-02cf-41f5-8d12-fec2b79b4b8f",
-      "identifier": "DEV-287",
-      "labels": [],
-      "metadata": {
-        "deploy_gate_hold_noted": true,
-        "last_run_verdict": "posted",
-        "last_window_end": "2026-06-20T04:06:00Z",
-        "lifecycle_phase": "integrate",
-        "retry_count": 1,
-        "retry_last": "2026-06-20T09:00:00Z",
-        "top3_count": 3
-      },
-      "number": 287,
-      "parent_issue_id": null,
-      "position": -11,
-      "priority": "none",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "stage": null,
-      "start_date": null,
-      "status": "in_review",
-      "title": "Daily Command Center Digest — 2026-06-20",
-      "updated_at": "2026-06-20T22:54:32Z",
+      "updated_at": "2026-06-29T04:36:41Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 332
+  "total": 333
 }

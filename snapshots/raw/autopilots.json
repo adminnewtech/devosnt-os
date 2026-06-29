@@ -80,7 +80,7 @@
       "id": "a0af1952-8173-4b21-bf8a-05940101fa4e",
       "issue_title_template": "Daily Command Center Digest — {{date}}",
       "last_run_at": "2026-06-29T04:00:08Z",
-      "last_run_status": "issue_created",
+      "last_run_status": "completed",
       "next_run_at": "2026-06-25T04:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
@@ -125,7 +125,7 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-29T04:00:17Z",
+      "last_run_at": "2026-06-29T05:00:20Z",
       "last_run_status": "running",
       "next_run_at": "2026-06-24T10:00:00Z",
       "project_id": null,
@@ -135,7 +135,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-29T04:00:17Z",
+      "updated_at": "2026-06-29T05:00:20Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -148,7 +148,7 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-29T04:00:21Z",
+      "last_run_at": "2026-06-29T05:00:22Z",
       "last_run_status": "running",
       "next_run_at": "2026-06-24T10:00:00Z",
       "project_id": null,
@@ -158,7 +158,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-29T04:00:21Z",
+      "updated_at": "2026-06-29T05:00:22Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -172,7 +172,7 @@
       "id": "656afad6-c9eb-40b3-8fb3-26ef3676f859",
       "issue_title_template": "Skill Improvement Review — {{date}}",
       "last_run_at": "2026-06-29T04:00:09Z",
-      "last_run_status": "issue_created",
+      "last_run_status": "completed",
       "next_run_at": "2026-06-29T04:00:00Z",
       "project_id": "88c09466-8a25-419d-b28e-d3d5973197c4",
       "status": "active",
@@ -190,7 +190,7 @@
       "created_at": "2026-05-25T15:56:10Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
-      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n## Progress Rules\n- If still working after 30 min with no comment posted, post a brief progress update: what you have done and what remains.\n- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.",
       "execution_mode": "create_issue",
       "id": "0cf43035-4ef9-4b41-b99a-9f84a4ec9872",
       "issue_title_template": "Factory Health Audit — {{date}}",
@@ -204,7 +204,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-29T03:00:28Z",
+      "updated_at": "2026-06-29T04:11:51Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],

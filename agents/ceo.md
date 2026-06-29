@@ -111,11 +111,18 @@ Proactively sweep blocked issues for accumulated retry_log metadata and route th
    - **Credential/auth gap** — reason contains "credential", "auth", "token", or "key".
    - **Logic/QA failure** — reason contains "logic", "qa", "test", or "verification".
    - **Unknown** — none of the above matched; treat as stall.
-5. Apply routing rule by attempt count:
-   - `attempts >= 3` (any failure type) → invoke `external-blocker-escalation` skill.
+5. Apply routing rule by attempt count. **Check 5a first** for stale issues before routing.
+   - `attempts >= 3` AND `issue.updated_at` older than 30 days → **auto-cancel** (step 5a). Skip escalation.
+   - `attempts >= 3` AND `issue.updated_at` within 30 days → invoke `external-blocker-escalation` skill.
    - `attempts >= 2` and type = **stall** or **unknown** → invoke `agent-self-healing-policy`, re-assign to a different runtime/model.
    - `attempts >= 2` and type = **credential/auth gap** → invoke `external-blocker-escalation` immediately (skip self-healing retry — credentials cannot be fixed by a model swap).
    - `attempts >= 2` and type = **logic/QA failure** → post a failure-summary comment on the issue and re-assign to the original assignee for a targeted fix.
+5a. **Auto-cancel stale credential-blocked issues:**
+    For any issue where step 5 matched the "older than 30 days" condition:
+    - Post cancel comment: "Auto-cancelled: blocked 30+ days with retry_log≥3, no recovery path. See workspace memory `known-external-blockers-2026-06-28` (DEV-325). Provision credentials at admin@newtechkw.com to reopen."
+    - `multica issue status <id> cancelled`
+    - Count against the step 6 cap.
+
 6. Cap: process at most 5 blocked issues per CEO run. The remainder will be caught on the next invocation.
 
 **Failure examples (justification for this rule):**
