@@ -2,7 +2,7 @@
 
 - **ID:** `1a1c2fb3-41ee-4b99-b820-d10f1c564052`
 - **Status:** `planned`
-- **Issues:** 131 (done: 83)
+- **Issues:** 132 (done: 83)
 
 ## Description
 
@@ -13,8 +13,6 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | ID | Title | Status | Priority |
 |---|---|---|---|
 | DEV-263 | Workspace Upgrade Action — Capture admin-escalation blockers as memory defaults | `in_review` | high |
-| DEV-285 | Daily Command Center Digest — 2026-06-19 | `in_review` | none |
-| DEV-286 | Factory Health Audit — 2026-06-20 | `in_review` | none |
 | DEV-287 | Daily Command Center Digest — 2026-06-20 | `in_review` | none |
 | DEV-288 | Factory Health Audit — 2026-06-21 | `in_review` | none |
 | DEV-289 | Daily Command Center Digest — 2026-06-21 | `in_review` | none |
@@ -29,7 +27,8 @@ Master rules, strategy, workspace context, operating model, decisions, quality s
 | DEV-319 | Daily Command Center Digest — 2026-06-26 | `blocked` | none |
 | DEV-320 | Factory Health Audit — 2026-06-27 | `in_review` | none |
 | DEV-321 | Daily Command Center Digest — 2026-06-27 | `in_review` | none |
-| DEV-330 | Factory Health Audit — 2026-06-29 | `in_progress` | none |
+| DEV-330 | Factory Health Audit — 2026-06-29 | `in_review` | none |
+| DEV-331 | Daily Command Center Digest — 2026-06-29 | `in_progress` | none |
 
 ## Recent Done
 

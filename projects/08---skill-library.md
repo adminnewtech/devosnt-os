@@ -2,7 +2,7 @@
 
 - **ID:** `88c09466-8a25-419d-b28e-d3d5973197c4`
 - **Status:** `planned`
-- **Issues:** 47 (done: 29)
+- **Issues:** 48 (done: 29)
 
 ## Description
 
@@ -10,7 +10,9 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 ## Open Issues (snapshot)
 
-_(no open issues)_
+| ID | Title | Status | Priority |
+|---|---|---|---|
+| DEV-332 | Skill Improvement Review — 2026-06-29 | `in_progress` | none |
 
 ## Recent Done
 
