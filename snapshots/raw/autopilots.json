@@ -80,7 +80,7 @@
       "id": "a0af1952-8173-4b21-bf8a-05940101fa4e",
       "issue_title_template": "Daily Command Center Digest — {{date}}",
       "last_run_at": "2026-06-30T04:00:19Z",
-      "last_run_status": "issue_created",
+      "last_run_status": "completed",
       "next_run_at": "2026-07-01T04:00:00Z",
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "status": "active",
@@ -125,9 +125,9 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-30T04:00:24Z",
+      "last_run_at": "2026-06-30T05:00:25Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-30T05:00:00Z",
+      "next_run_at": "2026-06-30T06:00:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -135,7 +135,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-30T04:00:24Z",
+      "updated_at": "2026-06-30T05:00:25Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -148,9 +148,9 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-30T04:00:27Z",
+      "last_run_at": "2026-06-30T05:00:28Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-30T04:15:00Z",
+      "next_run_at": "2026-06-30T05:15:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -158,7 +158,7 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-30T04:00:27Z",
+      "updated_at": "2026-06-30T05:00:28Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
