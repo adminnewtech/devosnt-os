@@ -101,6 +101,30 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "assignee_type": "agent",
+      "created_at": "2026-06-30T03:00:22Z",
+      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
+      "creator_type": "agent",
+      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n## Progress Rules\n- If still working after 30 min with no comment posted, post a brief progress update: what you have done and what remains.\n- If unable to proceed (missing info, blocked tool, external dependency), post a blocked comment with reason immediately — never run silently past 60 min.\n\n---\n*Autopilot run triggered at 2026-06-30 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "9216f78b-4024-40ba-aa0a-063422017bbd",
+      "identifier": "DEV-339",
+      "labels": [],
+      "metadata": {},
+      "number": 339,
+      "parent_issue_id": null,
+      "position": -15,
+      "priority": "none",
+      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
+      "stage": null,
+      "start_date": null,
+      "status": "in_progress",
+      "title": "Factory Health Audit — 2026-06-30",
+      "updated_at": "2026-06-30T03:01:12Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
       "created_at": "2026-06-29T07:09:05Z",
@@ -1280,36 +1304,9 @@
       "title": "Skill Improvement Review — 2026-06-22 (0 new stalls; 5 actions: doc-agent patch, in-review-triage autopilot, research-scout preflight, cred escalation, in-review triage)",
       "updated_at": "2026-06-22T04:21:16Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
-      "created_at": "2026-06-22T03:00:09Z",
-      "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "creator_type": "agent",
-      "description": "Run the daily factory health audit. Cover: (1) runtime health (multica runtime list) — alert if any offline \u003e5m; (2) WIP discipline — flag any agent with \u003e3 in_progress or any squad with \u003e6; (3) stale issues — list any in_progress issue \u003e24h with no comments; (4) orphan/zero-skill check — every skill assigned to ≥1 agent; every agent has ≥1 skill; (5) metadata hygiene — sample 10 done issues and flag any with stale waiting_on / blocked_reason; (6) cost — pull the current month spend per project and compare to budget (cost-budget-tracker); (7) error budget — pull yesterday's Sentry error rate, latency p95, uptime % per shipped app and alert on SLO burn. Post one consolidated comment on the created issue with: GREEN/YELLOW/RED status, the top 5 issues found, and one-line remediation per issue. Status the issue 'done' if all green; 'in_review' if YELLOW; 'blocked' if RED. Do not silently ignore failures.\n\n---\n*Autopilot run triggered at 2026-06-22 06:00 Asia/Kuwait. After starting work, rename this issue to accurately reflect what you are doing.*",
-      "due_date": null,
-      "id": "93353f77-d95c-460a-acd7-485a6118f2e4",
-      "identifier": "DEV-294",
-      "labels": [],
-      "metadata": {
-        "decision": "accept",
-        "quality_score": 10
-      },
-      "number": 294,
-      "parent_issue_id": null,
-      "position": -11,
-      "priority": "none",
-      "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
-      "stage": null,
-      "start_date": null,
-      "status": "done",
-      "title": "Factory Health Audit — 2026-06-22",
-      "updated_at": "2026-06-22T06:36:34Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 338
+  "total": 339
 }
