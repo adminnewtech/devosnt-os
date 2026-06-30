@@ -3,6 +3,7 @@
     {
       "assignee_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-26T16:47:51Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -26,6 +27,7 @@
     {
       "assignee_id": "606dde5b-1e4b-481a-8cf4-0f6aa0dd37c7",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-26T16:47:40Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -49,6 +51,7 @@
     {
       "assignee_id": "ce249709-eb0c-4a45-ad59-007e27564dc0",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-26T16:42:47Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -72,6 +75,7 @@
     {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-26T16:42:03Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -95,6 +99,7 @@
     {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-26T16:38:47Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -118,6 +123,7 @@
     {
       "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-25T19:25:40Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -125,9 +131,9 @@
       "execution_mode": "run_only",
       "id": "47668345-3f72-4821-af88-c4233b4764cd",
       "issue_title_template": null,
-      "last_run_at": "2026-06-30T10:00:27Z",
+      "last_run_at": "2026-06-30T11:00:16Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-30T11:00:00Z",
+      "next_run_at": "2026-06-30T12:00:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -135,12 +141,13 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-30T10:00:27Z",
+      "updated_at": "2026-06-30T11:00:16Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
       "assignee_id": "ebd03ec3-2a72-433f-b89f-bf4d35573a3d",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-25T17:20:18Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -148,9 +155,9 @@
       "execution_mode": "run_only",
       "id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
       "issue_title_template": null,
-      "last_run_at": "2026-06-30T10:00:29Z",
+      "last_run_at": "2026-06-30T11:00:20Z",
       "last_run_status": "running",
-      "next_run_at": "2026-06-30T10:15:00Z",
+      "next_run_at": "2026-06-30T11:15:00Z",
       "project_id": null,
       "status": "active",
       "subscribers": [],
@@ -158,12 +165,13 @@
       "trigger_kinds": [
         "schedule"
       ],
-      "updated_at": "2026-06-30T10:00:29Z",
+      "updated_at": "2026-06-30T11:00:20Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
       "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-25T15:56:16Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
@@ -187,6 +195,7 @@
     {
       "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "assignee_type": "agent",
+      "can_write": true,
       "created_at": "2026-05-25T15:56:10Z",
       "created_by_id": "0c06df4b-79c1-44d4-a0a0-a822d82ae6f4",
       "created_by_type": "member",
