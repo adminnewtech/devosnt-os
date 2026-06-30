@@ -17,7 +17,6 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 ## Recent Done
 
-- DEV-295 — Skill Improvement Review — 2026-06-22 (0 new stalls; 5 actions: doc-agent patch,
 - DEV-299 — Escalate admin credential blockers + update memory entries (4 weeks overdue)
 - DEV-297 — Prompt patch: Apply Progress Rules to documentation-agent
 - DEV-298 — Prompt patch: Add pre-flight dependency check to research-scout
