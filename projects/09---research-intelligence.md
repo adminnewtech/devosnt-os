@@ -26,4 +26,4 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-309 — SECURITY REVIEW: chrome-devtools-mcp import
 - DEV-307 — SECURITY REVIEW: hookify writing-rules skill import
 - DEV-302 — QA Gate: DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
-- DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
+- DEV-244 — SECURITY REVIEW: sandbox-process-runner import
