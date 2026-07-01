@@ -200,7 +200,7 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
       "assignee_type": "squad",
       "created_at": "2026-07-01T08:11:00Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
@@ -213,6 +213,7 @@
       "metadata": {
         "blocked_reason": "Security review failed: SECURITY DEFINER functions missing SET search_path=''. All 6 functions need search_path='' and public.employees fully qualified in hook. Also: DATABASE_URL not validated in seed-bootstrap.sh. See QGM verdict comment for required fixes.",
         "decision": "revise",
+        "lifecycle_phase": "integrate",
         "quality_score": 8
       },
       "number": 351,
@@ -222,9 +223,9 @@
       "project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
       "stage": null,
       "start_date": null,
-      "status": "in_review",
+      "status": "blocked",
       "title": "BUILD: Supabase Auth integration — JWT custom claims hook + session management — Android Attendance",
-      "updated_at": "2026-07-01T08:32:25Z",
+      "updated_at": "2026-07-01T10:24:35Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

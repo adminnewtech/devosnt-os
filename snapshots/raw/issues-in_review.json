@@ -4,34 +4,6 @@
     {
       "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
       "assignee_type": "squad",
-      "created_at": "2026-07-01T08:11:00Z",
-      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
-      "creator_type": "agent",
-      "description": "## Supabase Auth Integration — Android Attendance App\n\n**Architecture reference**: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219) (comment #3 — RLS Policies + Auth Model)\n\n## Input\nFrom DEV-30 auth model:\n- Supabase Auth (email + password; no OAuth for MVP)\n- Custom JWT claims injected via Auth Hook: `tenant_id`, `employee_id`, `role`, `department_id`\n- Roles: `super_admin`, `hr_manager`, `dept_manager`, `employee`\n- JWT payload structure:\n  ```json\n  {\n    \"sub\": \"\u003cauth.users.id\u003e\",\n    \"app_metadata\": {\n      \"tenant_id\": \"\u003cuuid\u003e\",\n      \"employee_id\": \"\u003cuuid\u003e\",\n      \"role\": \"hr_manager\",\n      \"department_id\": \"\u003cuuid | null\u003e\"\n    }\n  }\n  ```\n- Session management: 1-hour access token, 7-day refresh token\n- Mobile: refresh token stored in `expo-secure-store` (encrypted keychain)\n- Web: refresh token handled by Supabase JS SSR client (`@supabase/ssr`)\n\n## Expected Output\n1. **Auth Hook function** (`custom_access_token_hook`) — Postgres function that looks up the employee record by `auth.users.id` and injects `tenant_id`, `employee_id`, `role`, `department_id` into JWT claims\n2. **Auth Hook registered** in Supabase project hooks configuration (`supabase/config.toml` or dashboard)\n3. **Helper functions** in Postgres:\n   - `auth_tenant_id()` → `(auth.jwt()-\u003e'app_metadata'-\u003e\u003e'tenant_id')::uuid`\n   - `auth_employee_id()` → `(auth.jwt()-\u003e'app_metadata'-\u003e\u003e'employee_id')::uuid`\n   - `auth_role()` → `auth.jwt()-\u003e'app_metadata'-\u003e\u003e'role'`\n4. **Seed data**: at least one `super_admin` user per tenant for testing (`super_admin@diwan.demo / Demo2026!`)\n5. **Auth middleware** for Next.js web: `middleware.ts` using `@supabase/ssr` to refresh sessions on every request\n6. **Mobile auth utils**: `lib/supabase.ts` for Expo using `expo-secure-store` as storage adapter\n\n## Acceptance Criteria\n- [ ] Auth Hook function exists in DB and is registered (`SELECT * FROM auth.hooks`)\n- [ ] Login with `super_admin@diwan.demo / Demo2026!` returns JWT with correct `app_metadata` claims\n- [ ] JWT decoded client-side shows `role=super_admin`, `tenant_id`, `employee_id` populated\n- [ ] `auth_tenant_id()` returns correct UUID when called with an authenticated session\n- [ ] Next.js `middleware.ts` refreshes expired access tokens automatically\n- [ ] Expo `lib/supabase.ts` uses `expo-secure-store` storage adapter (not AsyncStorage)\n- [ ] Seed script creates demo users without committing passwords to repo (env var or vault)\n\n## Dependencies\n- DB Schema sub-issue (employees table must exist for hook to query)\n- DEV-30 architecture artifacts (auth model comment)\n\n## Risk\n- Auth hook runs as SECURITY DEFINER — validate input to prevent privilege escalation\n- Seed passwords must NOT be committed to repo — use Supabase CLI secrets or `.env`\n\n## Definition of Done\n- Auth hook deployed and tested\n- Login flow verified end-to-end with correct JWT claims\n- Seed user created and documented\n- Status flipped to `in_review`",
-      "due_date": null,
-      "id": "30ba8b2f-78cf-4cab-942d-dce002b4acfa",
-      "identifier": "DEV-351",
-      "labels": [],
-      "metadata": {
-        "blocked_reason": "Security review failed: SECURITY DEFINER functions missing SET search_path=''. All 6 functions need search_path='' and public.employees fully qualified in hook. Also: DATABASE_URL not validated in seed-bootstrap.sh. See QGM verdict comment for required fixes.",
-        "decision": "revise",
-        "quality_score": 8
-      },
-      "number": 351,
-      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
-      "position": -18,
-      "priority": "medium",
-      "project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
-      "stage": null,
-      "start_date": null,
-      "status": "in_review",
-      "title": "BUILD: Supabase Auth integration — JWT custom claims hook + session management — Android Attendance",
-      "updated_at": "2026-07-01T08:32:25Z",
-      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
-    },
-    {
-      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
-      "assignee_type": "squad",
       "created_at": "2026-07-01T08:10:53Z",
       "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
       "creator_type": "agent",
@@ -594,7 +566,7 @@
         "factory_pulse_autopilot_id": "b7f20bdc-5e6d-4089-8e92-f2476846dd61",
         "github_owner": "adminnewtech",
         "kb_sync_autopilot_id": "47668345-3f72-4821-af88-c4233b4764cd",
-        "kb_sync_status": "yellow@2026-07-01T09:03Z",
+        "kb_sync_status": "yellow@2026-07-01T10:04Z",
         "knowledge_base_repo": "https://github.com/adminnewtech/devosnt-os",
         "pipeline_status": "demo-backend-live: Supabase up, tunnel live, HR admin web live, HOW_TO_INSTALL ready. APK build dispatched to mobile-engineer via DEV-42.",
         "waiting_on": "admin:multiple-credentials"
@@ -608,11 +580,11 @@
       "start_date": null,
       "status": "in_review",
       "title": "تابع وشوف شنو ثار وراجع كل شي",
-      "updated_at": "2026-07-01T09:17:53Z",
+      "updated_at": "2026-07-01T10:04:23Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     }
   ],
   "limit": 50,
   "offset": 0,
-  "total": 23
+  "total": 22
 }

@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-07-01T10:03:46.283532+00:00_
+_Generated: 2026-07-01T11:02:47.641123+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-07-01T10:03:46.283532+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 2 |
+| blocked_issues | 3 |
 | in_review_parent_count | 4 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,13 +26,14 @@ _Generated: 2026-07-01T10:03:46.283532+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 7 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 8 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
 | 🟡 WARN | `issue.blocked` | DEV-352 blocked: BUILD: React Native Expo mobile app shell (Android, RTL Arab | Review blocker — autopilot caps at 3 retries |
+| 🟡 WARN | `issue.blocked` | DEV-351 blocked: BUILD: Supabase Auth integration — JWT custom claims hook +  | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-361 blocked: Emulator QA: DEV-352 — run 7 screens, offline sync test, att | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `skill.orphan` | Skill `chrome-devtools-mcp-setup` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
 | 🟡 WARN | `skill.orphan` | Skill `embedded-security-scan` has no agent owner | Assign to the most relevant agent, or archive if obsolete |
