@@ -19,7 +19,6 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 
 - DEV-338 — SECURITY REVIEW: NotFair skill import
 - DEV-335 — BENCHMARK ACTION: EmbeddedSecurityScanning
-- DEV-300 — Weekly Benchmark Sweep — 2026-06-22
 - DEV-303 — Weekly GitHub Research Sweep — 2026-06-22
 - DEV-311 — QA Gate: DEV-304 — SKILL IMPORT: hookify writing-rules
 - DEV-310 — QA Gate: DEV-306 — SKILL IMPORT: chrome-devtools-mcp
@@ -27,3 +26,4 @@ Research tasks, GitHub repos, AI updates, benchmarks, competitors, best practice
 - DEV-309 — SECURITY REVIEW: chrome-devtools-mcp import
 - DEV-307 — SECURITY REVIEW: hookify writing-rules skill import
 - DEV-302 — QA Gate: DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
+- DEV-301 — BENCHMARK ACTION: CuratedOneTapMCPCatalog
