@@ -17,7 +17,7 @@ App Hub for the Android Attendance app (parent: DEV-25). Per the App Hub Model (
 | DEV-351 | BUILD: Supabase Auth integration — JWT custom claims hook + session management — | `blocked` | medium |
 | DEV-352 | BUILD: React Native Expo mobile app shell (Android, RTL Arabic) — Android Attend | `blocked` | medium |
 | DEV-356 | FIX: punch_rate_limit RLS — confirm tenant isolation (blocker for DEV-348) | `in_review` | high |
-| DEV-360 | QA Gate: DEV-349 — BUILD: Implement Supabase Edge Functions (punch, sync, report | `in_progress` | none |
+| DEV-360 | QA Gate: DEV-349 — BUILD: Implement Supabase Edge Functions (punch, sync, report | `blocked` | none |
 | DEV-361 | Emulator QA: DEV-352 — run 7 screens, offline sync test, attach screenshots | `blocked` | medium |
 
 ## Recent Done

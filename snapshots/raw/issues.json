@@ -135,7 +135,7 @@
       "metadata": {
         "deploy_gate_hold_noted": true,
         "lifecycle_phase": "integrate",
-        "retry_log": "{\"attempts\":2,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T13:18Z\"}"
+        "retry_log": "{\"attempts\":3,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T15:02Z\"}"
       },
       "number": 353,
       "parent_issue_id": null,
@@ -146,7 +146,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "ADR-004: i18n/l10n Library Standard — next-intl (web) + react-i18next/expo-localization (mobile)",
-      "updated_at": "2026-07-01T13:21:30Z",
+      "updated_at": "2026-07-01T15:06:00Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -289,7 +289,7 @@
       "identifier": "DEV-360",
       "labels": [],
       "metadata": {
-        "retry_log": "{\"attempts\":2,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T13:34Z\"}"
+        "retry_log": "{\"attempts\":3,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T15:19Z\"}"
       },
       "number": 360,
       "parent_issue_id": "3eee1894-aa96-4d7f-aa38-b0e039e02841",
@@ -298,9 +298,9 @@
       "project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "blocked",
       "title": "QA Gate: DEV-349 — BUILD: Implement Supabase Edge Functions (punch, sync, reports, FCM)",
-      "updated_at": "2026-07-01T13:37:24Z",
+      "updated_at": "2026-07-01T15:22:46Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

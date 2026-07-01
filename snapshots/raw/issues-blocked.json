@@ -58,6 +58,32 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "d87c831d-bd4d-459f-9672-d633e238c44f",
+      "assignee_type": "agent",
+      "created_at": "2026-07-01T08:34:19Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "Verify and decide on [DEV-349](mention://issue/3eee1894-aa96-4d7f-aa38-b0e039e02841).\n\nSteps:\n1. Read the parent issue body + all comments.\n2. Run `security-review-checklist` — this is user-facing (punch/leave API with JWT auth, geofence, selfie upload).\n3. Check every item in the Definition of Done checklist:\n   - All 6 Edge Functions deploy without errors\n   - `/punch` rejects double-punch within 30 seconds\n   - `/punch` outside geofence returns 422/403 OUTSIDE_GEOFENCE\n   - `/punch-sync` deduplicates by `client_punch_id` (idempotent)\n   - `/leave-approve` creates audit_log entry on approval/rejection\n   - `/report-daily` returns correct JSON for authenticated HR Manager JWT\n   - `openapi.yaml` validates against OpenAPI 3.1 spec\n\nDecision:\n- PASS (DoD met, no security issues) → `multica issue status 3eee1894-aa96-4d7f-aa38-b0e039e02841 done`\n- VETO (DoD not met or security failure) → `multica issue status 3eee1894-aa96-4d7f-aa38-b0e039e02841 backlog` + `multica issue metadata set 3eee1894-aa96-4d7f-aa38-b0e039e02841 --key blocked_reason --value \"\u003creason\u003e\"`\n\nPost your verdict as a comment on the parent issue.",
+      "due_date": null,
+      "id": "c2f75dfd-005a-437b-a56f-fa38482d460c",
+      "identifier": "DEV-360",
+      "labels": [],
+      "metadata": {
+        "retry_log": "{\"attempts\":3,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T15:19Z\"}"
+      },
+      "number": 360,
+      "parent_issue_id": "3eee1894-aa96-4d7f-aa38-b0e039e02841",
+      "position": -17,
+      "priority": "none",
+      "project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
+      "stage": null,
+      "start_date": null,
+      "status": "blocked",
+      "title": "QA Gate: DEV-349 — BUILD: Implement Supabase Edge Functions (punch, sync, reports, FCM)",
+      "updated_at": "2026-07-01T15:22:46Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "e4c72b01-5bc8-4d1a-9fbb-a6aa0f2e7787",
       "assignee_type": "agent",
       "created_at": "2026-07-01T08:38:48Z",
@@ -467,5 +493,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 17
+  "total": 18
 }
