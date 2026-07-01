@@ -144,9 +144,9 @@
       "project_id": "aa435e43-6888-4273-8d8d-86813b10cb13",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "blocked",
       "title": "ADR-004: i18n/l10n Library Standard — next-intl (web) + react-i18next/expo-localization (mobile)",
-      "updated_at": "2026-07-01T15:06:00Z",
+      "updated_at": "2026-07-01T16:49:39Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {

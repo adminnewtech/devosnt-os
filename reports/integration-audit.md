@@ -1,6 +1,6 @@
 # Integration Audit Report
 
-_Generated: 2026-07-01T16:05:11.836555+00:00_
+_Generated: 2026-07-01T17:02:56.684705+00:00_
 
 ## Health Summary
 
@@ -14,7 +14,7 @@ _Generated: 2026-07-01T16:05:11.836555+00:00_
 | inactive_autopilots | 0 |
 | missing_required_autopilots | 0 |
 | missing_projects | 0 |
-| blocked_issues | 4 |
+| blocked_issues | 5 |
 | in_review_parent_count | 4 |
 | agents_outside_squad_preview | 18 |
 
@@ -26,12 +26,13 @@ _Generated: 2026-07-01T16:05:11.836555+00:00_
 - **Projects:** 11 (pipeline gaps: 0)
 - **Autopilots:** 9 (active: 9)
 
-## Verdict: YELLOW ⚠️ — 9 warnings, no blockers
+## Verdict: YELLOW ⚠️ — 10 warnings, no blockers
 
 ## Findings
 
 | Severity | Area | Detail | Remediation |
 |---|---|---|---|
+| 🟡 WARN | `issue.blocked` | DEV-353 blocked: ADR-004: i18n/l10n Library Standard — next-intl (web) + reac | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-352 blocked: BUILD: React Native Expo mobile app shell (Android, RTL Arab | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-351 blocked: BUILD: Supabase Auth integration — JWT custom claims hook +  | Review blocker — autopilot caps at 3 retries |
 | 🟡 WARN | `issue.blocked` | DEV-360 blocked: QA Gate: DEV-349 — BUILD: Implement Supabase Edge Functions  | Review blocker — autopilot caps at 3 retries |
