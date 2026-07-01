@@ -134,7 +134,8 @@
       "labels": [],
       "metadata": {
         "deploy_gate_hold_noted": true,
-        "lifecycle_phase": "integrate"
+        "lifecycle_phase": "integrate",
+        "retry_log": "{\"attempts\":1,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T11:33Z\"}"
       },
       "number": 353,
       "parent_issue_id": null,
@@ -145,7 +146,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "ADR-004: i18n/l10n Library Standard — next-intl (web) + react-i18next/expo-localization (mobile)",
-      "updated_at": "2026-07-01T09:50:33Z",
+      "updated_at": "2026-07-01T11:37:55Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -287,7 +288,9 @@
       "id": "c2f75dfd-005a-437b-a56f-fa38482d460c",
       "identifier": "DEV-360",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "retry_log": "{\"attempts\":1,\"reason\":\"stall \u003e90min no comments\",\"last_stall\":\"2026-07-01T11:45Z\"}"
+      },
       "number": 360,
       "parent_issue_id": "3eee1894-aa96-4d7f-aa38-b0e039e02841",
       "position": -17,
@@ -297,7 +300,7 @@
       "start_date": null,
       "status": "in_progress",
       "title": "QA Gate: DEV-349 — BUILD: Implement Supabase Edge Functions (punch, sync, reports, FCM)",
-      "updated_at": "2026-07-01T08:35:23Z",
+      "updated_at": "2026-07-01T11:52:48Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
