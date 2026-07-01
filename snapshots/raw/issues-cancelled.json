@@ -429,6 +429,33 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
+      "assignee_id": "a51cdb63-a37d-4e54-80cf-a0534ff416f7",
+      "assignee_type": "squad",
+      "created_at": "2026-05-25T19:58:42Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Input\nParent: [DEV-25](mention://issue/f01f5264-86df-4f80-a2ff-f6a1abbb0794). PRD: [DEV-26](mention://issue/799e091f-184e-4551-8f8d-fd55cf62c59f). UX/UI plan: [DEV-29](mention://issue/0e6d9818-9ce4-46a8-8edc-e8e7e2cb1681). API: [DEV-32](mention://issue/bb36dbf3-e989-4e10-bf4e-f0756c5eef37). Schema + roles: [DEV-31](mention://issue/89749693-1fd3-42ff-a0bd-481b3feadc76).\n\n## Expected Output\n\nThree documents committed to `adminnewtech/attendance-app/docs/`:\n\n1. **`USER_GUIDE.ar.md`** (Kuwaiti Arabic, RTL formatting)\n   - How to install the APK\n   - First-time login (email + password / magic link)\n   - How to check-in / check-out (with GPS + selfie + QR)\n   - Reading the history screen\n   - Submitting a leave request\n   - What \"أنت خارج نطاق المكتب\" means and what to do\n   - Offline mode behaviour\n   - Troubleshooting: lost FCM notifications, login fails, GPS not detected\n\n2. **`ADMIN_GUIDE.ar.md`** + **`ADMIN_GUIDE.en.md`** (Kuwaiti Arabic + English, mirrored content)\n   - Logging into the admin dashboard\n   - Creating employees (with civil ID handling + role assignment)\n   - Office + geofence setup\n   - Shift template management\n   - Reading the live attendance board\n   - Generating + exporting reports (CSV / PDF)\n   - Approving leave requests\n   - Auditing changes via audit log\n   - Role matrix (super_admin / hr_manager / dept_manager / employee) with what each can/cannot do\n   - PDPL compliance notes (civil ID storage, biometric consent)\n\n3. **`README.md`** at repo root: 60-second project summary + how to run locally (`pnpm dev` + `expo start` + `supabase start`) + links to all three guides.\n\n## Acceptance Criteria\n- [ ] User guide uses Kuwaiti Arabic conversational tone (not MSA)\n- [ ] Admin guide is fully bilingual with matching headings AR ↔ EN\n- [ ] Every role in the matrix has a clear \"Can / Cannot\" list\n- [ ] No secrets, internal URLs, or PII anywhere in the docs\n- [ ] Screenshots/diagrams optional but encouraged (Mermaid acceptable for flow diagrams)\n\n## Dependencies\nNone blocking. UX plan + Architecture + DB schema are all finalised.\n\n## Risk\n- Admin guide may need regeneration if [DEV-34](mention://issue/3f3a89bb-3322-4f87-bd97-f6e89cf63d9b) UI labels change — document this dependency in a \"Maintenance\" section.\n\n## Definition of Done\nAll four files committed. Comment on this issue with file list + PR/commit link. Reviewed for tone (Arabic Kuwaiti, not MSA) by [@arabic-rtl-experience-agent](mention://agent/7bcef3ff-a4d6-4ea3-866e-bdcc00b27576) — they sign off before this can land in `done`.",
+      "due_date": null,
+      "id": "967675f5-e77f-4bf1-bbaf-c7e5251b3717",
+      "identifier": "DEV-40",
+      "labels": [],
+      "metadata": {
+        "retry_log": "{\"count\":3,\"stalled_at\":\"2026-05-26\"}",
+        "waiting_on": "admin:github-repo:adminnewtech/attendance-app"
+      },
+      "number": 40,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": 0,
+      "priority": "high",
+      "project_id": "0ef266f6-8a27-410d-93a2-4ed479ae1752",
+      "stage": null,
+      "start_date": null,
+      "status": "cancelled",
+      "title": "User Guide (Arabic) + Admin Guide (AR/EN) — Android Attendance App",
+      "updated_at": "2026-07-01T09:15:27Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "4c52cff6-fe74-430a-9285-cf549a54fc92",
       "assignee_type": "agent",
       "created_at": "2026-05-25T16:08:08Z",
@@ -479,5 +506,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 19
+  "total": 20
 }

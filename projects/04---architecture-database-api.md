@@ -12,7 +12,7 @@ Tech stack, database schemas, API contracts, auth model, integrations, ERDs, ADR
 
 | ID | Title | Status | Priority |
 |---|---|---|---|
-| DEV-353 | ADR-004: i18n/l10n Library Standard — next-intl (web) + react-i18next/expo-local | `in_review` | medium |
+| DEV-353 | ADR-004: i18n/l10n Library Standard — next-intl (web) + react-i18next/expo-local | `in_progress` | medium |
 
 ## Recent Done
 
