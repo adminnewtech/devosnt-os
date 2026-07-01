@@ -111,7 +111,12 @@
       "id": "0a14786e-294f-4266-913f-c3797fe6398f",
       "identifier": "DEV-342",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-07-01T04:11:03Z",
+        "lifecycle_phase_snapshot": "{\"1a1c2fb3-41ee-4b99-b820-d10f1c564052\":\"—\",\"0ef266f6-8a27-410d-93a2-4ed479ae1752\":\"integrate\"}",
+        "top3_count": 3
+      },
       "number": 342,
       "parent_issue_id": null,
       "position": -15,
@@ -119,9 +124,9 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-07-01",
-      "updated_at": "2026-07-01T04:03:21Z",
+      "updated_at": "2026-07-01T04:11:23Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
