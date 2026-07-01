@@ -2,7 +2,7 @@
 
 - **ID:** `f3089a97-c608-4599-913c-f331335e1abe`
 - **Status:** `planned`
-- **Issues:** 3 (done: 1)
+- **Issues:** 5 (done: 1)
 
 ## Description
 
@@ -10,7 +10,10 @@ All new app ideas and system requests start here. Intake → triage → routed t
 
 ## Open Issues (snapshot)
 
-_(no open issues)_
+| ID | Title | Status | Priority |
+|---|---|---|---|
+| DEV-363 | SECURITY: Rate limiting on /login and write endpoints — Android Attendance | `backlog` | high |
+| DEV-364 | SECURITY: RLS policies on all user-scoped tables — Android Attendance | `backlog` | high |
 
 ## Recent Done
 

@@ -2,6 +2,59 @@
   "has_more": false,
   "issues": [
     {
+      "assignee_id": "45b0949e-f65b-47c8-a861-3ad0e8dbe3aa",
+      "assignee_type": "squad",
+      "created_at": "2026-07-01T08:11:03Z",
+      "creator_id": "77da9a0d-924e-4087-9278-59ba1182b599",
+      "creator_type": "agent",
+      "description": "## React Native Mobile App Shell — Android Attendance App\n\n**Architecture reference**: [DEV-30](mention://issue/6d29ecb8-4487-4e92-a87b-cd672b72e219) (ADR + offline sync + push notification design)\n**Prior work**: [DEV-33](mention://issue/f76d10de-667b-48f8-ae1b-d3baa473fee5) scaffold + [DEV-43](mention://issue/585eee66-2638-4dc8-8a61-6f6dab977c07) demo APK (already built)\n\n## Input\n- Stack: Expo SDK 50+ (React Native), TypeScript, NativeWind (Tailwind for RN), Zustand (state)\n- Target: Android API 24+ (primary); iOS excluded from MVP\n- Language: Arabic RTL primary\n- Modules: Camera (selfie), Location (GPS), Local SQLite (offline queue), Firebase FCM (push)\n\n## Expected Output\nA production-ready Expo app shell with the following screens wired to Supabase:\n\n### Screens\n- **Login** (`/`) — Email + password, Arabic RTL, Supabase Auth, stores session in `expo-secure-store`\n- **Home / Dashboard** (`/home`) — Today's punch status, shift info, pending leave count\n- **Punch Screen** (`/punch`) — \"Check In\" / \"Check Out\" button; captures GPS + selfie; calls `/functions/v1/punch`; queues to SQLite if offline\n- **Punch History** (`/history`) — List of own punch events (paginated, PostgREST)\n- **Leave Request** (`/leave`) — Form: type, dates, reason; submits to `leave_requests` table\n- **Leave Status** (`/leave/status`) — Employee's own leave requests with approval status\n- **Offline Sync Indicator** — Badge on home screen showing pending offline queue count\n\n### Technical Requirements\n- Offline queue: SQLite table `offline_queue` (schema from DEV-30 offline sync design)\n- Auto-sync: drain offline queue when network connectivity restored (`expo-network` listener)\n- FCM: register device token on login, store in `push_subscriptions` table\n- Selfie: `expo-camera` capture → upload to Supabase Storage private bucket\n- GPS: `expo-location` foreground permission → lat/lng sent with each punch\n- `FCM_ENABLED` env flag (graceful no-op when false, matching DEV-43 pattern)\n- Deep link support: `attendance://` scheme for push notification taps\n\n## Acceptance Criteria\n- [ ] `npx expo start` launches without errors\n- [ ] Login screen renders in Arabic RTL (`dir=\"rtl\"` equivalent via NativeWind)\n- [ ] Successful login stores session in `expo-secure-store`\n- [ ] Punch screen captures GPS and selfie before calling API\n- [ ] Offline queue stores punch event when network is unavailable\n- [ ] Offline queue drains automatically when connectivity restores\n- [ ] FCM token registered on login (or no-op if `FCM_ENABLED=false`)\n- [ ] TypeScript strict mode passes (`tsc --noEmit`)\n\n## Dependencies\n- Auth sub-issue (Supabase auth utils / `lib/supabase.ts`)\n- API sub-issue (Edge Functions must be deployed for punch to work)\n- DB schema sub-issue (offline SQLite schema matches server schema)\n\n## Risk\n- Camera + Location require Android permissions declared in `app.json` / `AndroidManifest.xml`\n- `expo-secure-store` not available on Android emulators older than API 23 — target API 24+ only\n- FCM requires `google-services.json` — use `FCM_ENABLED=false` until credentials available\n\n## Definition of Done\n- All 7 screens render without crash on Android emulator (API 34)\n- Offline queue → sync flow verified manually\n- TypeScript strict passes\n- Screenshot of login + punch screen attached to comment\n- Status flipped to `in_review`",
+      "due_date": null,
+      "id": "16c91ac2-f0b9-4e88-aa70-b4408bdea1d6",
+      "identifier": "DEV-352",
+      "labels": [],
+      "metadata": {
+        "blocked_reason": "DoD not met: emulator test not run, offline sync not manually verified, login+punch screenshots not attached. See QGM verdict comment.",
+        "waiting_on": "admin:ANDROID_SDK_34_AVD"
+      },
+      "number": 352,
+      "parent_issue_id": "f01f5264-86df-4f80-a2ff-f6a1abbb0794",
+      "position": -19,
+      "priority": "medium",
+      "project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
+      "stage": null,
+      "start_date": null,
+      "status": "blocked",
+      "title": "BUILD: React Native Expo mobile app shell (Android, RTL Arabic) — Android Attendance",
+      "updated_at": "2026-07-01T08:44:36Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
+      "assignee_id": "e4c72b01-5bc8-4d1a-9fbb-a6aa0f2e7787",
+      "assignee_type": "agent",
+      "created_at": "2026-07-01T08:38:48Z",
+      "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
+      "creator_type": "agent",
+      "description": "## Emulator QA — DEV-352: React Native Expo app shell\n\nParent: [DEV-352](mention://issue/16c91ac2-f0b9-4e88-aa70-b4408bdea1d6)\n\nThe build is code-complete (TypeScript strict passes, security reviewed as strong). Three DoD items are unverified and blocking `done`.\n\n## Required tests\n\n### 1. Full emulator smoke test (Android API 34)\n\nRun `npx expo run:android` on an API 34 emulator and confirm all 7 screens launch and render without crash:\n- Login (`/`) — Arabic RTL\n- Home / Dashboard (`/home`) — punch status, shift info, offline badge\n- Punch Screen (`/punch`) — GPS + selfie flow\n- Punch History (`/history`) — paginated list\n- Leave Request (`/leave`) — form\n- Leave Status (`/leave/status`) — approval badges\n- Offline Sync Indicator — badge on home screen\n\n### 2. Offline sync flow test\n\n1. Put emulator in airplane mode.\n2. Perform a punch on the Punch screen — confirm it shows as queued (not sent).\n3. Check SQLite `offline_queue` table has the pending entry.\n4. Restore connectivity.\n5. Confirm the queue drains automatically and the punch appears in Punch History.\n\n### 3. Screenshots\n\nCapture and attach to a comment on [DEV-352](mention://issue/16c91ac2-f0b9-4e88-aa70-b4408bdea1d6):\n- Login screen (must show Arabic RTL text)\n- Punch screen (GPS + selfie UI visible)\n\n## Acceptance Criteria\n- [ ] All 7 screens load without crash on API 34 emulator\n- [ ] Offline punch queues to SQLite when airplane mode active\n- [ ] Queue drains when connectivity restores; punch appears in history\n- [ ] Login + Punch screenshots attached to DEV-352 comment\n\n## On completion\n\nPost a summary comment on [DEV-352](mention://issue/16c91ac2-f0b9-4e88-aa70-b4408bdea1d6) with test results and screenshots attached, then run:\n\n```\nmultica issue status 16c91ac2-f0b9-4e88-aa70-b4408bdea1d6 in_review\nmultica issue metadata delete 16c91ac2-f0b9-4e88-aa70-b4408bdea1d6 --key blocked_reason\n```",
+      "due_date": null,
+      "id": "195aa58c-bd5a-4a0a-963c-65fb104a513c",
+      "identifier": "DEV-361",
+      "labels": [],
+      "metadata": {
+        "blocked_reason": "Android SDK (adb/emulator) not installed in agent runtime. Cannot run npx expo run:android or capture screenshots. Needs environment with Android SDK 34 + API 34 AVD."
+      },
+      "number": 361,
+      "parent_issue_id": "16c91ac2-f0b9-4e88-aa70-b4408bdea1d6",
+      "position": -15,
+      "priority": "medium",
+      "project_id": "09e6cfd3-d45e-4225-a494-2e3400b6983c",
+      "stage": null,
+      "start_date": null,
+      "status": "blocked",
+      "title": "Emulator QA: DEV-352 — run 7 screens, offline sync test, attach screenshots",
+      "updated_at": "2026-07-01T08:43:27Z",
+      "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
+    },
+    {
       "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "assignee_type": "agent",
       "created_at": "2026-06-26T04:00:08Z",
@@ -120,7 +173,7 @@
       "identifier": "DEV-197",
       "labels": [],
       "metadata": {
-        "waiting_on": "admin@newtechkw.com: respond to DEV-37 comment 0316aefd (re-escalation 2026-06-01) — 3 blockers: GH PAT, codegraph install, Pulse v3 approval"
+        "waiting_on": "admin@newtechkw.com: respond to DEV-37 comment 675c4147 (third escalation 2026-07-01) — deadline 2026-07-08; 3 blockers: GH PAT, codegraph install, Pulse v3 approval. Fallback: simplified App Hub (no codegraph) activates if no response."
       },
       "number": 197,
       "parent_issue_id": "e71ee0f7-e249-44eb-b7c6-3aeb613b591b",
@@ -131,7 +184,7 @@
       "start_date": null,
       "status": "blocked",
       "title": "ARCH ACTION: Re-escalate ADR-002 App Hub Model — unblock admin provisioning",
-      "updated_at": "2026-06-04T17:55:12Z",
+      "updated_at": "2026-07-01T08:08:29Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -409,5 +462,5 @@
   ],
   "limit": 50,
   "offset": 0,
-  "total": 15
+  "total": 17
 }

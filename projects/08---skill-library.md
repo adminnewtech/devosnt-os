@@ -17,5 +17,4 @@ Reusable skills, app templates, prompt templates, workflow templates — the wor
 
 ## Recent Done
 
-- DEV-299 — Escalate admin credential blockers + update memory entries (4 weeks overdue)
-- DEV-298 — Prompt patch: Add pre-flight dependency check to research-scout
+_(none)_
