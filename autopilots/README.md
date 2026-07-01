@@ -6,8 +6,8 @@ Scheduled / triggered automations that keep the factory running without manual i
 |---|---|---|---|---|
 | [Daily Command Center Digest](./daily-command-center-digest.md) | `active` | `create_issue` | 2026-07-01T04:00:11Z | `d9f942b9…` |
 | [Factory Health Daily Audit](./factory-health-daily-audit.md) | `active` | `create_issue` | 2026-07-01T03:00:23Z | `f3a68587…` |
-| [Factory Pulse — Auto-route & Unblock](./factory-pulse-auto-route-unblock.md) | `active` | `run_only` | 2026-07-01T13:00:18Z | `ebd03ec3…` |
-| [KB Sync — Hourly Refresh](./kb-sync-hourly-refresh.md) | `active` | `run_only` | 2026-07-01T13:00:16Z | `f3a68587…` |
+| [Factory Pulse — Auto-route & Unblock](./factory-pulse-auto-route-unblock.md) | `active` | `run_only` | 2026-07-01T14:00:18Z | `ebd03ec3…` |
+| [KB Sync — Hourly Refresh](./kb-sync-hourly-refresh.md) | `active` | `run_only` | 2026-07-01T14:00:17Z | `f3a68587…` |
 | [Monthly Architecture & Tool-stack Review](./monthly-architecture-tool-stack-review.md) | `active` | `create_issue` | 2026-07-01T08:00:14Z | `77da9a0d…` |
 | [Skill Improvement Weekly Loop](./skill-improvement-weekly-loop.md) | `active` | `create_issue` | 2026-06-29T04:00:09Z | `5822179b…` |
 | [Weekly Benchmark Sweep](./weekly-benchmark-sweep.md) | `active` | `create_issue` | 2026-06-29T06:00:02Z | `606dde5b…` |
