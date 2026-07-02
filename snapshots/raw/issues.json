@@ -505,8 +505,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-06-29T04:00:09Z",
       "creator_id": "5822179b-4e9e-40ea-bca2-70f4c80d2a19",
       "creator_type": "agent",
@@ -515,7 +515,9 @@
       "id": "80663fd0-9ac5-452a-84d3-4e12b4583681",
       "identifier": "DEV-332",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 332,
       "parent_issue_id": null,
       "position": -16,
@@ -525,7 +527,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Skill Improvement Review — 2026-06-29 (1 new stall; 5 actions: lifecycle-closer scale-run, progress-rules, stuck-todo patch, credential-cancel, stall-verify)",
-      "updated_at": "2026-06-29T04:08:32Z",
+      "updated_at": "2026-07-02T04:53:15Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
@@ -580,8 +582,8 @@
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-07-02T04:00:10Z",
       "creator_id": "d9f942b9-e245-4e28-99eb-8f12fbebc2c3",
       "creator_type": "agent",
@@ -590,7 +592,13 @@
       "id": "d672ed94-1df8-4b20-ba77-b5823e5c2ec4",
       "identifier": "DEV-376",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "last_run_verdict": "posted",
+        "last_window_end": "2026-07-02T04:13:00Z",
+        "lifecycle_phase": "integrate",
+        "lifecycle_phase_snapshot": "{\"09e6cfd3-d45e-4225-a494-2e3400b6983c\":\"build\"}",
+        "top3_count": 3
+      },
       "number": 376,
       "parent_issue_id": null,
       "position": -15,
@@ -598,14 +606,14 @@
       "project_id": "1a1c2fb3-41ee-4b99-b820-d10f1c564052",
       "stage": null,
       "start_date": null,
-      "status": "in_progress",
+      "status": "in_review",
       "title": "Daily Command Center Digest — 2026-07-02",
-      "updated_at": "2026-07-02T04:02:11Z",
+      "updated_at": "2026-07-02T04:53:20Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
-      "assignee_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
-      "assignee_type": "agent",
+      "assignee_id": "981c8c82-88ca-4940-a2cb-20e1893707b7",
+      "assignee_type": "squad",
       "created_at": "2026-07-02T03:00:16Z",
       "creator_id": "f3a68587-4383-43b1-8f03-16b12ee95797",
       "creator_type": "agent",
@@ -614,7 +622,9 @@
       "id": "8a1565bf-9128-4947-89e1-f6a0d183521c",
       "identifier": "DEV-375",
       "labels": [],
-      "metadata": {},
+      "metadata": {
+        "lifecycle_phase": "integrate"
+      },
       "number": 375,
       "parent_issue_id": null,
       "position": -15,
@@ -624,7 +634,7 @@
       "start_date": null,
       "status": "in_review",
       "title": "Factory Health Audit — 2026-07-02",
-      "updated_at": "2026-07-02T03:05:18Z",
+      "updated_at": "2026-07-02T04:53:23Z",
       "workspace_id": "6ab51ea8-1c35-46e7-a387-961e2877f3cf"
     },
     {
